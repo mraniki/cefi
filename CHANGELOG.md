@@ -2,6 +2,15 @@
 
 
 
+## v1.1.4 (2023-08-09)
+
+### 📝
+
+* 📝 ([`af9254e`](https://github.com/mraniki/cefi/commit/af9254ee01fe8f1bc318b61800dd88a55887e08a))
+
+* 📝 ([`576f8f4`](https://github.com/mraniki/cefi/commit/576f8f4250e932261aea9f2c83a34c5277837cc3))
+
+
 ## v1.1.3 (2023-08-09)
 
 ### 📝
