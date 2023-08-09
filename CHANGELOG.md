@@ -2,6 +2,19 @@
 
 
 
+## v1.0.1 (2023-08-09)
+
+### :white_check_mark:
+
+* :white_check_mark: unit test ([`54e37bc`](https://github.com/mraniki/cex/commit/54e37bc4e0f6b4fa3456a6468029c8b7d1decb07))
+
+* :white_check_mark: unit test ([`dc085f5`](https://github.com/mraniki/cex/commit/dc085f540fdc6a426f1d75e63d002c748c7c7d86))
+
+### Other
+
+* Merge branch &#39;main&#39; of git@github.com:mraniki/cex.git ([`22d29f4`](https://github.com/mraniki/cex/commit/22d29f4edcd8c64275bc2170432b956adee93321))
+
+
 ## v1.0.0 (2023-08-09)
 
 ### :boom:
