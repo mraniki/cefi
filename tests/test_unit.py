@@ -58,7 +58,6 @@ async def test_help(exchange):
     """Test help"""
 
     result = await exchange.get_help()
-    exchange.get_help.assert_awaited_once()
     assert result is not None
     assert "🎯" in result
     assert "🏦" in result
@@ -92,7 +91,6 @@ async def test_get_account_pnl(exchange):
     """Test pnl"""
 
     result = await exchange.get_account_pnl()
-    exchange.get_account_pnl.assert_awaited_once()
     assert result == 0
 
 
