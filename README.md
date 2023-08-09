@@ -7,7 +7,7 @@
 <a href="https://hub.docker.com/r/mraniki/tt"><img src="https://img.shields.io/docker/pulls/mraniki/tt?style=for-the-badge"></a>
 <br>
     </td>
-    <td align="center"><img width="200" alt="Logo" src="/docs/_static_/logo-full.png"></td>
+    <td align="center"><img width="200" alt="Logo" src="/docs/_static/logo-full.png"></td>
   </tr>
   <tr>
     <td>
