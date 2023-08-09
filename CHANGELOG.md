@@ -2,6 +2,21 @@
 
 
 
+## v1.1.1 (2023-08-09)
+
+### :whale:
+
+* :whale: ([`448b84d`](https://github.com/mraniki/cefi/commit/448b84d1ad8f83cbd0ae75c996dca5b3b971ef43))
+
+### Other
+
+* Merge pull request #4 from mraniki/dev
+
+🐳 ([`3b6757f`](https://github.com/mraniki/cefi/commit/3b6757f0f498e55094115da65129576d2876c9d6))
+
+* Merge branch &#39;main&#39; into dev ([`e9d8d48`](https://github.com/mraniki/cefi/commit/e9d8d48f9939c8365cdc502a5d7f3383da78ac12))
+
+
 ## v1.1.0 (2023-08-09)
 
 ### :sparkles:
@@ -9,6 +24,8 @@
 * :sparkles: rename package ([`1c0e9d6`](https://github.com/mraniki/cefi/commit/1c0e9d6624470853f68c7ddd61be838709924f12))
 
 ### Other
+
+* Merge branch &#39;main&#39; into dev ([`ce25df7`](https://github.com/mraniki/cefi/commit/ce25df7577d4166634e51d42bbee158dfae62a6b))
 
 * Merge pull request #3 from mraniki/dev
 
@@ -19,6 +36,10 @@ Update ([`73e9ff4`](https://github.com/mraniki/cefi/commit/73e9ff4308510efd66df0
 Conflicts:
 	cex/__init__.py
 	pyproject.toml ([`645dc2a`](https://github.com/mraniki/cefi/commit/645dc2af2078f9a8dae2bf2122b7b0012553a29a))
+
+### Update
+
+* Update Requirements ([`615ba79`](https://github.com/mraniki/cefi/commit/615ba7948f0d28bf1e530d5c2d6db89bcade375c))
 
 
 ## v1.0.3 (2023-08-09)
