@@ -8,7 +8,7 @@ Installation
 
 ::
     
-    pip install cex
+    pip install cefi
 
 
 Example

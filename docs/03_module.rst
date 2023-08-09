@@ -8,4 +8,4 @@ Module
    :template: custom-module-template.rst
    :recursive:
 
-   cex
+   cefi
