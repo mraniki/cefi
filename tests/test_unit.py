@@ -53,7 +53,7 @@ async def test_plugin(exchange):
     assert "🪪" in result
     assert "💱 binance" in result
     assert exchange is not None
-    assert isinstance(exchange, cex.main.CexExchange)
+    assert isinstance(exchange, CexExchange)
     assert callable(exchange.get_account_balance)
     assert callable(exchange.get_account_position)
     assert callable(exchange.execute_order)
