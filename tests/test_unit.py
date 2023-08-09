@@ -78,7 +78,7 @@ async def test_parse_help(exchange):
     """Test help"""
     exchange.get_help = AsyncMock()
     await exchange.get_help()
-    plugin.exchange.get_help.assert_awaited_once()
+    exchange.get_help.assert_awaited_once()
 
 
 @pytest.mark.asyncio
