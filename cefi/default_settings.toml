@@ -37,6 +37,7 @@ cex_ordertype = "MARKET"
 # to risk per order
 # 10 = 10% of the position
 trading_risk_amount = 10
+trading_asset = "USDT"
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###

@@ -56,6 +56,7 @@ class CexExchange:
         # method not implemented yet
         return f"💱 {self.exchange_name}\n🪪 {self.account}"
 
+
     async def get_help(self):
         """
         Get the help information for the current instance.
