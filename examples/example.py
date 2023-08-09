@@ -21,6 +21,8 @@ async def main():
     await cex.get_account_balance()
 
 
+
+
 app = FastAPI()
 
 
