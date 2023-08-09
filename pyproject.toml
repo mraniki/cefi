@@ -4,22 +4,22 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
-name = "cex"
+name = "cefi"
 version = "1.0.2"
 description = "A python library, to interact with CCXT crypto exchange"
 authors = ["mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
 readme = "README.md"
-keywords = ["cex"]
+keywords = ["cex, cefi"]
 packages = [
-    {include = "cex"}
+    {include = "cefi"}
 ]
 
 
 [tool.poetry.urls]
-"Changelog" =  "https://github.com/mraniki/cex/blob/dev/CHANGELOG.rst"
-"Support" =  "https://github.com/mraniki/cex/discussions"
-"Issues" =  "https://github.com/mraniki/cex/issues"
+"Changelog" =  "https://github.com/mraniki/cefi/blob/dev/CHANGELOG.rst"
+"Support" =  "https://github.com/mraniki/cefi/discussions"
+"Issues" =  "https://github.com/mraniki/cefi/issues"
 
 
 [tool.poetry.dependencies]
@@ -97,7 +97,7 @@ omit = [
 
 [tool.semantic_release]
 upload_to_vcs_release = true
-version_variables = ["pyproject.toml:version","cex/__init__.py:__version__"]
+version_variables = ["pyproject.toml:version","cefi/__init__.py:__version__"]
 build_command = "pip install poetry && poetry build"
 commit_parser = "emoji"
 
