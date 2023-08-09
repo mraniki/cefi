@@ -2,7 +2,38 @@
 
 
 
+## v1.1.5 (2023-08-09)
+
+### Other
+
+* Merge pull request #10 from mraniki/dev
+
+📝 ([`1137b11`](https://github.com/mraniki/cefi/commit/1137b1160e2cb9eea2e5bd14fd0ab36ee958a4d1))
+
+* Merge branch &#39;main&#39; into dev ([`8e4bf7f`](https://github.com/mraniki/cefi/commit/8e4bf7f20529e1031564dd805cfe83917fc63329))
+
+### Update
+
+* Update pyproject.toml ([`1d1a367`](https://github.com/mraniki/cefi/commit/1d1a367e9cd91d6a0bfc0c273d802e73749c9a38))
+
+### ⚡
+
+* ⚡ ([`38ec507`](https://github.com/mraniki/cefi/commit/38ec5077275f399bdf188cc75ae27b3b57a16029))
+
+### 📝
+
+* 📝 ([`6a9fe57`](https://github.com/mraniki/cefi/commit/6a9fe5758f3b6636b8d5305b69a06fdf449bd678))
+
+* 📝 ([`77c0459`](https://github.com/mraniki/cefi/commit/77c0459948ea022afa35685faf3c7f5c3f66a7c7))
+
+
 ## v1.1.4 (2023-08-09)
+
+### Other
+
+* Merge pull request #9 from mraniki/main
+
+📝 ([`1c03331`](https://github.com/mraniki/cefi/commit/1c0333112d03d6f89831c736ebb02f751dce3edd))
 
 ### 📝
 
