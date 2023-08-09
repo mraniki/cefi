@@ -2,6 +2,39 @@
 
 
 
+## v1.1.8 (2023-08-09)
+
+### :bug:
+
+* :bug::white_check_mark: ([`22c8061`](https://github.com/mraniki/cefi/commit/22c806118572a77006b5fc2f8e69d4a8c468f4a9))
+
+### :memo:
+
+* :memo::white_check_mark: ([`b824b08`](https://github.com/mraniki/cefi/commit/b824b08d82e9914f2ef8cfea1b84c811c73dd4d6))
+
+### :white_check_mark:
+
+* :white_check_mark: ([`bbfd854`](https://github.com/mraniki/cefi/commit/bbfd8547a3302804574bb08dc23a641627a6b5e1))
+
+* :white_check_mark: ([`2b6cb46`](https://github.com/mraniki/cefi/commit/2b6cb463c93a21f678856bef7d938e04857426b6))
+
+* :white_check_mark: ([`02a17bf`](https://github.com/mraniki/cefi/commit/02a17bf687dd6f6f85fbffe6d3d6fc242454fa69))
+
+* :white_check_mark: ([`d678412`](https://github.com/mraniki/cefi/commit/d678412499470ac56c2d59cbd3ede54a1d16760b))
+
+* :white_check_mark: ([`d6e37a7`](https://github.com/mraniki/cefi/commit/d6e37a7d61ebc9d6dd467f77e3ea3e0ea0b6a400))
+
+### :wrench:
+
+* :wrench: ([`690eb41`](https://github.com/mraniki/cefi/commit/690eb4144073dbcc6a1b7035f76afb2dc66a1bc9))
+
+### Other
+
+* Merge pull request #11 from mraniki/dev
+
+:white_check_mark: ([`ab450e0`](https://github.com/mraniki/cefi/commit/ab450e082dd835ecc7fbf6cf3fdd1063ee6acb34))
+
+
 ## v1.1.7 (2023-08-09)
 
 ### Update
