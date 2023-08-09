@@ -30,7 +30,7 @@ def result_order():
 
 
 @pytest.fixture(name="exchange")
-def test_fixture_plugin():
+def test_fixture():
     return CexExchange()
 
 
@@ -41,7 +41,7 @@ def test_dynaconf_is_in_testing_env_CEX():
 
 
 @pytest.mark.asyncio
-async def test_plugin(exchange):
+async def test_cefi(exchange):
     print(type(exchange))
     result = await exchange.get_info()
     assert "🪪" in result
@@ -65,18 +65,9 @@ async def test_help(exchange):
 
 
 @pytest.mark.asyncio
-async def test_info(exchange):
-    """Test info"""
-    exchange.get_info = AsyncMock()
-    await exchange.get_info()
-    exchange.get_info.assert_awaited_once()
-    assert '🪪' in result
-
-
-@pytest.mark.asyncio
 async def test_balance(exchange):
     """Test balance"""
-    results = await exchange.get_account_balance()
+    result = await exchange.get_account_balance()
     assert result is not None
     assert "USDT" in result
 
