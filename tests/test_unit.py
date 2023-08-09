@@ -4,8 +4,8 @@ from unittest.mock import AsyncMock
 import ccxt
 import pytest
 
-from cex import CexExchange
-from cex.config import settings
+from cefi import CexExchange
+from cefi.config import settings
 
 
 @pytest.fixture(scope="session", autouse=True)

@@ -9,7 +9,7 @@ import uvicorn
 from fastapi import FastAPI
 from loguru import logger
 
-from cex import CexExchange, __version__
+from cefi import CexExchange, __version__
 
 logger.remove()
 logger.add(sys.stderr, level="DEBUG")
