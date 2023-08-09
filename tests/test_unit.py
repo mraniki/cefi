@@ -13,18 +13,12 @@ def set_test_settings_CEX():
     settings.configure(FORCE_ENV_FOR_DYNACONF="testingbinancecex")
 
 
-@pytest.fixture(name="order_message")
-def order():
-    """return valid order"""
-    return "buy BTCUSDT sl=200 tp=400 q=1%"
-
-
 @pytest.fixture(name="order_parsed")
 def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "EURUSD",
+        "instrument": "BTCUSDT",
         "stop_loss": 200,
         "take_profit": 400,
         "quantity": 2,
@@ -71,7 +65,7 @@ async def test_parse_quote(exchange, caplog):
     """Test parse_message balance"""
     result = await exchange.get_quote("BTCUSDT")
     assert result is not None
-    #assert "🏦" in caplog.text
+    assert "🏦" in caplog.text
 
 
 @pytest.mark.asyncio
@@ -125,11 +119,19 @@ async def test_get_help(exchange):
 
 
 @pytest.mark.asyncio
+async def test_position(exchange, caplog):
+    """Test position"""
+    
+    result = await exchange.get_account_position()
+    assert result is not None
+
+@pytest.mark.asyncio
 async def test_execute_order(exchange, order_parsed):
     result = await exchange.execute_order(order_parsed)
     print(result)
     assert result is not None
-    assert "⚠️ order execution" in result
+    assert "⬆️" in result
+    #assert "⚠️ order execution" in result
 
 
 # @pytest.mark.asyncio
