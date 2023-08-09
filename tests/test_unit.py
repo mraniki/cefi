@@ -53,48 +53,43 @@ async def test_plugin(exchange):
     assert callable(exchange.execute_order)
 
 
-# @pytest.mark.asyncio
-# async def test_position(exchange):
-#     #with pytest.raises(Exception):
-#     await exchange.get_account_position()
-#     assert "📊 Position" in result
-
-
 @pytest.mark.asyncio
-async def test_parse_quote(exchange, caplog):
-    """Test parse_message balance"""
-    result = await exchange.get_quote("BTCUSDT")
-    assert result is not None
-    assert "🏦" in caplog.text
-
-
-@pytest.mark.asyncio
-async def test_parse_help(exchange):
+async def test_help(exchange):
     """Test help"""
     exchange.get_help = AsyncMock()
-    await exchange.get_help()
+    result = await exchange.get_help()
     exchange.get_help.assert_awaited_once()
+    assert result is not None
+    assert "🎯" in result
+    assert "🏦" in result
 
 
 @pytest.mark.asyncio
-async def test_parse_info(exchange):
+async def test_info(exchange):
     """Test info"""
     exchange.get_info = AsyncMock()
     await exchange.get_info()
     exchange.get_info.assert_awaited_once()
+    assert '🪪' in result
 
 
 @pytest.mark.asyncio
-async def test_parse_balance(exchange):
+async def test_balance(exchange):
     """Test balance"""
-    with pytest.raises(Exception):
-        exchange.assert_awaited_once = AsyncMock()
-        await exchange.get_account_balance("/bal")
-        exchange.get_account_balance.assert_called()
+    results = await exchange.get_account_balance()
+    assert result is not None
+    assert "USDT" in result
+
+
+# @pytest.mark.asyncio
+# async def test_position(exchange):
+#     #with pytest.raises(Exception):
+#     result = await exchange.get_account_position()
+#     assert "📊 Position" in result
 
 
 @pytest.mark.asyncio
-async def test_parse_position(exchange, caplog):
+async def test_position_error(exchange, caplog):
     """Test position"""
     exchange.get_account_position = AsyncMock()
     await exchange.get_account_position("/pos")
@@ -105,18 +100,18 @@ async def test_parse_position(exchange, caplog):
 async def test_get_account_pnl(exchange):
     """Test pnl"""
     exchange.get_account_pnl = AsyncMock()
-    await exchange.get_account_pnl("/d")
+    result = await exchange.get_account_pnl()
     exchange.get_account_pnl.assert_awaited_once()
+    assert result == 0
 
 
 @pytest.mark.asyncio
-async def test_get_help(exchange):
-    result = await exchange.get_help()
-    print(result)
+async def test_quote(exchange, caplog):
+    """Test quote"""
+    result = await exchange.get_quote("BTCUSDT")
     assert result is not None
-    assert "🎯" in result
     assert "🏦" in result
-
+    assert "BTCUSDT" in result
 
 
 @pytest.mark.asyncio
@@ -125,44 +120,7 @@ async def test_execute_order(exchange, order_parsed):
     print(result)
     assert result is not None
     assert "⬆️" in result
+    assert "ℹ️" in result
     #assert "⚠️ order execution" in result
 
 
-# @pytest.mark.asyncio
-# async def test_cex_exchange():
-#     exchange_instance = CexExchange()
-#     ccxt_client_mock = AsyncMock()
-#     ccxt_client_mock.uid = '12345'
-#     ccxt_client_mock.fetchTicker.side_effect = lambda symbol: {'last': 5000}
-#     ccxt_client_mock.fetchBalance = AsyncMock(return_value={'BTC': {'free': 1}})
-#     ccxt_client_mock.create_order = AsyncMock(
-#         return_value={
-#             'id': '12345',
-#             'amount': 1,
-#             'price': 5000,
-#             'datetime': '2022-01-01 00:00:00'})
-#     exchange_instance.cex = ccxt_client_mock
-
-#     with patch('ccxt.binance', return_value=ccxt_client_mock):
-
-#         result = await exchange_instance.get_info()
-
-#         assert result is not None
-#         assert '💱' in result
-#         assert '🪪' in result
-
-#         order_params = {
-#             'action': 'BUY',
-#             'instrument': 'BTCUSDT',
-#             'quantity': 100
-#         }
-
-#         result = await ccxt_client_mock.execute_order(order_params)
-#         print(result)
-#         assert result is not None
-#         assert '⬆️ BTC/USD' in result
-
-#         ccxt_client_mock.fetchTicker.assert_awaited_once_with('BTCUSDT')
-#         ccxt_client_mock.fetchBalance.assert_awaited_once()
-#         ccxt_client_mock.create_order.assert_awaited_once_with(
-#             'BTCUSDT', settings.cex_ordertype, 'BUY', 0.02, price=None)
