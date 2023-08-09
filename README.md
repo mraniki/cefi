@@ -1,3 +1,5 @@
+
+
 <br>
   <table style="border: 1px solid transparent">
     <tr>
@@ -22,7 +24,6 @@
         Interact with CEX Exchanges<br>
         supported by CCXT.
       </td>
-      
     </tr>
   </table>
 
