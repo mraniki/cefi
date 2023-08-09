@@ -28,7 +28,7 @@ def result_order():
         "timestamp": datetime.now(),
     }
 
-
+ 
 @pytest.fixture(name="exchange")
 def test_fixture():
     return CexExchange()
@@ -56,7 +56,7 @@ async def test_cefi(exchange):
 @pytest.mark.asyncio
 async def test_help(exchange):
     """Test help"""
-    exchange.get_help = AsyncMock()
+
     result = await exchange.get_help()
     exchange.get_help.assert_awaited_once()
     assert result is not None
@@ -90,7 +90,7 @@ async def test_position_error(exchange, caplog):
 @pytest.mark.asyncio
 async def test_get_account_pnl(exchange):
     """Test pnl"""
-    exchange.get_account_pnl = AsyncMock()
+
     result = await exchange.get_account_pnl()
     exchange.get_account_pnl.assert_awaited_once()
     assert result == 0

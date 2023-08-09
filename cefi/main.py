@@ -56,6 +56,7 @@ class CexExchange:
         # method not implemented yet
         return f"💱 {self.exchange_name}\n🪪 {self.account}"
 
+
     async def get_help(self):
         """
         Get the help information for the current instance.
@@ -76,7 +77,7 @@ class CexExchange:
             quote
         """
 
-        return f"🏦 {self.cex.fetchTicker(symbol).get('lastPrice')}"
+        return f"🏦 {self.cex.fetchTicker(symbol).get('last')}"
 
     async def get_trading_asset_balance(self):
         """
