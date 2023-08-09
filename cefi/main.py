@@ -6,8 +6,7 @@ from .config import settings
 class CexExchange:
     """
     CEX Object to support CEX
-    via CCXT library to be reviewed
-    to be stored in different file/package
+    via CCXT library
 
     Args:
         None
@@ -37,10 +36,12 @@ class CexExchange:
                         "defaultType": settings.cex_defaulttype,
                     },
                 }
-            )
+            ) 
             if settings.cex_testmode:
                 self.cex.set_sandbox_mode("enabled")
             self.commands = settings.ccxt_commands
+            self.account = self.cex.uid
+            self.exchange_name = self.cex.id
 
     async def get_info(self):
         """
@@ -51,11 +52,9 @@ class CexExchange:
         the exchange name and the account information.
         :rtype: str
         """
-        exchange_name = self.cex.id
-        account_info = self.cex.uid
         # account_info = self.cex.fetchAccounts().get('main')
         # method not implemented yet
-        return f"💱 {exchange_name}\n🪪 {account_info}"
+        return f"💱 {self.exchange_name}\n🪪 {self.account}"
 
     async def get_help(self):
         """
