@@ -76,7 +76,7 @@ class CexExchange:
             quote
         """
 
-        return f"🏦 {self.cex.fetchTicker(symbol).get('last')}"
+        return f"🏦 {self.cex.fetchTicker(symbol).get('lastPrice')}"
 
     async def get_trading_asset_balance(self):
         """

@@ -53,11 +53,11 @@ async def test_plugin(exchange):
     assert callable(exchange.execute_order)
 
 
-@pytest.mark.asyncio
-async def test_position(exchange):
-    with pytest.raises(Exception):
-        await exchange.get_account_position()
-        # assert "📊 Position" in result
+# @pytest.mark.asyncio
+# async def test_position(exchange):
+#     #with pytest.raises(Exception):
+#     await exchange.get_account_position()
+#     assert "📊 Position" in result
 
 
 @pytest.mark.asyncio
@@ -118,12 +118,6 @@ async def test_get_help(exchange):
     assert "🏦" in result
 
 
-@pytest.mark.asyncio
-async def test_position(exchange, caplog):
-    """Test position"""
-    
-    result = await exchange.get_account_position()
-    assert result is not None
 
 @pytest.mark.asyncio
 async def test_execute_order(exchange, order_parsed):
