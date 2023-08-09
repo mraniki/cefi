@@ -1,6 +1,4 @@
-.. raw:: html
-
-   <br>
+<br>
   <table style="border: 1px solid transparent">
     <tr>
       <td>
@@ -39,23 +37,4 @@
 
   <h5>Documentation</h5>
   <a href="https://talky.readthedocs.io/projects/cefi/en/latest/"><img src="https://img.shields.io/badge/Documentation-000000?style=for-the-badge&logo=readthedocs&logoColor=white"></a><br>
-
-
-User Guide
-==========
-
-.. toctree::
-   :maxdepth: 3
-
-   01_start
-   02_config
-
-
-Module Reference
-================
-
-.. toctree::
-   :maxdepth: 4
-
-   03_module
 
