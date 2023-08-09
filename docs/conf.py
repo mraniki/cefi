@@ -52,6 +52,7 @@ intersphinx_mapping = {
     "findmyorder": (
         "https://talky.readthedocs.io/projects/findmyorder/en/latest", None),
     "dxsp": ("https://talky.readthedocs.io/projects/dxsp/en/latest", None),
+    "cex": ("https://talky.readthedocs.io/projects/cex/en/latest", None),
     "iamlistening": (
         "https://iamlistening.readthedocs.io/en/latest", None),
     "talkytrend": ("https://talky.readthedocs.io/projects/talkytrend/en/latest", None),
@@ -73,6 +74,7 @@ hoverxref_intersphinx = [
     'iamlistening',
     'talkytrend',
     'myllm',
+    'cex'
 
 ]
 

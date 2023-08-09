@@ -1,35 +1,25 @@
-"""
-FindMyOrder Unit Testing
-"""
-
 from datetime import datetime
+from unittest.mock import AsyncMock
 
+import ccxt
 import pytest
 
-from findmyorder import FindMyOrder, settings
+from cex import CexExchange
+from cex.config import settings
 
 
 @pytest.fixture(scope="session", autouse=True)
-def set_test_settings():
-    settings.configure(FORCE_ENV_FOR_DYNACONF="testing")
-    
+def set_test_settings_CEX():
+    settings.configure(FORCE_ENV_FOR_DYNACONF="testingbinancecex")
 
-@pytest.fixture(name="fmo")
-def fmo():
-    """return fmo"""
-    return FindMyOrder()
 
-@pytest.fixture
+@pytest.fixture(name="order_message")
 def order():
     """return valid order"""
-    return "buy EURUSD sl=200 tp=400 q=2%"
+    return "buy BTCUSDT sl=200 tp=400 q=1%"
 
-@pytest.fixture
-def short_order():
-    """return valid order"""
-    return "Buy EURUSD"
 
-@pytest.fixture
+@pytest.fixture(name="order_parsed")
 def result_order():
     """return standard expected results"""
     return {
@@ -41,187 +31,141 @@ def result_order():
         "order_type": None,
         "leverage_type": None,
         "comment": None,
-        "timestamp": datetime.now()
+        "timestamp": datetime.now(),
     }
 
-@pytest.fixture
-def ignore_order():
-    """return valid order"""
-    return "buy US500"
 
-@pytest.fixture
-def crypto_order():
-    """return valid order"""
-    return "SHORT ETH sl=200 tp=400 q=2%"
-
-@pytest.fixture
-def crypto_short_order():
-    """return valid order"""
-    return "Sell ETH"
-
-@pytest.fixture
-def result_crypto_order():
-    """return standard expected results"""
-    return {
-        "action": "SHORT",
-        "instrument": "WETH",
-        "stop_loss": 1000,
-        "take_profit": 1000,
-        "quantity": 10,
-        "order_type": None,
-        "leverage_type": None,
-        "comment": None,
-        "timestamp": datetime.now()
-        }
-
-@pytest.fixture
-def order_with_emoji():
-    """return emoji type order"""
-    return """⚡️⚡️ #BNB/USDT ⚡️⚡️
-    Exchanges: ByBit USDT, Binance Futures
-    Signal Type: Regular (Long)
-    Leverage: Cross (20.0X)"""
+@pytest.fixture(name="exchange")
+def test_fixture_plugin():
+    return CexExchange()
 
 
-@pytest.fixture
-def bot_command():
-    return "/bal"
-
-
-@pytest.fixture
-def invalid_order():
-    """return fmo"""
-    return "This is not an order"
-
-@pytest.mark.asyncio
-async def test_settings():
-    """Search Testing"""
-    assert settings.VALUE == "On Testing"
-    assert settings.findmyorder_enabled is True
+def test_dynaconf_is_in_testing_env_CEX():
+    print(settings.VALUE)
+    assert settings.VALUE == "On Testing CEX_binance"
+    assert settings.cex_name == "binance"
 
 
 @pytest.mark.asyncio
-async def test_info(fmo):
-    """Search Testing"""
-    result = await fmo.get_info()
+async def test_plugin(exchange):
+    print(type(exchange))
+    result = await exchange.get_info()
+    assert "🪪" in result
+    assert "💱 binance" in result
+    assert exchange is not None
+    assert isinstance(exchange, ccxt.Binance)
+    assert callable(exchange.get_account_balance)
+    assert callable(exchange.get_account_position)
+    assert callable(exchange.execute_order)
+
+
+@pytest.mark.asyncio
+async def test_position(exchange):
+    with pytest.raises(Exception):
+        await exchange.get_account_position()
+        # assert "📊 Position" in result
+
+
+@pytest.mark.asyncio
+async def test_parse_quote(exchange, caplog):
+    """Test parse_message balance"""
+    await exchange.get_quote("/q BTCUSDT")
+    assert "🏦" in caplog.text
+
+
+@pytest.mark.asyncio
+async def test_parse_help(exchange):
+    """Test help"""
+    exchange.get_help = AsyncMock()
+    await exchange.get_help()
+    plugin.exchange.get_help.assert_awaited_once()
+
+
+@pytest.mark.asyncio
+async def test_parse_info(exchange):
+    """Test info"""
+    exchange.get_info = AsyncMock()
+    await exchange.get_info()
+    exchange.get_info.assert_awaited_once()
+
+
+@pytest.mark.asyncio
+async def test_parse_balance(exchange):
+    """Test balance"""
+    with pytest.raises(Exception):
+        exchange.assert_awaited_once = AsyncMock()
+        await exchange.get_account_balance("/bal")
+        exchange.get_account_balance.assert_called()
+
+
+@pytest.mark.asyncio
+async def test_parse_position(exchange, caplog):
+    """Test position"""
+    exchange.get_account_position = AsyncMock()
+    await exchange.get_account_position("/pos")
+    exchange.get_account_position.assert_awaited_once()
+
+
+@pytest.mark.asyncio
+async def test_get_account_pnl(exchange):
+    """Test pnl"""
+    exchange.get_account_pnl = AsyncMock()
+    await exchange.get_account_pnl("/d")
+    exchange.get_account_pnl.assert_awaited_once()
+
+
+@pytest.mark.asyncio
+async def test_get_help(exchange):
+    result = await exchange.get_help()
     print(result)
     assert result is not None
-    assert str(result).startswith("FindMyOrder")
-
-@pytest.mark.asyncio
-async def test_search_valid_order(fmo, crypto_order):
-    """Search Testing"""
-    assert await fmo.search(crypto_order) is True
+    assert "🎯" in result
+    assert "🏦" in result
 
 
 @pytest.mark.asyncio
-async def test_search_no_order(fmo, invalid_order):
-    """Search Testing"""
-    assert await fmo.search(invalid_order) is False
-
-
-@pytest.mark.asyncio
-async def test_search_no_order_command(fmo, bot_command):
-    """Search Testing"""
-    assert await fmo.search(bot_command) is False
-
-
-@pytest.mark.asyncio
-async def test_search_exception(fmo):
-    """Search Testing"""
-    mystring = ""
-    assert await fmo.search(mystring) is False
-
-
-@pytest.mark.asyncio
-async def test_search_normal_order(fmo,order):
-    """Search Testing"""
-    assert await fmo.search(order) is True
-
-
-@pytest.mark.asyncio
-async def test_search_normal_order_variation(fmo,crypto_order):
-    """Search Testing"""
-    assert await fmo.search(crypto_order) is True
-
-
-@pytest.mark.asyncio
-async def test_identify_order(fmo, short_order):
-    """Identify Testing"""
-    result = await fmo.identify_order(short_order)
-    assert result is not None
-
-
-@pytest.mark.asyncio
-async def test_identify_order_invalid_input(fmo, invalid_order):
-    """Identify Testing"""
-    result = await fmo.identify_order(invalid_order)
-    assert str(result).startswith("Expected")
-
-
-
-@pytest.mark.asyncio
-async def test_valid_get_order(fmo, order, result_order):
-    """get order Testing"""
-    result = await fmo.get_order(order)
-    assert result["action"] == result_order["action"]
-    assert result["instrument"] == result_order["instrument"]
-    assert int(result["stop_loss"]) == result_order["stop_loss"]
-    assert int(result["take_profit"]) == result_order["take_profit"]
-    assert int(result["quantity"]) == result_order["quantity"]
-    assert result["order_type"] == result_order["order_type"]
-    assert result["leverage_type"] == result_order["leverage_type"]
-    assert result["comment"] == result_order["comment"]
-    assert type(result["timestamp"] is datetime)
-
-
-@pytest.mark.asyncio
-async def test_short_valid_get_order(fmo, short_order, result_order):
-    """get order Testing"""
-    result = await fmo.get_order(short_order)
-    assert result["action"] == result_order["action"]
-    assert result["instrument"] == result_order["instrument"]
-    assert int(result["quantity"]) == 1
-    assert type(result["timestamp"] is datetime)
-
-
-@pytest.mark.asyncio
-async def test_ignore_order(fmo, ignore_order):
-    """ignore order Testing"""
-    result = await fmo.get_order(ignore_order)
-    assert result is None
-
-
-@pytest.mark.asyncio
-async def test_invalid_get_order(fmo, invalid_order):
-    """ignore order Testing"""
-    result = await fmo.get_order(invalid_order)
-    assert result is None
-
-
-@pytest.mark.asyncio
-async def test_mapping_order(
-    fmo,
-    crypto_short_order,
-    result_crypto_order):
-    """replace instrument Testing"""
-    result = await fmo.get_order(crypto_short_order)
+async def test_execute_order(exchange, order_parsed):
+    result = await exchange.execute_order(order_parsed)
     print(result)
-    assert settings.instrument_mapping is True
-    assert result["instrument"] == result_crypto_order["instrument"]
-    assert type(result["timestamp"] is datetime)
+    assert result is not None
+    assert "⚠️ order execution" in result
 
 
-@pytest.mark.asyncio
-async def test_contains_no_emoji(fmo, order):
-    """check emoji"""
-    result = await fmo.contains_emoji(order)
-    assert result is False
+# @pytest.mark.asyncio
+# async def test_cex_exchange():
+#     exchange_instance = CexExchange()
+#     ccxt_client_mock = AsyncMock()
+#     ccxt_client_mock.uid = '12345'
+#     ccxt_client_mock.fetchTicker.side_effect = lambda symbol: {'last': 5000}
+#     ccxt_client_mock.fetchBalance = AsyncMock(return_value={'BTC': {'free': 1}})
+#     ccxt_client_mock.create_order = AsyncMock(
+#         return_value={
+#             'id': '12345',
+#             'amount': 1,
+#             'price': 5000,
+#             'datetime': '2022-01-01 00:00:00'})
+#     exchange_instance.cex = ccxt_client_mock
 
+#     with patch('ccxt.binance', return_value=ccxt_client_mock):
 
-@pytest.mark.asyncio
-async def test_contains_emoji(fmo,order_with_emoji):
-    """check emoji"""
-    result = await fmo.contains_emoji(order_with_emoji)
-    assert result is True
+#         result = await exchange_instance.get_info()
 
+#         assert result is not None
+#         assert '💱' in result
+#         assert '🪪' in result
+
+#         order_params = {
+#             'action': 'BUY',
+#             'instrument': 'BTCUSDT',
+#             'quantity': 100
+#         }
+
+#         result = await ccxt_client_mock.execute_order(order_params)
+#         print(result)
+#         assert result is not None
+#         assert '⬆️ BTC/USD' in result
+
+#         ccxt_client_mock.fetchTicker.assert_awaited_once_with('BTCUSDT')
+#         ccxt_client_mock.fetchBalance.assert_awaited_once()
+#         ccxt_client_mock.create_order.assert_awaited_once_with(
+#             'BTCUSDT', settings.cex_ordertype, 'BUY', 0.02, price=None)

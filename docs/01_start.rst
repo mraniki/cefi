@@ -8,7 +8,7 @@ Installation
 
 ::
     
-    pip install xxxxxx
+    pip install cex
 
 
 Example

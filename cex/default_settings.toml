@@ -1,0 +1,38 @@
+########################################
+###          DEFAULT SETTINGS        ###
+########################################
+
+# Any of those settings can be changed
+# by the user. To overwrite a setting, 
+# create a settings.toml or load the 
+# settings from .env file or vars.
+# As an example, to disable the 
+# cex object:
+# settings.toml
+# [default]
+# cex_enabled = false
+
+[default]
+# Dynaconf settings verification
+VALUE = "On default"
+
+# Module Enable/Disable
+cex_enabled = false
+# Help Message
+ccxt_commands = "🎯 BUY BTCUSDT\n🎯 /q BTCUSDT\n🏦 /bal\n🏦 /pos\n"
+# CCXT Parameters to connect with 
+# the exchange
+cex_name = ""
+cex_api = ""
+cex_secret = ""
+cex_password = ""
+cex_testmode = true
+
+# Default type: SPOT, FUTURE, etc.
+cex_defaulttype = "SPOT"
+# Order type: Market, Limit, etc.
+cex_ordertype = "MARKET"
+
+########################################
+###     END OF DEFAULT SETTINGS      ###
+########################################
