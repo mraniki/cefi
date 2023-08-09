@@ -2,6 +2,25 @@
 
 
 
+## v1.0.3 (2023-08-09)
+
+### :memo:
+
+* :memo: readme update ([`0e9e870`](https://github.com/mraniki/cex/commit/0e9e8701b1600a799eeb19b056b43a91b70a64e2))
+
+### Other
+
+* Merge pull request #1 from mraniki/renovate/ruff-0.x
+
+⬆️(deps): update dependency ruff to &gt;=0.0.283,&lt;0.0.284 ([`61cae89`](https://github.com/mraniki/cex/commit/61cae899ae345b49255ebb386161c291108deb47))
+
+* Merge branch &#39;main&#39; of git@github.com:mraniki/cex.git ([`d24487f`](https://github.com/mraniki/cex/commit/d24487f4c86c95c564545d4826dd4693aad554c4))
+
+### Update
+
+* Update README.md ([`4300998`](https://github.com/mraniki/cex/commit/43009984acef0d41bc5e402d948b63aef325e3ec))
+
+
 ## v1.0.2 (2023-08-09)
 
 ### :white_check_mark:
@@ -43,6 +62,10 @@
 ### Other
 
 * Initial commit ([`db2f177`](https://github.com/mraniki/cex/commit/db2f177b514e22e31c4922b02361933b0bb41a9f))
+
+### ⬆️
+
+* ⬆️(deps): update dependency ruff to &gt;=0.0.283,&lt;0.0.284 ([`f48429a`](https://github.com/mraniki/cex/commit/f48429a622eb0e2d48e1fe3174f9268c4ad6df19))
 
 ### 💥
 
