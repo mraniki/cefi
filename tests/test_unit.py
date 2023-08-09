@@ -53,7 +53,7 @@ async def test_plugin(exchange):
     assert "🪪" in result
     assert "💱 binance" in result
     assert exchange is not None
-    assert isinstance(exchange, ccxt.Binance)
+    assert isinstance(exchange, cex.main.CexExchange)
     assert callable(exchange.get_account_balance)
     assert callable(exchange.get_account_position)
     assert callable(exchange.execute_order)
@@ -69,7 +69,7 @@ async def test_position(exchange):
 @pytest.mark.asyncio
 async def test_parse_quote(exchange, caplog):
     """Test parse_message balance"""
-    await exchange.get_quote("/q BTCUSDT")
+    await exchange.get_quote("BTCUSDT")
     assert "🏦" in caplog.text
 
 

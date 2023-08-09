@@ -33,6 +33,11 @@ cex_defaulttype = "SPOT"
 # Order type: Market, Limit, etc.
 cex_ordertype = "MARKET"
 
+# Trading % of your position
+# to risk per order
+# 10 = 10% of the position
+trading_risk_amount = 10
+
 ########################################
 ###     END OF DEFAULT SETTINGS      ###
 ########################################
