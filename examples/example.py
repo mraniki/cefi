@@ -1,5 +1,5 @@
 """
-Provides example for FindMyOrder
+Provides example for CEX lib
 """
 
 import asyncio
@@ -8,13 +8,17 @@ import sys
 import uvicorn
 from fastapi import FastAPI
 from loguru import logger
-from xxxxx import __version__, xxxxx
+
+from cex import CexExchange, __version__
 
 logger.remove()
 logger.add(sys.stderr, level="DEBUG")
 
+
 async def main():
     """Main"""
+    cex = CexExchange()
+    await cex.get_account_balance()
 
 
 app = FastAPI()
