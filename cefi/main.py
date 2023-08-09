@@ -18,6 +18,13 @@ class CexExchange:
     """
 
     def __init__(self):
+        """
+        Initialize the CEX object to interact with
+        CEX exchange support by CCXT library
+
+        """
+
+
         if settings.cex_name:
             client = getattr(ccxt, settings.cex_name)
             self.cex = client(
@@ -37,8 +44,12 @@ class CexExchange:
 
     async def get_info(self):
         """
-        info_message
+        Retrieves information about the exchange 
+        and the account.
 
+        :return: A formatted string containing
+        the exchange name and the account information.
+        :rtype: str
         """
         exchange_name = self.cex.id
         account_info = self.cex.uid
