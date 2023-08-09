@@ -1,0 +1,6 @@
+colorama==0.4.6 ; python_version >= "3.10" and python_version < "4.0" and sys_platform == "win32"
+dynaconf==3.2.0 ; python_version >= "3.10" and python_version < "4.0"
+emoji==2.7.0 ; python_version >= "3.10" and python_version < "4.0"
+loguru==0.7.0 ; python_version >= "3.10" and python_version < "4.0"
+pyparsing==3.1.1 ; python_version >= "3.10" and python_version < "4.0"
+win32-setctime==1.1.0 ; python_version >= "3.10" and python_version < "4.0" and sys_platform == "win32"
