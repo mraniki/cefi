@@ -2,9 +2,30 @@
 
 
 
+## v1.1.12 (2023-08-10)
+
+### Other
+
+* Merge pull request #14 from mraniki/dev
+
+📝 docs ([`4f0e831`](https://github.com/mraniki/cefi/commit/4f0e8319bc83e21ae9597bd654b9c243ac7a8989))
+
+* Merge branch &#39;main&#39; into dev ([`d13985b`](https://github.com/mraniki/cefi/commit/d13985b9a2761003f9bbbd2960a47e4ac3b86058))
+
+### Update
+
+* Update Requirements ([`418fa35`](https://github.com/mraniki/cefi/commit/418fa3544416fb68fdfd4eb262c376f33a9b587b))
+
+### 📝
+
+* 📝 docs ([`f1efc7c`](https://github.com/mraniki/cefi/commit/f1efc7c0c7c5cb9f3408efaba4c1f24c3ca29044))
+
+
 ## v1.1.11 (2023-08-10)
 
 ### Other
+
+* Merge branch &#39;main&#39; into dev ([`0d8e538`](https://github.com/mraniki/cefi/commit/0d8e5380e7007914ad7b9ed99fdf9faa8b730bc4))
 
 * Merge pull request #13 from mraniki/renovate/ruff-0.x
 
@@ -13,6 +34,10 @@
 ### ⬆️
 
 * ⬆️(deps): update dependency ruff to &gt;=0.0.284,&lt;0.0.285 ([`77a8c33`](https://github.com/mraniki/cefi/commit/77a8c339b7fcbfac5fdbe0b2cc8a9a931a54e236))
+
+### 👷
+
+* 👷 CI Change ([`67a999e`](https://github.com/mraniki/cefi/commit/67a999e3ddf5a3ee35d98659db8259c42a077a9f))
 
 
 ## v1.1.10 (2023-08-10)
