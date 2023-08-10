@@ -2,6 +2,13 @@
 
 
 
+## v1.1.10 (2023-08-10)
+
+### Update
+
+* Update README.md ([`0b498b3`](https://github.com/mraniki/cefi/commit/0b498b30db11e300c38ba4e025f371274be330ec))
+
+
 ## v1.1.9 (2023-08-09)
 
 ### :memo:
