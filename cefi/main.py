@@ -6,8 +6,9 @@ from .config import settings
 class CexExchange:
     """
     CEX Object to support CEX
-    via CCXT library
-
+    via CCXT library 
+    https://github.com/ccxt/ccxt
+    
     Args:
         None
 
