@@ -2,6 +2,19 @@
 
 
 
+## v1.1.13 (2023-08-11)
+
+### :memo:
+
+* :memo: ([`83b2009`](https://github.com/mraniki/cefi/commit/83b20091dd75df88c99e83309c44ee7edf74868b))
+
+### Other
+
+* Merge pull request #15 from mraniki/dev
+
+:memo: ([`ec7862e`](https://github.com/mraniki/cefi/commit/ec7862ebd121865ac629953ae47752ee22f3e9ab))
+
+
 ## v1.1.12 (2023-08-10)
 
 ### Other
