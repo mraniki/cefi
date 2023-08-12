@@ -2,6 +2,25 @@
 
 
 
+## v1.1.14 (2023-08-12)
+
+### Other
+
+* Merge pull request #16 from mraniki/dev
+
+📝 Documentation update ([`cc36c0e`](https://github.com/mraniki/cefi/commit/cc36c0e070b4ba0500fbdd959fff8ebb71fffa31))
+
+* Merge branch &#39;main&#39; into dev ([`8c1bc09`](https://github.com/mraniki/cefi/commit/8c1bc098c71be6ecd7dfeb204a5a8d33a46a7421))
+
+### Update
+
+* Update Requirements ([`9cc8239`](https://github.com/mraniki/cefi/commit/9cc82395a9b0b985a13f20075045abf88bdaaf1d))
+
+### 📝
+
+* 📝 ([`ad0a005`](https://github.com/mraniki/cefi/commit/ad0a005ed0f07b37b7644edb6ad083cc910bbf68))
+
+
 ## v1.1.13 (2023-08-11)
 
 ### :memo:
@@ -10,9 +29,15 @@
 
 ### Other
 
+* Merge branch &#39;main&#39; into dev ([`810f714`](https://github.com/mraniki/cefi/commit/810f714f4d8ca70ca94f4524baf25c0c5d5e88ba))
+
 * Merge pull request #15 from mraniki/dev
 
 :memo: ([`ec7862e`](https://github.com/mraniki/cefi/commit/ec7862ebd121865ac629953ae47752ee22f3e9ab))
+
+### Update
+
+* Update Requirements ([`bbbcd1d`](https://github.com/mraniki/cefi/commit/bbbcd1d0d41aa36a6cefeba450b87a520282a67f))
 
 
 ## v1.1.12 (2023-08-10)
