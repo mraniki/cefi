@@ -2,6 +2,23 @@
 
 
 
+## v1.1.16 (2023-08-18)
+
+### :recycle:
+
+* :recycle::arrow_up:dep downgrade ([`e9d555b`](https://github.com/mraniki/cefi/commit/e9d555b4cca62edfd0d31efa9ede2535d073460c))
+
+### Other
+
+* Merge pull request #18 from mraniki/dev
+
+:recycle::arrow_up:dep downgrade ([`49724b3`](https://github.com/mraniki/cefi/commit/49724b3d023979f87456f1b87e74e2fb028c701b))
+
+### Update
+
+* Update Requirements ([`379cc92`](https://github.com/mraniki/cefi/commit/379cc926bacc2bb7d93c47e9b8bfb01e7acf5cd1))
+
+
 ## v1.1.15 (2023-08-18)
 
 ### Other
