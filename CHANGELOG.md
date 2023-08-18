@@ -2,6 +2,23 @@
 
 
 
+## v1.1.15 (2023-08-18)
+
+### Other
+
+* Merge pull request #17 from mraniki/renovate/ruff-0.x
+
+⬆️(deps): update dependency ruff to &gt;=0.0.285,&lt;0.0.286 ([`051680a`](https://github.com/mraniki/cefi/commit/051680a2d8eb2db932e6ea5bf0168210378bbe4d))
+
+### Update
+
+* Update Requirements ([`b26ad59`](https://github.com/mraniki/cefi/commit/b26ad59848756e7fa8d72cd5c01b5e958f9d7250))
+
+### ⬆️
+
+* ⬆️(deps): update dependency ruff to &gt;=0.0.285,&lt;0.0.286 ([`977b6f9`](https://github.com/mraniki/cefi/commit/977b6f9763ce2386aca86321964a18526c130353))
+
+
 ## v1.1.14 (2023-08-12)
 
 ### Other
