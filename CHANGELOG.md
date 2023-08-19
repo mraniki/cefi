@@ -2,6 +2,34 @@
 
 
 
+## v1.1.17 (2023-08-19)
+
+### Other
+
+* Merge pull request #20 from mraniki/dependabot/pip/loguru-gte-0.6-and-lt-0.8
+
+⬆️ Dep: Update loguru requirement from ^0.6.0 to &gt;=0.6,&lt;0.8 ([`4b9f84d`](https://github.com/mraniki/cefi/commit/4b9f84d596b9c9be5c6fb9cd139da9add3c4860a))
+
+### Update
+
+* Update Requirements ([`c2f4885`](https://github.com/mraniki/cefi/commit/c2f48857cb951e6010dbb4e3a69c76003405a881))
+
+* :arrow_up: Dep: Update loguru requirement from ^0.6.0 to &gt;=0.6,&lt;0.8
+
+Updates the requirements on [loguru](https://github.com/Delgan/loguru) to permit the latest version.
+- [Release notes](https://github.com/Delgan/loguru/releases)
+- [Changelog](https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/Delgan/loguru/compare/0.6.0...0.7.0)
+
+---
+updated-dependencies:
+- dependency-name: loguru
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://github.com/mraniki/cefi/commit/933d3cf364bb77f2d8ecb47afb0301fc301d510a))
+
+
 ## v1.1.16 (2023-08-18)
 
 ### :recycle:
