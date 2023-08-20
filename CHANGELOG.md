@@ -2,6 +2,13 @@
 
 
 
+## v1.1.18 (2023-08-20)
+
+### Update
+
+* Update pyproject.toml ([`d0a2478`](https://github.com/mraniki/cefi/commit/d0a2478b7a2e67ecf95d94c59cc67e347683218b))
+
+
 ## v1.1.17 (2023-08-19)
 
 ### Other
