@@ -2,6 +2,13 @@
 
 
 
+## v1.1.19 (2023-08-20)
+
+### Update
+
+* Update renovate.json ([`f889682`](https://github.com/mraniki/cefi/commit/f8896820c99ed13cea24177cb766e9a9018bf163))
+
+
 ## v1.1.18 (2023-08-20)
 
 ### Update
