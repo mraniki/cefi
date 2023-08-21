@@ -2,6 +2,21 @@
 
 
 
+## v1.1.20 (2023-08-21)
+
+### Other
+
+* Merge pull request #22 from mraniki/dev
+
+:construction_worker_man:Flow.yml ([`c52038e`](https://github.com/mraniki/cefi/commit/c52038ec0eaa7c5a81b03b5a05e3189e2c9673a8))
+
+* :construction_worker_man:Flow.yml ([`043f22e`](https://github.com/mraniki/cefi/commit/043f22e9f4bb97528d938d53bf0d20ef9d99aa58))
+
+### Update
+
+* Update Requirements ([`3f9546c`](https://github.com/mraniki/cefi/commit/3f9546cddb647d89aa5a414f09437c3ce01bad33))
+
+
 ## v1.1.19 (2023-08-20)
 
 ### Update
