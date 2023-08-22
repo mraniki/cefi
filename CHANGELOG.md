@@ -2,6 +2,34 @@
 
 
 
+## v1.1.21 (2023-08-22)
+
+### Other
+
+* Merge pull request #23 from mraniki/dependabot/pip/sphinx-7.2.2
+
+⬆️ Dep: Update sphinx requirement from 7.1.0 to 7.2.2 ([`9a43183`](https://github.com/mraniki/cefi/commit/9a43183c91858612a11b3f9e9547d521f82d44f4))
+
+### Update
+
+* Update Requirements ([`e1475a0`](https://github.com/mraniki/cefi/commit/e1475a0529a6e6fe1fd785590eb96d1714a3298d))
+
+* :arrow_up: Dep: Update sphinx requirement from 7.1.0 to 7.2.2
+
+Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to permit the latest version.
+- [Release notes](https://github.com/sphinx-doc/sphinx/releases)
+- [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES)
+- [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.1.0...v7.2.2)
+
+---
+updated-dependencies:
+- dependency-name: sphinx
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`392d4a3`](https://github.com/mraniki/cefi/commit/392d4a3c42e34de10e42201d974161542c6234b5))
+
+
 ## v1.1.20 (2023-08-21)
 
 ### Other
