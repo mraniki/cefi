@@ -2,6 +2,29 @@
 
 
 
+## v1.1.23 (2023-08-24)
+
+### Other
+
+* Merge pull request #25 from mraniki/dev ([`1da6c66`](https://github.com/mraniki/cefi/commit/1da6c667c23585fed14807e8e11205eca1f44456))
+
+### Update
+
+* Update Requirements ([`c67c30c`](https://github.com/mraniki/cefi/commit/c67c30c24c3ec5ce565e8133de2d2c451ad1b64d))
+
+### ⬆️
+
+* ⬆️ 📝 ([`ba763be`](https://github.com/mraniki/cefi/commit/ba763be73ff6f7a9d71593cb4db3897be8c256ac))
+
+### 👷
+
+* 👷 CI cleanup ([`6906d69`](https://github.com/mraniki/cefi/commit/6906d690c334270ac9d757ef9173a745c95b21a4))
+
+### 🔥
+
+* 🔥 cleanup ([`9c7ee51`](https://github.com/mraniki/cefi/commit/9c7ee51b77721fcb72992b4d25ebb1280436fff0))
+
+
 ## v1.1.22 (2023-08-24)
 
 ### Update
