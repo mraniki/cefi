@@ -2,6 +2,19 @@
 
 
 
+## v1.1.24 (2023-08-28)
+
+### Other
+
+* Merge pull request #27 from mraniki/dev
+
+🐛 📝  extension error ([`4e5f11f`](https://github.com/mraniki/cefi/commit/4e5f11fa32670cefd768c0be22769cd064c0c34f))
+
+### 🐛
+
+* 🐛 📝  extension error ([`bd77653`](https://github.com/mraniki/cefi/commit/bd77653fca29d0fdfefae4a7586202850371375b))
+
+
 ## v1.1.23 (2023-08-24)
 
 ### Other
