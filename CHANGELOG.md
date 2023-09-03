@@ -2,6 +2,17 @@
 
 
 
+## v1.1.28 (2023-09-03)
+
+### Other
+
+* Merge pull request #28 from mraniki/renovate/sphinx-7.x
+
+⬆️ 🛠️(deps): update dependency sphinx to v7.2.5 ([`b1b241a`](https://github.com/mraniki/cefi/commit/b1b241ad4aae35ae9d50c5c523ee7b0bd67e63a0))
+
+* Merge branch &#39;main&#39; into renovate/sphinx-7.x ([`38796b1`](https://github.com/mraniki/cefi/commit/38796b159b6ba8c951047fb29954c89cd3e7a4b0))
+
+
 ## v1.1.27 (2023-09-01)
 
 ### Other
@@ -14,9 +25,13 @@
 
 * Update Requirements ([`63ea682`](https://github.com/mraniki/cefi/commit/63ea68265fa2b4687a8ede018157821b1ef8431c))
 
+* Update Requirements ([`7d1a1a1`](https://github.com/mraniki/cefi/commit/7d1a1a1357646ec71afca9a33378c926c207cd08))
+
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.287,&lt;0.0.288 ([`67d27a2`](https://github.com/mraniki/cefi/commit/67d27a265dfff8d44bd8e0833bf560552bf57470))
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.2.5 ([`9419799`](https://github.com/mraniki/cefi/commit/9419799f86fd6cca19f73272317a519bf258b474))
 
 
 ## v1.1.26 (2023-08-30)
