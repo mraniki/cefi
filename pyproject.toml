@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "cefi"
-version = "1.1.26"
+version = "1.1.27"
 description = "A python library, to interact with CCXT crypto exchange"
 authors = ["mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
@@ -31,7 +31,7 @@ ccxt = "^4.0.0"
 
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = "^8.0.7"
-ruff = ">=0.0.286,<0.0.287"
+ruff = ">=0.0.287,<0.0.288"
 
 
 [tool.ruff]
