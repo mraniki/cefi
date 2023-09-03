@@ -24,14 +24,15 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-dynaconf = "^3.1.12"
-loguru = ">=0.6,<0.8"
-ccxt = "^4.0.0"
+dynaconf = ">=3.1.12"
+loguru = ">=0.6"
+ccxt = ">=4.0.19"
 
 
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = "^8.0.7"
-ruff = ">=0.0.287,<0.0.288"
+ruff = ">=0.0.287"
+
 
 
 [tool.ruff]
