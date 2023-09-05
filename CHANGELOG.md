@@ -2,6 +2,27 @@
 
 
 
+## v1.1.29 (2023-09-05)
+
+### Other
+
+* Merge pull request #32 from mraniki/dev
+
+Merge ([`b7c23ab`](https://github.com/mraniki/cefi/commit/b7c23abcf6aaacebc233f9248fc25fef517f1682))
+
+* Merge branch &#39;main&#39; into dev ([`75ba9e1`](https://github.com/mraniki/cefi/commit/75ba9e1c112f6005dae7fb0f8ba42c195c646f25))
+
+* Merge pull request #31 from mraniki/main
+
+Merge ([`03377bd`](https://github.com/mraniki/cefi/commit/03377bdd3bd7f7f137e858646ffd5f4f524ad76b))
+
+* Merge branch &#39;dev&#39; into main ([`9a7c629`](https://github.com/mraniki/cefi/commit/9a7c629818d1a4b5e43aba3c7fba87d1d61e52f7))
+
+### Update
+
+* Update Requirements ([`3d443a9`](https://github.com/mraniki/cefi/commit/3d443a96878f7296a6f5f1d3fdd9d47f83bd55c6))
+
+
 ## v1.1.28 (2023-09-03)
 
 ### Other
@@ -21,9 +42,30 @@
 
 ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.287,&lt;0.0.288 ([`7e71f49`](https://github.com/mraniki/cefi/commit/7e71f49361e81dbc03dca4725b8d43bc27602e84))
 
+* Merge pull request #29 from mraniki/dependabot/pip/dev/sphinx-7.2.5
+
+⬆️ 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5 ([`07a2719`](https://github.com/mraniki/cefi/commit/07a2719e712558b5f783ca136b2a51d0107aaa3b))
+
 ### Update
 
 * Update Requirements ([`63ea682`](https://github.com/mraniki/cefi/commit/63ea68265fa2b4687a8ede018157821b1ef8431c))
+
+* Update Requirements ([`912659f`](https://github.com/mraniki/cefi/commit/912659f1354e16bf6a832fd05566e7797d6901de))
+
+* :arrow_up: 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5
+
+Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to permit the latest version.
+- [Release notes](https://github.com/sphinx-doc/sphinx/releases)
+- [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES)
+- [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.2.4...v7.2.5)
+
+---
+updated-dependencies:
+- dependency-name: sphinx
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://github.com/mraniki/cefi/commit/bbfa6cd1a6f8062c3e1d709861faa8609f0af4ab))
 
 * Update Requirements ([`7d1a1a1`](https://github.com/mraniki/cefi/commit/7d1a1a1357646ec71afca9a33378c926c207cd08))
 
@@ -40,6 +82,10 @@
 
 * Update README.md ([`6a00efe`](https://github.com/mraniki/cefi/commit/6a00efe6eedd493db8f3469bf7227432e203fd96))
 
+### ♻️
+
+* ♻️ ([`a3e0644`](https://github.com/mraniki/cefi/commit/a3e0644938aa9c63c998174a1571c0627d7b5621))
+
 
 ## v1.1.25 (2023-08-28)
 
@@ -49,16 +95,22 @@
 
 ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.286,&lt;0.0.287 ([`6036c66`](https://github.com/mraniki/cefi/commit/6036c6674a57b1daecbd95742a54984b37bb02d1))
 
+* Merge branch &#39;main&#39; into dev ([`58750c1`](https://github.com/mraniki/cefi/commit/58750c1a9a086d6c9f59d263e06b5d4acc2cb896))
+
 
 ## v1.1.24 (2023-08-28)
 
 ### Other
+
+* Merge branch &#39;main&#39; into dev ([`acb42a7`](https://github.com/mraniki/cefi/commit/acb42a7556140fc1254ee59fb3ed01ae6253ec6b))
 
 * Merge pull request #27 from mraniki/dev
 
 🐛 📝  extension error ([`4e5f11f`](https://github.com/mraniki/cefi/commit/4e5f11fa32670cefd768c0be22769cd064c0c34f))
 
 ### Update
+
+* Update Requirements ([`fbb5b97`](https://github.com/mraniki/cefi/commit/fbb5b9764023263422d5e23f21c8e48bae42c4e6))
 
 * Update Requirements ([`b4e5959`](https://github.com/mraniki/cefi/commit/b4e5959b6db6de0bcee4bb4be0674ff016fb28fd))
 

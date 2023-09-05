@@ -1,4 +1,4 @@
-__version__ = "1.1.28"
+__version__ = "1.1.29"
 
 from cefi.config import settings
 from cefi.main import CexExchange
