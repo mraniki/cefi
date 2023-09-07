@@ -6,9 +6,9 @@ from .config import settings
 class CexExchange:
     """
     CEX Object to support CEX
-    via CCXT library 
+    via CCXT library
     https://github.com/ccxt/ccxt
-    
+
     Args:
         None
 
@@ -24,7 +24,6 @@ class CexExchange:
 
         """
 
-
         if settings.cex_name:
             client = getattr(ccxt, settings.cex_name)
             self.cex = client(
@@ -37,7 +36,7 @@ class CexExchange:
                         "defaultType": settings.cex_defaulttype,
                     },
                 }
-            ) 
+            )
             if settings.cex_testmode:
                 self.cex.set_sandbox_mode("enabled")
             self.commands = settings.ccxt_commands
@@ -46,7 +45,7 @@ class CexExchange:
 
     async def get_info(self):
         """
-        Retrieves information about the exchange 
+        Retrieves information about the exchange
         and the account.
 
         :return: A formatted string containing
@@ -56,7 +55,6 @@ class CexExchange:
         # account_info = self.cex.fetchAccounts().get('main')
         # method not implemented yet
         return f"💱 {self.exchange_name}\n🪪 {self.account}"
-
 
     async def get_help(self):
         """
@@ -107,11 +105,13 @@ class CexExchange:
         filtered_balance = {
             k: v for k, v in raw_balance.items() if v is not None and v > 0
         }
-        balance = "🏦 Balance\n" + "".join(
-            f"{iterator}: {value} \n" for iterator, value in filtered_balance.items()
-        )
-        if not balance:
-            balance += "No Balance"
+        if filtered_balance:
+            balance = "🏦 Balance\n" + "".join(
+                f"{iterator}: {value} \n"
+                for iterator, value in filtered_balance.items()
+            )
+        else:
+            balance = "🏦 No Balance"
         return balance
 
     async def get_account_position(self):
