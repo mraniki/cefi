@@ -102,17 +102,19 @@ class CexExchange:
 
         """
         raw_balance = self.cex.fetch_free_balance()
-        filtered_balance = {
-            k: v for k, v in raw_balance.items() if v is not None and v > 0
-        }
-        if filtered_balance:
-            balance = "🏦 Balance\n" + "".join(
+        return (
+            "🏦 Balance\n"
+            + "".join(
                 f"{iterator}: {value} \n"
                 for iterator, value in filtered_balance.items()
             )
-        else:
-            balance = "🏦 No Balance"
-        return balance
+            if (
+                filtered_balance := {
+                    k: v for k, v in raw_balance.items() if v is not None and v > 0
+                }
+            )
+            else "🏦 No Balance"
+        )
 
     async def get_account_position(self):
         """
