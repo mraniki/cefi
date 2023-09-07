@@ -19,7 +19,12 @@ VALUE = "On default"
 # Module Enable/Disable
 cex_enabled = false
 # Help Message
-ccxt_commands = "🎯 BUY BTCUSDT\n🎯 /q BTCUSDT\n🏦 /bal\n🏦 /pos\n"
+ccxt_commands = """
+🎯 BUY BTCUSDT
+🎯 /q BTCUSDT
+🏦 /bal
+🏦 /pos
+"""
 # CCXT Parameters to connect with 
 # the exchange
 cex_name = ""
