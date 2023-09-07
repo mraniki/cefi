@@ -2,6 +2,33 @@
 
 
 
+## v1.1.31 (2023-09-07)
+
+### Other
+
+* Merge pull request #33 from mraniki/dev
+
+♻️ ([`5341846`](https://github.com/mraniki/cefi/commit/5341846e02af77ee9f0507dd73c41246f6a28fb8))
+
+* Merge pull request #34 from mraniki/sourcery/dev
+
+♻️ (Sourcery refactored) ([`b23995a`](https://github.com/mraniki/cefi/commit/b23995aebeb37b825f27f0940610f3f19ecec7c6))
+
+* &#39;Refactored by Sourcery&#39; ([`31e458c`](https://github.com/mraniki/cefi/commit/31e458c82f6c63578851995624c29b9b32dfb903))
+
+### Update
+
+* Update Requirements ([`bc6bf51`](https://github.com/mraniki/cefi/commit/bc6bf513efbeaaf4334074b4ebc49404968cb386))
+
+### ♻️
+
+* ♻️ ([`bbf2bcc`](https://github.com/mraniki/cefi/commit/bbf2bcccac531782cf1cb7bc76be6194fbe6fb37))
+
+### ⬆️
+
+* ⬆️ ([`051f371`](https://github.com/mraniki/cefi/commit/051f3712a88051ec68bad1020ed154734dd44bdb))
+
+
 ## v1.1.30 (2023-09-06)
 
 ### Update
