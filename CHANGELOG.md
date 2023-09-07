@@ -2,6 +2,19 @@
 
 
 
+## v1.1.32 (2023-09-07)
+
+### Other
+
+* Merge pull request #35 from mraniki/dev
+
+Update README.md ([`1aec7bb`](https://github.com/mraniki/cefi/commit/1aec7bbe726489cfe1ae81a558c2996497c82c61))
+
+### Update
+
+* Update README.md ([`bb17200`](https://github.com/mraniki/cefi/commit/bb17200491e9f41eaf3f42f570fdb4b52fa55030))
+
+
 ## v1.1.31 (2023-09-07)
 
 ### Other
