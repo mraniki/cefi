@@ -2,6 +2,23 @@
 
 
 
+## v1.1.35 (2023-09-09)
+
+### Other
+
+* Merge pull request #36 from mraniki/dev
+
+👷 CI Change ([`0d26851`](https://github.com/mraniki/cefi/commit/0d26851682e7255be0d34506769b3feca1191194))
+
+### Update
+
+* Update Requirements ([`1c92709`](https://github.com/mraniki/cefi/commit/1c9270995f4e302a9c5f023a20e52ae5411e0c55))
+
+### 👷
+
+* 👷 CI Change ([`2819fb3`](https://github.com/mraniki/cefi/commit/2819fb3b9a7591d55c17321b401e9ffc7171e2f4))
+
+
 ## v1.1.34 (2023-09-07)
 
 ### Update
