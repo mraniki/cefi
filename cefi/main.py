@@ -2,7 +2,7 @@ import ccxt
 
 from .config import settings
 
-
+ 
 class CexExchange:
     """
     CEX Object to support CEX
@@ -23,7 +23,8 @@ class CexExchange:
         CEX exchange support by CCXT library
 
         """
-
+        #for exchange in settings.exchanges:
+        #exchange['cex_name']
         if settings.cex_name:
             client = getattr(ccxt, settings.cex_name)
             self.cex = client(

@@ -38,6 +38,10 @@ cex_defaulttype = "SPOT"
 # Order type: Market, Limit, etc.
 cex_ordertype = "MARKET"
 
+exchanges = [
+    { cex_name ="binance", cex_api='', cex_secret="", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
+    { cex_name ="huobi", cex_api='',cex_secret="", cex_password = "", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
+    ]
 # Trading % of your position
 # to risk per order
 # 10 = 10% of the position
