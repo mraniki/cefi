@@ -38,6 +38,8 @@ cex_defaulttype = "SPOT"
 # Order type: Market, Limit, etc.
 cex_ordertype = "MARKET"
 
+# CCXT Parameters to connect
+# to 1 or more exchanges
 exchanges = [
     { cex_name ="binance", cex_api='', cex_secret="", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
     { cex_name ="huobi", cex_api='',cex_secret="", cex_password = "", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
