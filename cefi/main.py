@@ -164,13 +164,16 @@ class CexExchange:
         #         }
         #         if filtered_balance:
         #             balance_str = "".join(
-        #                 f"{iterator}: {value} \n" for iterator, value in filtered_balance.items()
+        #                 f"{iterator}: {value} \n" for iterator,
+        # value in filtered_balance.items()
         #             )
-        #             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance_str}")
+        #             balance_info.append(
+        # f"🏦 Balance for {exchange_name}:\n{balance_str}")
         #         else:
         #             balance_info.append(f"🏦 No Balance for {exchange_name}")
         #     except Exception as e:
-        #         balance_info.append(f"🏦 Error fetching balance for {exchange_name} - {e}")
+        #         balance_info.append(
+        # f"🏦 Error fetching balance for {exchange_name} - {e}")
         # return '\n'.join(balance_info)
 
         raw_balance = self.cex.fetch_free_balance()
