@@ -28,26 +28,36 @@ ccxt_commands = """
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-[default.exchanges.binance]
-cex_name ="binance"
+[default.exchanges]
+cex_name = ""
 cex_api=""
 cex_secret=""
 cex_testmode = true
-cex_defaulttype = "SPOT"
-cex_ordertype = "MARKET"
+cex_defaulttype = ""
+cex_ordertype = ""
 trading_risk_amount = 10
-trading_asset = "USDT"
+trading_asset = ""
+
+# [default.exchanges.binance]
+# cex_name = "binance"
+# cex_api=""
+# cex_secret=""
+# cex_testmode = true
+# cex_defaulttype = "SPOT"
+# cex_ordertype = "MARKET"
+# trading_risk_amount = 10
+# trading_asset = "USDT"
 
 
-[default.exchanges.huobi]
-cex_name ="huobi"
-cex_api=""
-cex_secret=""
-cex_testmode = true
-cex_defaulttype = "SPOT"
-cex_ordertype = "MARKET"
-trading_risk_amount = 10
-trading_asset = "USDT"
+# [default.exchanges.huobi]
+# cex_name ="huobi"
+# cex_api=""
+# cex_secret=""
+# cex_testmode = true
+# cex_defaulttype = "SPOT"
+# cex_ordertype = "MARKET"
+# trading_risk_amount = 10
+# trading_asset = "USDT"
 
 
 
