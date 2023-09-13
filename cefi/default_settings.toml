@@ -25,48 +25,54 @@ ccxt_commands = """
 🏦 /bal
 🏦 /pos
 """
-# CCXT Parameters to connect with 
-# the exchange
-cex_name = ""
-cex_api = ""
-cex_secret = ""
-cex_password = ""
-cex_testmode = true
-
-# Default type: SPOT, FUTURE, etc.
-cex_defaulttype = "SPOT"
-# Order type: Market, Limit, etc.
-cex_ordertype = "MARKET"
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.exchanges]
 cex_name ="binance"
-cex_api=''
+cex_api=""
 cex_secret=""
 cex_testmode = true
 cex_defaulttype = "SPOT"
 cex_ordertype = "MARKET"
+trading_risk_amount = 10
+trading_asset = "USDT"
+
 
 [default.exchanges.huobi]
 cex_name ="huobi"
-cex_api=''
+cex_api=""
 cex_secret=""
 cex_testmode = true
 cex_defaulttype = "SPOT"
 cex_ordertype = "MARKET"
-
-# exchanges = [
-#     { cex_name ="binance", cex_api='', cex_secret="", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
-#     { cex_name ="huobi", cex_api='',cex_secret="", cex_password = "", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
-#     ]
-
-# Trading % of your position
-# to risk per order
-# 10 = 10% of the position
 trading_risk_amount = 10
 trading_asset = "USDT"
+
+
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###
 ########################################
+
+
+########################################
+###     NOTSUPPORTED SETTINGS        ###
+########################################
+
+# Trading % of your position
+# to risk per order
+# 10 = 10% of the position
+# trading_risk_amount = 10
+# trading_asset = "USDT"
+
+# cex_name = ""
+# cex_api = ""
+# cex_secret = ""
+# cex_password = ""
+# cex_testmode = true
+
+# # Default type: SPOT, FUTURE, etc.
+# cex_defaulttype = "SPOT"
+# # Order type: Market, Limit, etc.
+# cex_ordertype = "MARKET"

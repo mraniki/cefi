@@ -4,7 +4,7 @@ from unittest.mock import AsyncMock
 import ccxt
 import pytest
 
-from cefi import CexExchange
+from cefi import CexTrader
 from cefi.config import settings
 
 
@@ -28,45 +28,53 @@ def result_order():
         "timestamp": datetime.now(),
     }
 
- 
-@pytest.fixture(name="exchange")
+
+@pytest.fixture(name="CXTrader")
 def test_fixture():
-    return CexExchange()
+    return CexTrader()
 
 
 def test_dynaconf_is_in_testing_env_CEX():
     print(settings.VALUE)
     assert settings.VALUE == "On Testing CEX_binance"
-    assert settings.cex_name == "binance"
 
 
 @pytest.mark.asyncio
-async def test_cefi(exchange):
-    print(type(exchange))
-    result = await exchange.get_info()
+async def test_cefi(CXTrader):
+    print(type(CXTrader))
+    result = await CXTrader.get_info()
     assert "🪪" in result
     assert "💱 binance" in result
-    assert exchange is not None
-    assert isinstance(exchange, CexExchange)
-    assert callable(exchange.get_account_balance)
-    assert callable(exchange.get_account_position)
-    assert callable(exchange.execute_order)
+    assert CXTrader is not None
+    assert isinstance(CXTrader, CexTrader)
+    assert callable(CXTrader.get_account_balance)
+    assert callable(CXTrader.get_account_position)
+    assert callable(CXTrader.execute_order)
 
 
 @pytest.mark.asyncio
-async def test_help(exchange):
+async def test_help(CXTrader):
     """Test help"""
 
-    result = await exchange.get_help()
+    result = await CXTrader.get_help()
     assert result is not None
     assert "🎯" in result
     assert "🏦" in result
 
 
 @pytest.mark.asyncio
-async def test_balance(exchange):
+async def test_quote(CXTrader, caplog):
+    """Test quote"""
+    result = await CXTrader.get_quotes("BTCUSDT")
+    assert result is not None
+    assert "🏦" in result
+    assert result is not None
+
+
+@pytest.mark.asyncio
+async def test_balance(CXTrader):
     """Test balance"""
-    result = await exchange.get_account_balance()
+    result = await CXTrader.get_account_balances()
     assert result is not None
     assert "USDT" in result
 
@@ -79,37 +87,26 @@ async def test_balance(exchange):
 
 
 @pytest.mark.asyncio
-async def test_position_error(exchange, caplog):
+async def test_position_error(CXTrader, caplog):
     """Test position"""
-    exchange.get_account_position = AsyncMock()
-    await exchange.get_account_position("/pos")
-    exchange.get_account_position.assert_awaited_once()
+    CXTrader.get_account_positions = AsyncMock()
+    await CXTrader.get_account_positions("/pos")
+    CXTrader.get_account_positions.assert_awaited_once()
 
 
 @pytest.mark.asyncio
-async def test_get_account_pnl(exchange):
+async def test_get_account_pnl(CXTrader):
     """Test pnl"""
 
-    result = await exchange.get_account_pnl()
+    result = await CXTrader.get_account_pnl()
     assert result == 0
 
 
 @pytest.mark.asyncio
-async def test_quote(exchange, caplog):
-    """Test quote"""
-    result = await exchange.get_quote("BTCUSDT")
-    assert result is not None
-    assert "🏦" in result
-    assert result is not None
-
-
-@pytest.mark.asyncio
-async def test_execute_order(exchange, order_parsed):
-    result = await exchange.execute_order(order_parsed)
+async def test_execute_order(CXTrader, order_parsed):
+    """Test order"""
+    result = await CXTrader.execute_order(order_parsed)
     print(result)
     assert result is not None
     assert "⬆️" in result
     assert "ℹ️" in result
-    #assert "⚠️ order execution" in result
-
-

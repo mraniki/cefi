@@ -1,11 +1,13 @@
 import ccxt
+from loguru import logger
 
 from .config import settings
 
 
-class CexExchange:
+class CexTrader:
     """
-    CEX Object to support CEX
+    CEX Object to support CEFI
+    exchange and trading
     via CCXT library
     https://github.com/ccxt/ccxt
 
@@ -19,59 +21,54 @@ class CexExchange:
 
     def __init__(self):
         """
-        Initialize the CEX object to interact with
-        CEX exchange support by CCXT library
+        Initialize the CexTrader object
 
         """
 
         self.commands = settings.ccxt_commands
-        self.cex = None
-        self.cex_objects = []
+        self.cex_info = []
 
-        if settings.exchanges:
-
-            for exchange in settings.exchanges:
-                client = getattr(ccxt, exchange["cex_name"])
-                cex = client(
-                    {
-                        "apiKey": exchange["cex_api"],
-                        "secret": exchange["cex_secret"],
-                        "password": (exchange["cex_password"] or ""),
-                        "enableRateLimit": True,
-                        "options": {
-                            "defaultType": exchange["cex_defaulttype"],
-                        },
-                    }
-                )
-                if exchange["cex_testmode"]:
-                    cex.set_sandbox_mode("enabled")
-                account = cex.uid
-                exchange_name = cex.id
-                self.cex_objects.append(
-                    {
-                        "cex": cex,
-                        "account": account,
-                        "exchange_name": exchange_name,
-                    }
-                )
-        elif settings.cex_name:
-            client = getattr(ccxt, settings.cex_name)
-            self.cex = client(
+        for exchange in settings.exchanges:
+            client = getattr(ccxt, exchange["cex_name"])
+            cx_client = client(
                 {
-                    "apiKey": settings.cex_api,
-                    "secret": settings.cex_secret,
-                    "password": (settings.cex_password or ""),
+                    "apiKey": exchange["cex_api"],
+                    "secret": exchange["cex_secret"],
+                    "password": (exchange["cex_password"] or ""),
                     "enableRateLimit": True,
                     "options": {
-                        "defaultType": settings.cex_defaulttype,
+                        "defaultType": exchange["cex_defaulttype"],
                     },
                 }
             )
-            if settings.cex_testmode:
-                self.cex.set_sandbox_mode("enabled")
+            if exchange["cex_testmode"]:
+                cx_client.set_sandbox_mode("enabled")
+            account = cx_client.uid
+            exchange_name = cx_client.id
+            trading_asset = settings.trading_asset
+            trading_risk_amount = settings.trading_risk_amount
+            exchange_defaulttype = settings.cex_defaulttype
+            exchange_ordertype = settings.cex_ordertype
+            self.cex_info.append(
+                {
+                    "cex": cx_client,
+                    "account": account,
+                    "exchange_name": exchange_name,
+                    "exchange_defaulttype": exchange_defaulttype,
+                    "exchange_ordertype": exchange_ordertype,
+                    "trading_asset": trading_asset,
+                    "trading_risk_amount": trading_risk_amount,
+                }
+            )
 
-            self.account = self.cex.uid
-            self.exchange_name = self.cex.id
+    async def get_help(self):
+        """
+        Get the help information for the current instance.
+
+        Returns:
+            A string containing the available commands.
+        """
+        return f"{self.commands}\n"
 
     async def get_info(self):
         """
@@ -83,78 +80,70 @@ class CexExchange:
         :rtype: str
         """
 
-        if self.cex_objects:
-            info = ""
-            for cex_object in self.cex_objects:
-                exchange_name = cex_object["exchange_name"]
-                account = cex_object["account"]
-                info += f"💱 {exchange_name}\n🪪 {account}\n\n"
-            return info.strip()
+        info = ""
+        for cex in self.cex_info:
+            exchange_name = cex["exchange_name"]
+            account = cex["account"]
+            info += f"💱 {exchange_name}\n🪪 {account}\n\n"
+        return info.strip()
 
-        else:
-            # account_info = self.cex.fetchAccounts().get('main')
-            # above method is not yet implemented in CCXT
-            return f"💱 {self.exchange_name}\n🪪 {self.account}"
-
-    async def get_help(self):
+    async def get_quotes(self, symbol):
         """
-        Get the help information for the current instance.
-
-        Returns:
-            A string containing the available commands.
-        """
-        return f"{self.commands}\n"
-
-    async def get_quote(self, symbol):
-        """
-        return main asset balance.
+        Return a list of quotes.
 
         Args:
             symbol
 
         Returns:
+            quotes
+        """
+
+        quotes = []
+        for cex in self.cex_info:
+            cex = cex["cex"]
+            exchange_name = cex["exchange_name"]
+            try:
+                quote = await self.get_quote(cex, symbol)
+                quotes.append(f"🏦 {exchange_name}: {quote}")
+            except Exception as e:
+                quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
+        return "\n".join(quotes)
+
+    async def get_quote(cex, symbol):
+        """
+        Return a quote for a symbol
+
+
+        Args:
+            cex
+            symbol
+
+        Returns:
             quote
         """
-        if self.cex_objects:
-            quotes = []
-            for cex_object in self.cex_objects:
-                cex = cex_object["cex"]
-                exchange_name = cex_object["exchange_name"]
-                try:
-                    ticker = cex.fetchTicker(symbol)
-                    last_price = ticker.get("last")
-                    quotes.append(f"🏦 {exchange_name}: {last_price}")
-                except Exception as e:
-                    quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
-            return "\n".join(quotes)
-        else:
-            return f"🏦 {self.cex.fetchTicker(symbol).get('last')}"
+        ticker = cex.fetchTicker(symbol)
+        return ticker.get("last") or ""
 
-    async def get_trading_asset_balance(self):
+    async def get_account_balances(self):
         """
-        return main asset balance.
+        Return account balance.
 
         Args:
             None
 
         Returns:
             balance
-        """
-        if self.cex_objects:
-            balances = []
-            for cex_object in self.cex_objects:
-                cex = cex_object["cex"]
-                exchange_name = cex_object["exchange_name"]
-                try:
-                    balance = cex.fetchBalance()[f"{settings.trading_asset}"]["free"]
-                    balances.append(f"🏦 {exchange_name}: {balance}")
-                except Exception as e:
-                    balances.append(f"🏦 {exchange_name}: Error fetching balance - {e}")
-            return "\n".join(balances)
-        else:
-            return self.cex.fetchBalance()[f"{settings.trading_asset}"]["free"]
 
-    async def get_account_balance(self):
+        """
+        balance_info = []
+        for cex in self.cex_info:
+            cex = cex["cex"]
+            exchange_name = cex["exchange_name"]
+            balance = self.get_account_balance(cex)
+            balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
+        return "\n".join(balance_info)
+
+    async def get_account_balance(cex):
         """
         return account balance.
 
@@ -165,48 +154,20 @@ class CexExchange:
             balance
 
         """
-        if self.cex_objects:
-            balance_info = []
-            for cex_object in self.cex_objects:
-                cex = cex_object["cex"]
-                exchange_name = cex_object["exchange_name"]
-                try:
-                    raw_balance = cex.fetch_free_balance()
-                    filtered_balance = {
-                        k: v for k, v in raw_balance.items() if v is not None and v > 0
-                    }
-                    if filtered_balance:
-                        balance_str = "".join(
-                            f"{iterator}: {value} \n"
-                            for iterator, value in filtered_balance.items()
-                        )
-                        balance_info.append(
-                            f"🏦 Balance for {exchange_name}:\n{balance_str}"
-                        )
-                    else:
-                        balance_info.append(f"🏦 No Balance for {exchange_name}")
-                except Exception as e:
-                    balance_info.append(
-                        f"🏦 Error fetching balance for {exchange_name} - {e}"
-                    )
-            return "\n".join(balance_info)
-        else:
-            raw_balance = self.cex.fetch_free_balance()
-            return (
-                "🏦 Balance\n"
-                + "".join(
-                    f"{iterator}: {value} \n"
-                    for iterator, value in filtered_balance.items()
-                )
-                if (
-                    filtered_balance := {
-                        k: v for k, v in raw_balance.items() if v is not None and v > 0
-                    }
-                )
-                else "🏦 No Balance"
+        raw_balance = cex.fetch_free_balance()
+        filtered_balance = {
+            k: v for k, v in raw_balance.items() if v is not None and v > 0
+        }
+        if filtered_balance:
+            balance_str = "".join(
+                f"{iterator}: {value} \n"
+                for iterator, value in filtered_balance.items()
             )
+            return f"{balance_str}"
+        else:
+            return "No Balance"
 
-    async def get_account_position(self, cex_object=None):
+    async def get_account_positions(self):
         """
         return account position.
 
@@ -217,36 +178,31 @@ class CexExchange:
             position
 
         """
-        if self.cex_objects:
-            position_info = []
-            for cex_object in self.cex_objects:
-                cex = cex_object['cex']
-                exchange_name = cex_object['exchange_name']
-                try:
-                    positions = cex.fetch_positions()
-                    if positions:
-                        position_str = "".join(
-                            f"{position['symbol']}: {position['amount']} \n"
-                        for position in positions
-                        )
-                        position_info.append(f"🏦 Positions for {exchange_name}:\n{position_str}")
-                    else:
-                        position_info.append(f"🏦 No positions for {exchange_name}")
-                except Exception as e:
-                    position_info.append(f"🏦 Error fetching positions for {exchange_name} - {e}")
-            return '\n'.join(position_info)
-        else:
-            open_positions = self.cex.fetch_positions()
-            open_positions = [p for p in open_positions if p["type"] == "open"]
-            position = "📊 Position\n" + str(open_positions)
-            position += str(
-                await self.cex.fetch_balance(
-                    {
-                        "type": "margin",
-                    }
-                )
-            )
-            return position
+
+        position_info = []
+        for cex in self.cex_info:
+            cex = cex["cex"]
+            exchange_name = cex["exchange_name"]
+            positions = self.get_account_position(cex)
+            position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
+        return "\n".join(position_info)
+
+    async def get_account_position(cex):
+        """
+        return account position.
+
+        Args:
+            None
+
+        Returns:
+            position
+
+        """
+        positions = cex.fetch_positions()
+        positions = [p for p in positions if p["type"] == "open"]
+        if positions:
+            return f"{positions}"
+        return "No Position"
 
     async def get_account_pnl(self):
         """
@@ -277,73 +233,56 @@ class CexExchange:
         """
         action = order_params.get("action")
         instrument = order_params.get("instrument")
-        quantity = order_params.get("quantity", settings.trading_risk_amount)
-
+        confirmation_info = []
         if not action or not instrument:
-            return "⚠️ Missing parameters"
+            return
 
-        if self.cex_objects:
-            for cex_object in self.cex_objects:
-                cex = cex_object['cex']
-                order = self.cex.send_order(cex_object['cex'], order_params)
-        else:
-            order = self.cex.send_order(self.cex, order_params)
+        for cex in self.cex_info:
+            cex = cex["cex"]
+            exchange_name = cex["exchange_name"]
+            order_type = cex["exchange_ordertype"]
+            try:
+                if await self.get_balance(cex) == "No Balance":
+                    logger.debug("⚠️ Check Balance")
+                    continue
+                asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
+                asset_out_balance = float(
+                    cex.fetchBalance()[f"{cex['trading_asset']}"]["free"]
+                )
 
+                if not asset_out_balance:
+                    continue
 
-    async def send_order(self, cex=None, order_params):
-        """
-        Send order
+                quantity = order_params.get("quantity", cex["trading_risk_amount"])
+                transaction_amount = (
+                    asset_out_balance * (float(quantity) / 100) / asset_out_quote
+                )
 
-        Args:
-            cex (CexExchange)
-            order_params (dict)
-            
-        Returns:
-            trade_confirmation
+                trade = cex.create_order(
+                    instrument,
+                    order_type,
+                    action,
+                    transaction_amount,
+                    # price=None
+                )
 
-        """
+                if not trade:
+                    continue
 
-        action = order_params.get("action")
-        instrument = order_params.get("instrument")
-        quantity = order_params.get("quantity", settings.trading_risk_amount)
+                trade_confirmation = (
+                    f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
+                )
+                trade_confirmation += f"➕ Size: {round(trade['amount'], 4)}\n"
+                trade_confirmation += f"⚫️ Entry: {round(trade['price'], 4)}\n"
+                trade_confirmation += f"ℹ️ {trade['id']}\n"
+                trade_confirmation += f"🗓️ {trade['datetime']}"
+                if trade_confirmation:
+                    confirmation_info.append(f"{exchange_name}:\n{trade_confirmation}")
+                else:
+                    confirmation_info.append(f"Error executing {exchange_name}")
 
-        try:
-            if self.cex_objects:
-                self.cex=cex
+            except Exception as e:
+                confirmation_info.append(f"{exchange_name}: {e}")
+                continue
 
-            if await self.get_account_balance() == "No Balance":
-                return "⚠️ Check Balance"
-
-            asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
-            asset_out_balance = await self.get_trading_asset_balance()
-
-            if not asset_out_balance:
-                return
-
-            transaction_amount = (
-                asset_out_balance * (float(quantity) / 100) / asset_out_quote
-            )
-
-            trade = cex.create_order(
-                instrument,
-                settings.cex_ordertype,
-                action,
-                transaction_amount,
-                # price=None
-            )
-
-            if not trade:
-                return
-
-            trade_confirmation = (
-                f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
-            )
-            trade_confirmation += f"➕ Size: {round(trade['amount'], 4)}\n"
-            trade_confirmation += f"⚫️ Entry: {round(trade['price'], 4)}\n"
-            trade_confirmation += f"ℹ️ {trade['id']}\n"
-            trade_confirmation += f"🗓️ {trade['datetime']}"
-
-            return trade_confirmation
-
-        except Exception as e:
-            return f"⚠️ order execution: {e}"
+        return confirmation_info
