@@ -109,7 +109,7 @@ class CexTrader:
                 quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
         return "\n".join(quotes)
 
-    async def get_quote(cex, symbol):
+    async def get_quote(self, symbol):
         """
         Return a quote for a symbol
 
@@ -121,7 +121,7 @@ class CexTrader:
         Returns:
             quote
         """
-        ticker = cex.fetchTicker(symbol)
+        ticker = self.fetchTicker(symbol)
         return ticker.get("last") or ""
 
     async def get_account_balances(self):
@@ -143,7 +143,7 @@ class CexTrader:
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
 
-    async def get_account_balance(cex):
+    async def get_account_balance(self):
         """
         return account balance.
 
@@ -154,11 +154,10 @@ class CexTrader:
             balance
 
         """
-        raw_balance = cex.fetch_free_balance()
-        filtered_balance = {
+        raw_balance = self.fetch_free_balance()
+        if filtered_balance := {
             k: v for k, v in raw_balance.items() if v is not None and v > 0
-        }
-        if filtered_balance:
+        }:
             balance_str = "".join(
                 f"{iterator}: {value} \n"
                 for iterator, value in filtered_balance.items()
@@ -187,7 +186,7 @@ class CexTrader:
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
 
-    async def get_account_position(cex):
+    async def get_account_position(self):
         """
         return account position.
 
@@ -198,9 +197,8 @@ class CexTrader:
             position
 
         """
-        positions = cex.fetch_positions()
-        positions = [p for p in positions if p["type"] == "open"]
-        if positions:
+        positions = self.fetch_positions()
+        if positions := [p for p in positions if p["type"] == "open"]:
             return f"{positions}"
         return "No Position"
 
