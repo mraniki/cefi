@@ -40,10 +40,27 @@ cex_ordertype = "MARKET"
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-exchanges = [
-    { cex_name ="binance", cex_api='', cex_secret="", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
-    { cex_name ="huobi", cex_api='',cex_secret="", cex_password = "", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
-    ]
+[default.exchanges]
+cex_name ="binance"
+cex_api=''
+cex_secret=""
+cex_testmode = true
+cex_defaulttype = "SPOT"
+cex_ordertype = "MARKET"
+
+[default.exchanges.huobi]
+cex_name ="huobi"
+cex_api=''
+cex_secret=""
+cex_testmode = true
+cex_defaulttype = "SPOT"
+cex_ordertype = "MARKET"
+
+# exchanges = [
+#     { cex_name ="binance", cex_api='', cex_secret="", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
+#     { cex_name ="huobi", cex_api='',cex_secret="", cex_password = "", cex_testmode = true, cex_defaulttype = "SPOT", cex_ordertype = "MARKET"},
+#     ]
+
 # Trading % of your position
 # to risk per order
 # 10 = 10% of the position
