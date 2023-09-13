@@ -28,7 +28,7 @@ ccxt_commands = """
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-[default.exchanges]
+[default.exchanges.binance]
 cex_name ="binance"
 cex_api=""
 cex_secret=""

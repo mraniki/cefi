@@ -29,6 +29,7 @@ class CexTrader:
         self.cex_info = []
 
         for exchange in settings.exchanges:
+            logger.info(f"Loading {exchange}")
             client = getattr(ccxt, exchange["cex_name"])
             cx_client = client(
                 {
