@@ -30,8 +30,8 @@ class CexTrader:
         logger.info(f"Loading {settings.exchanges}")
         for exchange in settings.exchanges:
             logger.info(f"Loading {exchange}")
-            logger.info(f"Loading {exchange[0]}")
-            client = getattr(ccxt, [exchange][0]["cex_name"])
+            logger.info(f"Loading {exchange.values()}")
+            client = getattr(ccxt, exchange.values()["cex_name"])
             cx_client = client(
                 {
                     "apiKey": exchange["cex_api"],
