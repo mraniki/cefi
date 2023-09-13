@@ -27,7 +27,7 @@ class CexTrader:
 
         self.commands = settings.ccxt_commands
         self.cex_info = []
-
+        logger.info(f"Loading {settings.exchanges}")
         for exchange in settings.exchanges:
             logger.info(f"Loading {exchange}")
             logger.info(f"Loading {settings.exchanges.cex_name}")
