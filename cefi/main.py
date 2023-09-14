@@ -259,7 +259,7 @@ class CexTrader:
                     logger.warning("⚠️ Check Balance")
                     confirmation_info.append(f"{exchange_name}:\nNo Funding")
                     continue
-                asset_out_quote = float(await get_quote(cex, instrument))
+                asset_out_quote = float(await self.get_quote(cex, instrument))
                 logger.debug("asset_out_quote {}", asset_out_quote)
                 asset_out_balance = float(
                     cex.fetchBalance()[f"{trading_asset}"]["free"]
