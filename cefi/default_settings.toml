@@ -30,8 +30,8 @@ ccxt_commands = """
 # to 1 or more exchanges
 [default.exchanges.main]
 cex_name = ""
-cex_api=""
-cex_secret=""
+cex_api= ""
+cex_secret= ""
 cex_password = ""
 cex_testmode = true
 cex_defaulttype = ""
@@ -49,7 +49,6 @@ trading_asset = "USDT"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
 
-
 # [default.exchanges.huobi]
 # cex_name ="huobi"
 # cex_api=""
@@ -61,29 +60,6 @@ trading_asset = "USDT"
 # trading_asset = "USDT"
 
 
-
 ########################################
 ###     END OF DEFAULT SETTINGS      ###
 ########################################
-
-
-########################################
-###     NOTSUPPORTED SETTINGS        ###
-########################################
-
-# Trading % of your position
-# to risk per order
-# 10 = 10% of the position
-# trading_risk_amount = 10
-# trading_asset = "USDT"
-
-# cex_name = ""
-# cex_api = ""
-# cex_secret = ""
-# cex_password = ""
-# cex_testmode = true
-
-# # Default type: SPOT, FUTURE, etc.
-# cex_defaulttype = "SPOT"
-# # Order type: Market, Limit, etc.
-# cex_ordertype = "MARKET"
