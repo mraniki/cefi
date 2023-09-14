@@ -28,11 +28,9 @@ class CexTrader:
         self.commands = settings.ccxt_commands
         exchanges = settings.exchanges
         self.cex_info = []
-        logger.debug(f"Loading {exchanges}")
         try:
             for exchange in exchanges:
                 logger.debug(f"Loading {exchange}")
-                logger.debug(f"Loading {exchanges[exchange]}")
                 client = getattr(ccxt, exchanges[exchange]["cex_name"])
                 cx_client = client(
                     {
@@ -108,11 +106,8 @@ class CexTrader:
         for item in self.cex_info:
             cex = item["cex"]
             exchange_name = item["exchange_name"]
-            try:
-                quote = await self.get_quote(cex, symbol)
-                quotes.append(f"🏦 {exchange_name}: {quote}")
-            except Exception as e:
-                quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
+            quote = await self.get_quote(cex, symbol)
+            quotes.append(f"🏦 {exchange_name}: {quote}")
         return "\n".join(quotes)
 
     async def get_quote(self, symbol):
@@ -128,8 +123,12 @@ class CexTrader:
         Returns:
             quote
         """
-        ticker = self.fetchTicker(symbol)
-        return ticker.get("last") or ""
+        try:
+            ticker = self.fetchTicker(symbol)
+            return ticker.get("last") or ""
+        except Exception as e:
+            logger.error(e)
+            return "No Quote"
 
     async def get_account_balances(self):
         """
@@ -162,16 +161,18 @@ class CexTrader:
             balance
 
         """
-        raw_balance = cx_client.fetch_free_balance()
-        if filtered_balance := {
-            k: v for k, v in raw_balance.items() if v is not None and v > 0
-        }:
-            balance_str = "".join(
-                f"{iterator}: {value} \n"
-                for iterator, value in filtered_balance.items()
-            )
-            return f"{balance_str}"
-        else:
+        try:
+            raw_balance = cx_client.fetch_free_balance()
+            if filtered_balance := {
+                k: v for k, v in raw_balance.items() if v is not None and v > 0
+            }:
+                balance_str = "".join(
+                    f"{iterator}: {value} \n"
+                    for iterator, value in filtered_balance.items()
+                )
+                return f"{balance_str}"
+        except Exception as e:
+            logger.error(e)
             return "No Balance"
 
     async def get_account_positions(self):
@@ -206,10 +207,13 @@ class CexTrader:
             position
 
         """
-        positions = cx_client.fetch_positions()
-        if positions := [p for p in positions if p["type"] == "open"]:
-            return f"{positions}"
-        return "No Position"
+        try:
+            positions = cx_client.fetch_positions()
+            if positions := [p for p in positions if p["type"] == "open"]:
+                return f"{positions}"
+        except Exception as e:
+            logger.error(e)
+            return "No Position"
 
     async def get_account_pnl(self):
         """
@@ -249,7 +253,7 @@ class CexTrader:
             exchange_name = item["exchange_name"]
             order_type = item["exchange_ordertype"]
             try:
-                if await self.get_balance(cex) == "No Balance":
+                if await self.get_account_balance(cex) == "No Balance":
                     logger.debug("⚠️ Check Balance")
                     continue
                 asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
@@ -279,8 +283,10 @@ class CexTrader:
                 trade_confirmation = (
                     f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
                 )
-                trade_confirmation += f"➕ Size: {round(trade['amount'], 4)}\n"
-                trade_confirmation += f"⚫️ Entry: {round(trade['price'], 4)}\n"
+                trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
+                trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
+                trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
+                trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
                 trade_confirmation += f"ℹ️ {trade['id']}\n"
                 trade_confirmation += f"🗓️ {trade['datetime']}"
                 if trade_confirmation:
