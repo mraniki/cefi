@@ -197,7 +197,7 @@ class CexTrader:
 
     async def get_account_position(self, cx_client):
         """
-        return account position.
+        Return account position.
         of a given exchange
 
         Args:
@@ -217,7 +217,7 @@ class CexTrader:
 
     async def get_account_pnl(self):
         """
-        return account pnl.
+        Return account pnl.
 
         Args:
             None
