@@ -81,7 +81,7 @@ async def test_balance(CXTrader):
 
 @pytest.mark.asyncio
 async def test_position(CXTrader):
-    result = await CXTrader.get_account_position()
+    result = await CXTrader.get_account_positions()
     assert "📊 Position" in result
 
 
