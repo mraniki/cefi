@@ -29,40 +29,43 @@ class CexTrader:
         exchanges = settings.exchanges
         self.cex_info = []
         logger.debug(f"Loading {exchanges}")
-        for exchange in exchanges:
-            logger.debug(f"Loading {exchange}")
-            logger.debug(f"Loading {exchanges[exchange]}")
-            client = getattr(ccxt, exchanges[exchange]["cex_name"])
-            cx_client = client(
-                {
-                    "apiKey": exchanges[exchange]["cex_api"],
-                    "secret": exchanges[exchange]["cex_secret"],
-                    "password": (exchanges[exchange]["cex_password"]),
-                    "enableRateLimit": True,
-                    "options": {
-                        "defaultType": exchanges[exchange]["cex_defaulttype"],
-                    },
-                }
-            )
-            if exchanges[exchange]["cex_testmode"]:
-                cx_client.set_sandbox_mode("enabled")
-            account = cx_client.uid
-            exchange_name = cx_client.id
-            trading_asset = exchanges[exchange]["trading_asset"]
-            trading_risk_amount = exchanges[exchange]["trading_risk_amount"]
-            exchange_defaulttype = exchanges[exchange]["cex_defaulttype"]
-            exchange_ordertype = exchanges[exchange]["cex_ordertype"]
-            self.cex_info.append(
-                {
-                    "cex": cx_client,
-                    "account": account,
-                    "exchange_name": exchange_name,
-                    "exchange_defaulttype": exchange_defaulttype,
-                    "exchange_ordertype": exchange_ordertype,
-                    "trading_asset": trading_asset,
-                    "trading_risk_amount": trading_risk_amount,
-                }
-            )
+        try:
+            for exchange in exchanges:
+                logger.debug(f"Loading {exchange}")
+                logger.debug(f"Loading {exchanges[exchange]}")
+                client = getattr(ccxt, exchanges[exchange]["cex_name"])
+                cx_client = client(
+                    {
+                        "apiKey": exchanges[exchange]["cex_api"],
+                        "secret": exchanges[exchange]["cex_secret"],
+                        "password": (exchanges[exchange]["cex_password"]),
+                        "enableRateLimit": True,
+                        "options": {
+                            "defaultType": exchanges[exchange]["cex_defaulttype"],
+                        },
+                    }
+                )
+                if exchanges[exchange]["cex_testmode"]:
+                    cx_client.set_sandbox_mode("enabled")
+                account = cx_client.uid
+                exchange_name = cx_client.id
+                trading_asset = exchanges[exchange]["trading_asset"]
+                trading_risk_amount = exchanges[exchange]["trading_risk_amount"]
+                exchange_defaulttype = exchanges[exchange]["cex_defaulttype"]
+                exchange_ordertype = exchanges[exchange]["cex_ordertype"]
+                self.cex_info.append(
+                    {
+                        "cex": cx_client,
+                        "account": account,
+                        "exchange_name": exchange_name,
+                        "exchange_defaulttype": exchange_defaulttype,
+                        "exchange_ordertype": exchange_ordertype,
+                        "trading_asset": trading_asset,
+                        "trading_risk_amount": trading_risk_amount,
+                    }
+                )
+        except Exception as e:
+            logger.error(e)
 
     async def get_help(self):
         """
@@ -112,7 +115,7 @@ class CexTrader:
                 quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
         return "\n".join(quotes)
 
-    async def get_quote(cex, symbol):
+    async def get_quote(cx_client, symbol):
         """
         Return a quote for a symbol
         of a given exchange ccxt object
@@ -125,7 +128,7 @@ class CexTrader:
         Returns:
             quote
         """
-        ticker = cex.fetchTicker(symbol)
+        ticker = cx_client.fetchTicker(symbol)
         return ticker.get("last") or ""
 
     async def get_account_balances(self):
@@ -147,7 +150,7 @@ class CexTrader:
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
 
-    async def get_account_balance(self, cex):
+    async def get_account_balance(self, cx_client):
         """
         return account balance of
         a given ccxt exchange
@@ -159,7 +162,7 @@ class CexTrader:
             balance
 
         """
-        raw_balance = cex.fetch_free_balance()
+        raw_balance = cx_client.fetch_free_balance()
         filtered_balance = {
             k: v for k, v in raw_balance.items() if v is not None and v > 0
         }
@@ -192,7 +195,7 @@ class CexTrader:
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
 
-    async def get_account_position(self, cex):
+    async def get_account_position(self, cx_client):
         """
         return account position.
         of a given exchange
@@ -204,7 +207,7 @@ class CexTrader:
             position
 
         """
-        positions = cex.fetch_positions()
+        positions = cx_client.fetch_positions()
         positions = [p for p in positions if p["type"] == "open"]
         if positions:
             return f"{positions}"
