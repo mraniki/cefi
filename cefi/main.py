@@ -115,7 +115,7 @@ class CexTrader:
                 quotes.append(f"🏦 {exchange_name}: Error fetching quote - {e}")
         return "\n".join(quotes)
 
-    async def get_quote(cx_client, symbol):
+    async def get_quote(self, symbol):
         """
         Return a quote for a symbol
         of a given exchange ccxt object
@@ -128,7 +128,7 @@ class CexTrader:
         Returns:
             quote
         """
-        ticker = cx_client.fetchTicker(symbol)
+        ticker = self.fetchTicker(symbol)
         return ticker.get("last") or ""
 
     async def get_account_balances(self):
@@ -163,10 +163,9 @@ class CexTrader:
 
         """
         raw_balance = cx_client.fetch_free_balance()
-        filtered_balance = {
+        if filtered_balance := {
             k: v for k, v in raw_balance.items() if v is not None and v > 0
-        }
-        if filtered_balance:
+        }:
             balance_str = "".join(
                 f"{iterator}: {value} \n"
                 for iterator, value in filtered_balance.items()
@@ -208,8 +207,7 @@ class CexTrader:
 
         """
         positions = cx_client.fetch_positions()
-        positions = [p for p in positions if p["type"] == "open"]
-        if positions:
+        if positions := [p for p in positions if p["type"] == "open"]:
             return f"{positions}"
         return "No Position"
 
