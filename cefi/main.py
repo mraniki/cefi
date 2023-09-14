@@ -26,7 +26,7 @@ class CexTrader:
         """
 
         self.commands = settings.ccxt_commands
-        exchanges = settings.exchanges.cex
+        exchanges = settings.cex
         self.cex_info = []
         try:
             for exchange in exchanges:

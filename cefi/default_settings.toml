@@ -28,7 +28,7 @@ ccxt_commands = """
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-[default.exchanges.main]
+[default.cex.main]
 cex_name = ""
 cex_api= ""
 cex_secret= ""
@@ -39,7 +39,7 @@ cex_ordertype = ""
 trading_risk_amount = 10
 trading_asset = "USDT"
 
-# [default.exchanges.binance]
+# [default.cex.binance]
 # cex_name = "binance"
 # cex_api=""
 # cex_secret=""
@@ -49,7 +49,7 @@ trading_asset = "USDT"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
 
-# [default.exchanges.huobi]
+# [default.cex.huobi]
 # cex_name ="huobi"
 # cex_api=""
 # cex_secret=""
