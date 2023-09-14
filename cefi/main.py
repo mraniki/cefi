@@ -38,7 +38,7 @@ class CexTrader:
                 {
                     "apiKey": exchanges[exchange]["cex_api"],
                     "secret": exchanges[exchange]["cex_secret"],
-                    "password": (exchanges[exchange]["cex_password"] or ""),
+                    "password": (exchanges[exchange]["cex_password"]),
                     "enableRateLimit": True,
                     "options": {
                         "defaultType": exchanges[exchange]["cex_defaulttype"],
