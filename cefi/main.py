@@ -126,7 +126,7 @@ class CexTrader:
         try:
             ticker =  cx_client.fetch_ticker(symbol)
             logger.debug("ticker: {}", ticker)
-            return ticker[f"{symbol}"]['last']
+            #return ticker[f"{symbol}"]['last']
         except Exception as e:
             logger.error(e)
             return "No Quote"
