@@ -110,7 +110,7 @@ class CexTrader:
             quotes.append(f"🏦 {exchange_name}: {quote}")
         return "\n".join(quotes)
 
-    async def get_quote(self, symbol):
+    async def get_quote(self, cx_client, symbol):
         """
         Return a quote for a symbol
         of a given exchange ccxt object
@@ -124,7 +124,7 @@ class CexTrader:
             quote
         """
         try:
-            ticker = self.fetchTicker(symbol)
+            ticker = cx_client.fetchTicker(symbol)
             return ticker.get("last") or ""
         except Exception as e:
             logger.error(e)

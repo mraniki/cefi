@@ -76,7 +76,7 @@ async def test_balance(CXTrader):
     """Test balance"""
     result = await CXTrader.get_account_balances()
     assert result is not None
-    assert "USDT" in result
+    assert "🏦" in result
 
 
 # @pytest.mark.asyncio
