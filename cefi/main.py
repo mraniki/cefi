@@ -28,11 +28,10 @@ class CexTrader:
         self.commands = settings.ccxt_commands
         exchanges = settings.exchanges
         self.cex_info = []
-        logger.info(f"Loading {exchanges}")
+        logger.debug(f"Loading {exchanges}")
         for exchange in exchanges:
-            logger.info(f"Loading {exchange}")
-            logger.info(f"Loading {exchanges[exchange]}")
-            logger.info(f"Loading {exchanges[exchange]['cex_name']}")
+            logger.debug(f"Loading {exchange}")
+            logger.debug(f"Loading {exchanges[exchange]}")
             client = getattr(ccxt, exchanges[exchange]["cex_name"])
             cx_client = client(
                 {
@@ -85,9 +84,9 @@ class CexTrader:
         """
 
         info = ""
-        for cex in self.cex_info:
-            exchange_name = cex["exchange_name"]
-            account = cex["account"]
+        for item in self.cex_info:
+            exchange_name = item["exchange_name"]
+            account = item["account"]
             info += f"💱 {exchange_name}\n🪪 {account}\n\n"
         return info.strip()
 
@@ -103,9 +102,9 @@ class CexTrader:
         """
 
         quotes = []
-        for cex in self.cex_info:
-            cex = cex["cex"]
-            exchange_name = cex["exchange_name"]
+        for item in self.cex_info:
+            cex = item["cex"]
+            exchange_name = item["exchange_name"]
             try:
                 quote = await self.get_quote(cex, symbol)
                 quotes.append(f"🏦 {exchange_name}: {quote}")
@@ -141,9 +140,9 @@ class CexTrader:
 
         """
         balance_info = []
-        for cex in self.cex_info:
-            cex = cex["cex"]
-            exchange_name = cex["exchange_name"]
+        for item in self.cex_info:
+            cex = item["cex"]
+            exchange_name = item["exchange_name"]
             balance = self.get_account_balance(cex)
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
@@ -186,9 +185,9 @@ class CexTrader:
         """
 
         position_info = []
-        for cex in self.cex_info:
-            cex = cex["cex"]
-            exchange_name = cex["exchange_name"]
+        for item in self.cex_info:
+            cex = item["cex"]
+            exchange_name = item["exchange_name"]
             positions = self.get_account_position(cex)
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
@@ -244,23 +243,23 @@ class CexTrader:
         if not action or not instrument:
             return
 
-        for cex in self.cex_info:
-            cex = cex["cex"]
-            exchange_name = cex["exchange_name"]
-            order_type = cex["exchange_ordertype"]
+        for item in self.cex_info:
+            cex = item["cex"]
+            exchange_name = item["exchange_name"]
+            order_type = item["exchange_ordertype"]
             try:
                 if await self.get_balance(cex) == "No Balance":
                     logger.debug("⚠️ Check Balance")
                     continue
                 asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
                 asset_out_balance = float(
-                    cex.fetchBalance()[f"{cex['trading_asset']}"]["free"]
+                    cex.fetchBalance()[f"{item['trading_asset']}"]["free"]
                 )
 
                 if not asset_out_balance:
                     continue
 
-                quantity = order_params.get("quantity", cex["trading_risk_amount"])
+                quantity = order_params.get("quantity", item["trading_risk_amount"])
                 transaction_amount = (
                     asset_out_balance * (float(quantity) / 100) / asset_out_quote
                 )
