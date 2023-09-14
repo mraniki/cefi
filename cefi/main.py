@@ -146,7 +146,7 @@ class CexTrader:
         for item in self.cex_info:
             cex = item["cex"]
             exchange_name = item["exchange_name"]
-            balance = self.get_account_balance(cex)
+            balance = await self.get_account_balance(cex)
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
 
@@ -190,7 +190,7 @@ class CexTrader:
         for item in self.cex_info:
             cex = item["cex"]
             exchange_name = item["exchange_name"]
-            positions = self.get_account_position(cex)
+            positions = await self.get_account_position(cex)
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
 
