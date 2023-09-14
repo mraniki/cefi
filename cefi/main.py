@@ -147,7 +147,7 @@ class CexTrader:
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
 
-    async def get_account_balance(cex):
+    async def get_account_balance(self, cex):
         """
         return account balance of
         a given ccxt exchange
@@ -192,7 +192,7 @@ class CexTrader:
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
 
-    async def get_account_position(cex):
+    async def get_account_position(self, cex):
         """
         return account position.
         of a given exchange
