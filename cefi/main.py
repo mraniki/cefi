@@ -124,8 +124,9 @@ class CexTrader:
             quote
         """
         try:
-            return cx_client.fetch_ticker(symbol)
-            #.get('last')
+            ticker =  cx_client.fetch_ticker(symbol)
+            logger.debug("ticker: {}", ticker)
+            return ticker[f"{symbol}"]['last']
         except Exception as e:
             logger.error(e)
             return "No Quote"
@@ -259,11 +260,9 @@ class CexTrader:
                     logger.warning("⚠️ Check Balance")
                     confirmation_info.append(f"{exchange_name}:\nNo Funding")
                     continue
-                asset_out_quote = float(await self.get_quote(cex, instrument))
+                asset_out_quote = await self.get_quote(cex, instrument)
                 logger.debug("asset_out_quote {}", asset_out_quote)
-                asset_out_balance = float(
-                    cex.fetchBalance()[f"{trading_asset}"]["free"]
-                )
+                asset_out_balance = cex.fetchBalance()[f"{trading_asset}"]["free"]
                 logger.debug("asset_out_balance {}", asset_out_quote)
                 if not asset_out_balance:
                     confirmation_info.append(f"{exchange_name}:\nNo Funding")
