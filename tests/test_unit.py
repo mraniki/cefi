@@ -79,11 +79,10 @@ async def test_balance(CXTrader):
     assert "🏦" in result
 
 
-# @pytest.mark.asyncio
-# async def test_position(exchange):
-#     #with pytest.raises(Exception):
-#     result = await exchange.get_account_position()
-#     assert "📊 Position" in result
+@pytest.mark.asyncio
+async def test_position(CXTrader):
+    result = await CXTrader.get_account_position()
+    assert "📊 Position" in result
 
 
 @pytest.mark.asyncio
@@ -108,5 +107,6 @@ async def test_execute_order(CXTrader, order_parsed):
     result = await CXTrader.execute_order(order_parsed)
     print(result)
     assert result is not None
+    assert "binance" in result
     # assert ("⬆️" in result) or ("⬇️" in result)
     # assert "ℹ️" in result
