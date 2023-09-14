@@ -255,6 +255,7 @@ class CexTrader:
             try:
                 if await self.get_account_balance(cex) == "No Balance":
                     logger.debug("⚠️ Check Balance")
+                    confirmation_info.append(f"{exchange_name}: No Funding")
                     continue
                 asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
                 asset_out_balance = float(
@@ -262,6 +263,7 @@ class CexTrader:
                 )
 
                 if not asset_out_balance:
+                    confirmation_info.append(f"{exchange_name}: No Funding")
                     continue
 
                 quantity = order_params.get("quantity", item["trading_risk_amount"])
