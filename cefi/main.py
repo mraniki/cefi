@@ -32,27 +32,27 @@ class CexTrader:
         for exchange in exchanges:
             logger.info(f"Loading {exchange}")
             logger.info(f"Loading {exchanges[exchange]}")
-            logger.info(f"Loading {exchanges[exchange]["cex_name"]}")
+            logger.info(f"Loading {exchanges[exchange]['cex_name']}")
             client = getattr(ccxt, exchanges[exchange]["cex_name"])
             cx_client = client(
                 {
-                    "apiKey": exchange["cex_api"],
-                    "secret": exchange["cex_secret"],
-                    "password": (exchange["cex_password"] or ""),
+                    "apiKey": exchanges[exchange]["cex_api"],
+                    "secret": exchanges[exchange]["cex_secret"],
+                    "password": (exchanges[exchange]["cex_password"] or ""),
                     "enableRateLimit": True,
                     "options": {
-                        "defaultType": exchange["cex_defaulttype"],
+                        "defaultType": exchanges[exchange]["cex_defaulttype"],
                     },
                 }
             )
-            if exchange["cex_testmode"]:
+            if exchanges[exchange]["cex_testmode"]:
                 cx_client.set_sandbox_mode("enabled")
             account = cx_client.uid
             exchange_name = cx_client.id
-            trading_asset = settings.trading_asset
-            trading_risk_amount = settings.trading_risk_amount
-            exchange_defaulttype = settings.cex_defaulttype
-            exchange_ordertype = settings.cex_ordertype
+            trading_asset = exchanges[exchange]["trading_asset"]
+            trading_risk_amount = exchanges[exchange]["trading_risk_amount"]
+            exchange_defaulttype = exchanges[exchange]["cex_defaulttype"]
+            exchange_ordertype = exchanges[exchange]["cex_ordertype"]
             self.cex_info.append(
                 {
                     "cex": cx_client,
@@ -116,6 +116,7 @@ class CexTrader:
     async def get_quote(cex, symbol):
         """
         Return a quote for a symbol
+        of a given exchange ccxt object
 
 
         Args:
@@ -149,7 +150,8 @@ class CexTrader:
 
     async def get_account_balance(cex):
         """
-        return account balance.
+        return account balance of
+        a given ccxt exchange
 
         Args:
             None
@@ -194,6 +196,7 @@ class CexTrader:
     async def get_account_position(cex):
         """
         return account position.
+        of a given exchange
 
         Args:
             None
