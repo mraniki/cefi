@@ -32,11 +32,12 @@ ccxt_commands = """
 cex_name = ""
 cex_api=""
 cex_secret=""
+cex_password = ""
 cex_testmode = true
 cex_defaulttype = ""
 cex_ordertype = ""
 trading_risk_amount = 10
-trading_asset = ""
+trading_asset = "USDT"
 
 # [default.exchanges.binance]
 # cex_name = "binance"
