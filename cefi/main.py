@@ -252,16 +252,19 @@ class CexTrader:
             cex = item["cex"]
             exchange_name = item["exchange_name"]
             order_type = item["exchange_ordertype"]
+            trading_asset = item["trading_asset"]
+            logger.debug("trading_asset {}", trading_asset)
             try:
                 if await self.get_account_balance(cex) == "No Balance":
-                    logger.debug("⚠️ Check Balance")
+                    logger.warning("⚠️ Check Balance")
                     confirmation_info.append(f"{exchange_name}:\nNo Funding")
                     continue
                 asset_out_quote = float(cex.fetchTicker(f"{instrument}").get("last"))
+                logger.debug("asset_out_quote {}", asset_out_quote)
                 asset_out_balance = float(
-                    cex.fetchBalance()[f"{item['trading_asset']}"]["free"]
+                    cex.fetchBalance()[f"{trading_asset}"]["free"]
                 )
-
+                logger.debug("asset_out_balance {}", asset_out_quote)
                 if not asset_out_balance:
                     confirmation_info.append(f"{exchange_name}:\nNo Funding")
                     continue
