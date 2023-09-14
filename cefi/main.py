@@ -124,8 +124,7 @@ class CexTrader:
             quote
         """
         try:
-            ticker = cx_client.fetchTicker(symbol)
-            return ticker.get("last")
+            return cx_client.fetchTicker(symbol).get('last')
         except Exception as e:
             logger.error(e)
             return "No Quote"
