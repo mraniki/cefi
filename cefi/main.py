@@ -105,6 +105,7 @@ class CexTrader:
         quotes = []
         for item in self.cex_info:
             cex = item["cex"]
+            instrument = str(symbol, item["trading_asset"])
             exchange_name = item["exchange_name"]
             quote = await self.get_quote(cex, symbol)
             quotes.append(f"🏦 {exchange_name}: {quote}")
@@ -126,7 +127,7 @@ class CexTrader:
         try:
             ticker =  cx_client.fetch_ticker(symbol)
             logger.debug("ticker: {}", ticker)
-            #return ticker[f"{symbol}"]['last']
+            return ticker['last']
         except Exception as e:
             logger.error(e)
             return "No Quote"
