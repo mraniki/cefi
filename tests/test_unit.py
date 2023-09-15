@@ -66,6 +66,7 @@ async def test_help(CXTrader):
 async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
+    print(result)
     assert result is not None
     assert "🏦" in result
     assert any("binance" in item for item in result)
