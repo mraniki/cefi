@@ -18,7 +18,7 @@ def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTCUSDT",
+        "instrument": "BTCUSD",
         "stop_loss": 200,
         "take_profit": 400,
         "quantity": 2,
@@ -65,10 +65,12 @@ async def test_help(CXTrader):
 @pytest.mark.asyncio
 async def test_quote(CXTrader, caplog):
     """Test quote"""
-    result = await CXTrader.get_quotes("BTCUSDT")
+    result = await CXTrader.get_quotes("BTCUSD")
     assert result is not None
     assert "🏦" in result
-    assert result is not None
+    assert any("binance" in item for item in result)
+    assert any("huobi" in item for item in result)
+    assert any("BTCUSD" in item for item in result)
 
 
 @pytest.mark.asyncio
@@ -77,6 +79,8 @@ async def test_balance(CXTrader):
     result = await CXTrader.get_account_balances()
     assert result is not None
     assert "🏦" in result
+    assert any("binance" in item for item in result)
+    assert any("huobi" in item for item in result)
 
 
 @pytest.mark.asyncio
