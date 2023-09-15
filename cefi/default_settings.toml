@@ -38,6 +38,7 @@ cex_defaulttype = ""
 cex_ordertype = ""
 trading_risk_amount = 10
 trading_asset = "USDT"
+trading_asset_separator = ""
 
 # [default.cex.binance]
 # cex_name = "binance"
@@ -58,7 +59,7 @@ trading_asset = "USDT"
 # cex_ordertype = "MARKET"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
-
+#trading_asset_separator = "/"
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###

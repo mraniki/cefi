@@ -48,6 +48,7 @@ class CexTrader:
                 account = cx_client.uid
                 exchange_name = cx_client.id
                 trading_asset = exchanges[exchange]["trading_asset"]
+                separator = exchanges[exchange]["trading_asset_separator"]
                 trading_risk_amount = exchanges[exchange]["trading_risk_amount"]
                 exchange_defaulttype = exchanges[exchange]["cex_defaulttype"]
                 exchange_ordertype = exchanges[exchange]["cex_ordertype"]
@@ -59,6 +60,7 @@ class CexTrader:
                         "exchange_defaulttype": exchange_defaulttype,
                         "exchange_ordertype": exchange_ordertype,
                         "trading_asset": trading_asset,
+                        "separator": separator,
                         "trading_risk_amount": trading_risk_amount,
                     }
                 )
@@ -105,7 +107,7 @@ class CexTrader:
         quotes = []
         for item in self.cex_info:
             cex = item["cex"]
-            instrument = str(symbol, item["trading_asset"])
+            instrument = (symbol + item["separator"] + item["trading_asset"])
             exchange_name = item["exchange_name"]
             quote = await self.get_quote(cex, symbol)
             quotes.append(f"🏦 {exchange_name}: {quote}")
