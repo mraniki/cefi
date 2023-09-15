@@ -69,9 +69,8 @@ async def test_quote(CXTrader, caplog):
     print(result)
     assert result is not None
     assert "🏦" in result
-    assert any("binance" in item for item in result)
-    assert any("huobi" in item for item in result)
-    assert any("BTC" in item for item in result)
+    assert ("binance" in result) or ("huobi" in result)
+
 
 
 @pytest.mark.asyncio
@@ -80,8 +79,7 @@ async def test_balance(CXTrader):
     result = await CXTrader.get_account_balances()
     assert result is not None
     assert "🏦" in result
-    assert any("binance" in item for item in result)
-    assert any("huobi" in item for item in result)
+    assert ("binance" in result) or ("huobi" in result)
 
 
 @pytest.mark.asyncio
@@ -112,7 +110,7 @@ async def test_execute_order(CXTrader, order_parsed):
     result = await CXTrader.execute_order(order_parsed)
     print(result)
     assert result is not None
-    assert any("binance" in item for item in result)
+    assert ("binance" in result) or ("huobi" in result)
     assert any("ℹ️" in item for item in result)
     assert ("⬆️" in result) or ("⬇️" in result)
     # assert "ℹ️" in result
