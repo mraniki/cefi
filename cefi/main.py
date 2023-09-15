@@ -109,7 +109,7 @@ class CexTrader:
             cex = item["cex"]
             instrument = (symbol + item["separator"] + item["trading_asset"])
             exchange_name = item["exchange_name"]
-            quote = await self.get_quote(cex, symbol)
+            quote = await self.get_quote(cex, instrument)
             quotes.append(f"🏦 {exchange_name}: {quote}")
         return "\n".join(quotes)
 
