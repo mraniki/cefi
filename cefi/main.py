@@ -267,7 +267,7 @@ class CexTrader:
                     continue
                 asset_out_quote = await self.get_quote(cex, instrument)
                 logger.debug("asset_out_quote {}", asset_out_quote)
-                if asset_out_quote == "No Quote"
+                if asset_out_quote == "No Quote":
                  confirmation_info.append(f"{exchange_name}:\nNo quote")
                     continue
                 asset_out_balance = cex.fetchBalance()[f"{trading_asset}"]["free"]
