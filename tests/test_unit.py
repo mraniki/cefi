@@ -65,12 +65,12 @@ async def test_help(CXTrader):
 @pytest.mark.asyncio
 async def test_quote(CXTrader, caplog):
     """Test quote"""
-    result = await CXTrader.get_quotes("BTCUSD")
+    result = await CXTrader.get_quotes("BTC/USDT")
     assert result is not None
     assert "🏦" in result
     assert any("binance" in item for item in result)
     assert any("huobi" in item for item in result)
-    assert any("BTCUSD" in item for item in result)
+    assert any("BTC" in item for item in result)
 
 
 @pytest.mark.asyncio
