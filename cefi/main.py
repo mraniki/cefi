@@ -128,11 +128,11 @@ class CexTrader:
             quote
         """
         try:
-            ticker =  cx_client.fetch_ticker(symbol)
+            ticker = cx_client.fetch_ticker(symbol)
             logger.debug("ticker: {}", ticker)
-            return ticker['last']
+            return ticker["last"]
         except Exception as e:
-            logger.error(e)
+            logger.error("get_quote: {}", e)
             return "No Quote"
 
     async def get_account_balances(self):
@@ -308,7 +308,7 @@ class CexTrader:
                     confirmation_info.append(f"Error executing {exchange_name}")
 
             except Exception as e:
-                logger.debug("{} Error {}", exchange_name,e)
+                logger.debug("{} Error {}", exchange_name, e)
                 confirmation_info.append(f"{exchange_name}: Error {e}")
                 continue
 
