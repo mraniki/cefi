@@ -132,7 +132,7 @@ class CexTrader:
             logger.debug("ticker: {}", ticker)
             return ticker['last']
         except Exception as e:
-            #logger.error(e)
+            logger.error(e)
             return "No Quote"
 
     async def get_account_balances(self):
