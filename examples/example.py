@@ -9,7 +9,7 @@ import uvicorn
 from fastapi import FastAPI
 from loguru import logger
 
-from cefi import CexExchange, __version__
+from cefi import CexTrader
 
 logger.remove()
 logger.add(sys.stderr, level="DEBUG")
@@ -17,10 +17,8 @@ logger.add(sys.stderr, level="DEBUG")
 
 async def main():
     """Main"""
-    cex = CexExchange()
+    cex = CexTrader()
     await cex.get_account_balance()
-
-
 
 
 app = FastAPI()
