@@ -28,7 +28,7 @@
   <h5>How to use it</h5>
   <pre>
   <code>
-      cex = CexExchange()
+      cex = CexTrader()
       await cex.get_account_balance()
   </code>
   </pre>
