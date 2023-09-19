@@ -2,6 +2,161 @@
 
 
 
+## v2.0.0 (2023-09-19)
+
+### :boom:
+
+* :boom: preparing framework for multi exchange support ([`e5e9809`](https://github.com/mraniki/cefi/commit/e5e980953b80495fc635f5a816984703745f364c))
+
+### :white_check_mark:
+
+* :white_check_mark: Unit Test ([`adc164d`](https://github.com/mraniki/cefi/commit/adc164dcd977b1404ee3cd2d01d8ea4fd1bbd067))
+
+* :white_check_mark: Unit Test ([`9dcd159`](https://github.com/mraniki/cefi/commit/9dcd159590a4b03bbc2dee77d116db1e293a804b))
+
+* :white_check_mark: Unit Test ([`0b6fb32`](https://github.com/mraniki/cefi/commit/0b6fb32dfc5931edc29c872a9177714b34ff219a))
+
+* :white_check_mark: Unit Test ([`6a98054`](https://github.com/mraniki/cefi/commit/6a9805406bc13d3925f59eef0e194e62685f64cc))
+
+* :white_check_mark: Unit Test ([`a2a4eb8`](https://github.com/mraniki/cefi/commit/a2a4eb8d03efc69f219120a78016208d118c1c0c))
+
+* :white_check_mark: Unit Test ([`de336db`](https://github.com/mraniki/cefi/commit/de336db6f36380e6b24ec26c0014f959797f6e67))
+
+### Fix
+
+* Refactor CexTrader class and fix exchange variable references ([`2a0700a`](https://github.com/mraniki/cefi/commit/2a0700a40265873bb85476236c66d79a59e59d3a))
+
+* Refactor CexTrader class and fix exchange variable references ([`b871e18`](https://github.com/mraniki/cefi/commit/b871e18ddb4c8828b7bd607c2cb8e8559773c8a7))
+
+### Other
+
+* Merge pull request #37 from mraniki/dev
+
+:boom: preparing framework for multi exchange support ([`18b1faf`](https://github.com/mraniki/cefi/commit/18b1faf61e637051d6bd66b673133da18c551428))
+
+* Fix indentation in CexTrader class ([`4be0801`](https://github.com/mraniki/cefi/commit/4be0801b96921270012b1ad9d7248e1b6210cb1d))
+
+* Fix conditional statement in CexTrader class ([`41795d8`](https://github.com/mraniki/cefi/commit/41795d80534dab6ca91815a8bc8802064d5b3ce6))
+
+* Refactor CexTrader class and test_execute_order function ([`6f5182e`](https://github.com/mraniki/cefi/commit/6f5182e0949233266d0704154d555aa7d08db59e))
+
+* Refactor code to use list comprehension for checking if &#34;binance&#34; is in result. ([`231c448`](https://github.com/mraniki/cefi/commit/231c44863991de5004fd29edbca103c106b7b6d5))
+
+* Refactor test_unit.py to simplify assertions ([`6635a93`](https://github.com/mraniki/cefi/commit/6635a93ad3ab9a65a433cc24dc0c091218711e6f))
+
+* Refactor error logging and add print statement in unit test ([`6985b19`](https://github.com/mraniki/cefi/commit/6985b196b0902a4fd324c7176dc31e3127bcc126))
+
+* Add debug logging for quote in CexTrader ([`6d06425`](https://github.com/mraniki/cefi/commit/6d0642520463006e56ea2556ac5b81ee5bf708c0))
+
+* Refactor get_quote method in CexTrader class ([`c0eaf40`](https://github.com/mraniki/cefi/commit/c0eaf40aa861a22053adb982fdd4b6938512e113))
+
+* Refactor CexTrader and test_unit.py for symbol changes ([`06e77be`](https://github.com/mraniki/cefi/commit/06e77be1af4d1e0e8bc3cca04a0b3986cbe02d8a))
+
+* Refactor CexTrader and test_unit.py for symbol changes ([`47108af`](https://github.com/mraniki/cefi/commit/47108afa4180be138e7b3427fc534e3cb19cc920))
+
+* Refactor test_unit.py for quote function ([`0f5f1d6`](https://github.com/mraniki/cefi/commit/0f5f1d69ca3e7948ab230aa8efe70daf8d580499))
+
+* Refactor CexTrader class in main.py ([`562e514`](https://github.com/mraniki/cefi/commit/562e5149e81c13fc9c62cda68f6a17320720a5ca))
+
+* Refactor CexTrader class in main.py ([`8f2dbd3`](https://github.com/mraniki/cefi/commit/8f2dbd39b54bd15b445cc8995aa8ca3f7d4ac480))
+
+* Merge pull request #42 from mraniki/sourcery/dev
+
+:boom: preparing framework for multi exchange support (Sourcery refactored) ([`26cac8d`](https://github.com/mraniki/cefi/commit/26cac8d285fae1590fecc89285ac8dae42ed54c9))
+
+* &#39;Refactored by Sourcery&#39; ([`e9b7509`](https://github.com/mraniki/cefi/commit/e9b7509cba4a19b79495ae57094528a4f4d80a4d))
+
+* Refactor loading exchanges in CexTrader class ([`b749935`](https://github.com/mraniki/cefi/commit/b74993515c6552e87821a7903170a7a62cb6de5f))
+
+* Refactor CexTrader class to load exchanges dynamically ([`968dc07`](https://github.com/mraniki/cefi/commit/968dc07017947e57a6d706df9bf4b71fdfc27b89))
+
+* Refactor logger.info message in CexTrader class ([`0439434`](https://github.com/mraniki/cefi/commit/04394343a69515dc20c5a25635ca5f941cb2baa7))
+
+* Refactor loading exchange information in CexTrader class ([`0ad590c`](https://github.com/mraniki/cefi/commit/0ad590c8cbc30de81a6e37700e7b39bc8d67344b))
+
+* Fix logger info message formatting ([`6194995`](https://github.com/mraniki/cefi/commit/61949950ae159240d4d38d65d5230f396de87e66))
+
+* Refactor logger.info in CexTrader class ([`6882462`](https://github.com/mraniki/cefi/commit/6882462567c91b7c9f98a349a28aee9411f016db))
+
+* Refactor logger.info in CexTrader ([`88133e3`](https://github.com/mraniki/cefi/commit/88133e31aeca27bf13692e74b93ce76776cbfd5f))
+
+* Refactor CexTrader logger message ([`90a51df`](https://github.com/mraniki/cefi/commit/90a51df5db35ff4c3244eaf93c67b1cb3665e3cb))
+
+### Update
+
+* Update main.py ([`2d6598f`](https://github.com/mraniki/cefi/commit/2d6598f48445d1f6989d1ee2e1640980604a8f97))
+
+* Update main.py ([`690bebd`](https://github.com/mraniki/cefi/commit/690bebd38376e40d4e6b16e3ba6109f2a25fa406))
+
+* Update test_unit.py ([`e90b6a5`](https://github.com/mraniki/cefi/commit/e90b6a5ba98dbf4eb68d1b59c378c98b6a1f65a2))
+
+* Update default_settings.toml: add cex_password and set trading_asset to &#34;USDT ([`6f56ac7`](https://github.com/mraniki/cefi/commit/6f56ac7f986641eec6f029c9deda5cc69f9f8f92))
+
+### ♻️
+
+* ♻️ ([`9a7890c`](https://github.com/mraniki/cefi/commit/9a7890cf3247feef826f19be2ec52187689d41ff))
+
+* ♻️ ([`35b047d`](https://github.com/mraniki/cefi/commit/35b047d9e3ca4a64f0d5d9d978368378be6a1b66))
+
+* ♻️ ([`f3f5ca7`](https://github.com/mraniki/cefi/commit/f3f5ca75a16bd5c16d8cb8fc9e99d1baf7a61eae))
+
+* ♻️ ([`110fda3`](https://github.com/mraniki/cefi/commit/110fda3caae9043bd1e0b75b9a6a15aadfdbe46b))
+
+* ✅ Unit Test ♻️ ([`d9b40d2`](https://github.com/mraniki/cefi/commit/d9b40d24662278a9c414695d7e521e8bae8064dc))
+
+* ♻️ ([`afc7bd6`](https://github.com/mraniki/cefi/commit/afc7bd6a7fa2f212eab31e99a8861a97eab85458))
+
+### ✅
+
+* ✅ Unit Test ([`d1ec390`](https://github.com/mraniki/cefi/commit/d1ec390177635aadef760814127cb899939a2f0b))
+
+* ✅ Unit Test ([`e0af241`](https://github.com/mraniki/cefi/commit/e0af2416c5c9533a017124685fd108d7f3596bcd))
+
+* ✅ Unit Test coverage ([`f1d3bf0`](https://github.com/mraniki/cefi/commit/f1d3bf0f34fcfe8894828c3c80f7a55243c1f9b9))
+
+* ✅ Unit Test ([`e0cf06a`](https://github.com/mraniki/cefi/commit/e0cf06a1a4ff74899ac0155ade1b100729b62606))
+
+* ✅ Unit Test ([`4fa6252`](https://github.com/mraniki/cefi/commit/4fa6252e9c6b6e6db298f925547ddbb98608f693))
+
+* ✅ Unit Test ([`48c9200`](https://github.com/mraniki/cefi/commit/48c920081b39cc8a1e1980e8302c8592b51f4493))
+
+### ✨
+
+* ✨ multi exchange support initial update ([`5fb04e2`](https://github.com/mraniki/cefi/commit/5fb04e2026d72f07d67d35704b99aca5ad4ed468))
+
+### 🎨
+
+* 🎨 ([`02b08fa`](https://github.com/mraniki/cefi/commit/02b08fafce1a40090a08ae6a5fe54a396c775505))
+
+* 🎨 ([`87df90b`](https://github.com/mraniki/cefi/commit/87df90b4bdb693b77c4e0e602d53caf7f093115f))
+
+### 🐛
+
+* 🐛 ([`7664fc5`](https://github.com/mraniki/cefi/commit/7664fc5a2bb79a88558f4612d696668125b67d32))
+
+* 🐛 ([`54b17e6`](https://github.com/mraniki/cefi/commit/54b17e648fd907a055320c3e7ccf82a54c8fb1ce))
+
+### 🔧
+
+* 🔧 ([`da1c698`](https://github.com/mraniki/cefi/commit/da1c69835a77164f799e4cc24111db73069792c6))
+
+* 🔧 ([`6b19ba4`](https://github.com/mraniki/cefi/commit/6b19ba42bd5fc163e8cac1dd2d27ac4b2f17e3ce))
+
+### 🚑
+
+* 🚑 Broken WIP ([`11dc332`](https://github.com/mraniki/cefi/commit/11dc3324e731c776d5d60557a72a2d87d42b8b2d))
+
+### 🚨
+
+* 🚨 ([`2df693f`](https://github.com/mraniki/cefi/commit/2df693f633aed70116ee01828d2dcfd9be2d9a35))
+
+* 🚨 ([`274c254`](https://github.com/mraniki/cefi/commit/274c254b971a78c199a332458523d89fd090a4a2))
+
+### 🥅
+
+* 🥅 ([`7c2d2f7`](https://github.com/mraniki/cefi/commit/7c2d2f7d2aeb72ff187abe415b1c4f68bbabd159))
+
+
 ## v1.1.35 (2023-09-09)
 
 ### Other
