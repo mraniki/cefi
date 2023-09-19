@@ -2,6 +2,19 @@
 
 
 
+## v2.0.3 (2023-09-19)
+
+### Other
+
+* Merge pull request #46 from mraniki/dev
+
+🚨 ([`e246ae5`](https://github.com/mraniki/cefi/commit/e246ae57626ac6d52d0445b7bca68215f2fcfc66))
+
+### 🚨
+
+* 🚨 ([`89851a7`](https://github.com/mraniki/cefi/commit/89851a77462b7379665fd3964ee63df4f87198ce))
+
+
 ## v2.0.2 (2023-09-19)
 
 ### Other
