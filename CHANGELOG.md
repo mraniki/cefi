@@ -2,6 +2,27 @@
 
 
 
+## v2.0.2 (2023-09-19)
+
+### Other
+
+* Merge pull request #45 from mraniki/dev
+
+✅ Unit Test ([`4adb908`](https://github.com/mraniki/cefi/commit/4adb90832606fa0945c0e2011d87dc72f772b846))
+
+* Merge pull request #43 from mraniki/renovate/pydata-sphinx-theme-0.x
+
+⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.14.0 ([`5ea2bb3`](https://github.com/mraniki/cefi/commit/5ea2bb3d941a1c6e79a7d195cf0cf397c8cfd1c8))
+
+### ♻️
+
+* ♻️ ([`61bd7ec`](https://github.com/mraniki/cefi/commit/61bd7ec64caf683dc83cb94096d8339de0e44729))
+
+### ✅
+
+* ✅ Unit Test ([`096fa63`](https://github.com/mraniki/cefi/commit/096fa63e900efa9d8843bf164ba7d7e5d875b750))
+
+
 ## v2.0.1 (2023-09-19)
 
 ### Update
@@ -130,6 +151,10 @@
 ### ✨
 
 * ✨ multi exchange support initial update ([`5fb04e2`](https://github.com/mraniki/cefi/commit/5fb04e2026d72f07d67d35704b99aca5ad4ed468))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.14.0 ([`7504438`](https://github.com/mraniki/cefi/commit/75044382690626caa5e4f0e7b40ac71af0c09624))
 
 ### 🎨
 
