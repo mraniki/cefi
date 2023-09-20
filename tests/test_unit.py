@@ -10,7 +10,7 @@ from cefi.config import settings
 
 @pytest.fixture(scope="session", autouse=True)
 def set_test_settings_CEX():
-    settings.configure(FORCE_ENV_FOR_DYNACONF="cex")
+    settings.configure(FORCE_ENV_FOR_DYNACONF="cefi")
 
 
 @pytest.fixture(name="order_parsed")
