@@ -2,6 +2,19 @@
 
 
 
+## v2.0.4 (2023-09-20)
+
+### Other
+
+* Merge pull request #47 from mraniki/dev
+
+✅ Unit Test ([`dcf0301`](https://github.com/mraniki/cefi/commit/dcf03014235271b323a5dce997b4a90e927e69e5))
+
+### ✅
+
+* ✅ Unit Test ([`6f1499c`](https://github.com/mraniki/cefi/commit/6f1499cc733afef50f6a486083fb2db2fd913557))
+
+
 ## v2.0.3 (2023-09-19)
 
 ### Other
