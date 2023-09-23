@@ -28,7 +28,7 @@ ccxt_commands = """
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-[default.cex.main]
+[default.cex.template]
 cex_name = ""
 cex_api= ""
 cex_secret= ""
