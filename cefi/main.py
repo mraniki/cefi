@@ -64,8 +64,10 @@ class CexTrader:
                         "trading_risk_amount": trading_risk_amount,
                     }
                 )
+                logger.debug(f"Loaded {exchange}")
+            logger.debug("CexTrader init complete")
         except Exception as e:
-            logger.error(e)
+            logger.error("CexTrader init: {}", e)
 
     async def get_help(self):
         """
@@ -107,7 +109,7 @@ class CexTrader:
         quotes = []
         for item in self.cex_info:
             cex = item["cex"]
-            instrument = (symbol + item["separator"] + item["trading_asset"])
+            instrument = symbol + item["separator"] + item["trading_asset"]
             exchange_name = item["exchange_name"]
             quote = await self.get_quote(cex, instrument)
             logger.debug("Quote {}", quote)
@@ -259,7 +261,7 @@ class CexTrader:
             order_type = item["exchange_ordertype"]
             trading_asset = item["trading_asset"]
             logger.debug("trading_asset {}", trading_asset)
-            instrument = (instrument + item["separator"] + item["trading_asset"])
+            instrument = instrument + item["separator"] + item["trading_asset"]
             try:
                 if await self.get_account_balance(cex) == "No Balance":
                     logger.warning("⚠️ Check Balance")
