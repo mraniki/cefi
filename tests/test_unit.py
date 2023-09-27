@@ -1,7 +1,8 @@
+import asyncio
 from datetime import datetime
-from unittest.mock import AsyncMock
+from unittest import TestCase
+from unittest.mock import AsyncMock, MagicMock, patch
 
-import ccxt
 import pytest
 
 from cefi import CexTrader
@@ -18,10 +19,10 @@ def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTC",
-        "stop_loss": 200,
+        "instrument": "BTCUSDT",
+        "stop_loss": 2000,
         "take_profit": 400,
-        "quantity": 2,
+        "quantity": 1,
         "order_type": None,
         "leverage_type": None,
         "comment": None,
@@ -66,12 +67,13 @@ async def test_help(CXTrader):
 async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
-    print(result)
+    #print(result)
     assert result is not None
     assert "🏦" in result
     assert ("binance" in result) or ("huobi" in result)
+    assert ("No quote" in result) or ("2" in result)
 
-
+ 
 @pytest.mark.asyncio
 async def test_balance(CXTrader):
     """Test balance"""
@@ -104,11 +106,14 @@ async def test_get_account_pnl(CXTrader):
 
 
 @pytest.mark.asyncio
-async def test_execute_order(CXTrader, order_parsed):
-    """Test order"""
+async def test_execute_order_full(CXTrader, order_parsed):
     result = await CXTrader.execute_order(order_parsed)
-    print(result)
+    #print(result)
     assert result is not None
-    assert any("binance" in item for item in result)
-    # assert any("🔵" in item for item in result)
-    # assert any("No Funding" in item for item in result)
+    assert "binance" in result[0]
+    assert "huobi" in result[1]
+    assert "🔵" in result[0]
+    assert "🔴" in result[0]
+    assert "ℹ️" in result[0]
+    assert "🗓️" in result[0]
+    assert "No quote" in result[1]
