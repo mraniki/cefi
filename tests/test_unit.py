@@ -1,6 +1,6 @@
-import asyncio
+
+
 from datetime import datetime
-from unittest import TestCase
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
@@ -73,7 +73,7 @@ async def test_quote(CXTrader, caplog):
     assert ("binance" in result) or ("huobi" in result)
     assert ("No quote" in result) or ("2" in result)
 
- 
+
 @pytest.mark.asyncio
 async def test_balance(CXTrader):
     """Test balance"""
