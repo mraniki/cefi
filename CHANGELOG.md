@@ -2,6 +2,57 @@
 
 
 
+## v2.0.9 (2023-09-27)
+
+### :white_check_mark:
+
+* :white_check_mark: Unit Test ([`c3416fc`](https://github.com/mraniki/cefi/commit/c3416fc47b7a9b3a355e6ff83248472adea64b4d))
+
+* :white_check_mark: Unit Test ([`dc36c11`](https://github.com/mraniki/cefi/commit/dc36c1118bff4baf734c264d30933ca034b72e58))
+
+* :white_check_mark: Unit Test ([`278d121`](https://github.com/mraniki/cefi/commit/278d121108750f14b03cb8b60c7f15357f455c23))
+
+### Other
+
+* Merge pull request #52 from mraniki/dev
+
+✅ Unit Test Increase coverage ([`65060e9`](https://github.com/mraniki/cefi/commit/65060e91422a7a4a126bfd035ac2b00b8ace9227))
+
+* Remove debug log statement in CexTrader init ([`a813a5e`](https://github.com/mraniki/cefi/commit/a813a5ea011e8260ffc61ebdb82979e72321e1da))
+
+* Remove unnecessary test cases and update assertion in test_execute_order_full ([`2f3192e`](https://github.com/mraniki/cefi/commit/2f3192e172de72f1577fb7d08b4a1c7d43401bf1))
+
+* Refactor debug logging and update test unit quantity. ([`f52062f`](https://github.com/mraniki/cefi/commit/f52062f55bf5682cc72eae50020f0d03877b5c7d))
+
+* Refactor test_unit.py ([`cd7b8f3`](https://github.com/mraniki/cefi/commit/cd7b8f3fbc56d9ce3d330345d6157bbe01db4b79))
+
+* Refactor test_unit.py ([`3fe34c9`](https://github.com/mraniki/cefi/commit/3fe34c957011dd831cf274b6b64a58d05573c8c4))
+
+* Refactor test_unit.py assertions for quote function. ([`a3c88a1`](https://github.com/mraniki/cefi/commit/a3c88a14c64bc151f6b6053e7521aa64047c4c2d))
+
+* Refactor test_unit.py ([`8289af0`](https://github.com/mraniki/cefi/commit/8289af027c6627ff67d022736c384f32ffe796cb))
+
+### ⚡
+
+* ⚡ ([`d452b1f`](https://github.com/mraniki/cefi/commit/d452b1f62a26cb0bdfc9892e11bcd05083a73a22))
+
+### ✅
+
+* ✅ Unit Test ([`f023a00`](https://github.com/mraniki/cefi/commit/f023a00e89931f36260f4890a8ea6b296be3637a))
+
+* ✅ Unit Test ([`15ca4dc`](https://github.com/mraniki/cefi/commit/15ca4dcc62f8078b82bd8025ea4e65b51bb44a56))
+
+* ✅ Unit Test Increase coverage ([`de89cfc`](https://github.com/mraniki/cefi/commit/de89cfc7a693b1013ab725b329ef91729aef3d5f))
+
+### 🚨
+
+* 🚨 ([`0ef3ba4`](https://github.com/mraniki/cefi/commit/0ef3ba4c9c54ade02a8019a0e873d2171fcbafa3))
+
+* 🚨 ([`a422167`](https://github.com/mraniki/cefi/commit/a422167eb677969afc9fa20f68169401dafdcb7b))
+
+* 🚨 ([`234d9da`](https://github.com/mraniki/cefi/commit/234d9da3eb8923ca338feca39a7d4bf946e97ec5))
+
+
 ## v2.0.8 (2023-09-27)
 
 ### Other
