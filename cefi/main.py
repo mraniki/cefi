@@ -68,7 +68,7 @@ class CexTrader:
             logger.debug("CexTrader init complete")
         except Exception as e:
             logger.error("CexTrader init: {}", e)
-
+ 
     async def get_help(self):
         """
         Get the help information for the current instance.
