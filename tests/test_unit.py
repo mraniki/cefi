@@ -121,7 +121,7 @@ async def test_execute_order(CXTrader, order_parsed):
 @patch("CexTrader.get_account_balance")
 @patch("CexTrader.get_quote")
 @patch("CexTrader.fetchBalance")
-def test_execute_order(
+def test_execute_order_full(
     CXTrader, mock_fetch_balance, mock_get_quote, mock_get_account_balance
 ):
     # Setup
