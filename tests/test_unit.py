@@ -19,7 +19,7 @@ def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTC",
+        "instrument": "BTC/USDT",
         "stop_loss": 200,
         "take_profit": 400,
         "quantity": 100,
@@ -122,5 +122,5 @@ async def test_execute_order_full(CXTrader, order_parsed):
     assert result is not None
     assert "binance" in result[0]
     assert "huobi" in result[1]
-    assert "No Funding" in result[0]
+    assert "No quote" in result[0]
     assert "No Funding" in result[1]
