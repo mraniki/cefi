@@ -105,17 +105,6 @@ async def test_get_account_pnl(CXTrader):
     assert result == 0
 
 
-# @pytest.mark.asyncio
-# async def test_execute_order(CXTrader, order_parsed):
-#     """Test order"""
-#     result = await CXTrader.execute_order(order_parsed)
-#     #print(result)
-#     assert result is not None
-#     assert any("binance" in item for item in result)
-    # assert any("🔵" in item for item in result)
-    # assert any("No Funding" in item for item in result)
-
-
 @pytest.mark.asyncio
 async def test_execute_order_full(CXTrader, order_parsed):
     result = await CXTrader.execute_order(order_parsed)
@@ -123,5 +112,8 @@ async def test_execute_order_full(CXTrader, order_parsed):
     assert result is not None
     assert "binance" in result[0]
     assert "huobi" in result[1]
-    assert "Insufficient" in result[0]
+    assert "🔵" in result[0]
+    assert "🔴" in result[0]
+    assert "ℹ️" in result[0]
+    assert "🗓️" in result[0]
     assert "No quote" in result[1]
