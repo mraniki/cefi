@@ -261,7 +261,7 @@ class CexTrader:
             order_type = item["exchange_ordertype"]
             trading_asset = item["trading_asset"]
             logger.debug("trading_asset {}", trading_asset)
-            instrument = instrument + item["separator"] + item["trading_asset"]
+            #instrument = instrument + item["separator"] + item["trading_asset"]
             try:
                 if await self.get_account_balance(cex) == "No Balance":
                     logger.warning("⚠️ Check Balance")

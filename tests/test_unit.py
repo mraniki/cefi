@@ -20,7 +20,7 @@ def result_order():
     return {
         "action": "BUY",
         "instrument": "BTC/USDT",
-        "stop_loss": 200,
+        "stop_loss": 2000,
         "take_profit": 400,
         "quantity": 100,
         "order_type": None,
