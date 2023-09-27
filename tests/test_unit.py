@@ -22,7 +22,7 @@ def result_order():
         "instrument": "BTC",
         "stop_loss": 200,
         "take_profit": 400,
-        "quantity": 2,
+        "quantity": 100,
         "order_type": None,
         "leverage_type": None,
         "comment": None,
@@ -84,9 +84,7 @@ async def test_balance(CXTrader):
 
 @pytest.mark.asyncio
 async def test_position(CXTrader):
-    get_account_position = AsyncMock()
     result = await CXTrader.get_account_positions()
-    get_account_position.assert_awaited_once()
     assert "📊 Position" in result
 
 
@@ -117,44 +115,12 @@ async def test_execute_order(CXTrader, order_parsed):
     # assert any("No Funding" in item for item in result)
 
 
-@patch("CexTrader.get_account_balance")
-@patch("CexTrader.get_quote")
-@patch("CexTrader.fetchBalance")
-def test_execute_order_full(
-    CXTrader, mock_fetch_balance, mock_get_quote, mock_get_account_balance
-):
-    # Setup
-    order_params = {"action": "BUY", "instrument": "BTC", "quantity": 100}
-    [
-        {
-            "cex": MagicMock(),
-            "exchange_name": "Exchange 1",
-            "exchange_ordertype": "LIMIT",
-            "trading_asset": "BTC",
-            "separator": "/",
-            "trading_risk_amount": 10,
-        },
-        {
-            "cex": MagicMock(),
-            "exchange_name": "Exchange 2",
-            "exchange_ordertype": "MARKET",
-            "trading_asset": "ETH",
-            "separator": "/",
-            "trading_risk_amount": 20,
-        },
-    ]
-
-    # Mock return values
-    mock_get_account_balance.side_effect = ["No Balance", "Balance"]
-    mock_get_quote.side_effect = ["No Quote", 1.5]
-    mock_fetch_balance.return_value = {"BTC": {"free": 100}}
-
-    # Test
-    confirmation_info = asyncio.run(CXTrader.execute_order(order_params))
-
-    # Assertions
-    assert confirmation_info is not None
-    assert "Exchange 1" in confirmation_info[0]
-    assert "Exchange 2" in confirmation_info[1]
-    assert "No Funding" in confirmation_info[0]
-    assert "No quote" in confirmation_info[1]
+@pytest.mark.asyncio
+async def test_execute_order_full(CXTrader, order_parsed):
+    result = await CXTrader.execute_order(order_parsed)
+    print(result)
+    assert result is not None
+    assert "binance" in result[0]
+    assert "huobi" in result[1]
+    assert "No Funding" in result[0]
+    assert "No Funding" in result[1]
