@@ -65,7 +65,6 @@ class CexTrader:
                     }
                 )
                 logger.debug(f"Loaded {exchange}")
-            logger.debug("CexTrader init complete")
         except Exception as e:
             logger.error("CexTrader init: {}", e)
  
