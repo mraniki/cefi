@@ -70,10 +70,10 @@ async def test_quote(CXTrader, caplog):
     #print(result)
     assert result is not None
     assert "🏦" in result
-    assert "binance" in result[0]
-    assert "huobi" in result[1]
-    assert "No quote" in result[0]
-    assert "2" in result[1]
+    assert "binance" in result[1]
+    assert "huobi" in result[2]
+    assert "No quote" in result[1]
+    assert "2" in result[2]
 
  
 @pytest.mark.asyncio
