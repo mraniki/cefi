@@ -2,6 +2,21 @@
 
 
 
+## v2.0.10 (2023-09-27)
+
+### Other
+
+* Merge pull request #53 from mraniki/dev
+
+🚨♻️ Dev ([`85a21d8`](https://github.com/mraniki/cefi/commit/85a21d811f9f2be025f71f03b4fe1e06f5fb3388))
+
+* Fix example.py and test_unit.py ([`69e868b`](https://github.com/mraniki/cefi/commit/69e868b4a2a25b8386931057f27fa2bffcd19039))
+
+### Update
+
+* Update default cex settings ([`3c1bcbd`](https://github.com/mraniki/cefi/commit/3c1bcbd2d80653458775e93f8e61fc994d6f3305))
+
+
 ## v2.0.9 (2023-09-27)
 
 ### :white_check_mark:
