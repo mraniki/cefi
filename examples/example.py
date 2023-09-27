@@ -18,7 +18,7 @@ logger.add(sys.stderr, level="DEBUG")
 async def main():
     """Main"""
     cex = CexTrader()
-    await cex.get_account_balance()
+    await cex.get_account_balances()
 
 
 app = FastAPI()
