@@ -94,10 +94,12 @@ omit = [
 
 [tool.semantic_release]
 upload_to_vcs_release = true
-version_variables = ["pyproject.toml:version","cefi/__init__.py:__version__"]
+version_variables = ["cefi/__init__.py:__version__"]
 build_command = "pip install poetry && poetry build"
 commit_parser = "emoji"
-
+version_toml = [
+   "pyproject.toml:tool.poetry.version",
+   ]
 
 
 
