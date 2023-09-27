@@ -22,7 +22,7 @@ def result_order():
         "instrument": "BTCUSDT",
         "stop_loss": 2000,
         "take_profit": 400,
-        "quantity": 100,
+        "quantity": 1,
         "order_type": None,
         "leverage_type": None,
         "comment": None,

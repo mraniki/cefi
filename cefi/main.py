@@ -279,9 +279,11 @@ class CexTrader:
                     continue
 
                 quantity = order_params.get("quantity", item["trading_risk_amount"])
+                logger.debug("quantity {}", quantity)
                 transaction_amount = (
                     asset_out_balance * (float(quantity) / 100) / asset_out_quote
                 )
+                logger.debug("transaction_amount {}", transaction_amount)
 
                 trade = cex.create_order(
                     instrument,
