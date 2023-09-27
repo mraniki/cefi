@@ -2,6 +2,19 @@
 
 
 
+## v2.0.7 (2023-09-27)
+
+### Other
+
+* Merge pull request #50 from mraniki/dev
+
+👷 CI Change ([`1c5094b`](https://github.com/mraniki/cefi/commit/1c5094b91c13a554868f54ca1c75ca602dd59ed9))
+
+### 👷
+
+* 👷 CI Change ([`5ab26f2`](https://github.com/mraniki/cefi/commit/5ab26f2ce47c81d49e6a9fc639c5b48d5f2101c2))
+
+
 ## v2.0.6 (2023-09-23)
 
 ### Other
