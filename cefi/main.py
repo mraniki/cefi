@@ -76,9 +76,7 @@ class CexTrader:
         :rtype: str
         """
 
-        info = ""
-        for cex in self.cex_info:
-            info += f"💱 {cex.name}\n🪪 {cex.account}\n\n"
+        info = "".join(f"💱 {cex.name}\n🪪 {cex.account}\n\n" for cex in self.cex_info)
         return info.strip()
 
     async def get_quotes(self, symbol):
@@ -128,7 +126,7 @@ class CexTrader:
         """
 
         position_info = []
-        for cex in self.cex_info:
+        for _ in self.cex_info:
             positions = await item.get_account_position()
             position_info.append(f"📊 Position for {item.name}:\n{positions}")
         return "\n".join(position_info)
