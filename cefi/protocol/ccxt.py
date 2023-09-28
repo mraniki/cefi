@@ -1,11 +1,20 @@
+"""
+
+
+
+
+"""
+
+
 import ccxt
 from loguru import logger
 
-from .config import settings
-from .protocol.ccxt import CexClient
+from cefi.config import settings
+
+from .client import CexClient
 
 
-class CexTrader:
+class CexCcxt(CexClient):
     """
     CEX Object to support CEFI
     exchange and trading
@@ -26,9 +35,7 @@ class CexTrader:
 
         """
 
-        self.commands = settings.ccxt_commands
-        exchanges = settings.cex
-        self.cex_info = []
+
         try:
             for exchange in exchanges:
                 logger.debug(f"Loading {exchange}")
@@ -66,7 +73,6 @@ class CexTrader:
                     }
                 )
                 logger.debug(f"Loaded {exchange}")
-                CexClient()
         except Exception as e:
             logger.error("CexTrader init: {}", e)
 
@@ -117,6 +123,27 @@ class CexTrader:
             quotes.append(f"🏦 {exchange_name}: {quote}")
         return "\n".join(quotes)
 
+    async def get_quote(self, cx_client, symbol):
+        """
+        Return a quote for a symbol
+        of a given exchange ccxt object
+
+
+        Args:
+            cex
+            symbol
+
+        Returns:
+            quote
+        """
+        try:
+            ticker = cx_client.fetch_ticker(symbol)
+            logger.debug("ticker: {}", ticker)
+            return ticker["last"]
+        except Exception as e:
+            logger.error("get_quote: {}", e)
+            return "No Quote"
+
     async def get_account_balances(self):
         """
         Return account balance.
@@ -135,6 +162,32 @@ class CexTrader:
             balance = await self.get_account_balance(cex)
             balance_info.append(f"🏦 Balance for {exchange_name}:\n{balance}")
         return "\n".join(balance_info)
+
+    async def get_account_balance(self, cx_client):
+        """
+        return account balance of
+        a given ccxt exchange
+
+        Args:
+            None
+
+        Returns:
+            balance
+
+        """
+        try:
+            raw_balance = cx_client.fetch_free_balance()
+            if filtered_balance := {
+                k: v for k, v in raw_balance.items() if v is not None and v > 0
+            }:
+                balance_str = "".join(
+                    f"{iterator}: {value} \n"
+                    for iterator, value in filtered_balance.items()
+                )
+                return f"{balance_str}"
+        except Exception as e:
+            logger.error(e)
+            return "No Balance"
 
     async def get_account_positions(self):
         """
@@ -155,6 +208,26 @@ class CexTrader:
             positions = await self.get_account_position(cex)
             position_info.append(f"📊 Position for {exchange_name}:\n{positions}")
         return "\n".join(position_info)
+
+    async def get_account_position(self, cx_client):
+        """
+        Return account position.
+        of a given exchange
+
+        Args:
+            None
+
+        Returns:
+            position
+
+        """
+        try:
+            positions = cx_client.fetch_positions()
+            if positions := [p for p in positions if p["type"] == "open"]:
+                return f"{positions}"
+        except Exception as e:
+            logger.error(e)
+            return "No Position"
 
     async def get_account_pnl(self):
         """
@@ -251,22 +324,3 @@ class CexTrader:
                 continue
 
         return confirmation_info
-
-    # async def replace_instrument(self, instrument):
-    #     """
-    #     Replace instrument by an alternative instrument, if the
-    #     instrument is not in the mapping, it will be ignored.
-
-    #     Args:
-    #         order (dict):
-
-    #     Returns:
-    #         dict
-    #     """
-    #     for item in self.mapping:
-    #         if item["id"] == instrument:
-    #             instrument = item["alt"]
-    #             self.logger.debug("Instrument symbol changed", instrument)
-    #             break
-
-    #     return instrument
