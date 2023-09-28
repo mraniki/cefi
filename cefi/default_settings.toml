@@ -39,6 +39,9 @@ cex_ordertype = ""
 trading_risk_amount = 10
 trading_asset = "USDT"
 trading_asset_separator = ""
+mapping = [
+    { id = "BTC", alt = "BTC/USDT" },
+]
 
 # [default.cex.binance]
 # cex_name = "binance"

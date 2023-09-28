@@ -67,7 +67,7 @@ class CexTrader:
                 logger.debug(f"Loaded {exchange}")
         except Exception as e:
             logger.error("CexTrader init: {}", e)
- 
+
     async def get_help(self):
         """
         Get the help information for the current instance.
@@ -249,6 +249,7 @@ class CexTrader:
 
         """
         action = order_params.get("action")
+        # TODO implement mapping
         instrument = order_params.get("instrument")
         confirmation_info = []
         if not action or not instrument:
@@ -260,7 +261,6 @@ class CexTrader:
             order_type = item["exchange_ordertype"]
             trading_asset = item["trading_asset"]
             logger.debug("trading_asset {}", trading_asset)
-            #instrument = instrument + item["separator"] + item["trading_asset"]
             try:
                 if await self.get_account_balance(cex) == "No Balance":
                     logger.warning("⚠️ Check Balance")
@@ -316,3 +316,22 @@ class CexTrader:
                 continue
 
         return confirmation_info
+
+    # async def replace_instrument(self, instrument):
+    #     """
+    #     Replace instrument by an alternative instrument, if the
+    #     instrument is not in the mapping, it will be ignored.
+
+    #     Args:
+    #         order (dict):
+
+    #     Returns:
+    #         dict
+    #     """
+    #     for item in self.mapping:
+    #         if item["id"] == instrument:
+    #             instrument = item["alt"]
+    #             self.logger.debug("Instrument symbol changed", instrument)
+    #             break
+
+    #     return instrument
