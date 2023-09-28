@@ -11,7 +11,7 @@
 # settings.toml
 # [default]
 # cex_enabled = false
- 
+
 [default]
 # Dynaconf settings verification
 VALUE = "On default"
@@ -26,16 +26,17 @@ ccxt_commands = """
 🏦 /pos
 """
 
+
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
-cex_name = ""
-cex_api= ""
-cex_secret= ""
-cex_password = ""
-cex_testmode = true
-cex_defaulttype = ""
-cex_ordertype = ""
+name = ""
+api_key= ""
+secret= ""
+password = ""
+testmode = true
+defaulttype = ""
+ordertype = ""
 trading_risk_amount = 10
 trading_asset = "USDT"
 trading_asset_separator = ""
