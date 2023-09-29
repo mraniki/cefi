@@ -26,7 +26,6 @@ ccxt_commands = """
 🏦 /pos
 """
 
-
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
@@ -53,6 +52,8 @@ mapping = [
 # cex_ordertype = "market"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
+# trading_asset_separator = ""
+# mapping = []
 
 # [default.cex.huobi]
 # cex_name ="huobi"
@@ -63,7 +64,8 @@ mapping = [
 # cex_ordertype = "market"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
-#trading_asset_separator = "/"
+# trading_asset_separator = "/"
+# mapping = []
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###
