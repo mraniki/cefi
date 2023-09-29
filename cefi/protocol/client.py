@@ -154,7 +154,7 @@ class CexClient:
         for item in self.mapping:
             if item["id"] == instrument:
                 instrument = item["alt"]
-                logger.debug("Instrument symbol changed", instrument)
+                logger.debug("Instrument symbol changed {} {}", item["id"], instrument)
                 break
 
         return instrument
