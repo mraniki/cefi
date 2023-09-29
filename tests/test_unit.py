@@ -95,8 +95,8 @@ async def test_get_pnls(CXTrader):
 
 
 @pytest.mark.asyncio
-async def test_execute_order(CXTrader, order_parsed):
-    result = await CXTrader.execute_order(order_parsed)
+async def test_submit_order(CXTrader, order_parsed):
+    result = await CXTrader.submit_order(order_parsed)
     assert result is not None
     assert "binance" in result[0]
     assert "huobi" in result[1]

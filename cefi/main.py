@@ -150,7 +150,7 @@ class CexTrader:
             pnl_info.append(f"📊 PnL for {cex.name}:\n{pnls}")
             return "\n".join(pnl_info)
 
-    async def execute_order(self, order_params):
+    async def submit_order(self, order_params):
         """
         Execute order
 
