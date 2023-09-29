@@ -38,7 +38,7 @@ class CexTrader:
                     secret=exchanges[exchange]["secret"],
                     password=exchanges[exchange]["password"],
                     testmode=exchanges[exchange]["testmode"],
-                    defaultype=exchanges[exchange]["defaultype"],
+                    defaulttype=exchanges[exchange]["defaulttype"],
                     ordertype=exchanges[exchange]["ordertype"],
                     trading_risk_amount=exchanges[exchange]["trading_risk_amount"],
                     trading_asset=exchanges[exchange]["trading_asset"],
