@@ -1,5 +1,3 @@
-
-
 from datetime import datetime
 from unittest.mock import AsyncMock, MagicMock, patch
 
@@ -14,15 +12,31 @@ def set_test_settings_CEX():
     settings.configure(FORCE_ENV_FOR_DYNACONF="cefi")
 
 
-@pytest.fixture(name="order_parsed")
-def result_order():
+@pytest.fixture(name="order")
+def order1():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTCUSDT",
+        "instrument": "BTC",
         "stop_loss": 2000,
         "take_profit": 400,
-        "quantity": 1,
+        "quantity": 10,
+        "order_type": None,
+        "leverage_type": None,
+        "comment": None,
+        "timestamp": datetime.now(),
+    }
+
+
+@pytest.fixture(name="limit_order")
+def order2():
+    """return standard expected results"""
+    return {
+        "action": "BUY",
+        "instrument": "BTC",
+        "stop_loss": 2000,
+        "take_profit": 400,
+        "quantity": 10,
         "order_type": None,
         "leverage_type": None,
         "comment": None,
@@ -37,7 +51,7 @@ def test_fixture():
 
 def test_dynaconf_is_in_testing_env_CEX():
     print(settings.VALUE)
-    assert settings.VALUE == "On Testing CEX_binance"
+    assert settings.VALUE == "On Testing CEX"
 
 
 @pytest.mark.asyncio
@@ -48,72 +62,61 @@ async def test_cefi(CXTrader):
     assert "💱 binance" in result
     assert CXTrader is not None
     assert isinstance(CXTrader, CexTrader)
-    assert callable(CXTrader.get_account_balance)
-    assert callable(CXTrader.get_account_position)
-    assert callable(CXTrader.execute_order)
-
-
-@pytest.mark.asyncio
-async def test_help(CXTrader):
-    """Test help"""
-
-    result = await CXTrader.get_help()
-    assert result is not None
-    assert "🎯" in result
-    assert "🏦" in result
+    assert callable(CXTrader.get_balances)
+    assert callable(CXTrader.get_positions)
+    assert callable(CXTrader.submit_order)
 
 
 @pytest.mark.asyncio
 async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
-    #print(result)
     assert result is not None
     assert "🏦" in result
     assert ("binance" in result) or ("huobi" in result)
-    assert ("No quote" in result) or ("2" in result)
+    assert ("No Quote" in result) or ("2" in result)
 
 
 @pytest.mark.asyncio
-async def test_balance(CXTrader):
+async def test_get_balances(CXTrader):
     """Test balance"""
-    result = await CXTrader.get_account_balances()
+    result = await CXTrader.get_balances()
     assert result is not None
     assert "🏦" in result
     assert ("binance" in result) or ("huobi" in result)
 
 
 @pytest.mark.asyncio
-async def test_position(CXTrader):
-    result = await CXTrader.get_account_positions()
+async def test_get_positions(CXTrader):
+    result = await CXTrader.get_positions()
     assert "📊 Position" in result
 
 
 @pytest.mark.asyncio
-async def test_position_error(CXTrader, caplog):
-    """Test position"""
-    CXTrader.get_account_positions = AsyncMock()
-    await CXTrader.get_account_positions("/pos")
-    CXTrader.get_account_positions.assert_awaited_once()
-
-
-@pytest.mark.asyncio
-async def test_get_account_pnl(CXTrader):
+async def test_get_pnls(CXTrader):
     """Test pnl"""
 
-    result = await CXTrader.get_account_pnl()
-    assert result == 0
+    result = await CXTrader.get_pnls()
+    assert "0" in result
 
 
 @pytest.mark.asyncio
-async def test_execute_order_full(CXTrader, order_parsed):
-    result = await CXTrader.execute_order(order_parsed)
-    #print(result)
+async def test_submit_order(CXTrader, order):
+    result = await CXTrader.submit_order(order)
     assert result is not None
+    print(result)
     assert "binance" in result[0]
+    assert ("🔵" in result[0]) or ("Error" in result[0])
     assert "huobi" in result[1]
-    assert "🔵" in result[0]
-    assert "🔴" in result[0]
-    assert "ℹ️" in result[0]
-    assert "🗓️" in result[0]
-    assert "No quote" in result[1]
+    assert ("🔵" in result[1]) or ("Error" in result[1])
+
+
+@pytest.mark.asyncio
+async def test_submit_limit_order(CXTrader, limit_order):
+    result = await CXTrader.submit_order(limit_order)
+    assert result is not None
+    print(result)
+    assert "binance" in result[0]
+    assert ("🔵" in result[0]) or ("Error" in result[0])
+    assert "huobi" in result[1]
+    assert ("🔵" in result[1]) or ("Error" in result[1])

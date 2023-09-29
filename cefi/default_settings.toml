@@ -11,7 +11,7 @@
 # settings.toml
 # [default]
 # cex_enabled = false
- 
+
 [default]
 # Dynaconf settings verification
 VALUE = "On default"
@@ -29,18 +29,26 @@ ccxt_commands = """
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
-cex_name = ""
-cex_api= ""
-cex_secret= ""
-cex_password = ""
-cex_testmode = true
-cex_defaulttype = ""
-cex_ordertype = ""
+protocol = ""
+name = ""
+api_key= ""
+secret= ""
+password = ""
+testmode = true
+defaulttype = ""
+ordertype = ""
+leverage_type = ""
+leverage = 1
+trading_risk_percentage = true
 trading_risk_amount = 10
 trading_asset = "USDT"
 trading_asset_separator = ""
+mapping = [
+    { id = "BTC", alt = "BTC/USDT" },
+]
 
 # [default.cex.binance]
+# protocol = "ccxt"
 # cex_name = "binance"
 # cex_api=""
 # cex_secret=""
@@ -49,8 +57,11 @@ trading_asset_separator = ""
 # cex_ordertype = "market"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
+# trading_asset_separator = ""
+# mapping = []
 
 # [default.cex.huobi]
+# protocol = "ccxt"
 # cex_name ="huobi"
 # cex_api=""
 # cex_secret=""
@@ -59,7 +70,8 @@ trading_asset_separator = ""
 # cex_ordertype = "market"
 # trading_risk_amount = 10
 # trading_asset = "USDT"
-#trading_asset_separator = "/"
+# trading_asset_separator = "/"
+# mapping = []
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###
