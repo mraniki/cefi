@@ -171,9 +171,8 @@ class CexCcxt(CexClient):
                     amount,
                 )
 
-                if not trade:
-                    return f"Error executing {self.name}"
-                return await self.get_trade_confirmation(trade, action, instrument)
+                if trade:
+                    return await self.get_trade_confirmation(trade,instrument, action)
 
         except Exception as e:
             logger.debug("{} Error {}", self.name, e)
