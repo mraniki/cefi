@@ -172,7 +172,7 @@ class CexTrader:
                 order.append(trade)
 
             except Exception as e:
-                logger.debug("{} Error {}", cex.name, e)
+                logger.error("{} Error {}", cex.name, e)
                 continue
 
         return order

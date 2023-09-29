@@ -37,12 +37,14 @@ class CexCcxt(CexClient):
         testmode=True,
         defaulttype="spot",
         ordertype="market",
+        leverage_type="isolated",
+        leverage=1,
         trading_risk_percentage=True,
         trading_risk_amount=1,
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
-        **kwargs
+        **kwargs,
     ):
         """
         Initialize the ccxt client
@@ -175,6 +177,16 @@ class CexCcxt(CexClient):
             instrument=instrument,
             is_percentage=self.trading_risk_percentage,
         )
+        params = {
+            "stopLoss": {
+                "triggerPrice": order_params.get("stop_loss"),
+                # "price": order_params.get("action") * 0.98,
+            },
+            "takeProfit": {
+                "triggerPrice": order_params.get("take_profit"),
+                # "price": order_params.get("action") * 0.98,
+            },
+        }
         logger.debug("amount {}", amount)
         pre_order_checks = await self.pre_order_checks(order_params)
         logger.debug("pre_order_checks {}", pre_order_checks)
@@ -185,6 +197,7 @@ class CexCcxt(CexClient):
                     type=self.ordertype,
                     side=action,
                     amount=amount,
+                    params=params,
                 ):
                     return await self.get_trade_confirmation(order, instrument, action)
             return f"Error executing {self.name}"

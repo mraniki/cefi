@@ -12,15 +12,31 @@ def set_test_settings_CEX():
     settings.configure(FORCE_ENV_FOR_DYNACONF="cefi")
 
 
-@pytest.fixture(name="order_parsed")
-def result_order():
+@pytest.fixture(name="order")
+def order1():
     """return standard expected results"""
     return {
         "action": "BUY",
         "instrument": "BTC",
         "stop_loss": 2000,
         "take_profit": 400,
-        "quantity": 1,
+        "quantity": 10,
+        "order_type": None,
+        "leverage_type": None,
+        "comment": None,
+        "timestamp": datetime.now(),
+    }
+
+
+@pytest.fixture(name="limit_order")
+def order2():
+    """return standard expected results"""
+    return {
+        "action": "BUY",
+        "instrument": "BTC",
+        "stop_loss": 2000,
+        "take_profit": 400,
+        "quantity": 10,
         "order_type": None,
         "leverage_type": None,
         "comment": None,
@@ -49,16 +65,6 @@ async def test_cefi(CXTrader):
     assert callable(CXTrader.get_balances)
     assert callable(CXTrader.get_positions)
     # assert callable(CXTrader.execute_order)
-
-
-# @pytest.mark.asyncio
-# async def test_help(CXTrader):
-#     """Test help"""
-
-#     result = await CXTrader.get_help()
-#     assert result is not None
-#     assert "🎯" in result
-#     assert "🏦" in result
 
 
 @pytest.mark.asyncio
@@ -95,8 +101,19 @@ async def test_get_pnls(CXTrader):
 
 
 @pytest.mark.asyncio
-async def test_submit_order(CXTrader, order_parsed):
-    result = await CXTrader.submit_order(order_parsed)
+async def test_submit_order(CXTrader, order):
+    result = await CXTrader.submit_order(order)
+    assert result is not None
+    print(result)
+    assert "binance" in result[0]
+    assert ("🔵" in result[0]) or ("Error" in result[0])
+    assert "huobi" in result[1]
+    assert ("🔵" in result[1]) or ("Error" in result[1])
+
+
+@pytest.mark.asyncio
+async def test_submit_order(CXTrader, limit_order):
+    result = await CXTrader.submit_order(limit_order)
     assert result is not None
     print(result)
     assert "binance" in result[0]
