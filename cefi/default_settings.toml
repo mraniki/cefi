@@ -29,6 +29,7 @@ ccxt_commands = """
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
+protocol = ""
 name = ""
 api_key= ""
 secret= ""
@@ -44,6 +45,7 @@ mapping = [
 ]
 
 # [default.cex.binance]
+# protocol = "ccxt"
 # cex_name = "binance"
 # cex_api=""
 # cex_secret=""
@@ -56,6 +58,7 @@ mapping = [
 # mapping = []
 
 # [default.cex.huobi]
+# protocol = "ccxt"
 # cex_name ="huobi"
 # cex_api=""
 # cex_secret=""

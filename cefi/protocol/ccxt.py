@@ -67,8 +67,8 @@ class CexCcxt(CexClient):
             self.trading_asset = trading_asset
             self.separator = trading_asset_separator
             self.trading_risk_amount = trading_risk_amount
-            self.exchange_defaulttype = defaulttype
-            self.exchange_ordertype = ordertype
+            self.defaulttype = defaulttype
+            self.ordertype = ordertype
             self.mapping = mapping
         except Exception as e:
             logger.error("CexCcxt init: {}", e)
@@ -87,14 +87,11 @@ class CexCcxt(CexClient):
             quote
         """
         symbol = await self.replace_instrument(symbol)
-        logger.debug("symbol: {}", symbol)
         try:
             ticker = self.client.fetch_ticker(symbol)
-            logger.debug("ticker: {}", ticker)
             return ticker["last"]
         except Exception as e:
-            logger.error("get_quote: {}", e)
-            return "No Quote"
+            logger.error("No Quote: {}", e)
 
     async def get_account_balance(self):
         """
@@ -142,9 +139,12 @@ class CexCcxt(CexClient):
             logger.error(e)
             return "No Position"
 
+    async def pre_order_checks(self, order_params):
+        """ """
+        return True
+
     async def get_trading_asset_balance(self):
         """ """
-        logger.debug("trading_asset: {}", self.trading_asset)
         return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
 
     async def execute_order(self, order_params):
@@ -162,20 +162,15 @@ class CexCcxt(CexClient):
 
         """
         action = order_params.get("action")
-        logger.debug("action: {}", action)
         instrument = await self.replace_instrument(order_params.get("instrument"))
-        logger.debug("instrument: {}", instrument)
         quantity = order_params.get("quantity", self.trading_risk_amount)
-        logger.debug("quantity: {}", quantity)
         amount = await self.get_order_amount(quantity, instrument)
-        logger.debug("amount: {}", amount)
         pre_order_checks = await self.pre_order_checks(order_params)
-        logger.debug("pre_order_checks: {}", pre_order_checks)
         try:
             if amount and pre_order_checks:
                 if order := self.client.create_order(
                     instrument,
-                    self.order_type,
+                    self.ordertype,
                     action,
                     amount,
                 ):
@@ -183,5 +178,5 @@ class CexCcxt(CexClient):
             return f"Error executing {self.name}"
 
         except Exception as e:
-            logger.debug("{} Error {}", self.name, e)
+            logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}"

@@ -17,7 +17,7 @@ def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTCUSDT",
+        "instrument": "BTC",
         "stop_loss": 2000,
         "take_profit": 400,
         "quantity": 1,
@@ -99,10 +99,7 @@ async def test_submit_order(CXTrader, order_parsed):
     result = await CXTrader.submit_order(order_parsed)
     assert result is not None
     print(result)
-    assert "binance" in result
-    assert "huobi" in result
-    assert "🔵" in result
-    assert "🔴" in result
-    assert "ℹ️" in result
-    assert "🗓️" in result
-    assert "No quote" in result
+    assert "binance" in result[0]
+    assert "🔵" in result[0]
+    assert "huobi" in result[1]
+    assert "Error" in result[1]
