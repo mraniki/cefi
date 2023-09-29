@@ -69,6 +69,7 @@ class CexCcxt(CexClient):
             self.trading_risk_amount = trading_risk_amount
             self.exchange_defaulttype = defaulttype
             self.exchange_ordertype = ordertype
+            self.mapping = mapping
         except Exception as e:
             logger.error("CexCcxt init: {}", e)
 
