@@ -29,6 +29,7 @@ class CexCcxt(CexClient):
 
     def __init__(
         self,
+        **kwargs,
         protocol="ccxt",
         name=None,
         api_key=None,
