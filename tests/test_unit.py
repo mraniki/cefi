@@ -46,8 +46,8 @@ async def test_cefi(CXTrader):
     assert "💱 binance" in result
     assert CXTrader is not None
     assert isinstance(CXTrader, CexTrader)
-    assert callable(CXTrader.get_account_balances)
-    assert callable(CXTrader.get_account_positions)
+    assert callable(CXTrader.get_balances)
+    assert callable(CXTrader.get_positions)
     #assert callable(CXTrader.execute_order)
 
 
