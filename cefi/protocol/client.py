@@ -124,7 +124,7 @@ class CexClient:
 
     async def pre_order_checks(self, order_params):
         """ """
-        pass
+        return True
         # if await self.get_account_balance() == "No Balance":
         #     return f"{self.name}:\nNo Funding"
 
@@ -163,6 +163,7 @@ class CexClient:
         Returns:
             dict
         """
+        logger.debug("replace_instrument: {}", instrument)
         for item in self.mapping:
             if item["id"] == instrument:
                 instrument = item["alt"]
