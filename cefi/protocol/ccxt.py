@@ -160,7 +160,7 @@ class CexCcxt(CexClient):
         action = order_params.get("action")
         instrument = await self.replace_instrument(order_params.get("instrument"))
         quantity = order_params.get("quantity", self.trading_risk_amount)
-        amount = await order_amount(quantity)
+        amount = await get_order_amount(quantity, instrument)
 
         try:
             if amount and await self.order_checks(order_params):
@@ -173,7 +173,7 @@ class CexCcxt(CexClient):
 
                 if not trade:
                     return f"Error executing {self.name}"
-            return await self.get_trade_confirmation(trade, action, instrument)
+                return await self.get_trade_confirmation(trade, action, instrument)
 
         except Exception as e:
             logger.debug("{} Error {}", self.name, e)
