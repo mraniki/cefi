@@ -93,8 +93,7 @@ class CexCcxt(CexClient):
             logger.debug("ticker: {}", ticker)
             return ticker["last"]
         except Exception as e:
-            logger.error("get_quote: {}", e)
-            return "No Quote"
+            logger.error("No Quote: {}", e)
 
     async def get_account_balance(self):
         """
