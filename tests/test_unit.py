@@ -101,4 +101,4 @@ async def test_submit_order(CXTrader, order_parsed):
     print(result)
     assert "binance" in result[0]
     assert "huobi" in result[1]
-    assert ("🔵" in result) or ("error" in result)
+    assert ("🔵" in result) or ("Error" in result)
