@@ -26,7 +26,10 @@ class CexClient:
 
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        **kwargs,
+    ):
         """
         Initialize the Cex object
 
@@ -133,21 +136,6 @@ class CexClient:
     async def pre_order_checks(self, order_params):
         """ """
 
-    async def get_trade_confirmation(self, trade, instrument, action):
-        """ """
-
-        trade_confirmation = (
-            f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
-        )
-        trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
-        trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
-        trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
-        trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
-        trade_confirmation += f"ℹ️ {trade['id']}\n"
-        trade_confirmation += f"🗓️ {trade['datetime']}"
-        if trade_confirmation:
-            return f"{self.name}:\n{trade_confirmation}"
-
     async def replace_instrument(self, instrument):
         """
         Replace instrument by an alternative instrument, if the
@@ -166,3 +154,20 @@ class CexClient:
                 break
 
         return instrument
+        
+    async def get_trade_confirmation(self, trade, instrument, action):
+        """ """
+
+        trade_confirmation = (
+            f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
+        )
+        trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
+        trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"ℹ️ {trade['id']}\n"
+        trade_confirmation += f"🗓️ {trade['datetime']}"
+        if trade_confirmation:
+            return f"{self.name}:\n{trade_confirmation}"
+
+

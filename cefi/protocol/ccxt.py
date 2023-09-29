@@ -42,7 +42,6 @@ class CexCcxt(CexClient):
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
-        **kwargs,
     ):
         """
         Initialize the ccxt client
@@ -167,12 +166,15 @@ class CexCcxt(CexClient):
         action = order_params.get("action")
         instrument = await self.replace_instrument(order_params.get("instrument"))
         quantity = order_params.get("quantity", self.trading_risk_amount)
+        logger.debug("quantity {}", quantity)
         amount = await self.get_order_amount(
             quantity=quantity,
             instrument=instrument,
             is_percentage=self.trading_risk_percentage,
         )
+        logger.debug("amount {}", amount)
         pre_order_checks = await self.pre_order_checks(order_params)
+        logger.debug("pre_order_checks {}", pre_order_checks)
         try:
             if amount and pre_order_checks:
                 if order := self.client.create_order(
