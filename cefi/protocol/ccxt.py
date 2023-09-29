@@ -164,14 +164,12 @@ class CexCcxt(CexClient):
 
         try:
             if amount and (await self.order_checks(order_params)):
-                trade = self.client.create_order(
+                if trade := self.client.create_order(
                     instrument,
                     self.order_type,
                     action,
                     amount,
-                )
-
-                if trade:
+                ):
                     return await self.get_trade_confirmation(trade,instrument, action)
 
         except Exception as e:
