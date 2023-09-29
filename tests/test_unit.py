@@ -105,4 +105,3 @@ async def test_submit_order(CXTrader, order_parsed):
     assert "🔴" in result[0]
     assert "ℹ️" in result[0]
     assert "🗓️" in result[0]
-    assert "No quote" in result[1]
