@@ -42,6 +42,7 @@ class CexCcxt(CexClient):
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
+        **kwargs,
     ):
         """
         Initialize the ccxt client
@@ -75,22 +76,22 @@ class CexCcxt(CexClient):
         except Exception as e:
             logger.error("CexCcxt init: {}", e)
 
-    async def get_quote(self, symbol):
+    async def get_quote(self, instrument):
         """
-        Return a quote for a symbol
+        Return a quote for a instrument
         of a given exchange ccxt object
 
 
         Args:
             cex
-            symbol
+            instrument
 
         Returns:
             quote
         """
-        symbol = await self.replace_instrument(symbol)
+        instrument = await self.replace_instrument(instrument)
         try:
-            ticker = self.client.fetch_ticker(symbol)
+            ticker = self.client.fetch_ticker(instrument)
             return ticker["last"]
         except Exception as e:
             logger.error("No Quote: {}", e)
