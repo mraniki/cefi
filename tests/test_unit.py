@@ -17,7 +17,7 @@ def result_order():
     """return standard expected results"""
     return {
         "action": "BUY",
-        "instrument": "BTCUSDT",
+        "instrument": "BTC",
         "stop_loss": 2000,
         "take_profit": 400,
         "quantity": 1,
