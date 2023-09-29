@@ -101,16 +101,14 @@ class CexClient:
         """
 
     async def get_trading_asset_balance(self):
-        """
-        
-        """
-        
+        """ """
+
     async def get_order_amount(self, quantity, symbol):
         balance = await self.get_trading_asset_balance
         quote = await self.get_quote(symbol)
         if balance and quote:
             return balance * (float(quantity) / 100) / quote
-        
+
     async def order_checks(self, order_params):
         """ """
         pass

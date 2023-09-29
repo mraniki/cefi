@@ -48,7 +48,7 @@ async def test_cefi(CXTrader):
     assert isinstance(CXTrader, CexTrader)
     assert callable(CXTrader.get_balances)
     assert callable(CXTrader.get_positions)
-    #assert callable(CXTrader.execute_order)
+    # assert callable(CXTrader.execute_order)
 
 
 # @pytest.mark.asyncio
@@ -98,6 +98,7 @@ async def test_get_pnls(CXTrader):
 async def test_submit_order(CXTrader, order_parsed):
     result = await CXTrader.submit_order(order_parsed)
     assert result is not None
+    print(result)
     assert "binance" in result
     assert "huobi" in result
     assert "🔵" in result
