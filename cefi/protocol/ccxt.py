@@ -140,6 +140,9 @@ class CexCcxt(CexClient):
             logger.error(e)
             return "No Position"
 
+    async def get_trading_asset_balance(self):
+        return self.client.fetchBalance()[f"{trading_asset}"]["free"]
+
     async def execute_order(self, order_params):
         """
         Execute order
@@ -157,11 +160,10 @@ class CexCcxt(CexClient):
         action = order_params.get("action")
         instrument = await self.replace_instrument(order_params.get("instrument"))
         quantity = order_params.get("quantity", self.trading_risk_amount)
-        amount = quantity
-        # amount = asset_out_balance * (float(quantity) / 100) / asset_out_quote
+        amount = await order_amount(quantity)
 
         try:
-            if await self.order_checks():
+            if amount and await self.order_checks(order_params):
                 trade = self.cx_client.create_order(
                     instrument,
                     self.order_type,

@@ -72,33 +72,25 @@ async def test_quote(CXTrader, caplog):
 
 
 @pytest.mark.asyncio
-async def test_balance(CXTrader):
+async def test_get_balances(CXTrader):
     """Test balance"""
-    result = await CXTrader.get_account_balances()
+    result = await CXTrader.get_balances()
     assert result is not None
     assert "🏦" in result
     assert ("binance" in result) or ("huobi" in result)
 
 
 @pytest.mark.asyncio
-async def test_position(CXTrader):
-    result = await CXTrader.get_account_positions()
+async def test_get_positions(CXTrader):
+    result = await CXTrader.get_positions()
     assert "📊 Position" in result
 
 
 @pytest.mark.asyncio
-async def test_position_error(CXTrader, caplog):
-    """Test position"""
-    CXTrader.get_account_positions = AsyncMock()
-    await CXTrader.get_account_positions("/pos")
-    CXTrader.get_account_positions.assert_awaited_once()
-
-
-@pytest.mark.asyncio
-async def test_get_account_pnls(CXTrader):
+async def test_get_pnls(CXTrader):
     """Test pnl"""
 
-    result = await CXTrader.get_account_pnls()
+    result = await CXTrader.get_pnls()
     assert "0" in result
 
 

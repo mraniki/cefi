@@ -98,7 +98,7 @@ class CexTrader:
             quotes.append(f"🏦 {cex.name}: {quote}")
         return "\n".join(quotes)
 
-    async def get_account_balances(self):
+    async def get_balances(self):
         """
         Return account balance.
 
@@ -115,7 +115,7 @@ class CexTrader:
             balance_info.append(f"🏦 Balance for {cex.name}:\n{balance}")
         return "\n".join(balance_info)
 
-    async def get_account_positions(self):
+    async def get_positions(self):
         """
         return account position.
 
@@ -133,7 +133,7 @@ class CexTrader:
             position_info.append(f"📊 Position for {_.name}:\n{positions}")
         return "\n".join(position_info)
 
-    async def get_account_pnls(self):
+    async def get_pnls(self):
         """
         Return account pnl.
 
