@@ -67,8 +67,8 @@ class CexCcxt(CexClient):
             self.trading_asset = trading_asset
             self.separator = trading_asset_separator
             self.trading_risk_amount = trading_risk_amount
-            self.exchange_defaulttype = defaulttype
-            self.exchange_ordertype = ordertype
+            self.defaulttype = defaulttype
+            self.ordertype = ordertype
             self.mapping = mapping
         except Exception as e:
             logger.error("CexCcxt init: {}", e)
@@ -175,7 +175,7 @@ class CexCcxt(CexClient):
             if amount and pre_order_checks:
                 if order := self.client.create_order(
                     instrument,
-                    self.order_type,
+                    self.ordertype,
                     action,
                     amount,
                 ):
