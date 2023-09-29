@@ -32,18 +32,20 @@ class CexTrader:
         try:
             for exchange in exchanges:
                 client = self._create_client(
-                protocol="ccxt",
-                name=exchanges[exchange]["name"],
-                api_key=exchanges[exchange]["api_key"],
-                secret=exchanges[exchange]["secret"],
-                password=exchanges[exchange]["password"],
-                testmode=exchanges[exchange]["testmode"],
-                defaultype=exchanges[exchange]["defaultype"],
-                ordertype=exchanges[exchange]["ordertype"],
-                trading_risk_amount=exchanges[exchange]["trading_risk_amount"],
-                trading_asset=exchanges[exchange]["trading_asset"],
-                trading_asset_separator=exchanges[exchange]["trading_asset_separator"],
-                mapping=exchanges[exchange]["mapping"],
+                    protocol="ccxt",
+                    name=exchanges[exchange]["name"],
+                    api_key=exchanges[exchange]["api_key"],
+                    secret=exchanges[exchange]["secret"],
+                    password=exchanges[exchange]["password"],
+                    testmode=exchanges[exchange]["testmode"],
+                    defaultype=exchanges[exchange]["defaultype"],
+                    ordertype=exchanges[exchange]["ordertype"],
+                    trading_risk_amount=exchanges[exchange]["trading_risk_amount"],
+                    trading_asset=exchanges[exchange]["trading_asset"],
+                    trading_asset_separator=exchanges[exchange][
+                        "trading_asset_separator"
+                    ],
+                    mapping=exchanges[exchange]["mapping"],
                 )
                 self.cex_info.append(client)
                 logger.debug(f"Loaded {exchange}")
@@ -58,13 +60,13 @@ class CexTrader:
         Returns:
             object: The handler object.
         """
-        platform = kwargs["platform"]
-        logger.debug("get handler {}", platform)
-        if platform == "ccxt":
+        protocol = kwargs["protocol"]
+        logger.debug("get handler {}", protocol)
+        if protocol == "ccxt":
             logger.debug("get ccxt client")
             return CexCcxt(**kwargs)
         else:
-            logger.error("Invalid platform specified {}", platform)
+            logger.error("Invalid platform specified {}", protocol)
 
     async def get_info(self):
         """
@@ -110,7 +112,7 @@ class CexTrader:
         balance_info = []
         for cex in self.cex_info:
             balance = await cex.get_account_balance()
-            balance_info.append(f"🏦 Balance for {item.name}:\n{balance}")
+            balance_info.append(f"🏦 Balance for {cex.name}:\n{balance}")
         return "\n".join(balance_info)
 
     async def get_account_positions(self):
@@ -127,8 +129,8 @@ class CexTrader:
 
         position_info = []
         for _ in self.cex_info:
-            positions = await item.get_account_position()
-            position_info.append(f"📊 Position for {item.name}:\n{positions}")
+            positions = await _.get_account_position()
+            position_info.append(f"📊 Position for {_.name}:\n{positions}")
         return "\n".join(position_info)
 
     async def get_account_pnls(self):
@@ -163,15 +165,13 @@ class CexTrader:
 
         """
         order = []
-        if not action or not instrument:
-            return
+        # if not action or not instrument:
+        #     return
 
         for cex in self.cex_info:
             try:
-
                 trade = await cex.execute_order(order_params)
                 order.append(trade)
-
 
             except Exception as e:
                 logger.debug("{} Error {}", cex.name, e)

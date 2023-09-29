@@ -4,7 +4,7 @@ CEX client based
 class
 
 
-""" 
+"""
 
 from loguru import logger
 
@@ -46,7 +46,6 @@ class CexClient:
             quote
         """
 
-
     async def get_account_balance(self):
         """
         return account balance of
@@ -59,7 +58,6 @@ class CexClient:
             balance
 
         """
-
 
     async def get_account_position(self):
         """
@@ -101,39 +99,36 @@ class CexClient:
             trade_confirmation(dict)
 
         """
+
     async def order_checks(self, order_params):
-        """
-        
-        """
-        if await self.get_account_balance() == "No Balance":
-            return (f"{self.name}:\nNo Funding")
+        """ """
+        pass
+        # if await self.get_account_balance() == "No Balance":
+        #     return f"{self.name}:\nNo Funding"
 
-        asset_out_quote = await self.get_quote(instrument)
-        if asset_out_quote == "No Quote":
-                return (f"{self.name}:\nNo quote")
-        
-        asset_out_balance = self.client.fetchBalance()[f"{trading_asset}"]["free"]
+        # asset_out_quote = await self.get_quote(instrument)
+        # if asset_out_quote == "No Quote":
+        #     return f"{self.name}:\nNo quote"
 
-        if not asset_out_balance:
-            return (f"{self.name}:\nNo Funding")
-                
+        # asset_out_balance = self.client.fetchBalance()[f"{trading_asset}"]["free"]
+
+        # if not asset_out_balance:
+        #     return f"{self.name}:\nNo Funding"
 
     async def get_trade_confirmation(self, trade, instrument, action):
-        """
-        
-        """
+        """ """
 
         trade_confirmation = (
-                f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
-            )
-            trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
-            trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
-            trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
-            trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
-            trade_confirmation += f"ℹ️ {trade['id']}\n"
-            trade_confirmation += f"🗓️ {trade['datetime']}"
-            if trade_confirmation:
-                return (f"{self.name}:\n{trade_confirmation}")
+            f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
+        )
+        trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
+        trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"ℹ️ {trade['id']}\n"
+        trade_confirmation += f"🗓️ {trade['datetime']}"
+        if trade_confirmation:
+            return f"{self.name}:\n{trade_confirmation}"
 
     async def replace_instrument(self, instrument):
         """
