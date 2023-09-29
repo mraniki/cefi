@@ -165,9 +165,6 @@ class CexTrader:
 
         """
         order = []
-        # if not action or not instrument:
-        #     return
-
         for cex in self.cex_info:
             try:
                 trade = await cex.execute_order(order_params)
