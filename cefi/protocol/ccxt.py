@@ -95,7 +95,7 @@ class CexCcxt(CexClient):
         try:
             ticker = self.client.fetch_ticker(instrument)
             quote = ticker["last"]
-            logger.error("Quote: {}", quote)
+            logger.debug("Quote: {}", quote)
             return quote
         except Exception as e:
             logger.error("No Quote: {}", e)

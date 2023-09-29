@@ -121,7 +121,9 @@ class CexClient:
 
         """
         balance = await self.get_trading_asset_balance()
+        logger.debug("Balance {}", balance)
         quote = await self.get_quote(instrument)
+        logger.debug("Quote {}", quote)
 
         if not is_percentage and balance and quote:
             return quantity
@@ -129,7 +131,7 @@ class CexClient:
         if balance and quote:
             risk_percentage = float(quantity) / 100
             amount = balance * risk_percentage / quote
-
+            logger.debug("Amount {}", amount)
         if amount >= 1:
             return amount
 
