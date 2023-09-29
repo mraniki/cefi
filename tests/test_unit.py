@@ -95,15 +95,15 @@ async def test_position_error(CXTrader, caplog):
 
 
 @pytest.mark.asyncio
-async def test_get_account_pnl(CXTrader):
+async def test_get_account_pnls(CXTrader):
     """Test pnl"""
 
-    result = await CXTrader.get_account_pnl()
-    assert result == 0
+    result = await CXTrader.get_account_pnls()
+    assert "0" in result
 
 
 @pytest.mark.asyncio
-async def test_execute_order_full(CXTrader, order_parsed):
+async def test_execute_order(CXTrader, order_parsed):
     result = await CXTrader.execute_order(order_parsed)
     assert result is not None
     assert "binance" in result[0]
