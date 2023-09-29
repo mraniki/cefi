@@ -40,7 +40,7 @@ class CexTrader:
                     testmode=None or exchanges[exchange]["testmode"],
                     defaulttype="spot" or exchanges[exchange]["defaulttype"],
                     ordertype="market" or exchanges[exchange]["ordertype"],
-                    leverage_type="cross" or exchanges[exchange]["leverage_type"],
+                    leverage_type="isolated" or exchanges[exchange]["leverage_type"],
                     leverage=1 or exchanges[exchange]["leverage"],
                     trading_risk_percentage=True
                     or exchanges[exchange]["trading_risk_percentage"],

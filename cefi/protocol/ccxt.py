@@ -181,10 +181,10 @@ class CexCcxt(CexClient):
         try:
             if amount and pre_order_checks:
                 if order := self.client.create_order(
-                    instrument,
-                    self.ordertype,
-                    action,
-                    amount,
+                    symbol=instrument,
+                    type=self.ordertype,
+                    side=action,
+                    amount=amount,
                 ):
                     return await self.get_trade_confirmation(order, instrument, action)
             return f"Error executing {self.name}"

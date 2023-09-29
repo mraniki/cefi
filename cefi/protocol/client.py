@@ -161,10 +161,10 @@ class CexClient:
         trade_confirmation = (
             f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
         )
-        trade_confirmation += f"⚫ {round(trade['amount'], 4)}\n"
-        trade_confirmation += f"🔵 {round(trade['price'], 4)}\n"
-        trade_confirmation += f"🟢 {round(trade['price'], 4)}\n"
-        trade_confirmation += f"🔴 {round(trade['price'], 4)}\n"
+        trade_confirmation += f"⚫ {round(0 or trade['amount'], 4)}\n"
+        trade_confirmation += f"🔵 {round(0 or trade['price'], 4)}\n"
+        trade_confirmation += f"🟢 {round(0 or trade['takeProfitPrice'], 4)}\n"
+        trade_confirmation += f"🔴 {round(0 or trade['stopLossPrice'], 4)}\n"
         trade_confirmation += f"ℹ️ {trade['id']}\n"
         trade_confirmation += f"🗓️ {trade['datetime']}"
         if trade_confirmation:
