@@ -30,7 +30,7 @@
   <pre>
   <code>
       cex = CexTrader()
-      await cex.get_account_balance()
+      await cex.get_balances()
   </code>
   </pre>
 
