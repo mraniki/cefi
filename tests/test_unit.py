@@ -98,10 +98,10 @@ async def test_get_pnls(CXTrader):
 async def test_submit_order(CXTrader, order_parsed):
     result = await CXTrader.submit_order(order_parsed)
     assert result is not None
-    assert "binance" in result[0]
-    assert "huobi" in result[1]
-    assert "🔵" in result[0]
-    assert "🔴" in result[0]
-    assert "ℹ️" in result[0]
-    assert "🗓️" in result[0]
-    assert "No quote" in result[1]
+    assert "binance" in result
+    assert "huobi" in result
+    assert "🔵" in result
+    assert "🔴" in result
+    assert "ℹ️" in result
+    assert "🗓️" in result
+    assert "No quote" in result
