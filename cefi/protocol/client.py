@@ -120,7 +120,9 @@ class CexClient:
         balance = await self.get_trading_asset_balance()
         quote = await self.get_quote(symbol)
         if balance and quote:
-            return balance * (float(quantity) / 100) / quote
+            amount = balance * (float(quantity) / 100) / quote
+            if amount > 1:
+                return amount
 
     async def pre_order_checks(self, order_params):
         """ """
