@@ -130,7 +130,7 @@ class CexClient:
             risk_percentage = float(quantity) / 100
             amount = balance * risk_percentage / quote
 
-            if amount >= 1:
+            if amount:
                 return amount
 
     async def pre_order_checks(self, order_params):
