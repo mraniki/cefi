@@ -2,6 +2,176 @@
 
 
 
+## v3.0.0 (2023-09-29)
+
+### :boom:
+
+* :boom: Refactor default_settings.toml and main.py
+
+The changes in this commit refactor the default_settings.toml and main.p
+y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c866b58e2c88d723846c6f1))
+
+### :recycle:
+
+* :recycle: ([`c110368`](https://github.com/mraniki/cefi/commit/c110368ae582fddffbaa33a0a9464e7daea8f564))
+
+### :rotating_light:
+
+* :rotating_light: ([`9ee2e7e`](https://github.com/mraniki/cefi/commit/9ee2e7e2dc91f90d97b01ddaba1dddfaf7da2183))
+
+* :rotating_light: ([`964b1c6`](https://github.com/mraniki/cefi/commit/964b1c616c81cd70846bc28252f3868b3e875ced))
+
+### :white_check_mark:
+
+* :white_check_mark: Unit Test ([`9360d0d`](https://github.com/mraniki/cefi/commit/9360d0d7a37c91876969c2aed69ffaf27251bfd4))
+
+* :white_check_mark: Unit Test ([`054e99b`](https://github.com/mraniki/cefi/commit/054e99ba2aa84630418572352b38709cf154988b))
+
+* :white_check_mark: Unit Test ([`a130299`](https://github.com/mraniki/cefi/commit/a130299bdd21e48a3413ec8c95b3df0e30c1e94e))
+
+* :white_check_mark: Unit Test ([`b49839e`](https://github.com/mraniki/cefi/commit/b49839ecc1b1e8d0fd232a11369fed2776dda341))
+
+* :white_check_mark: Unit Test ([`8e56306`](https://github.com/mraniki/cefi/commit/8e56306585b89f29d36a01e89e35bda92cd02aaa))
+
+### Other
+
+* Merge pull request #54 from mraniki/dev
+
+💥refactoring and instrument mapping per exchange ([`3c8d329`](https://github.com/mraniki/cefi/commit/3c8d329802ce00d4a2caeb4e9a637bb0d2f5f816))
+
+* Refactor test_unit.py assert statements ([`9b6216f`](https://github.com/mraniki/cefi/commit/9b6216fa437cb4f740d39bd9b499b2759e78930c))
+
+* Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`41d0ded`](https://github.com/mraniki/cefi/commit/41d0ded36cdb2a6ef64e37800009408e1056d904))
+
+* Fix leverage type and order parameters ([`eeca433`](https://github.com/mraniki/cefi/commit/eeca43308621c3cdc7b6711f9b234c1ca8763992))
+
+* Merge pull request #57 from mraniki/sourcery/dev
+
+💥refactoring and instrument mapping per exchange (Sourcery refactored) ([`24bc83f`](https://github.com/mraniki/cefi/commit/24bc83f6c713adccbf392c49299e176eeaeecc67))
+
+* &#39;Refactored by Sourcery&#39; ([`224a4ae`](https://github.com/mraniki/cefi/commit/224a4ae127fb204dbe7cd98039b87a516f55a67d))
+
+* Refactor CexCcxt to return quote instead of ticker[&#34;last&#34;] ([`76dec82`](https://github.com/mraniki/cefi/commit/76dec829e050dab9ab4a7bbb8936ff700fca5474))
+
+* Refactor CexCcxt class in ccxt.py ([`5c0ea16`](https://github.com/mraniki/cefi/commit/5c0ea168f8e60d58cb8a297b8359dac499a6b18f))
+
+* Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`6175741`](https://github.com/mraniki/cefi/commit/61757417da5c38b3a69185329ad04b6475adc010))
+
+* Refactor get_account_balance to get_balances ([`a59b87d`](https://github.com/mraniki/cefi/commit/a59b87d6488fa3050cef7187588ef02e73130ca8))
+
+* :loud_sound: ([`f240904`](https://github.com/mraniki/cefi/commit/f240904d598e2e7222d9a342934bf2a835fe3334))
+
+* Merge pull request #56 from mraniki/sourcery/dev
+
+💥refactoring and instrument mapping per exchange (Sourcery refactored) ([`6631cbe`](https://github.com/mraniki/cefi/commit/6631cbe2defe9a07dcef07918ea2973ac8a30bb9))
+
+* &#39;Refactored by Sourcery&#39; ([`76d58ce`](https://github.com/mraniki/cefi/commit/76d58ce2cf3729a5645fc95fa6afab103246b0a5))
+
+* Refactor test_unit.py assertions for submit_order function. ([`8e4cb45`](https://github.com/mraniki/cefi/commit/8e4cb453fc711a58e32d6028a34665df0d6377c5))
+
+* Refactor CexCcxt get_trade_confirmation method ([`a75c532`](https://github.com/mraniki/cefi/commit/a75c532c8adc60a4b7728b57fb56bc471ab5fab0))
+
+* Refactor order amount calculation and balance retrieval ([`e07331d`](https://github.com/mraniki/cefi/commit/e07331dcde20cd22fd92c08465ebb862219c79b4))
+
+* Merge pull request #55 from mraniki/sourcery/dev
+
+💥refactoring and instrument mapping per exchange (Sourcery refactored) ([`d57dd8a`](https://github.com/mraniki/cefi/commit/d57dd8af5218a7ec6bcc6cc1b44cc08948fa5ad0))
+
+* &#39;Refactored by Sourcery&#39; ([`4628f73`](https://github.com/mraniki/cefi/commit/4628f73ba56a4b72464edb445b77e3dac694ccce))
+
+### Update
+
+* Update logging statements and test assertions ([`1576010`](https://github.com/mraniki/cefi/commit/1576010ddc9dd7d1544c58a2dec62114496477cd))
+
+* Refactor CexTrader methods and add new methods for getting balances, positions, and PnLs. Update CexCcxt and CexClient to include new methods for getting trading asset balance and order amount. ([`4d044ba`](https://github.com/mraniki/cefi/commit/4d044ba18ff8ad67efca88942232578f7d2ea619))
+
+### ♻️
+
+* ♻️ ([`a5fc5d8`](https://github.com/mraniki/cefi/commit/a5fc5d81fdf24b4148c561d3974d5f38254da29f))
+
+* ♻️ ([`edc2e36`](https://github.com/mraniki/cefi/commit/edc2e36ec3d4b310ed4994f601f32568664a6df3))
+
+* ♻️ ([`32074ec`](https://github.com/mraniki/cefi/commit/32074ec3ac0470c465df7df819408d2c708d96b3))
+
+* ♻️ ([`dd38d16`](https://github.com/mraniki/cefi/commit/dd38d16777f5bbecc74f28473ce873d8ea1457bd))
+
+* ♻️ ([`085ab0d`](https://github.com/mraniki/cefi/commit/085ab0d2aaf4abf6797e19f0c63dcce9318cc7f4))
+
+* ♻️ ([`f17e73b`](https://github.com/mraniki/cefi/commit/f17e73bc607699d2e5fe653a006a47da05061791))
+
+* ♻️ ([`03ed578`](https://github.com/mraniki/cefi/commit/03ed578cbb4ef00b2c377f33f7cb415212ffc03e))
+
+* ♻️ ([`965980c`](https://github.com/mraniki/cefi/commit/965980c7890cf413cb85e87238837eb4c3d29a71))
+
+* ♻️ ([`82825d6`](https://github.com/mraniki/cefi/commit/82825d6240b232deaaf2a65bd60085de531c2602))
+
+* ♻️ ([`2cf1240`](https://github.com/mraniki/cefi/commit/2cf1240ab647e4d5129a512fa91042519d051dcf))
+
+* ♻️ ([`a257b65`](https://github.com/mraniki/cefi/commit/a257b65dfb7890ff376bf790afad73ed638d409c))
+
+* ♻️ ([`6d1c890`](https://github.com/mraniki/cefi/commit/6d1c8907a2825e6a740dbbe7793da887ce47d429))
+
+* 🔊 ♻️ ([`2eba4cf`](https://github.com/mraniki/cefi/commit/2eba4cfa6b6d28462831107ac1c4143afd6c42db))
+
+* ♻️ ([`36f155d`](https://github.com/mraniki/cefi/commit/36f155dca3257cf89209748f21e256c5e9660f40))
+
+* ♻️ Refactoring structure ([`8ced437`](https://github.com/mraniki/cefi/commit/8ced437beca3d6533331ad9f3fdb51e6e15ac2a9))
+
+### ⚡
+
+* ⚡ limit/future params ([`a249713`](https://github.com/mraniki/cefi/commit/a2497135d494e57d8e1b12e80466cd1494a9ff34))
+
+* ⚡ limit/future params ([`7e302a0`](https://github.com/mraniki/cefi/commit/7e302a0986f7f00def881fbaccb323420309136d))
+
+* ⚡ ([`13d08ab`](https://github.com/mraniki/cefi/commit/13d08abe71d526a1abf6d9f069280068d82e794a))
+
+### ✅
+
+* ✅ Unit Test ([`6690b19`](https://github.com/mraniki/cefi/commit/6690b192cfb14a8e9e6a8f3683a9f808cbd466ed))
+
+* ✅ Unit Test ([`3826a6b`](https://github.com/mraniki/cefi/commit/3826a6b0df4336bbe4c62999ae16348552ad2666))
+
+* ✅ Unit Test ([`e97a67f`](https://github.com/mraniki/cefi/commit/e97a67f229f4046a0465d1e1109241ef3a5a6888))
+
+* ✅ Unit Test ([`4ae87a6`](https://github.com/mraniki/cefi/commit/4ae87a65e74dc67c09824a4be1b2b118fa8e88f5))
+
+### ✨
+
+* ✨ instrument mapping per exchange ([`bc26438`](https://github.com/mraniki/cefi/commit/bc26438d53b8ad4f798e83dd82df5ecb6005a866))
+
+### 🐛
+
+* 🐛 ([`ec075b6`](https://github.com/mraniki/cefi/commit/ec075b61a8b8576042a5a16fe61fd788d7e54192))
+
+* 🐛 ([`4fbf950`](https://github.com/mraniki/cefi/commit/4fbf95007283322c7446b18d9459a7b8dbd675b4))
+
+* 🐛 ([`398bd65`](https://github.com/mraniki/cefi/commit/398bd65d21bbec65ccc51b8577260252e17eacda))
+
+### 🔇
+
+* 🔇 ([`aa17df8`](https://github.com/mraniki/cefi/commit/aa17df81f21261f9d7d1ce61fd47623687f48e3d))
+
+### 🔊
+
+* 🔊 ([`560c6f1`](https://github.com/mraniki/cefi/commit/560c6f1763223234bcc2b172194424426ecedc1a))
+
+* 🔊 ([`9b0d81a`](https://github.com/mraniki/cefi/commit/9b0d81a7e8b2622780c050e7958425ee95ec43bf))
+
+### 🔥
+
+* 🔥 ([`9a1aff8`](https://github.com/mraniki/cefi/commit/9a1aff8bb10f2abfac0e14d7d38bbfde1f117fe3))
+
+### 🔧
+
+* 🔧 ([`46e679c`](https://github.com/mraniki/cefi/commit/46e679cb284e49d5635c13c93e6ba51fe2d8d95c))
+
+### 🚨
+
+* 🚨 ([`864bc9f`](https://github.com/mraniki/cefi/commit/864bc9f2566c36fcf2c9c7df11acda1e0180cca8))
+
+* 🚨 ([`7ec03d0`](https://github.com/mraniki/cefi/commit/7ec03d0d83dfc3e615c6fd30f9437b702b2edea9))
+
+
 ## v2.0.10 (2023-09-27)
 
 ### Other
