@@ -104,12 +104,25 @@ class CexClient:
         """ """
 
     async def get_order_amount(self, quantity, symbol):
+        """
+        Return amount based on risk percentage.
+
+        Args:
+            quantity
+            symbol
+
+        Returns:
+            amount
+
+        """
+        logger.debug("quantity: {}", quantity)
+        logger.debug("symbol: {}", symbol)
         balance = await self.get_trading_asset_balance
         quote = await self.get_quote(symbol)
         if balance and quote:
             return balance * (float(quantity) / 100) / quote
 
-    async def order_checks(self, order_params):
+    async def pre_order_checks(self, order_params):
         """ """
         pass
         # if await self.get_account_balance() == "No Balance":

@@ -86,6 +86,7 @@ class CexCcxt(CexClient):
         Returns:
             quote
         """
+        logger.debug("symbol: {}", symbol)
         try:
             ticker = self.client.fetch_ticker(symbol)
             logger.debug("ticker: {}", ticker)
@@ -141,6 +142,8 @@ class CexCcxt(CexClient):
             return "No Position"
 
     async def get_trading_asset_balance(self):
+        """ """
+        logger.debug("trading_asset: {}", self.trading_asset)
         return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
 
     async def execute_order(self, order_params):
@@ -165,7 +168,7 @@ class CexCcxt(CexClient):
         logger.debug("quantity: {}", quantity)
         amount = await self.get_order_amount(quantity, instrument)
         logger.debug("amount: {}", amount)
-        pre_order_checks = await self.order_checks(order_params)
+        pre_order_checks = await self.pre_order_checks(order_params)
         logger.debug("pre_order_checks: {}", pre_order_checks)
         try:
             if amount and pre_order_checks:
