@@ -37,6 +37,7 @@ class CexCcxt(CexClient):
         testmode=True,
         defaulttype="spot",
         ordertype="market",
+        trading_risk_percentage=True,
         trading_risk_amount=1,
         trading_asset="USDT",
         trading_asset_separator=None,
@@ -66,6 +67,7 @@ class CexCcxt(CexClient):
             self.name = self.client.id
             self.trading_asset = trading_asset
             self.separator = trading_asset_separator
+            self.trading_risk_percentage = trading_risk_percentage
             self.trading_risk_amount = trading_risk_amount
             self.defaulttype = defaulttype
             self.ordertype = ordertype
@@ -164,7 +166,11 @@ class CexCcxt(CexClient):
         action = order_params.get("action")
         instrument = await self.replace_instrument(order_params.get("instrument"))
         quantity = order_params.get("quantity", self.trading_risk_amount)
-        amount = await self.get_order_amount(quantity, instrument)
+        amount = await self.get_order_amount(
+            quantity=quantity,
+            instrument=instrument,
+            is_percentage=self.trading_risk_percentage,
+        )
         pre_order_checks = await self.pre_order_checks(order_params)
         try:
             if amount and pre_order_checks:

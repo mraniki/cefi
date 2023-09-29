@@ -36,16 +36,19 @@ class CexTrader:
                     name=exchanges[exchange]["name"],
                     api_key=exchanges[exchange]["api_key"],
                     secret=exchanges[exchange]["secret"],
-                    password=exchanges[exchange]["password"],
-                    testmode=exchanges[exchange]["testmode"],
-                    defaulttype=exchanges[exchange]["defaulttype"],
-                    ordertype=exchanges[exchange]["ordertype"],
-                    trading_risk_amount=exchanges[exchange]["trading_risk_amount"],
-                    trading_asset=exchanges[exchange]["trading_asset"],
-                    trading_asset_separator=exchanges[exchange][
-                        "trading_asset_separator"
-                    ],
-                    mapping=exchanges[exchange]["mapping"],
+                    password=None or exchanges[exchange]["password"],
+                    testmode=None or exchanges[exchange]["testmode"],
+                    defaulttype="spot" or exchanges[exchange]["defaulttype"],
+                    ordertype="market" or exchanges[exchange]["ordertype"],
+                    leverage_type="cross" or exchanges[exchange]["leverage_type"],
+                    leverage=1 or exchanges[exchange]["leverage"],
+                    trading_risk_percentage=True
+                    or exchanges[exchange]["trading_risk_percentage"],
+                    trading_risk_amount=1 or exchanges[exchange]["trading_risk_amount"],
+                    trading_asset="USDT" or exchanges[exchange]["trading_asset"],
+                    trading_asset_separator=""
+                    or exchanges[exchange]["trading_asset_separator"],
+                    mapping=[] or exchanges[exchange]["mapping"],
                 )
                 self.cex_info.append(client)
                 logger.debug(f"Loaded {exchange}")

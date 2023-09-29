@@ -103,22 +103,30 @@ class CexClient:
     async def get_trading_asset_balance(self):
         """ """
 
-    async def get_order_amount(self, quantity, symbol):
+    async def get_order_amount(self, quantity, instrument, is_percentage=True):
         """
-        Return amount based on risk percentage.
+        Calculate the order amount based on the risk percentage or money amount.
 
         Args:
-            quantity
-            symbol
+            quantity: The quantity of the order.
+            instrument: The instrument of the asset.
+            is_percentage: True if quantity is a risk percentage,
+            False if it is a money amount.
 
         Returns:
-            amount
+            The calculated order amount.
 
         """
         balance = await self.get_trading_asset_balance()
-        quote = await self.get_quote(symbol)
+        quote = await self.get_quote(instrument)
+
+        if not is_percentage and balance and quote:
+            return quantity
+
         if balance and quote:
-            amount = balance * (float(quantity) / 100) / quote
+            risk_percentage = float(quantity) / 100
+            amount = balance * risk_percentage / quote
+
             if amount >= 1:
                 return amount
 
@@ -154,7 +162,7 @@ class CexClient:
         for item in self.mapping:
             if item["id"] == instrument:
                 instrument = item["alt"]
-                logger.debug("Instrument symbol changed {} {}", item["id"], instrument)
+                logger.debug("Instrument changed from {} to {}", item["id"], instrument)
                 break
 
         return instrument
