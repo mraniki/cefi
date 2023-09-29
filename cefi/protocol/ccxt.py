@@ -86,6 +86,7 @@ class CexCcxt(CexClient):
         Returns:
             quote
         """
+        symbol = await self.replace_instrument(symbol)
         logger.debug("symbol: {}", symbol)
         try:
             ticker = self.client.fetch_ticker(symbol)
