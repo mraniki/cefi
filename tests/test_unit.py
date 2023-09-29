@@ -64,7 +64,7 @@ async def test_cefi(CXTrader):
     assert isinstance(CXTrader, CexTrader)
     assert callable(CXTrader.get_balances)
     assert callable(CXTrader.get_positions)
-    # assert callable(CXTrader.execute_order)
+    assert callable(CXTrader.submit_order)
 
 
 @pytest.mark.asyncio
@@ -112,7 +112,7 @@ async def test_submit_order(CXTrader, order):
 
 
 @pytest.mark.asyncio
-async def test_submit_order(CXTrader, limit_order):
+async def test_submit_limit_order(CXTrader, limit_order):
     result = await CXTrader.submit_order(limit_order)
     assert result is not None
     print(result)
