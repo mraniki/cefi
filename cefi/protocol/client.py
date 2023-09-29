@@ -115,8 +115,6 @@ class CexClient:
             amount
 
         """
-        logger.debug("quantity: {}", quantity)
-        logger.debug("symbol: {}", symbol)
         balance = await self.get_trading_asset_balance()
         quote = await self.get_quote(symbol)
         if balance and quote:
@@ -126,18 +124,6 @@ class CexClient:
 
     async def pre_order_checks(self, order_params):
         """ """
-        return True
-        # if await self.get_account_balance() == "No Balance":
-        #     return f"{self.name}:\nNo Funding"
-
-        # asset_out_quote = await self.get_quote(instrument)
-        # if asset_out_quote == "No Quote":
-        #     return f"{self.name}:\nNo quote"
-
-        # asset_out_balance = self.client.fetchBalance()[f"{trading_asset}"]["free"]
-
-        # if not asset_out_balance:
-        #     return f"{self.name}:\nNo Funding"
 
     async def get_trade_confirmation(self, trade, instrument, action):
         """ """
