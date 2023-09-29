@@ -106,7 +106,7 @@ async def test_submit_order(CXTrader, order):
     assert result is not None
     print(result)
     assert "binance" in result[0]
-    assert ("🔵" in result[0]) or ("Error" in result[0])
+    assert ("🔵" in result[0])
     assert "huobi" in result[1]
     assert ("🔵" in result[1]) or ("Error" in result[1])
 
@@ -117,6 +117,6 @@ async def test_submit_limit_order(CXTrader, limit_order):
     assert result is not None
     print(result)
     assert "binance" in result[0]
-    assert ("🔵" in result[0]) or ("Error" in result[0])
+    assert ("🔵" in result[0]) 
     assert "huobi" in result[1]
     assert ("🔵" in result[1]) or ("Error" in result[1])
