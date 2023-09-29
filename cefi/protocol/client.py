@@ -121,7 +121,7 @@ class CexClient:
         quote = await self.get_quote(symbol)
         if balance and quote:
             amount = balance * (float(quantity) / 100) / quote
-            if amount > 1:
+            if amount >= 1:
                 return amount
 
     async def pre_order_checks(self, order_params):
