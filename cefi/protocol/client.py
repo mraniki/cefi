@@ -128,8 +128,10 @@ class CexClient:
 
         if balance and quote:
             risk_percentage = float(quantity) / 100
-            if amount := balance * risk_percentage / quote:
-                return amount
+            amount = balance * risk_percentage / quote
+
+        if amount >= 1:
+            return amount
 
     async def pre_order_checks(self, order_params):
         """ """
@@ -152,7 +154,7 @@ class CexClient:
                 break
 
         return instrument
-        
+
     async def get_trade_confirmation(self, trade, instrument, action):
         """ """
 
@@ -167,5 +169,3 @@ class CexClient:
         trade_confirmation += f"🗓️ {trade['datetime']}"
         if trade_confirmation:
             return f"{self.name}:\n{trade_confirmation}"
-
-
