@@ -117,7 +117,7 @@ class CexClient:
         """
         logger.debug("quantity: {}", quantity)
         logger.debug("symbol: {}", symbol)
-        balance = await self.get_trading_asset_balance
+        balance = await self.get_trading_asset_balance()
         quote = await self.get_quote(symbol)
         if balance and quote:
             return balance * (float(quantity) / 100) / quote
