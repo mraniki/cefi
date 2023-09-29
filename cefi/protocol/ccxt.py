@@ -163,8 +163,8 @@ class CexCcxt(CexClient):
         amount = await self.get_order_amount(quantity, instrument)
 
         try:
-            if amount and await self.order_checks(order_params):
-                trade = self.cx_client.create_order(
+            if amount and (await self.order_checks(order_params)):
+                trade = self.client.create_order(
                     instrument,
                     self.order_type,
                     action,
