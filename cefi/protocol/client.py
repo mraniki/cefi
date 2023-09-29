@@ -151,7 +151,6 @@ class CexClient:
         Returns:
             dict
         """
-        logger.debug("replace_instrument: {}", instrument)
         for item in self.mapping:
             if item["id"] == instrument:
                 instrument = item["alt"]

@@ -61,9 +61,7 @@ class CexTrader:
             object: The handler object.
         """
         protocol = kwargs["protocol"]
-        logger.debug("get handler {}", protocol)
         if protocol == "ccxt":
-            logger.debug("get ccxt client")
             return CexCcxt(**kwargs)
         else:
             logger.error("Invalid platform specified {}", protocol)
@@ -78,7 +76,7 @@ class CexTrader:
         :rtype: str
         """
 
-        info = "".join(f"💱 {cex.name}\n🪪 {cex.account}\n\n" for cex in self.cex_info)
+        info = "".join(f"💱 {cex.name}\n🪪 {cex.account}\n" for cex in self.cex_info)
         return info.strip()
 
     async def get_quotes(self, symbol):

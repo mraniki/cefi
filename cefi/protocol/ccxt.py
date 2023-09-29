@@ -178,5 +178,5 @@ class CexCcxt(CexClient):
             return f"Error executing {self.name}"
 
         except Exception as e:
-            logger.debug("{} Error {}", self.name, e)
+            logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}"
