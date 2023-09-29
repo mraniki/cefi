@@ -29,7 +29,6 @@ class CexCcxt(CexClient):
 
     def __init__(
         self,
-        **kwargs,
         protocol="ccxt",
         name=None,
         api_key=None,
@@ -43,6 +42,7 @@ class CexCcxt(CexClient):
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
+        **kwargs
     ):
         """
         Initialize the ccxt client
