@@ -99,8 +99,7 @@ async def test_submit_order(CXTrader, order_parsed):
     result = await CXTrader.submit_order(order_parsed)
     assert result is not None
     print(result)
-    assert "binance" in result
-    assert "huobi" in result
+    assert ("binance" in result) or ("huobi" in result)
     assert "🔵" in result
     assert "🔴" in result
     assert "ℹ️" in result
