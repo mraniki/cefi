@@ -46,7 +46,6 @@ class CexTrader:
                     or exchanges[exchange]["trading_risk_percentage"],
                     trading_risk_amount=1 or exchanges[exchange]["trading_risk_amount"],
                     trading_slippage=2 or exchanges[exchange]["trading_slippage"],
-                    or exchanges[exchange]["trading_risk_percentage"],
                     trading_asset="USDT" or exchanges[exchange]["trading_asset"],
                     trading_asset_separator=""
                     or exchanges[exchange]["trading_asset_separator"],
