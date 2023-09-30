@@ -2,6 +2,37 @@
 
 
 
+## v3.0.1 (2023-09-30)
+
+### :rotating_light:
+
+* :rotating_light: ([`6402a3a`](https://github.com/mraniki/cefi/commit/6402a3a2300ed173f5d5a9f4e26a8b4bc754b803))
+
+### Other
+
+* Merge pull request #58 from mraniki/dev
+
+🔧 ([`3ade662`](https://github.com/mraniki/cefi/commit/3ade662d5591119c79b3778a945fa08068f0ac6c))
+
+* Merge pull request #59 from mraniki/renovate/ccxt-4.x
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.0.111 ([`a2edee0`](https://github.com/mraniki/cefi/commit/a2edee0a879900d340f27b558349a12a7107efc2))
+
+### Update
+
+* Update ccxt.py ([`0f4f8f8`](https://github.com/mraniki/cefi/commit/0f4f8f8d386371c2d1c6a34ede8124ea3701c68b))
+
+* Update main.py ([`cc943e0`](https://github.com/mraniki/cefi/commit/cc943e0326d6d5d9d93452761b0a9faa00550169))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.0.111 ([`c6c435a`](https://github.com/mraniki/cefi/commit/c6c435a9bbe5d4a2f6b58d753284920d812991b4))
+
+### 🔧
+
+* 🔧 ([`8eef9f8`](https://github.com/mraniki/cefi/commit/8eef9f8efd317fab8a777b12c164e5330d0083af))
+
+
 ## v3.0.0 (2023-09-29)
 
 ### :boom:
