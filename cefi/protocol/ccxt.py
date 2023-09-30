@@ -41,6 +41,7 @@ class CexCcxt(CexClient):
         leverage=1,
         trading_risk_percentage=True,
         trading_risk_amount=1,
+        trading_slippage=2,
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
@@ -72,6 +73,7 @@ class CexCcxt(CexClient):
             self.separator = trading_asset_separator
             self.trading_risk_percentage = trading_risk_percentage
             self.trading_risk_amount = trading_risk_amount
+            self.trading_slippage = trading_slippage
             self.defaulttype = defaulttype
             self.ordertype = ordertype
             self.mapping = mapping
