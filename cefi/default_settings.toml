@@ -43,6 +43,7 @@ trading_risk_percentage = true
 trading_risk_amount = 10
 trading_asset = "USDT"
 trading_asset_separator = ""
+trading_slippage = 2
 mapping = [
     { id = "BTC", alt = "BTC/USDT" },
 ]
