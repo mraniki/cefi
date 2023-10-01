@@ -2,6 +2,33 @@
 
 
 
+## v3.0.3 (2023-10-01)
+
+### Other
+
+* Merge pull request #62 from mraniki/dev
+
+♻️ Cleanup and refactoring ([`c909cb5`](https://github.com/mraniki/cefi/commit/c909cb564eac2d3548aea6a52b68355a73bf0e04))
+
+* Merge pull request #61 from mraniki/renovate/ccxt-4.x
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.0.112 ([`44b0386`](https://github.com/mraniki/cefi/commit/44b0386e86e56f4ea102ae2d8c32179f09a9cab4))
+
+### Update
+
+* Update Requirements ([`a66ed72`](https://github.com/mraniki/cefi/commit/a66ed72b13b48fff8fb39415bf8cc6e0a5060899))
+
+* Update Requirements ([`ed861a0`](https://github.com/mraniki/cefi/commit/ed861a0e130e5d86ad10328f3f111fc041d8d66d))
+
+### ♻️
+
+* ♻️ Cleanup and refactoring ([`0f292ee`](https://github.com/mraniki/cefi/commit/0f292ee75b45cea342b2dab75d01fc338eb0dd3b))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.0.112 ([`eff8759`](https://github.com/mraniki/cefi/commit/eff87595338de30d6538869f49270dd10ab16911))
+
+
 ## v3.0.2 (2023-10-01)
 
 ### Other
