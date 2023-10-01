@@ -2,6 +2,23 @@
 
 
 
+## v3.0.2 (2023-10-01)
+
+### Other
+
+* Merge pull request #60 from mraniki/dev
+
+CI ([`241fb96`](https://github.com/mraniki/cefi/commit/241fb96b87bf0235a592242b9f29e17f502a4611))
+
+### 🎨
+
+* 🎨 ([`f1d214c`](https://github.com/mraniki/cefi/commit/f1d214cf901618d35894e5d63996dc02112a1167))
+
+### 👷
+
+* 👷 CI Change ([`b301191`](https://github.com/mraniki/cefi/commit/b3011910c30f9f9ec148fb09b9ef26869b96f1b8))
+
+
 ## v3.0.1 (2023-09-30)
 
 ### :rotating_light:
