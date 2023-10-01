@@ -26,7 +26,6 @@ class CexTrader:
 
         """
 
-        self.commands = settings.ccxt_commands
         exchanges = settings.cex
         self.cex_info = []
         try:

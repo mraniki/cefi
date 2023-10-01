@@ -18,13 +18,6 @@ VALUE = "On default"
 
 # Module Enable/Disable
 cex_enabled = false
-# Help Message
-ccxt_commands = """
-🎯 BUY BTCUSDT
-🎯 /q BTCUSDT
-🏦 /bal
-🏦 /pos
-"""
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
