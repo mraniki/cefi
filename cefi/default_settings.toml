@@ -22,7 +22,7 @@ cex_enabled = false
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
-protocol = ""
+protocol = "ccxt"
 name = ""
 api_key= ""
 secret= ""

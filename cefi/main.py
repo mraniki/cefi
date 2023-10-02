@@ -31,7 +31,7 @@ class CexTrader:
         try:
             for exchange in exchanges:
                 client = self._create_client(
-                    protocol="ccxt",
+                    protocol=exchanges[exchange]["protocol"],
                     name=exchanges[exchange]["name"],
                     api_key=exchanges[exchange]["api_key"],
                     secret=exchanges[exchange]["secret"],
