@@ -2,6 +2,19 @@
 
 
 
+## v3.1.0 (2023-10-04)
+
+### Other
+
+* Merge pull request #66 from mraniki/dev
+
+🥚Add support for .op.toml configuration file ([`9ef9a7d`](https://github.com/mraniki/cefi/commit/9ef9a7d6004828fd8d5481869fcba1f0423da2d5))
+
+### 🥚
+
+* 🥚Add support for .op.toml configuration file ([`eaebe17`](https://github.com/mraniki/cefi/commit/eaebe17b9bdc665e17c2c4571b71c361fe27c3ff))
+
+
 ## v3.0.4 (2023-10-04)
 
 ### :wrench:
