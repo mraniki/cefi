@@ -21,25 +21,25 @@ cex_enabled = false
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
-[default.cex.template]
-protocol = ""
-name = ""
-api_key= ""
-secret= ""
-password = ""
-testmode = true
-defaulttype = ""
-ordertype = ""
-leverage_type = ""
-leverage = 1
-trading_risk_percentage = true
-trading_risk_amount = 10
-trading_slippage = 2
-trading_asset = "USDT"
-trading_asset_separator = ""
-mapping = [
-    { id = "BTC", alt = "BTC/USDT" },
-]
+# [default.cex.template]
+# protocol = "ccxt"
+# name = ""
+# api_key= ""
+# secret= ""
+# password = ""
+# testmode = true
+# defaulttype = ""
+# ordertype = ""
+# leverage_type = ""
+# leverage = 1
+# trading_risk_percentage = true
+# trading_risk_amount = 10
+# trading_slippage = 2
+# trading_asset = "USDT"
+# trading_asset_separator = ""
+# mapping = [
+#     { id = "BTC", alt = "BTC/USDT" },
+# ]
 
 # [default.cex.binance]
 # protocol = "ccxt"
