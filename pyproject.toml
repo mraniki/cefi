@@ -45,8 +45,8 @@ exclude = [
   ".github/*",
   "docs/*",
 ]
-ignore = ["E401","F401","F811"]
-format = "github"
+#ignore = ["E401","F401","F811"]
+#format = "github"
 fixable = ["ALL"]
 
 [tool.pylint.exceptions]
