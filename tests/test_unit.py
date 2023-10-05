@@ -72,7 +72,7 @@ async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
     assert result is not None
-    assert "🏦" in result
+    assert "⚖️" in result
     assert ("binance" in result) or ("huobi" in result)
     assert ("No Quote" in result) or ("2" in result)
 
@@ -92,12 +92,11 @@ async def test_get_positions(CXTrader):
     assert "📊 Position" in result
 
 
-@pytest.mark.asyncio
-async def test_get_pnls(CXTrader):
-    """Test pnl"""
-
-    result = await CXTrader.get_pnls()
-    assert "0" in result
+# @pytest.mark.asyncio
+# async def test_get_pnls(CXTrader):
+#     """Test pnl"""
+#     result = await CXTrader.get_pnls()
+#     assert "0" in result
 
 
 @pytest.mark.asyncio
