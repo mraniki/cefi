@@ -2,6 +2,19 @@
 
 
 
+## v3.1.2 (2023-10-05)
+
+### Other
+
+* Merge pull request #70 from mraniki/dev
+
+🥅 ([`12643ac`](https://github.com/mraniki/cefi/commit/12643ac8f681c7d3598f184ab682fc084a1c2897))
+
+### 🥅
+
+* 🥅 ([`89841ff`](https://github.com/mraniki/cefi/commit/89841ffc6bc106437c125f1d448cbd236571b335))
+
+
 ## v3.1.1 (2023-10-05)
 
 ### Other
