@@ -36,12 +36,12 @@ class CexTrader:
                 if item in ["", "template"]:
                     continue
                 client = self._create_client(
-                    protocol=_config.get("protocol"),
+                    protocol=_config.get("protocol") or "ccxt",
                     name=_config.get("name"),
                     api_key=_config.get("api_key"),
-                    secret=_config.get("secret"),
-                    password=_config.get("password"),
-                    testmode=_config.get("testmode"),
+                    secret=_config.get("secret") or "",
+                    password=_config.get("password") or "",
+                    testmode=_config.get("testmode") or False,
                     defaulttype=_config.get("defaulttype") or "spot",
                     ordertype=_config.get("ordertype") or "market",
                     leverage_type=_config.get("leverage_type") or "isolated",
@@ -72,7 +72,7 @@ class CexTrader:
         if protocol == "ccxt":
             return CexCcxt(**kwargs)
         else:
-            logger.error("Invalid platform specified {}", protocol)
+            logger.error("Invalid platform {}", protocol)
 
     async def get_info(self):
         """
@@ -83,7 +83,7 @@ class CexTrader:
         the exchange name and the account information.
         :rtype: str
         """
-        version_info = f"{__version__}\n"
+        version_info = f"ℹ️ {type(self).__name__} {__version__}\n"
         client_info = "".join(
             f"💱 {client.name}\n🪪 {client.account}\n" for client in self.clients
         )
@@ -103,7 +103,7 @@ class CexTrader:
         quotes = []
         for cex in self.clients:
             quote = await cex.get_quote(symbol)
-            quotes.append(f"🏦 {cex.name}: {quote}")
+            quotes.append(f"⚖️ {cex.name}: {quote}")
         return "\n".join(quotes)
 
     async def get_balances(self):
@@ -120,7 +120,7 @@ class CexTrader:
         balance_info = []
         for cex in self.clients:
             balance = await cex.get_account_balance()
-            balance_info.append(f"🏦 Balance for {cex.name}:\n{balance}")
+            balance_info.append(f"🏦 {cex.name}:\n{balance}")
         return "\n".join(balance_info)
 
     async def get_positions(self):
@@ -138,7 +138,7 @@ class CexTrader:
         position_info = []
         for _ in self.clients:
             positions = await _.get_account_position()
-            position_info.append(f"📊 Position for {_.name}:\n{positions}")
+            position_info.append(f"📊 {_.name}:\n{positions}")
         return "\n".join(position_info)
 
     async def get_pnls(self):
