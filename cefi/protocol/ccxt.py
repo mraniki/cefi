@@ -67,7 +67,7 @@ class CexCcxt(CexClient):
             )
             if testmode:
                 self.client.set_sandbox_mode("enabled")
-            self.account = self.client.uid
+            self.account_number = self.client.uid
             self.name = self.client.id
             self.trading_asset = trading_asset
             self.separator = trading_asset_separator
