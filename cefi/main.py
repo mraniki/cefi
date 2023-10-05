@@ -36,12 +36,12 @@ class CexTrader:
                 if item in ["", "template"]:
                     continue
                 client = self._create_client(
-                    protocol=_config.get("protocol"),
+                    protocol=_config.get("protocol") or "ccxt",
                     name=_config.get("name"),
                     api_key=_config.get("api_key"),
-                    secret=_config.get("secret"),
-                    password=_config.get("password"),
-                    testmode=_config.get("testmode"),
+                    secret=_config.get("secret") or "",
+                    password=_config.get("password") or "",
+                    testmode=_config.get("testmode") or False,
                     defaulttype=_config.get("defaulttype") or "spot",
                     ordertype=_config.get("ordertype") or "market",
                     leverage_type=_config.get("leverage_type") or "isolated",
@@ -72,7 +72,7 @@ class CexTrader:
         if protocol == "ccxt":
             return CexCcxt(**kwargs)
         else:
-            logger.error("Invalid platform specified {}", protocol)
+            logger.error("Invalid platform {}", protocol)
 
     async def get_info(self):
         """
@@ -83,9 +83,9 @@ class CexTrader:
         the exchange name and the account information.
         :rtype: str
         """
-        version_info = f"{__version__}\n"
+        version_info = f"ℹ️ {type(self).__name__} {__version__}\n"
         client_info = "".join(
-            f"💱 {client.name}\n🪪 {client.account}\n" for client in self.clients
+            f"💱 {client.name}\n🪪 {client.account_number}\n" for client in self.clients
         )
         return version_info + client_info.strip()
 
@@ -99,12 +99,10 @@ class CexTrader:
         Returns:
             quotes
         """
-
-        quotes = []
-        for cex in self.clients:
-            quote = await cex.get_quote(symbol)
-            quotes.append(f"🏦 {cex.name}: {quote}")
-        return "\n".join(quotes)
+        _info = ["⚖️\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_quote(symbol)}")
+        return "\n".join(_info)
 
     async def get_balances(self):
         """
@@ -117,11 +115,10 @@ class CexTrader:
             balance
 
         """
-        balance_info = []
-        for cex in self.clients:
-            balance = await cex.get_account_balance()
-            balance_info.append(f"🏦 Balance for {cex.name}:\n{balance}")
-        return "\n".join(balance_info)
+        _info = ["💵\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_balance()}")
+        return "\n".join(_info)
 
     async def get_positions(self):
         """
@@ -134,12 +131,10 @@ class CexTrader:
             position
 
         """
-
-        position_info = []
-        for _ in self.clients:
-            positions = await _.get_account_position()
-            position_info.append(f"📊 Position for {_.name}:\n{positions}")
-        return "\n".join(position_info)
+        _info = ["📊\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_position()}")
+        return "\n".join(_info)
 
     async def get_pnls(self):
         """
@@ -151,12 +146,10 @@ class CexTrader:
         Returns:
             pnl
         """
-
-        pnl_info = []
-        for cex in self.clients:
-            pnls = await cex.get_account_pnl()
-            pnl_info.append(f"📊 PnL for {cex.name}:\n{pnls}")
-            return "\n".join(pnl_info)
+        _info = ["📊\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_pnl()}")
+        return "\n".join(_info)
 
     async def submit_order(self, order_params):
         """
@@ -173,13 +166,13 @@ class CexTrader:
 
         """
         order = []
-        for cex in self.clients:
+        for client in self.clients:
             try:
-                trade = await cex.execute_order(order_params)
+                trade = await client.execute_order(order_params)
                 order.append(trade)
 
             except Exception as e:
-                logger.error("{} Error {}", cex.name, e)
+                logger.error("{} Error {}", client.name, e)
                 continue
 
         return order
