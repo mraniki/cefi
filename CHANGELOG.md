@@ -2,6 +2,29 @@
 
 
 
+## v3.1.1 (2023-10-05)
+
+### Other
+
+* Merge pull request #68 from mraniki/dev
+
+♻️ ([`7151e9d`](https://github.com/mraniki/cefi/commit/7151e9d5f4ebdc2e2dc0a11d776a3d128677736c))
+
+* Refactor get_info method in CexTrader class ([`1474a52`](https://github.com/mraniki/cefi/commit/1474a527cd8d7f3d57ff4ac443e37ea6bb7e7265))
+
+* Merge pull request #67 from mraniki/renovate/pytest-loguru-0.x
+
+⬆️ 🛠️(deps): update dependency pytest-loguru to ^0.3.0 ([`d94c27c`](https://github.com/mraniki/cefi/commit/d94c27ceb1fd9137d592c9c7b5f59bf799f1e3db))
+
+### ♻️
+
+* ♻️ ([`1902b92`](https://github.com/mraniki/cefi/commit/1902b92b254fd3e028b5272853fce6210ffbdd80))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pytest-loguru to ^0.3.0 ([`cdaca14`](https://github.com/mraniki/cefi/commit/cdaca14f6bdbdcefcb3752a892654b8d9f7ee5e3))
+
+
 ## v3.1.0 (2023-10-04)
 
 ### Other
