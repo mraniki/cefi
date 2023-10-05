@@ -99,7 +99,7 @@ class CexTrader:
         Returns:
             quotes
         """
-        _info = ["🦄\n"]
+        _info = ["⚖️\n"]
         for client in self.clients:
             _info.append(f"🏦 {client.name}:\n{await client.get_quote(symbol)}")
         return "\n".join(_info)
