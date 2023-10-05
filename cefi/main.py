@@ -74,20 +74,20 @@ class CexTrader:
             logger.error("Invalid platform specified {}", protocol)
 
 
-async def get_info(self):
-    """
-    Retrieves information about the exchange
-    and the account.
+    async def get_info(self):
+        """
+        Retrieves information about the exchange
+        and the account.
 
-    :return: A formatted string containing
-    the exchange name and the account information.
-    :rtype: str
-    """
-    version_info = f"{__version__}\n"
-    client_info = "".join(
-        f"💱 {client.name}\n🪪 {client.account}\n" for client in self.clients
-    )
-    return version_info + client_info.strip()
+        :return: A formatted string containing
+        the exchange name and the account information.
+        :rtype: str
+        """
+        version_info = f"{__version__}\n"
+        client_info = "".join(
+            f"💱 {client.name}\n🪪 {client.account}\n" for client in self.clients
+        )
+        return version_info + client_info.strip()
 
     async def get_quotes(self, symbol):
         """
