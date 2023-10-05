@@ -2,6 +2,39 @@
 
 
 
+## v3.1.3 (2023-10-05)
+
+### Other
+
+* Merge pull request #71 from mraniki/dev
+
+♻️ ([`58d1c6e`](https://github.com/mraniki/cefi/commit/58d1c6ef4d07f695ae3c7c54ae93de7113764cab))
+
+### ♻️
+
+* ♻️ ([`3864536`](https://github.com/mraniki/cefi/commit/386453606e6288dcbfd21fa604ebc7ca7642dddd))
+
+* ♻️ ([`d30e35f`](https://github.com/mraniki/cefi/commit/d30e35f44791ad08085aed0fb5c694aafd3c1838))
+
+* ♻️ ([`8cd823b`](https://github.com/mraniki/cefi/commit/8cd823b1e77b5f17639b34d06a9c24d6e6aab02b))
+
+* ♻️ ([`980e721`](https://github.com/mraniki/cefi/commit/980e721b3217606d51084c27029c83cd7e373fac))
+
+### ✅
+
+* ✅ Unit Test ([`74187f6`](https://github.com/mraniki/cefi/commit/74187f64a26bae2e0bc737c86d31f2dad719e57f))
+
+* ✅ Unit Test ([`c3b09fc`](https://github.com/mraniki/cefi/commit/c3b09fc158934877efe4ab7cafdf1633c081c539))
+
+### 🐛
+
+* ✅ Unit Test 🐛 ([`2d0f257`](https://github.com/mraniki/cefi/commit/2d0f2575fa4e6cbdcf2d08918f2932e7f589770f))
+
+### 🔥
+
+* 🔥 ([`8ca3447`](https://github.com/mraniki/cefi/commit/8ca3447e342795438cede85b4756c5d59972b063))
+
+
 ## v3.1.2 (2023-10-05)
 
 ### Other
