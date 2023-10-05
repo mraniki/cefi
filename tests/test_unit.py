@@ -37,8 +37,6 @@ def order2():
         "stop_loss": 2000,
         "take_profit": 400,
         "quantity": 10,
-        "order_type": None,
-        "leverage_type": None,
         "comment": None,
         "timestamp": datetime.now(),
     }
@@ -115,7 +113,5 @@ async def test_submit_limit_order(CXTrader, limit_order):
     result = await CXTrader.submit_order(limit_order)
     assert result is not None
     print(result)
-    assert "binance" in result[0]
-    assert "🔵" in result[0] or ("Error" in result[0])
-    assert "huobi" in result[1]
-    assert ("🔵" in result[1]) or ("Error" in result[1])
+    assert "binance" in result
+    assert "🔵" in result or ("Error" in result)
