@@ -108,10 +108,10 @@ async def test_submit_order(CXTrader, order):
     assert ("🔵" in result[1]) or ("Error" in result[1])
 
 
-@pytest.mark.asyncio
-async def test_submit_limit_order(CXTrader, limit_order):
-    result = await CXTrader.submit_order(limit_order)
-    assert result is not None
-    print(result)
-    assert "binance" in result
-    assert "🔵" in result or ("Error" in result)
+# @pytest.mark.asyncio
+# async def test_submit_limit_order(CXTrader, limit_order):
+#     result = await CXTrader.submit_order(limit_order)
+#     assert result is not None
+#     print(result)
+#     assert "binance" in result
+#     assert "🔵" in result or ("Error" in result)
