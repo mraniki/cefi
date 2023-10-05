@@ -99,12 +99,10 @@ class CexTrader:
         Returns:
             quotes
         """
-
-        quotes = []
-        for cex in self.clients:
-            quote = await cex.get_quote(symbol)
-            quotes.append(f"⚖️ {cex.name}: {quote}")
-        return "\n".join(quotes)
+        _info = ["🦄\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_quote(symbol)}")
+        return "\n".join(_info)
 
     async def get_balances(self):
         """
@@ -117,11 +115,10 @@ class CexTrader:
             balance
 
         """
-        balance_info = []
-        for cex in self.clients:
-            balance = await cex.get_account_balance()
-            balance_info.append(f"🏦 {cex.name}:\n{balance}")
-        return "\n".join(balance_info)
+        _info = ["💵\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_balance()}")
+        return "\n".join(_info)
 
     async def get_positions(self):
         """
@@ -134,12 +131,10 @@ class CexTrader:
             position
 
         """
-
-        position_info = []
-        for _ in self.clients:
-            positions = await _.get_account_position()
-            position_info.append(f"📊 {_.name}:\n{positions}")
-        return "\n".join(position_info)
+        _info = ["📊\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_position()}")
+        return "\n".join(_info)
 
     async def get_pnls(self):
         """
@@ -151,12 +146,10 @@ class CexTrader:
         Returns:
             pnl
         """
-
-        pnl_info = []
-        for cex in self.clients:
-            pnls = await cex.get_account_pnl()
-            pnl_info.append(f"📊 PnL for {cex.name}:\n{pnls}")
-            return "\n".join(pnl_info)
+        _info = ["📊\n"]
+        for client in self.clients:
+            _info.append(f"🏦 {client.name}:\n{await client.get_account_pnl()}")
+        return "\n".join(_info)
 
     async def submit_order(self, order_params):
         """
@@ -173,13 +166,13 @@ class CexTrader:
 
         """
         order = []
-        for cex in self.clients:
+        for client in self.clients:
             try:
-                trade = await cex.execute_order(order_params)
+                trade = await client.execute_order(order_params)
                 order.append(trade)
 
             except Exception as e:
-                logger.error("{} Error {}", cex.name, e)
+                logger.error("{} Error {}", client.name, e)
                 continue
 
         return order
