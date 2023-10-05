@@ -1,6 +1,8 @@
 import ccxt
 from loguru import logger
 
+from cefi import __version__
+
 from .config import settings
 from .protocol.ccxt import CexCcxt
 
@@ -26,35 +28,37 @@ class CexTrader:
 
         """
 
-        exchanges = settings.cex
-        self.cex_info = []
         try:
-            for exchange in exchanges:
-                client = self._create_client(
-                    protocol=exchanges[exchange]["protocol"],
-                    name=exchanges[exchange]["name"],
-                    api_key=exchanges[exchange]["api_key"],
-                    secret=exchanges[exchange]["secret"],
-                    password=None or exchanges[exchange]["password"],
-                    testmode=None or exchanges[exchange]["testmode"],
-                    defaulttype="spot" or exchanges[exchange]["defaulttype"],
-                    ordertype="market" or exchanges[exchange]["ordertype"],
-                    leverage_type="isolated" or exchanges[exchange]["leverage_type"],
-                    leverage=1 or exchanges[exchange]["leverage"],
-                    trading_risk_percentage=True
-                    or exchanges[exchange]["trading_risk_percentage"],
-                    trading_risk_amount=1 or exchanges[exchange]["trading_risk_amount"],
-                    trading_slippage=2 or exchanges[exchange]["trading_slippage"],
-                    trading_asset="USDT" or exchanges[exchange]["trading_asset"],
-                    trading_asset_separator=""
-                    or exchanges[exchange]["trading_asset_separator"],
-                    mapping=[] or exchanges[exchange]["mapping"],
-                )
-                self.cex_info.append(client)
-                logger.debug(f"Loaded {exchange}")
+            config = settings.cex
+            self.clients = []
+            for item in config:
+                _config = config[item]
+                if item not in ["", "template"]:
+                    client = self._create_client(
+                        protocol=_config.get("protocol"),
+                        name=_config.get("name"),
+                        api_key=_config.get("api_key"),
+                        secret=_config.get("secret"),
+                        password=_config.get("password"),
+                        testmode=_config.get("testmode"),
+                        defaulttype=_config.get("defaulttype") or "spot",
+                        ordertype=_config.get("ordertype") or "market",
+                        leverage_type=_config.get("leverage_type") or "isolated",
+                        leverage=_config.get("leverage") or 1,
+                        trading_risk_percentage=_config.get("trading_risk_percentage")
+                        or True,
+                        trading_risk_amount=_config.get("trading_risk_amount") or 1,
+                        trading_slippage=_config.get("trading_slippage") or 2,
+                        trading_asset=_config.get("trading_asset") or "USDT",
+                        trading_asset_separator=_config.get("trading_asset_separator")
+                        or "",
+                        mapping=_config.get("mapping") or [],
+                    )
+                    self.clients.append(client)
+                    logger.debug(f"Loaded {item}")
 
         except Exception as e:
-            logger.error("CexTrader init: {}", e)
+            logger.error("init: {}", e)
 
     def _create_client(self, **kwargs):
         """
@@ -69,18 +73,21 @@ class CexTrader:
         else:
             logger.error("Invalid platform specified {}", protocol)
 
-    async def get_info(self):
-        """
-        Retrieves information about the exchange
-        and the account.
 
-        :return: A formatted string containing
-        the exchange name and the account information.
-        :rtype: str
-        """
+async def get_info(self):
+    """
+    Retrieves information about the exchange
+    and the account.
 
-        info = "".join(f"💱 {cex.name}\n🪪 {cex.account}\n" for cex in self.cex_info)
-        return info.strip()
+    :return: A formatted string containing
+    the exchange name and the account information.
+    :rtype: str
+    """
+    version_info = f"{__version__}\n"
+    client_info = "".join(
+        f"💱 {client.name}\n🪪 {client.account}\n" for client in self.clients
+    )
+    return version_info + client_info.strip()
 
     async def get_quotes(self, symbol):
         """
@@ -94,7 +101,7 @@ class CexTrader:
         """
 
         quotes = []
-        for cex in self.cex_info:
+        for cex in self.clients:
             quote = await cex.get_quote(symbol)
             quotes.append(f"🏦 {cex.name}: {quote}")
         return "\n".join(quotes)
@@ -111,7 +118,7 @@ class CexTrader:
 
         """
         balance_info = []
-        for cex in self.cex_info:
+        for cex in self.clients:
             balance = await cex.get_account_balance()
             balance_info.append(f"🏦 Balance for {cex.name}:\n{balance}")
         return "\n".join(balance_info)
@@ -129,7 +136,7 @@ class CexTrader:
         """
 
         position_info = []
-        for _ in self.cex_info:
+        for _ in self.clients:
             positions = await _.get_account_position()
             position_info.append(f"📊 Position for {_.name}:\n{positions}")
         return "\n".join(position_info)
@@ -146,7 +153,7 @@ class CexTrader:
         """
 
         pnl_info = []
-        for cex in self.cex_info:
+        for cex in self.clients:
             pnls = await cex.get_account_pnl()
             pnl_info.append(f"📊 PnL for {cex.name}:\n{pnls}")
             return "\n".join(pnl_info)
@@ -166,7 +173,7 @@ class CexTrader:
 
         """
         order = []
-        for cex in self.cex_info:
+        for cex in self.clients:
             try:
                 trade = await cex.execute_order(order_params)
                 order.append(trade)
