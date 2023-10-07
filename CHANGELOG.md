@@ -2,6 +2,74 @@
 
 
 
+## v3.1.4 (2023-10-07)
+
+### Other
+
+* Merge pull request #72 from mraniki/dev
+
+Refactor client information display in CexTrader class ([`049bed5`](https://github.com/mraniki/cefi/commit/049bed52e9352cc9904a340ec13a47853143eaa7))
+
+* Refactor CexCcxt fetch_positions method ([`e2cf1b1`](https://github.com/mraniki/cefi/commit/e2cf1b1fcc87e24058d31c23f5fd716861bd47b8))
+
+* Refactor CexCcxt class to handle empty positions response ([`4380291`](https://github.com/mraniki/cefi/commit/4380291917ae4335423186d91f186cc55588ee11))
+
+* Refactor CexTrader execute_order method ([`93c2c97`](https://github.com/mraniki/cefi/commit/93c2c97e06e020350390a1256c72fbe20423df39))
+
+* Refactor CexCcxt init method ([`ae9e6c0`](https://github.com/mraniki/cefi/commit/ae9e6c0563b377ad920049341e646c96cd4535b8))
+
+* Refactor test_get_trade_confirmation in test_unit.py
+
+Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7c4ddd2`](https://github.com/mraniki/cefi/commit/7c4ddd2b7826f5ca9d2455f00c159006b941c32c))
+
+* Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`081990e`](https://github.com/mraniki/cefi/commit/081990ee3fe1950e3315330d80474c665eb73cc1))
+
+* Refactor test_get_trade_confirmation function ([`34a93f6`](https://github.com/mraniki/cefi/commit/34a93f6310b534d05c94c8368de25c1c6d349c53))
+
+* Refactor test_unit.py
+
+- Remove unnecessary lines
+- Add comments for clarity ([`aa11bd5`](https://github.com/mraniki/cefi/commit/aa11bd50b9a04b74e929d72af7208515445fcb77))
+
+* Add unit tests for get_trade_confirmation function ([`e222bd9`](https://github.com/mraniki/cefi/commit/e222bd94cdd95d8a1cb66084a13f3bcbb5d249cb))
+
+* Refactor test_unit.py and add test for submit_order_exception ([`bb841d4`](https://github.com/mraniki/cefi/commit/bb841d4468bb26b0bc4567fcc3f6573bf7a06a05))
+
+* Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`e194b8d`](https://github.com/mraniki/cefi/commit/e194b8d218dffaf171970ffb1015841a3ae8251e))
+
+* Add unit tests for CexTrader exception handling ([`52f09d4`](https://github.com/mraniki/cefi/commit/52f09d465316b1de278d86548405579bf11f56f7))
+
+* Refactor test_cefi function in test_unit.py
+
+- Remove assert &#34;🪪&#34; in result
+- Add assert &#34;ℹ�#Ȉ\u001a[�\u001c�\\�[\u001d\u0002�\u0010\b\u000bN\f�
+�\f�\u0010\u0010\b\u0018\\�[��\u0019\u0019Y�\u001d\u0019\\�\u0017��]\u0
+017ؘ[\u0018[��\\�\u0010�\u0015\u001c�Y\u0019\\�N��H\b\b\b\u0018\\��\\�\b
+\b�&#39;�鈈\u001a[�\u001c�\\�[\u001d\u0002�
+�\b\b\b\u0018\\��\\�\b\b�%+R&#34;\u0006��\u0007&amp;W7V�@� ([`1433c19`](https://github.com/mraniki/cefi/commit/1433c1944305d259fd4e7a8e1a39255d68eb5db2))
+
+* Refactor CexTrader class in main.py
+
+- Removed unnecessary code in CexTrader class
+- Improved code readability and maintainability ([`eb8a4a8`](https://github.com/mraniki/cefi/commit/eb8a4a802ab2a5a50c48a99bbfbfc61ea3c26bc8))
+
+* Refactor client information display in CexTrader class ([`c8e4957`](https://github.com/mraniki/cefi/commit/c8e495709d58c5fbe31a0c291ef07bb7175a0c3f))
+
+### Update
+
+* Update Requirements ([`39f7581`](https://github.com/mraniki/cefi/commit/39f758146d28774b73f8bb32e8f2b02005658f03))
+
+* Update Requirements ([`dc09439`](https://github.com/mraniki/cefi/commit/dc09439e2bb2661725a4a2ac04040a0a2fa84f3f))
+
+* Update Requirements ([`34aeb1a`](https://github.com/mraniki/cefi/commit/34aeb1a178e510243017d1d2fa0ca2e70929461f))
+
+* Update pyproject.toml ([`eb994a5`](https://github.com/mraniki/cefi/commit/eb994a5cfb7947c37019c9d6849209fe6380b9e8))
+
+### 🚨
+
+* 🚨 ([`e166af3`](https://github.com/mraniki/cefi/commit/e166af3ceab9443ee265a0a9d17d63016b5f0b23))
+
+
 ## v3.1.3 (2023-10-05)
 
 ### Other
