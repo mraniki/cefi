@@ -85,7 +85,7 @@ class CexTrader:
         """
         version_info = f"ℹ️ {type(self).__name__} {__version__}\n"
         client_info = "".join(
-            f"💱 {client.name}\n🪪 {client.account_number}\n" for client in self.clients
+            f"💱 {client.name} {client.account_number}\n" for client in self.clients
         )
         return version_info + client_info.strip()
 
@@ -101,7 +101,7 @@ class CexTrader:
         """
         _info = ["⚖️\n"]
         for client in self.clients:
-            _info.append(f"🏦 {client.name}:\n{await client.get_quote(symbol)}")
+            _info.append(f"{client.name}: {await client.get_quote(symbol)}")
         return "\n".join(_info)
 
     async def get_balances(self):
@@ -117,7 +117,7 @@ class CexTrader:
         """
         _info = ["💵\n"]
         for client in self.clients:
-            _info.append(f"🏦 {client.name}:\n{await client.get_account_balance()}")
+            _info.append(f"{client.name}:\n{await client.get_account_balance()}")
         return "\n".join(_info)
 
     async def get_positions(self):
@@ -133,7 +133,7 @@ class CexTrader:
         """
         _info = ["📊\n"]
         for client in self.clients:
-            _info.append(f"🏦 {client.name}:\n{await client.get_account_position()}")
+            _info.append(f"{client.name}:\n{await client.get_account_position()}")
         return "\n".join(_info)
 
     async def get_pnls(self):
@@ -148,7 +148,7 @@ class CexTrader:
         """
         _info = ["📊\n"]
         for client in self.clients:
-            _info.append(f"🏦 {client.name}:\n{await client.get_account_pnl()}")
+            _info.append(f"{client.name}:\n{await client.get_account_pnl()}")
         return "\n".join(_info)
 
     async def submit_order(self, order_params):
@@ -167,12 +167,7 @@ class CexTrader:
         """
         order = []
         for client in self.clients:
-            try:
-                trade = await client.execute_order(order_params)
-                order.append(trade)
-
-            except Exception as e:
-                logger.error("{} Error {}", client.name, e)
-                continue
+            trade = await client.execute_order(order_params)
+            order.append(trade)
 
         return order

@@ -52,33 +52,32 @@ class CexCcxt(CexClient):
 
         """
 
-        try:
-            client = getattr(ccxt, name)
-            self.client = client(
-                {
-                    "apiKey": api_key,
-                    "secret": secret,
-                    "password": password,
-                    "enableRateLimit": True,
-                    "options": {
-                        "defaultType": defaulttype,
-                    },
-                }
-            )
-            if testmode:
-                self.client.set_sandbox_mode("enabled")
-            self.account_number = self.client.uid
-            self.name = self.client.id
-            self.trading_asset = trading_asset
-            self.separator = trading_asset_separator
-            self.trading_risk_percentage = trading_risk_percentage
-            self.trading_risk_amount = trading_risk_amount
-            self.trading_slippage = trading_slippage
-            self.defaulttype = defaulttype
-            self.ordertype = ordertype
-            self.mapping = mapping
-        except Exception as e:
-            logger.error("CexCcxt init: {}", e)
+
+        client = getattr(ccxt, name)
+        self.client = client(
+            {
+                "apiKey": api_key,
+                "secret": secret,
+                "password": password,
+                "enableRateLimit": True,
+                "options": {
+                    "defaultType": defaulttype,
+                },
+            }
+        )
+        if testmode:
+            self.client.set_sandbox_mode("enabled")
+        self.account_number = self.client.uid
+        self.name = self.client.id
+        self.trading_asset = trading_asset
+        self.separator = trading_asset_separator
+        self.trading_risk_percentage = trading_risk_percentage
+        self.trading_risk_amount = trading_risk_amount
+        self.trading_slippage = trading_slippage
+        self.defaulttype = defaulttype
+        self.ordertype = ordertype
+        self.mapping = mapping
+
 
     async def get_quote(self, instrument):
         """
@@ -94,13 +93,12 @@ class CexCcxt(CexClient):
             quote
         """
         instrument = await self.replace_instrument(instrument)
-        try:
-            ticker = self.client.fetch_ticker(instrument)
-            quote = ticker["last"]
-            logger.debug("Quote: {}", quote)
-            return quote
-        except Exception as e:
-            logger.error("No Quote: {}", e)
+        
+        ticker = self.client.fetch_ticker(instrument)
+        quote = ticker["last"]
+        logger.debug("Quote: {}", quote)
+        return quote
+
 
     async def get_account_balance(self):
         """
@@ -114,19 +112,17 @@ class CexCcxt(CexClient):
             balance
 
         """
-        try:
-            raw_balance = self.client.fetch_free_balance()
-            if filtered_balance := {
-                k: v for k, v in raw_balance.items() if v is not None and v > 0
-            }:
-                balance_str = "".join(
-                    f"{iterator}: {value} \n"
-                    for iterator, value in filtered_balance.items()
-                )
-                return f"{balance_str}"
-        except Exception as e:
-            logger.error(e)
-            return "No Balance"
+
+        raw_balance = self.client.fetch_free_balance()
+        if filtered_balance := {
+            k: v for k, v in raw_balance.items() if v is not None and v > 0
+        }:
+            balance_str = "".join(
+                f"{iterator}: {value} \n"
+                for iterator, value in filtered_balance.items()
+            )
+            return f"{balance_str}"
+            
 
     async def get_account_position(self):
         """
@@ -140,13 +136,15 @@ class CexCcxt(CexClient):
             position
 
         """
+
         try:
             positions = self.client.fetch_positions()
             if positions := [p for p in positions if p["type"] == "open"]:
                 return f"{positions}"
         except Exception as e:
-            logger.error(e)
-            return "No Position"
+            logger.error("{} Error {}", self.name, e)
+            
+
 
     async def pre_order_checks(self, order_params):
         """ """

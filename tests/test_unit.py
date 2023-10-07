@@ -1,5 +1,4 @@
 from datetime import datetime
-from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
@@ -51,12 +50,17 @@ def test_dynaconf_is_in_testing_env_CEX():
     print(settings.VALUE)
     assert settings.VALUE == "On Testing CEX"
 
+# @pytest.mark.asyncio
+# async def test_cefi_exception():
+#     with pytest.raises(Exception):
+#         return CexTrader("123")
+        
 
 @pytest.mark.asyncio
 async def test_cefi(CXTrader):
     print(type(CXTrader))
     result = await CXTrader.get_info()
-    assert "🪪" in result
+    assert "ℹ️" in result
     assert "💱 binance" in result
     assert CXTrader is not None
     assert isinstance(CXTrader, CexTrader)
@@ -80,7 +84,7 @@ async def test_get_balances(CXTrader):
     """Test balance"""
     result = await CXTrader.get_balances()
     assert result is not None
-    assert "🏦" in result
+    assert "💵" in result
     assert ("binance" in result) or ("huobi" in result)
 
 
@@ -107,7 +111,12 @@ async def test_submit_order(CXTrader, order):
     assert "huobi" in result[1]
     assert ("🔵" in result[1]) or ("Error" in result[1])
 
-
+@pytest.mark.asyncio
+async def test_submit_order_exception(CXTrader):
+    with pytest.raises(Exception):
+        CXTrader.clients=[]
+        await CXTrader.submit_order()
+        
 # @pytest.mark.asyncio
 # async def test_submit_limit_order(CXTrader, limit_order):
 #     result = await CXTrader.submit_order(limit_order)
@@ -115,3 +124,38 @@ async def test_submit_order(CXTrader, order):
 #     print(result)
 #     assert "binance" in result
 #     assert "🔵" in result or ("Error" in result)
+
+
+
+@pytest.mark.asyncio
+async def test_get_trade_confirmation(CXTrader):
+    # Create a mock trade object and test different cases
+    trade_buy = {
+        'amount': 10.0,
+        'price': 100.0,
+        'takeProfitPrice': 110.0,
+        'stopLossPrice': 90.0,
+        'id': '12345',
+        'datetime': '2023-10-07 12:00:00'
+    }
+
+    trade_sell = {
+        'amount': 10.0,
+        'price': 100.0,
+        'takeProfitPrice': 110.0,
+        'stopLossPrice': 90.0,
+        'id': '67890',
+        'datetime': '2023-10-07 14:00:00'
+    }
+
+    for client in CXTrader.clients:
+        result = await client.get_trade_confirmation(
+        trade_sell,
+        "InstrumentName",
+        "SELL")
+        assert ("binance" in result) or ("huobi" in result)
+        assert "⬇️" in result
+        assert "⚫" in result
+        assert "🔵" in result
+        assert "🟢" in result
+        assert "🗓️" in result
