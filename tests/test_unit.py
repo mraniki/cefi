@@ -55,7 +55,7 @@ def test_dynaconf_is_in_testing_env_CEX():
 async def test_cefi(CXTrader):
     print(type(CXTrader))
     result = await CXTrader.get_info()
-    assert "🪪" in result
+    assert "ℹ️" in result
     assert "💱 binance" in result
     assert CXTrader is not None
     assert isinstance(CXTrader, CexTrader)
@@ -79,7 +79,7 @@ async def test_get_balances(CXTrader):
     """Test balance"""
     result = await CXTrader.get_balances()
     assert result is not None
-    assert "🏦" in result
+    assert "💵" in result
     assert ("binance" in result) or ("huobi" in result)
 
 
