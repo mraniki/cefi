@@ -149,16 +149,13 @@ async def test_get_trade_confirmation(CXTrader):
     }
 
     for client in CXTrader.clients:
-    # Test the 'SELL' action
-        result_sell = await client.get_trade_confirmation(
+        result = await client.get_trade_confirmation(
         trade_sell,
         "InstrumentName",
         "SELL")
-        assert result_sell == "YourExpectedResultForSell"
-
-    # Test the 'BUY' action
-        #result_buy = await client.get_trade_confirmation(
-        #trade_buy,
-        #"InstrumentName",
-        #"BUY")
-       # assert result_buy == "YourExpectedResultForBuy"
+        assert "binance" in result
+        assert "⬇️" in result
+        assert "⚫" in result
+        assert "🔵" in result
+        assert "🟢" in result
+        assert "🗓️" in result
