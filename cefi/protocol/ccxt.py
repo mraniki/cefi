@@ -137,9 +137,13 @@ class CexCcxt(CexClient):
 
         """
 
-        positions = self.client.fetch_positions() or None
-        if positions := [p for p in positions if p["type"] == "open"]:
-            return f"{positions}"
+        try:
+            positions = self.client.fetch_positions()
+            if positions := [p for p in positions if p["type"] == "open"]:
+                return f"{positions}"
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            
 
 
     async def pre_order_checks(self, order_params):
