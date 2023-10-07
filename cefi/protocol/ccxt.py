@@ -137,7 +137,7 @@ class CexCcxt(CexClient):
 
         """
 
-        positions = self.client.fetch_positions()
+        positions = self.client.fetch_positions() or None
         if positions := [p for p in positions if p["type"] == "open"]:
             return f"{positions}"
 
