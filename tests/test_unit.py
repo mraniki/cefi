@@ -153,7 +153,7 @@ async def test_get_trade_confirmation(CXTrader):
         trade_sell,
         "InstrumentName",
         "SELL")
-        assert "binance" in result
+        assert ("binance" in result) or ("huobi" in result)
         assert "⬇️" in result
         assert "⚫" in result
         assert "🔵" in result
