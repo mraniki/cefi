@@ -2,6 +2,38 @@
 
 
 
+## v3.1.5 (2023-10-10)
+
+### Other
+
+* Merge pull request #74 from mraniki/dev
+
+⬆️ 🤖 Dependencies: Update ccxt requirement from 4.1.1 to 4.1.9 ([`ab44ded`](https://github.com/mraniki/cefi/commit/ab44dedba58bbe7dc8558bbb5799eb17c29b373e))
+
+* Merge pull request #73 from mraniki/dependabot/pip/dev/ccxt-4.1.9
+
+⬆️ 🤖 Dependencies: Update ccxt requirement from 4.1.1 to 4.1.9 ([`4db8a99`](https://github.com/mraniki/cefi/commit/4db8a99603e650619e64bd081ddca9867525df86))
+
+### Update
+
+* Update Requirements ([`4fddd8a`](https://github.com/mraniki/cefi/commit/4fddd8abf19bef5112b62c81f5d30ffcb4b103b7))
+
+* :arrow_up: 🤖 Dependencies: Update ccxt requirement from 4.1.1 to 4.1.9
+
+Updates the requirements on [ccxt](https://github.com/ccxt/ccxt) to permit the latest version.
+- [Release notes](https://github.com/ccxt/ccxt/releases)
+- [Changelog](https://github.com/ccxt/ccxt/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/ccxt/ccxt/compare/4.1.1...4.1.9)
+
+---
+updated-dependencies:
+- dependency-name: ccxt
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f36257e`](https://github.com/mraniki/cefi/commit/f36257ec9ecae09dbd57f11b1a8190d8761a757d))
+
+
 ## v3.1.4 (2023-10-07)
 
 ### Other
