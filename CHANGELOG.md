@@ -2,6 +2,38 @@
 
 
 
+## v3.1.7 (2023-10-10)
+
+### Other
+
+* Merge pull request #77 from mraniki/dev
+
+Update pyproject.toml ([`2144f24`](https://github.com/mraniki/cefi/commit/2144f24b42bf58cb14e006b7008b2f039e37b458))
+
+* Add automatic merge on approval rule
+
+This commit adds a new file `.github/.mergify.yml` which contains the co
+nfiguration for automatic merging of pull requests. The rule is set to
+m
+erge the pull request when the build and test checks are successful,
+and
+there are no check failures. ([`cea9efb`](https://github.com/mraniki/cefi/commit/cea9efb49ff3bb759e0eba732aa2ba59c9e0ffae))
+
+### 👷
+
+* 👷 CI Change with precommit ([`9ee78a8`](https://github.com/mraniki/cefi/commit/9ee78a89da282590d841dd73ff82f82d1023923e))
+
+### 🔒
+
+* 🔒 ([`7284ed3`](https://github.com/mraniki/cefi/commit/7284ed3b98706d4644e56250f883ea25e41b655b))
+
+* 🔒 bandit ([`2306c02`](https://github.com/mraniki/cefi/commit/2306c022be92d9f7d7eca41ec20219af65e125db))
+
+### 🚨
+
+* 🚨 ([`3340fc2`](https://github.com/mraniki/cefi/commit/3340fc2171c11b104989bdcfd2dc0f470bbece53))
+
+
 ## v3.1.6 (2023-10-10)
 
 ### Other
