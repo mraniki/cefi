@@ -2,6 +2,27 @@
 
 
 
+## v3.1.6 (2023-10-10)
+
+### Other
+
+* Merge pull request #76 from mraniki/dev
+
+♻️ pyproject update ([`7ee9a4c`](https://github.com/mraniki/cefi/commit/7ee9a4c0c10f2c911b9dad287f1ba4b135083ef7))
+
+* Merge pull request #75 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.0.292 ([`2ac7136`](https://github.com/mraniki/cefi/commit/2ac7136d9e20ceed2f2e187aef4367963e68dbff))
+
+### ♻️
+
+* ♻️ pyproject update ([`6056bb6`](https://github.com/mraniki/cefi/commit/6056bb63184118994a6aeb0996c347f1737f2078))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.0.292 ([`6c527c1`](https://github.com/mraniki/cefi/commit/6c527c1618fcb79ac10b83421db2f209bc0c7203))
+
+
 ## v3.1.5 (2023-10-10)
 
 ### Other
