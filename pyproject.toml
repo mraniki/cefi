@@ -30,9 +30,10 @@ ccxt = "4.1.9"
 
 
 [ tool.poetry.group.dev.dependencies]
-python-semantic-release = "^8.0.7"
-ruff = "*"
-
+python-semantic-release = ">=8.0.8"
+ruff = "^0.0.292"
+black = "^23.3.0"
+pre-commit = "^3.3.1"
 
 
 [tool.ruff]
@@ -45,8 +46,7 @@ exclude = [
   ".github/*",
   "docs/*",
 ]
-#ignore = ["E401","F401","F811"]
-#format = "github"
+
 fixable = ["ALL"]
 
 [tool.pylint.exceptions]
@@ -119,6 +119,13 @@ omit = [
     "docs/*",
     "*/config.py"
 ]
+
+[tool.bandit]
+exclude_dirs = ["tests","docs"]
+
+[tool.bandit.assert_used]
+skips = ["*_test.py", "test_*.py"]
+
 
 [tool.semantic_release]
 upload_to_vcs_release = true
