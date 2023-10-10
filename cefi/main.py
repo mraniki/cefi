@@ -1,4 +1,3 @@
-import ccxt
 from loguru import logger
 
 from cefi import __version__
