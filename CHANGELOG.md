@@ -2,6 +2,27 @@
 
 
 
+## v3.1.9 (2023-10-11)
+
+### Other
+
+* Merge pull request #80 from mraniki/dev
+
+👷 CI Change ([`378ffed`](https://github.com/mraniki/cefi/commit/378ffed65e896ff481fce6bc234134ebebeedcaf))
+
+* Merge pull request #79 from mraniki/mergify/mraniki/config-update
+
+ci(Mergify): configuration update ([`b47803f`](https://github.com/mraniki/cefi/commit/b47803fc0e7b703154d89814c306f77dadcdbd30))
+
+* ci(Mergify): configuration update
+
+Signed-off-by: null &lt;null&gt; ([`5d7899f`](https://github.com/mraniki/cefi/commit/5d7899f8c9cd0e3db04c43a08064bce7aef59645))
+
+### 👷
+
+* 👷 CI Change ([`9e1431f`](https://github.com/mraniki/cefi/commit/9e1431ff2d3412fcfd00a85b38e899b5629a24ce))
+
+
 ## v3.1.8 (2023-10-11)
 
 ### Other
