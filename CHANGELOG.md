@@ -2,6 +2,19 @@
 
 
 
+## v3.1.8 (2023-10-11)
+
+### Other
+
+* Merge pull request #78 from mraniki/dev
+
+👷 CI Change ([`d0ebe05`](https://github.com/mraniki/cefi/commit/d0ebe05c216b5f2058e747017930ace13bcbebb5))
+
+### 👷
+
+* 👷 CI Change ([`53e7cf6`](https://github.com/mraniki/cefi/commit/53e7cf606148a0f983dab344024a9ad615f2e753))
+
+
 ## v3.1.7 (2023-10-10)
 
 ### Other
