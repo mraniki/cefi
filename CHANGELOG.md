@@ -2,6 +2,38 @@
 
 
 
+## v3.1.10 (2023-10-14)
+
+### Other
+
+* Merge pull request #83 from mraniki/dev
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.12 ([`d8fecfb`](https://github.com/mraniki/cefi/commit/d8fecfb334d031ea54ff5d54f832ed98b3a12fa4))
+
+* Merge pull request #82 from mraniki/renovate/ccxt-4.x
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.12 ([`f003da3`](https://github.com/mraniki/cefi/commit/f003da3d3d6ccf2ce84ac2a3dc5f5ddce0f38511))
+
+* :construction_worker_man:Refactor GitHub configuration files
+
+- Removed `.github/mergify.yml`
+- Updated `.github/renovate.json` to include additional ignored authors ([`13ba230`](https://github.com/mraniki/cefi/commit/13ba230fdd715cfcfaacf269eda022c08174b6aa))
+
+* Merge pull request #81 from mraniki/dev
+
+:construction_worker_man: CI Change ([`9695e20`](https://github.com/mraniki/cefi/commit/9695e20216b35a3c15c2e5e401c6f337b6d502a7))
+
+* :construction_worker_man: CI Change ([`8bd4f9c`](https://github.com/mraniki/cefi/commit/8bd4f9c451f72f908d487a5a2becd053f355d28b))
+
+### Update
+
+* Update Requirements ([`ef6d49f`](https://github.com/mraniki/cefi/commit/ef6d49ff0bf2485db833dd8e1664e0bced9ce3f4))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.12 ([`044808f`](https://github.com/mraniki/cefi/commit/044808f1e6bb306a64dc119d9cae345d629cca03))
+
+
 ## v3.1.9 (2023-10-11)
 
 ### Other
