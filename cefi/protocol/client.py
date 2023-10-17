@@ -8,8 +8,6 @@ class
 
 from loguru import logger
 
-from cefi.config import settings
-
 
 class CexClient:
     """
@@ -132,7 +130,7 @@ class CexClient:
             risk_percentage = float(quantity) / 100
             amount = balance * risk_percentage / quote
             logger.debug("Amount {}", amount)
-        if amount >= 1:
+        if amount >= self.trading_amount_threshold:
             return amount
 
     async def pre_order_checks(self, order_params):

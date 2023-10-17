@@ -8,8 +8,6 @@ CCXT client
 import ccxt
 from loguru import logger
 
-from cefi.config import settings
-
 from .client import CexClient
 
 
@@ -42,6 +40,7 @@ class CexCcxt(CexClient):
         trading_risk_percentage=True,
         trading_risk_amount=1,
         trading_slippage=2,
+        trading_amount_threshold=0,
         trading_asset="USDT",
         trading_asset_separator=None,
         mapping=None,
@@ -51,7 +50,6 @@ class CexCcxt(CexClient):
         Initialize the ccxt client
 
         """
-
 
         client = getattr(ccxt, name)
         self.client = client(
@@ -74,10 +72,12 @@ class CexCcxt(CexClient):
         self.trading_risk_percentage = trading_risk_percentage
         self.trading_risk_amount = trading_risk_amount
         self.trading_slippage = trading_slippage
+        self.trading_amount_threshold = trading_amount_threshold
+        self.leverage_type = leverage_type
+        self.leverage = leverage
         self.defaulttype = defaulttype
         self.ordertype = ordertype
         self.mapping = mapping
-
 
     async def get_quote(self, instrument):
         """
@@ -93,12 +93,11 @@ class CexCcxt(CexClient):
             quote
         """
         instrument = await self.replace_instrument(instrument)
-        
+
         ticker = self.client.fetch_ticker(instrument)
         quote = ticker["last"]
         logger.debug("Quote: {}", quote)
         return quote
-
 
     async def get_account_balance(self):
         """
@@ -122,7 +121,6 @@ class CexCcxt(CexClient):
                 for iterator, value in filtered_balance.items()
             )
             return f"{balance_str}"
-            
 
     async def get_account_position(self):
         """
@@ -143,8 +141,6 @@ class CexCcxt(CexClient):
                 return f"{positions}"
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
-            
-
 
     async def pre_order_checks(self, order_params):
         """ """
