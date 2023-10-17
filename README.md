@@ -20,7 +20,7 @@
     <a href="https://codecov.io/gh/mraniki/cefi"> <img src="https://codecov.io/gh/mraniki/cefi/branch/main/graph/badge.svg?token=BTIoKrcXNq"/></a><br>
       </td>
       <td align="left"> 
-        Interact with CEX Exchanges<br>
+        Interact with Centralised Exchanges (CEX)<br>
         supported by CCXT.
       </td>
     </tr>
