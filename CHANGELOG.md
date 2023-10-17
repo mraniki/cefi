@@ -2,6 +2,23 @@
 
 
 
+## v3.2.1 (2023-10-17)
+
+### Other
+
+* Merge pull request #91 from mraniki/dev
+
+Dev ([`0ee33de`](https://github.com/mraniki/cefi/commit/0ee33de99ad27fe6c0feb9b94492dee965c50dfa))
+
+* Merge pull request #90 from mraniki/mraniki-patch-1
+
+Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f13412f357a24912e3c5930b5daaa8af4))
+
+### Update
+
+* Update README.md ([`d6ca9a3`](https://github.com/mraniki/cefi/commit/d6ca9a3b491eaab277a5ab8461e0eb45f945e241))
+
+
 ## v3.2.0 (2023-10-17)
 
 ### Other
