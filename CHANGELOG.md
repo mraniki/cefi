@@ -2,6 +2,29 @@
 
 
 
+## v3.2.0 (2023-10-17)
+
+### Other
+
+* Merge pull request #89 from mraniki/dev
+
+✨ trading_amount_threshold ⬆️  ccxt to v4.1.16 ([`55e1dab`](https://github.com/mraniki/cefi/commit/55e1dabf9278a4d6a47accdb5d9c9becae0cfd0f))
+
+### Update
+
+* Update Requirements ([`089a4fb`](https://github.com/mraniki/cefi/commit/089a4fb05bc8ae60a905b63f5db234802bf43147))
+
+* Update Requirements ([`4d9c501`](https://github.com/mraniki/cefi/commit/4d9c501c67cfee601071ef3f84de66dc44ed5021))
+
+### ✨
+
+* ✨ trading_amount_threshold ([`5a2fdd8`](https://github.com/mraniki/cefi/commit/5a2fdd86d152fa29cc3620d394c96b463e2ca2f7))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.16 ([`0c95447`](https://github.com/mraniki/cefi/commit/0c95447bf9e4e526c56d560591eff56201bd8af4))
+
+
 ## v3.1.12 (2023-10-17)
 
 ### Other
