@@ -2,6 +2,29 @@
 
 
 
+## v3.1.12 (2023-10-17)
+
+### Other
+
+* Merge pull request #88 from mraniki/dev
+
+👷 CI Change ([`f691313`](https://github.com/mraniki/cefi/commit/f691313c1e863c4214a5bd126d111e489a0e7674))
+
+### Update
+
+* Update Requirements ([`d6f77b1`](https://github.com/mraniki/cefi/commit/d6f77b17a2dc945e22e6c824d17b308bd236c645))
+
+### ✅
+
+* ✅ Unit Test ([`134f063`](https://github.com/mraniki/cefi/commit/134f063538fbf1b161c820c6237861771960d02a))
+
+* ✅ Unit Test ([`1050893`](https://github.com/mraniki/cefi/commit/105089393f840d5aa90093308bc1b2b81e1970ba))
+
+### 👷
+
+* 👷 CI Change ([`c3a812e`](https://github.com/mraniki/cefi/commit/c3a812ed900f2c6c85084241c4057f57a1668f1c))
+
+
 ## v3.1.11 (2023-10-15)
 
 ### Other
