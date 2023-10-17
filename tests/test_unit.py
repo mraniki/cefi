@@ -131,17 +131,7 @@ async def test_submit_order_exception(CXTrader):
 
 @pytest.mark.asyncio
 async def test_get_trade_confirmation(CXTrader):
-    # Create a mock trade object and test different cases
-    trade_buy = {
-        "amount": 10.0,
-        "price": 100.0,
-        "takeProfitPrice": 110.0,
-        "stopLossPrice": 90.0,
-        "id": "12345",
-        "datetime": "2023-10-07 12:00:00",
-    }
-
-    trade_sell = {
+    trade = {
         "amount": 10.0,
         "price": 100.0,
         "takeProfitPrice": 110.0,
@@ -151,9 +141,7 @@ async def test_get_trade_confirmation(CXTrader):
     }
 
     for client in CXTrader.clients:
-        result = await client.get_trade_confirmation(
-            trade_sell, "InstrumentName", "SELL"
-        )
+        result = await client.get_trade_confirmation(trade, "InstrumentName", "SELL")
         assert ("binance" in result) or ("huobi" in result)
         assert "⬇️" in result
         assert "⚫" in result
