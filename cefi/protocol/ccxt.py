@@ -92,12 +92,15 @@ class CexCcxt(CexClient):
         Returns:
             quote
         """
-        instrument = await self.replace_instrument(instrument)
+        try:
+            instrument = await self.replace_instrument(instrument)
 
-        ticker = self.client.fetch_ticker(instrument)
-        quote = ticker["last"]
-        logger.debug("Quote: {}", quote)
-        return quote
+            ticker = self.client.fetch_ticker(instrument)
+            quote = ticker["last"]
+            logger.debug("Quote: {}", quote)
+            return quote
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
 
     async def get_account_balance(self):
         """

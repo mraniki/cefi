@@ -147,11 +147,17 @@ class CexClient:
         Returns:
             dict
         """
-        for item in self.mapping:
-            if item["id"] == instrument:
-                instrument = item["alt"]
-                logger.debug("Instrument changed from {} to {}", item["id"], instrument)
-                break
+        try:
+            for item in self.mapping:
+                if item["id"] == instrument:
+                    instrument = item["alt"]
+                    logger.debug(
+                        "Instrument changed from {} to {}", item["id"], instrument
+                    )
+                    break
+
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
 
         return instrument
 
