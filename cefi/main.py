@@ -166,7 +166,9 @@ class CexTrader:
         """
         order = []
         for client in self.clients:
-            trade = await client.execute_order(order_params)
-            order.append(trade)
-
+            try:
+                trade = await client.execute_order(order_params)
+                order.append(trade)
+            except Exception as e:
+                logger.error("submit_order - client {} error {}", client.name, e)
         return order
