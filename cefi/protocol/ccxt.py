@@ -92,12 +92,15 @@ class CexCcxt(CexClient):
         Returns:
             quote
         """
-        instrument = await self.replace_instrument(instrument)
+        try:
+            instrument = await self.replace_instrument(instrument)
 
-        ticker = self.client.fetch_ticker(instrument)
-        quote = ticker["last"]
-        logger.debug("Quote: {}", quote)
-        return quote
+            ticker = self.client.fetch_ticker(instrument)
+            quote = ticker["last"]
+            logger.debug("Quote: {}", quote)
+            return quote
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
 
     async def get_account_balance(self):
         """
@@ -164,29 +167,30 @@ class CexCcxt(CexClient):
             trade_confirmation(dict)
 
         """
-        action = order_params.get("action")
-        instrument = await self.replace_instrument(order_params.get("instrument"))
-        quantity = order_params.get("quantity", self.trading_risk_amount)
-        logger.debug("quantity {}", quantity)
-        amount = await self.get_order_amount(
-            quantity=quantity,
-            instrument=instrument,
-            is_percentage=self.trading_risk_percentage,
-        )
-        params = {
-            "stopLoss": {
-                "triggerPrice": order_params.get("stop_loss"),
-                # "price": order_params.get("action") * 0.98,
-            },
-            "takeProfit": {
-                "triggerPrice": order_params.get("take_profit"),
-                # "price": order_params.get("action") * 0.98,
-            },
-        }
-        logger.debug("amount {}", amount)
-        pre_order_checks = await self.pre_order_checks(order_params)
-        logger.debug("pre_order_checks {}", pre_order_checks)
         try:
+            action = order_params.get("action")
+            instrument = await self.replace_instrument(order_params.get("instrument"))
+            quantity = order_params.get("quantity", self.trading_risk_amount)
+            logger.debug("quantity {}", quantity)
+            amount = await self.get_order_amount(
+                quantity=quantity,
+                instrument=instrument,
+                is_percentage=self.trading_risk_percentage,
+            )
+            params = {
+                "stopLoss": {
+                    "triggerPrice": order_params.get("stop_loss"),
+                    # "price": order_params.get("action") * 0.98,
+                },
+                "takeProfit": {
+                    "triggerPrice": order_params.get("take_profit"),
+                    # "price": order_params.get("action") * 0.98,
+                },
+            }
+            logger.debug("amount {}", amount)
+            pre_order_checks = await self.pre_order_checks(order_params)
+            logger.debug("pre_order_checks {}", pre_order_checks)
+
             if amount and pre_order_checks:
                 if order := self.client.create_order(
                     symbol=instrument,
