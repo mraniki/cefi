@@ -56,6 +56,10 @@ class CexTrader:
                 )
                 self.clients.append(client)
                 logger.debug(f"Loaded {item}")
+            if self.clients:
+                logger.info(f"Loaded {len(self.clients)} CEX clients")
+            else:
+                logger.warning("No CEX clients loaded. Verify config")
 
         except Exception as e:
             logger.error("init: {}", e)
