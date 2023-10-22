@@ -2,6 +2,27 @@
 
 
 
+## v3.2.5 (2023-10-22)
+
+### Other
+
+* Merge pull request #102 from mraniki/dev
+
+🥅 better error handling for no config ([`b26ad6c`](https://github.com/mraniki/cefi/commit/b26ad6c8fd59828d64a902e5b799ca954ec8beae))
+
+### Update
+
+* Update Requirements ([`ebe6ee4`](https://github.com/mraniki/cefi/commit/ebe6ee443fe599db843b465eab7dff0abc86f1ff))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.20 ([`500e091`](https://github.com/mraniki/cefi/commit/500e091e4a666f666f7ddac116d1ed654a5fbde6))
+
+### 🥅
+
+* 🥅 better error handling for no config ([`42d8755`](https://github.com/mraniki/cefi/commit/42d8755a6271d86aad3e3b7dc5d8c36df376b2e8))
+
+
 ## v3.2.4 (2023-10-20)
 
 ### Other
