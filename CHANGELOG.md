@@ -2,6 +2,29 @@
 
 
 
+## v3.2.6 (2023-10-23)
+
+### Other
+
+* Merge pull request #104 from mraniki/dev
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.22 ([`c1a1872`](https://github.com/mraniki/cefi/commit/c1a18726e6fbe5c3763e0139e029b013853b3759))
+
+### Update
+
+* 🔧 Updated Config toggle ([`363ae35`](https://github.com/mraniki/cefi/commit/363ae359db457b6cb1a2845b5283f81c74a70a9c))
+
+* Update Requirements ([`a6e7597`](https://github.com/mraniki/cefi/commit/a6e7597deb33952517a6db3df8336992c513ea66))
+
+### ✅
+
+* ✅ Unit Test ([`675449f`](https://github.com/mraniki/cefi/commit/675449f8eddc59f2ee0538288e5baf89d5f00768))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.22 ([`2676415`](https://github.com/mraniki/cefi/commit/26764156e4ef94778e0d51f7f102db402c17d786))
+
+
 ## v3.2.5 (2023-10-22)
 
 ### Other
