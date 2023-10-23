@@ -17,7 +17,7 @@
 VALUE = "On default"
 
 # Module Enable/Disable
-cex_enabled = false
+cex_enabled = true
 
 # CCXT Parameters to connect
 # to 1 or more exchanges
