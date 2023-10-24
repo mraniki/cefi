@@ -2,6 +2,37 @@
 
 
 
+## v3.2.7 (2023-10-24)
+
+### Other
+
+* Auto ([`18d8d6f`](https://github.com/mraniki/cefi/commit/18d8d6f917094b01685e51f4ab2cb4038c3ac773))
+
+* Merge pull request #108 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`1f2d349`](https://github.com/mraniki/cefi/commit/1f2d34978e635a197223c2e9b738b4183d4c438e))
+
+* Auto ([`685327b`](https://github.com/mraniki/cefi/commit/685327b7117c2d9bd455d09c3ee33cc2f14a44bf))
+
+* Merge pull request #106 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`d5794c4`](https://github.com/mraniki/cefi/commit/d5794c4e73223476bc912d19ee206063bc9fc326))
+
+* Auto ([`0b49d7c`](https://github.com/mraniki/cefi/commit/0b49d7cc7d35492800142839961bc888a0ca9783))
+
+### Update
+
+* Update Requirements ([`7cb2763`](https://github.com/mraniki/cefi/commit/7cb276375730f88c072b3ff517b28e40653be8a4))
+
+* Update Requirements ([`c1454f8`](https://github.com/mraniki/cefi/commit/c1454f8e1f994381f7ae644f4c0dee7d982b250a))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.24 ([`9d3fdc3`](https://github.com/mraniki/cefi/commit/9d3fdc35e33da9f13d0634e44f68730d32c5efa3))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.23 ([`b511b9a`](https://github.com/mraniki/cefi/commit/b511b9a2ee6637d063ff0c63ba6ea8897c4d5171))
+
+
 ## v3.2.6 (2023-10-23)
 
 ### Other
