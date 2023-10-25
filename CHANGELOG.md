@@ -2,6 +2,21 @@
 
 
 
+## v3.2.8 (2023-10-25)
+
+### Other
+
+* Auto ([`d8c4102`](https://github.com/mraniki/cefi/commit/d8c4102ab5c1573890349c9a4449681849226af8))
+
+### Update
+
+* Update Requirements ([`839dc79`](https://github.com/mraniki/cefi/commit/839dc79175d29869b937f9a50537268a174ade1b))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.25 ([`cd56bd0`](https://github.com/mraniki/cefi/commit/cd56bd082d8b033485285e38949fed5f2b3bef1a))
+
+
 ## v3.2.7 (2023-10-24)
 
 ### Other
