@@ -210,3 +210,16 @@ patch_tags = ["fix","bump","Update",
     "🔇",":mute:",
     "🔊",":volume:",
 ]
+[tool.semantic_release.changelog]
+# template_dir = "templates"
+changelog_file = "CHANGELOG.md"
+exclude_commit_patterns = []
+
+[tool.semantic_release.branches.main]
+match = "(main|master|dev)"
+prerelease_token = "rc"
+prerelease = false
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
