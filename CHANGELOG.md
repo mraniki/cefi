@@ -2,6 +2,55 @@
 
 
 
+## v3.2.9 (2023-10-27)
+
+### Other
+
+* Merge pull request #119 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`34953d3`](https://github.com/mraniki/cefi/commit/34953d3afbc0813bab805712ba5dd8ea3f1bb303))
+
+* Merge pull request #115 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`3d3d4a8`](https://github.com/mraniki/cefi/commit/3d3d4a807205a15c2543e56bdb3f02ab3d05754c))
+
+* Merge branch &#39;main&#39; into dev ([`8474653`](https://github.com/mraniki/cefi/commit/8474653e3d414a34ff8e801028ab5e7eea31aacc))
+
+* Auto ([`83c9c09`](https://github.com/mraniki/cefi/commit/83c9c095993a7fa48784d155c9be0bdee20e7e76))
+
+* Merge pull request #114 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`85f21bb`](https://github.com/mraniki/cefi/commit/85f21bb9b19ee9cb2badf4d22b547ff77e98ddce))
+
+* Auto ([`d2f7b5f`](https://github.com/mraniki/cefi/commit/d2f7b5ffa003e5bf74efc40e47687c32e17dfda9))
+
+### Update
+
+* ⬆️ Update Requirements and Version ([`38ea7b1`](https://github.com/mraniki/cefi/commit/38ea7b1922c073e27fe317d3f9427dcfcd9489b5))
+
+* Update Requirements ([`6eaa0c4`](https://github.com/mraniki/cefi/commit/6eaa0c439e00d2627fcd8d8f65e76bfaa7557d2c))
+
+* Update Requirements ([`6f2e56b`](https://github.com/mraniki/cefi/commit/6f2e56b236f1df57b6c3e8e33f92d7def82a9ecc))
+
+* Update Requirements ([`a169f9c`](https://github.com/mraniki/cefi/commit/a169f9c54eab197761f3c0c5e0bac46977648683))
+
+* Update Requirements ([`eff0bfa`](https://github.com/mraniki/cefi/commit/eff0bfa914728bad2025ac62802dec364bec18ad))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.29 ([`417f6d3`](https://github.com/mraniki/cefi/commit/417f6d398a74eecce2ef34b375b105215db57380))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.28 ([`52fe3fe`](https://github.com/mraniki/cefi/commit/52fe3febec34100b4eed1adf86c890e9e1a4d1dc))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.27 ([`f1b6cce`](https://github.com/mraniki/cefi/commit/f1b6ccec9114d7af7d474adcf26489d5689b8ea0))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.26 ([`2ac28c8`](https://github.com/mraniki/cefi/commit/2ac28c8fb7c57f432f59ac4348a97407633e6387))
+
+### 🔧
+
+* 🔧 ([`17cb6ea`](https://github.com/mraniki/cefi/commit/17cb6ea37229d7b31f483195396c1fe4858e364e))
+
+
 ## v3.2.8 (2023-10-25)
 
 ### Other
