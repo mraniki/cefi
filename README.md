@@ -1,6 +1,5 @@
 <br>
-  <table style="border: 1px solid transparent">
-    
+  <table style="border: 1px solid transparent">    
     <tr>
       <td>
   <a href="http://talky.readthedocs.io"><img src="https://img.shields.io/badge/Wiki-%23000000.svg?style=for-the-badge&logo=wikipedia&logoColor=white"></a>
