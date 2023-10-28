@@ -280,13 +280,13 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "ccxt"
-version = "4.1.29"
+version = "4.1.30"
 description = "A JavaScript / TypeScript / Python / C# / PHP cryptocurrency trading library with support for 130+ exchanges"
 optional = false
 python-versions = "*"
 files = [
-    {file = "ccxt-4.1.29-py2.py3-none-any.whl", hash = "sha256:5b87240f9d06c841134703e6a9794d9e263f0d88b9d0f52bec54296f63acb061"},
-    {file = "ccxt-4.1.29.tar.gz", hash = "sha256:dbe70212a115761c5b904317539a200b3c3d429fb721b02a57cb05aaeabaa9e0"},
+    {file = "ccxt-4.1.30-py2.py3-none-any.whl", hash = "sha256:0bae464bded79d79a4b5349d083645916ff99d5642436cb8ae1d16b389405c67"},
+    {file = "ccxt-4.1.30.tar.gz", hash = "sha256:11efe7444fd54e1d591146f59d6175ab8577b625bb540882df5a11b75e1a795e"},
 ]
 
 [package.dependencies]
@@ -2210,4 +2210,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "cffcdd0c2777e6e589780248c88664f19515424a1f394798adb922403ac3b0a2"
+content-hash = "d41ed49a2e1c94247a55f2a32ea7392bdd91295ef4555486a456d9850cd4d982"
