@@ -2,6 +2,91 @@
 
 
 
+## v3.2.10 (2023-10-30)
+
+### Other
+
+* Merge pull request #134 from mraniki/dev
+
+⬆️ 🤖 - You dialed ([`2a90583`](https://github.com/mraniki/cefi/commit/2a90583f39e6e89b619c881d89e8222756218f9b))
+
+* Merge pull request #132 from mraniki/dev
+
+⬆️ 🤖 - Never commit yourself  Let someone else commit you ([`57f4cae`](https://github.com/mraniki/cefi/commit/57f4cae8522c07b21d8a5e177fb9954eb916effa))
+
+* Refactor GitHub workflow file ([`08a4608`](https://github.com/mraniki/cefi/commit/08a460880c79e87e38ea8a38b0b836dc9dcb561d))
+
+* Merge pull request #131 from mraniki/dev
+
+Update README.md ([`67ba1db`](https://github.com/mraniki/cefi/commit/67ba1db75b03c0d4b86dba246a056d14cfb6b2ce))
+
+* Merge pull request #130 from mraniki/dev
+
+Update README.md ([`c08149d`](https://github.com/mraniki/cefi/commit/c08149d068d63bbeefba5e1d48fa25850fa937ed))
+
+* Merge pull request #129 from mraniki/dev
+
+Merge pull request #128 from mraniki/main ([`6ff7e8c`](https://github.com/mraniki/cefi/commit/6ff7e8c71e5ce972fc21489d66a32e0d08e2f9ab))
+
+* Merge pull request #128 from mraniki/main
+
+Merge pull request #127 from mraniki/dev ([`a8d1ca9`](https://github.com/mraniki/cefi/commit/a8d1ca9f0e7190aa5ca6ffd47a10ac6a784e8644))
+
+* Merge pull request #127 from mraniki/dev
+
+Merge pull request #126 from mraniki/main ([`04a193b`](https://github.com/mraniki/cefi/commit/04a193b8c2e81db44b40a04d912411158ad1392a))
+
+* Merge pull request #126 from mraniki/main
+
+Dev ([`39e61a4`](https://github.com/mraniki/cefi/commit/39e61a4debe23f6ee42bd1a2475f4240bc69eac7))
+
+* Merge pull request #125 from mraniki/dev
+
+Update README.md ([`fbba598`](https://github.com/mraniki/cefi/commit/fbba598f11719e9faf347768fa9306251dae1f19))
+
+* Merge pull request #124 from mraniki/dev
+
+Merge pull request #123 from mraniki/main ([`cdb4190`](https://github.com/mraniki/cefi/commit/cdb41908ec2756c1f20e643c2c8af3145cc4fc21))
+
+* Merge pull request #123 from mraniki/main
+
+Merge pull request #122 from mraniki/dev ([`b8e9f6a`](https://github.com/mraniki/cefi/commit/b8e9f6a08d13666042b9721fce171eb29d5a4f4b))
+
+* Merge pull request #122 from mraniki/dev
+
+Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a877d6b8bb0828c9e))
+
+* Merge pull request #120 from mraniki/dev
+
+⬆️ 🤖 - Auto Release ([`feb1b7f`](https://github.com/mraniki/cefi/commit/feb1b7fbf662feb609fd245ebfe1ce3caea134aa))
+
+### Update
+
+* Update README.md ([`0d52d6a`](https://github.com/mraniki/cefi/commit/0d52d6a9849b6c391a24b0a32dfdffdfa6b69cbe))
+
+* Update README.md ([`ddadaeb`](https://github.com/mraniki/cefi/commit/ddadaeb36945d11cdc8b8344788f1a71b4d70e38))
+
+* Update README.md ([`bd69c29`](https://github.com/mraniki/cefi/commit/bd69c29b47921dd0e27d554394ffb6ed362d93b3))
+
+* Update Requirements ([`32d2d73`](https://github.com/mraniki/cefi/commit/32d2d73413a4c71c986bfda1e598db51dcc00b0a))
+
+* ⬆️ Update Requirements and Version ([`d12840d`](https://github.com/mraniki/cefi/commit/d12840ddc816869dc26c22a3df39e58eb7545a22))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.32 ([`16f0487`](https://github.com/mraniki/cefi/commit/16f0487df666db91fc41df85f8304305854a4f68))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.31 ([`1def70a`](https://github.com/mraniki/cefi/commit/1def70ad53979c07573bbd574a5f92ba9fdeaffe))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.30 ([`73e616d`](https://github.com/mraniki/cefi/commit/73e616de7dc03b08499cdebc99551a02ec6a974c))
+
+### 👷
+
+* 👷 CI Change ([`95fe805`](https://github.com/mraniki/cefi/commit/95fe8056c55bde921cc55b7f3b9b3699c07c78bf))
+
+* 👷 CI Change ([`0913018`](https://github.com/mraniki/cefi/commit/091301851347ef5cffa4053c7fd4e7655dc48bbb))
+
+
 ## v3.2.9 (2023-10-27)
 
 ### Other
