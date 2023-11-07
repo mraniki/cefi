@@ -2,6 +2,77 @@
 
 
 
+## v3.2.11 (2023-11-07)
+
+### Other
+
+* Merge pull request #154 from mraniki/dev
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.41 ([`1a1da56`](https://github.com/mraniki/cefi/commit/1a1da56ac8d0cb3a2e1b5c6d806a305aa54c8f62))
+
+* Merge pull request #152 from mraniki/dev
+
+⬆️ 🤖 - Writing is turning ones worst moments into money ([`61daa32`](https://github.com/mraniki/cefi/commit/61daa3266d274bf1306ba76b87c78986bc26319b))
+
+* Merge pull request #150 from mraniki/dev
+
+⬆️ 🤖 - Writing is easy all you do is sit staring at the blank sheet of paper until ([`8fcd94b`](https://github.com/mraniki/cefi/commit/8fcd94be4e87d269bd914de796a380b58a03d79f))
+
+* Merge pull request #148 from mraniki/main
+
+Merge pull request #147 from mraniki/dev ([`7d0e257`](https://github.com/mraniki/cefi/commit/7d0e257ec2d6ccf4125a8556b9011dbac0de90a8))
+
+* Merge pull request #147 from mraniki/dev
+
+⬆️ 🤖 - Be security conscious  National defense is at stake ([`3204e32`](https://github.com/mraniki/cefi/commit/3204e327a46d87bf7ebebb18620f686ffcafb5da))
+
+* Merge pull request #145 from mraniki/main
+
+Merge ([`6a1c563`](https://github.com/mraniki/cefi/commit/6a1c5633a282b33e091f206fcdfe291eb7e50c75))
+
+* Merge pull request #144 from mraniki/dev
+
+⬆️ 🤖 - FORTUNE PROVIDES QUESTIONS FOR THE GREAT ANSWERS ([`337f017`](https://github.com/mraniki/cefi/commit/337f017b12c3c91b6ce17c2d09dc47e3583c6725))
+
+* Merge pull request #141 from mraniki/dev
+
+⬆️ 🤖 - There is a fly on your nose ([`397360f`](https://github.com/mraniki/cefi/commit/397360f8565fb8c76034dff02fc0b6d662462c72))
+
+* Merge pull request #136 from mraniki/renovate/pytest-asyncio-0.x
+
+⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.22.0 ([`1bfcb64`](https://github.com/mraniki/cefi/commit/1bfcb64bf89ebb4f6969f4d17869373105f32462))
+
+### Update
+
+* Update pyproject.toml ([`b76cacc`](https://github.com/mraniki/cefi/commit/b76cacccaae84c7629f79a6492af2baa5f2977ec))
+
+### ♻️
+
+* ♻️ simplify example ([`1944cc4`](https://github.com/mraniki/cefi/commit/1944cc4a160cb98230ba1cd067b6a8cc71e72751))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.41 ([`231dd91`](https://github.com/mraniki/cefi/commit/231dd91afb1e87247ef7e111dd23e1a648b8b335))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.40 ([`8b99d23`](https://github.com/mraniki/cefi/commit/8b99d2382ebd3dbc4a2c28a2640af3f1529d6d8c))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.39 ([`a6494b2`](https://github.com/mraniki/cefi/commit/a6494b2a1c279f171f90ad2f40ecb9eab982c580))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.38 ([`f919b26`](https://github.com/mraniki/cefi/commit/f919b26a0d5ba2b942cecb90c1631b62155733c4))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.37 ([`16ae400`](https://github.com/mraniki/cefi/commit/16ae400bb7035a9c44b15a4a0fe991ca0dc847c6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.36 ([`dab29a0`](https://github.com/mraniki/cefi/commit/dab29a07585f9ea03c70a7af2eafc60fd77f25eb))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.35 ([`b57d5e3`](https://github.com/mraniki/cefi/commit/b57d5e36ddd559e2f288c5f2974ca50487c11f0b))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.34 ([`deea5b7`](https://github.com/mraniki/cefi/commit/deea5b70573378ab457a5e8b28eb06e347a2ee5d))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.33 ([`10b0a48`](https://github.com/mraniki/cefi/commit/10b0a48a6dbd6d62d8fd7107c148e3ac11996024))
+
+* ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.22.0 ([`ca650df`](https://github.com/mraniki/cefi/commit/ca650df4789ee9d15e70f645de0d2481128e87bf))
+
+
 ## v3.2.10 (2023-10-30)
 
 ### Other
