@@ -2,6 +2,149 @@
 
 
 
+## v3.2.12 (2023-11-26)
+
+### Other
+
+* Merge pull request #199 from mraniki/dev
+
+Update pull request #197 from mraniki/dev ([`c89d320`](https://github.com/mraniki/cefi/commit/c89d32079ee6be138a50c557c7a71a3ca1f77588))
+
+* Merge pull request #198 from mraniki/main
+
+Update pull request #197 from mraniki/dev ([`6c5ca7e`](https://github.com/mraniki/cefi/commit/6c5ca7e3b4d2241b42852782c89a2ae6f2484483))
+
+* Merge pull request #197 from mraniki/dev
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.66 ([`6a36684`](https://github.com/mraniki/cefi/commit/6a36684a7388f27ad02a1bcc9bf1f5206da3d303))
+
+* Merge pull request #194 from mraniki/dev
+
+⬆️ 🤖 - What happened last night can happen again ([`3f7e3b7`](https://github.com/mraniki/cefi/commit/3f7e3b7e44fd492932495f41488d199b559ff91b))
+
+* Merge pull request #192 from mraniki/dev
+
+⬆️ 🤖 - Break into jail and claim police brutality ([`2c24714`](https://github.com/mraniki/cefi/commit/2c24714f1a05af624e0f4e427f8d34ee4f106434))
+
+* Merge pull request #189 from mraniki/dev
+
+⬆️ 🤖 - I was gratified to be able to answer promptly and I did I said I didnt know ([`084772b`](https://github.com/mraniki/cefi/commit/084772b6039ad3140b2082360f1e612b85a0eaaf))
+
+* Merge pull request #187 from mraniki/dev
+
+⬆️ 🤖 - You are a bundle of energy always on the go ([`27b9959`](https://github.com/mraniki/cefi/commit/27b9959300ea3e60c35fb882ded4914b71e699af))
+
+* Merge pull request #185 from mraniki/dev
+
+⬆️ 🤖 - Q	Why does Washington have the most lawyers per capita and ([`c2bd383`](https://github.com/mraniki/cefi/commit/c2bd383bf51819383dd5f422f4a7cb864b613f36))
+
+* Merge pull request #183 from mraniki/main
+
+Merge pull request #181 from mraniki/dev ([`437b3a0`](https://github.com/mraniki/cefi/commit/437b3a011a79e4d2a14e823924c8104d0757d486))
+
+* Merge pull request #181 from mraniki/dev
+
+⬆️ 🤖 - Its lucky youre going so slowly because youre going in the wrong direction ([`9bdaac2`](https://github.com/mraniki/cefi/commit/9bdaac27ef8c5549b00a0fdf8ec1362771a2e799))
+
+* Merge pull request #179 from mraniki/dev
+
+⬆️ 🤖 - Executive ability is prominent in your makeup ([`52b387d`](https://github.com/mraniki/cefi/commit/52b387df1130da858d0969e35042c5e48867597d))
+
+* Merge pull request #177 from mraniki/dev
+
+⬆️ 🤖 - Talkers are no good doers ([`83ad7ec`](https://github.com/mraniki/cefi/commit/83ad7ecbb3e662e128c5b970970e5f501e4859b9))
+
+* Merge pull request #174 from mraniki/dev
+
+⬆️ 🤖 - Q	Why did the lone ranger kill Tonto ([`7af44c0`](https://github.com/mraniki/cefi/commit/7af44c02be415144ed104f259fab40118363f9de))
+
+* Merge pull request #172 from mraniki/dev
+
+⬆️ 🤖 - Dont read everything you believe ([`f0b1ac9`](https://github.com/mraniki/cefi/commit/f0b1ac92886a3ecd329b82b5617928eb851533a3))
+
+* Merge pull request #170 from mraniki/dev
+
+⬆️ 🤖 - Q	What is the difference between a duck ([`0147e3e`](https://github.com/mraniki/cefi/commit/0147e3e81d21580192e61e68eb7078fbd1e136fa))
+
+* Merge pull request #168 from mraniki/dev
+
+⬆️ 🤖 - One of the most striking differences between a cat and a lie is that a cat has ([`2d512fd`](https://github.com/mraniki/cefi/commit/2d512fdbdd2174c8ac6939d6c4059d5202309938))
+
+* Merge pull request #165 from mraniki/dev
+
+⬆️ 🤖 - You have an ability to sense and know higher truth ([`d3085e0`](https://github.com/mraniki/cefi/commit/d3085e0373f5a5b3dbca9b1fffe7163aacc8b394))
+
+* Merge pull request #163 from mraniki/dev
+
+⬆️ 🤖 - Do not sleep in a eucalyptus tree tonight ([`7d69de9`](https://github.com/mraniki/cefi/commit/7d69de9bed6f665d96c7e763ec054bfbea3d05d0))
+
+* Merge pull request #161 from mraniki/dev
+
+⬆️ 🤖 - Suspicion always haunts the guilty mind ([`dcca91a`](https://github.com/mraniki/cefi/commit/dcca91a333a2a03db7c3488097d6e06d0fced382))
+
+* Merge pull request #158 from mraniki/dev
+
+⬆️ 🤖 - This is the first age thats paid much attention to the future which is a ([`73ad445`](https://github.com/mraniki/cefi/commit/73ad44545d9ab52b2a13c51d353f420c8dbec7cc))
+
+* Merge pull request #156 from mraniki/dev
+
+⬆️ 🤖 - Try to get all of your posthumous medals in advance ([`062ad31`](https://github.com/mraniki/cefi/commit/062ad31a0c194f1c251dab5b32c3b392210ddce9))
+
+* Merge remote-tracking branch &#39;origin/main&#39; into dev ([`91d078a`](https://github.com/mraniki/cefi/commit/91d078a8e0148dfd0210021c8e9b6c84b6fa5164))
+
+* Merge remote-tracking branch &#39;origin/main&#39; into dev ([`4a89d78`](https://github.com/mraniki/cefi/commit/4a89d7831d6ded6f2129e4915b9a461fc8fe6683))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.66 ([`51b7f72`](https://github.com/mraniki/cefi/commit/51b7f72a9b797ad97956605315acd09cacf90485))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.65 ([`ee4c419`](https://github.com/mraniki/cefi/commit/ee4c4196ff2252b01d52f0e8976ca7c6a95464eb))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.64 ([`f11ea19`](https://github.com/mraniki/cefi/commit/f11ea1992859852df65e9d6ba17c8df5723b25f6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.63 ([`6335520`](https://github.com/mraniki/cefi/commit/6335520012a3e97d9a4f92b398927f3f92372848))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.62 ([`d176dce`](https://github.com/mraniki/cefi/commit/d176dceefce123efda84e6df0f5499745d173e14))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.61 ([`1dd5d8a`](https://github.com/mraniki/cefi/commit/1dd5d8aa89a77201bfcfd8e4bfdb1fdb853f028c))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.60 ([`eebe843`](https://github.com/mraniki/cefi/commit/eebe8439d76b14c01a1e5a421c7ba088ca8a900a))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.59 ([`1d73118`](https://github.com/mraniki/cefi/commit/1d73118b0639bc50d4167e0a00e2cfbe1458c448))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.58 ([`b9f1178`](https://github.com/mraniki/cefi/commit/b9f11785f94356773e76226988c65b3b5af994b1))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.57 ([`5f2cbd9`](https://github.com/mraniki/cefi/commit/5f2cbd903e56c527603fb23bf1c922f3f1d7aec4))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.56 ([`f82a9a3`](https://github.com/mraniki/cefi/commit/f82a9a3a9b44b88982d6788762ae7a8fcd1c8933))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.55 ([`c39ef86`](https://github.com/mraniki/cefi/commit/c39ef860e74ae342a69a786fc43040d45b07f7bb))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.54 ([`6547dc2`](https://github.com/mraniki/cefi/commit/6547dc2ecc395d889f0045ca4a070f36d67dbc10))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.53 ([`ce4c6f6`](https://github.com/mraniki/cefi/commit/ce4c6f6936a17e382bab5db3d766c6f9fdc944a5))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.52 ([`e40d7d5`](https://github.com/mraniki/cefi/commit/e40d7d5a10c276765c437c2e4e11c80a1695f740))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.51 ([`550533d`](https://github.com/mraniki/cefi/commit/550533d80c939c361cdb94587fc9454ad9adc279))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.50 ([`2d9f13c`](https://github.com/mraniki/cefi/commit/2d9f13c7a62218beb7a109fa97386a4569fb1e39))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.49 ([`085662b`](https://github.com/mraniki/cefi/commit/085662bfc9b571b498fa25a5c54e35cedaf6f18e))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.48 ([`6f7e8cf`](https://github.com/mraniki/cefi/commit/6f7e8cf10185d6d6a810c439ad0787c35428fbd5))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.47 ([`66427b1`](https://github.com/mraniki/cefi/commit/66427b16e2ee5aa158e90d2868154bd4bd723e8d))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.46 ([`b45f274`](https://github.com/mraniki/cefi/commit/b45f274859cba521fcf8cd1aff1f3585f7501b6b))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.45 ([`5658c26`](https://github.com/mraniki/cefi/commit/5658c26c9e1df7ed88c2443d01517ddfa338567b))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.44 ([`a3428d3`](https://github.com/mraniki/cefi/commit/a3428d3b890d031ce81553d1fc7d54f808f3f943))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.43 ([`af9a7f6`](https://github.com/mraniki/cefi/commit/af9a7f6fa0ef33ee130d0743b20d2bc4fc3fa095))
+
+
 ## v3.2.11 (2023-11-07)
 
 ### Other
