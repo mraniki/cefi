@@ -2,6 +2,19 @@
 
 
 
+## v3.2.14 (2023-11-27)
+
+### Other
+
+* Merge pull request #202 from mraniki/dev
+
+⬆️ 🛠️(deps): update dependency ccxt to v4.1.67 ([`29b463f`](https://github.com/mraniki/cefi/commit/29b463f70b1654597ed841de1317e9ccac26e078))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.67 ([`368338c`](https://github.com/mraniki/cefi/commit/368338cb67c344e88885daa161f3bec10a6e2696))
+
+
 ## v3.2.13 (2023-11-26)
 
 ### Other
