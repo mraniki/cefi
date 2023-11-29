@@ -2,6 +2,21 @@
 
 
 
+## v3.2.15 (2023-11-29)
+
+### Other
+
+* Merge pull request #205 from mraniki/dev
+
+⬆️ 🤖 - Q	Why did the chicken cross the road ([`4d5aa37`](https://github.com/mraniki/cefi/commit/4d5aa37e2e07f9c1ed5d0d11be17c69bb2dca303))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.69 ([`6ff2a10`](https://github.com/mraniki/cefi/commit/6ff2a1063ea3251bb6409ff040367b34c6c4c152))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.68 ([`8892964`](https://github.com/mraniki/cefi/commit/88929646cea954a6e593208eb5520b04bc3dc561))
+
+
 ## v3.2.14 (2023-11-27)
 
 ### Other
