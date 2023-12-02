@@ -2,6 +2,25 @@
 
 
 
+## v3.2.17 (2023-12-02)
+
+### Other
+
+* Merge pull request #210 from mraniki/dev
+
+⬆️ 🤖 - Be cheerful while you are alive ([`c9b67c5`](https://github.com/mraniki/cefi/commit/c9b67c567d1646b5d94c56f438b4ea17b254fb52))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.74 ([`c0fe6a1`](https://github.com/mraniki/cefi/commit/c0fe6a113c4dd4922371a3e9c44dbccf9c26df99))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.73 ([`feff3f4`](https://github.com/mraniki/cefi/commit/feff3f4b59bbe03f722aef09a904db95da986ec1))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.72 ([`58b753e`](https://github.com/mraniki/cefi/commit/58b753ef6969924be49ef44e757b4308cb606533))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.71 ([`790a636`](https://github.com/mraniki/cefi/commit/790a636e1865aa32d220a0e999c28217316fced7))
+
+
 ## v3.2.16 (2023-11-29)
 
 ### Other
