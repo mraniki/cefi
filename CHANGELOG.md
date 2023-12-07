@@ -2,6 +2,33 @@
 
 
 
+## v3.2.18 (2023-12-07)
+
+### Other
+
+* Merge pull request #215 from mraniki/dev
+
+⬆️ 🤖 - Your nature demands love and your happiness depends on it ([`eb01d3d`](https://github.com/mraniki/cefi/commit/eb01d3dcdde75b91d2f3d3099cf55dedb331d526))
+
+* Merge pull request #213 from mraniki/renovate/pytest-asyncio-0.x
+
+⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.23.0 ([`b2c53e5`](https://github.com/mraniki/cefi/commit/b2c53e5e900e8775d3b11c3b195b8afa4742daab))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.79 ([`32cd2ad`](https://github.com/mraniki/cefi/commit/32cd2ad60059a004139d1c89e5d8fc9385dc4773))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.78 ([`1a1f841`](https://github.com/mraniki/cefi/commit/1a1f84155dd6c0ba979862b2b3fed90ca82982e7))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.77 ([`54944a2`](https://github.com/mraniki/cefi/commit/54944a25c737d60a84b656f9fd0c0fba2c909340))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.76 ([`9d59e12`](https://github.com/mraniki/cefi/commit/9d59e1225def21ed7cc894669fcc961f031d519f))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.75 ([`14dcddc`](https://github.com/mraniki/cefi/commit/14dcddc2e948e68f4db04dcded791a5bcb0383bc))
+
+* ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.23.0 ([`fba5ab6`](https://github.com/mraniki/cefi/commit/fba5ab653e3e88f067f73d54a567ef2accbb8cdc))
+
+
 ## v3.2.17 (2023-12-02)
 
 ### Other
