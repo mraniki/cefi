@@ -2,6 +2,25 @@
 
 
 
+## v3.2.19 (2023-12-10)
+
+### Other
+
+* Merge pull request #225 from mraniki/dev
+
+⬆️ 🤖 - You are the only person to ever get this message ([`e684556`](https://github.com/mraniki/cefi/commit/e684556ab70159a4c5c4bbb4a78a921a30c73bb0))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.83 ([`7be0e9d`](https://github.com/mraniki/cefi/commit/7be0e9d98973c899c3e759aa0f8f9a9d625964b6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.82 ([`20106d5`](https://github.com/mraniki/cefi/commit/20106d583d366bcdc1b3af4047f23b091daf2ab6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.81 ([`90b240f`](https://github.com/mraniki/cefi/commit/90b240fcc917395e589f0a06f41c4b7c90f63a4b))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.80 ([`0780bb5`](https://github.com/mraniki/cefi/commit/0780bb573d554def7668dd9436f3d108aec95ae8))
+
+
 ## v3.2.18 (2023-12-07)
 
 ### Other
