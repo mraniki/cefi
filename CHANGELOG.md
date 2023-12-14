@@ -2,6 +2,27 @@
 
 
 
+## v3.2.20 (2023-12-14)
+
+### Other
+
+* Merge pull request #230 from mraniki/dev
+
+⬆️ 🤖 - Dont get to bragging ([`3c70eb3`](https://github.com/mraniki/cefi/commit/3c70eb3180fb7b22ca14d11a59412a953c60e534))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.88 ([`eb15667`](https://github.com/mraniki/cefi/commit/eb156675107a62262613f5213996fc3743060669))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.87 ([`4fbe7b9`](https://github.com/mraniki/cefi/commit/4fbe7b99c47590a23258208a68f5392618ff3276))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.86 ([`8ae6281`](https://github.com/mraniki/cefi/commit/8ae628142378555481e62947a384217c09d70290))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.85 ([`b0a82d1`](https://github.com/mraniki/cefi/commit/b0a82d144d34fb04255a3fd3835c897cc467f164))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.84 ([`e31f728`](https://github.com/mraniki/cefi/commit/e31f728c15e27e5f29c73924c9856903e686c029))
+
+
 ## v3.2.19 (2023-12-10)
 
 ### Other
