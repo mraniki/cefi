@@ -2,6 +2,19 @@
 
 
 
+## v3.2.22 (2023-12-17)
+
+### Other
+
+* Merge pull request #238 from mraniki/dev
+
+Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4334792beb8a98dc41eab91a7439a1ed565))
+
+### Update
+
+* Update pyproject.toml ([`e8e4e32`](https://github.com/mraniki/cefi/commit/e8e4e329fee9775c56d0b3a3f4f198196b684768))
+
+
 ## v3.2.21 (2023-12-17)
 
 ### Other
