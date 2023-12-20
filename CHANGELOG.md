@@ -2,6 +2,23 @@
 
 
 
+## v3.2.23 (2023-12-20)
+
+### Other
+
+* Merge pull request #240 from mraniki/dev
+
+⬆️ 🤖 - Be free and open and breezy  Enjoy  Things wont get any better so ([`339ccf7`](https://github.com/mraniki/cefi/commit/339ccf7c235c6ecca3422b8cb2f981684d0cbb66))
+
+### Update
+
+* Update README.md ([`ea5e354`](https://github.com/mraniki/cefi/commit/ea5e354623ce95ef2700cf840b92c0ecdd0b141a))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.94 ([`bfe0c5b`](https://github.com/mraniki/cefi/commit/bfe0c5b988835904fddb87142b82f40c791853b1))
+
+
 ## v3.2.22 (2023-12-17)
 
 ### Other
