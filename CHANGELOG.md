@@ -2,6 +2,19 @@
 
 
 
+## v3.2.24 (2023-12-21)
+
+### Other
+
+* Merge pull request #242 from mraniki/dev
+
+⬆️ 🤖 - You are capable of planning your future ([`0646d7d`](https://github.com/mraniki/cefi/commit/0646d7df7a11381c7d4d3c80a036703adfca54ce))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.95 ([`826e14f`](https://github.com/mraniki/cefi/commit/826e14fe03ff09501afdcb23099bd3331187d8fa))
+
+
 ## v3.2.23 (2023-12-20)
 
 ### Other
