@@ -2,6 +2,19 @@
 
 
 
+## v3.2.25 (2023-12-23)
+
+### Other
+
+* Merge pull request #244 from mraniki/dev
+
+⬆️ 🤖 - You will always have good luck in your personal affairs ([`e1a01f7`](https://github.com/mraniki/cefi/commit/e1a01f786a8d3dd658c78027f3343a0ca9d5eb51))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.96 ([`6897bf5`](https://github.com/mraniki/cefi/commit/6897bf5776dfaa26d45bddde49e506781970ffd2))
+
+
 ## v3.2.24 (2023-12-21)
 
 ### Other

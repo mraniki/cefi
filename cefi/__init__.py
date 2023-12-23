@@ -1,4 +1,4 @@
-__version__ = "3.2.24"
+__version__ = "3.2.25"
 
 from cefi.main import CexTrader
 
