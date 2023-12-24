@@ -2,6 +2,19 @@
 
 
 
+## v3.2.26 (2023-12-24)
+
+### Other
+
+* Merge pull request #246 from mraniki/dev
+
+⬆️ 🤖 - Q	How many Zen masters does it take to screw in a light bulb ([`b5982aa`](https://github.com/mraniki/cefi/commit/b5982aa8e89a00f86db0eee164153094e6fc5aaa))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.97 ([`8bca5d0`](https://github.com/mraniki/cefi/commit/8bca5d0e0c04f0ef925afc44e5c16248cdd31cf7))
+
+
 ## v3.2.25 (2023-12-23)
 
 ### Other
