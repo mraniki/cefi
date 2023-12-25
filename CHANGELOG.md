@@ -2,6 +2,19 @@
 
 
 
+## v3.2.27 (2023-12-25)
+
+### Other
+
+* Merge pull request #248 from mraniki/dev
+
+⬆️ 🤖 - Blow it out your ear ([`19fd66a`](https://github.com/mraniki/cefi/commit/19fd66a6440f25cf58212549d22a95c0def8d6a2))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.98 ([`31116ad`](https://github.com/mraniki/cefi/commit/31116adf03891b95854a5d5e73e83633a3f3cd34))
+
+
 ## v3.2.26 (2023-12-24)
 
 ### Other
