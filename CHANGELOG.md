@@ -2,6 +2,23 @@
 
 
 
+## v3.2.30 (2024-01-03)
+
+### Other
+
+* Merge pull request #259 from mraniki/dev
+
+⬆️ 🤖 - You will hear good news from one you thought unfriendly to you ([`39076af`](https://github.com/mraniki/cefi/commit/39076af3c76ddcb45ba458b7c6c9eb1bb35b499e))
+
+### Update
+
+* Update test_unit.py ([`87bc088`](https://github.com/mraniki/cefi/commit/87bc088077ac15058e460f89197783e1c592db7f))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.4 ([`7dcc35e`](https://github.com/mraniki/cefi/commit/7dcc35e35ade39da14cfc2ac8d05dfe18808c6b4))
+
+
 ## v3.2.29 (2023-12-31)
 
 ### Other
