@@ -2,6 +2,27 @@
 
 
 
+## v3.2.31 (2024-01-05)
+
+### Other
+
+* Merge pull request #263 from mraniki/dev
+
+⬆️ 🤖 - I must have a prodigious quantity of mind it takes me as much as a ([`257689e`](https://github.com/mraniki/cefi/commit/257689e8bf68ba5522dda898028000099b60ffbb))
+
+* Merge pull request #261 from mraniki/renovate/pydata-sphinx-theme-0.x
+
+⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.15.0 ([`09b3811`](https://github.com/mraniki/cefi/commit/09b381194171f281bd7106ef7006d725ea32a5c3))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.6 ([`830202d`](https://github.com/mraniki/cefi/commit/830202d41b1751d81fb557bb54c8f60a9b65bbb8))
+
+* ⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.15.0 ([`882db4f`](https://github.com/mraniki/cefi/commit/882db4f5acc335e035e200d6bdc973d54c9ec567))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.5 ([`540f2c5`](https://github.com/mraniki/cefi/commit/540f2c50d451405c53a8504b39258101aaad0745))
+
+
 ## v3.2.30 (2024-01-03)
 
 ### Other
