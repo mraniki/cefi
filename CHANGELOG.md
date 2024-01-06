@@ -2,6 +2,19 @@
 
 
 
+## v3.2.32 (2024-01-06)
+
+### Other
+
+* Merge pull request #265 from mraniki/dev
+
+⬆️ 🤖 - You have an ambitious nature and may make a name for yourself ([`a64b1a6`](https://github.com/mraniki/cefi/commit/a64b1a696860b31ca0ebf74ce468bb52fcb385bf))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.7 ([`5f8df63`](https://github.com/mraniki/cefi/commit/5f8df639e098c9d33cdf41248f75650b41916f12))
+
+
 ## v3.2.31 (2024-01-05)
 
 ### Other
