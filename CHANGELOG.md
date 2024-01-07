@@ -2,6 +2,19 @@
 
 
 
+## v3.2.33 (2024-01-07)
+
+### Other
+
+* Merge pull request #267 from mraniki/dev
+
+⬆️ 🤖 - Kindness is a language which the deaf can hear and the blind can read ([`8470dda`](https://github.com/mraniki/cefi/commit/8470dda53afdfc64a45083ef496c5ce852bdad62))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.8 ([`dfdbbb6`](https://github.com/mraniki/cefi/commit/dfdbbb6b84afaa60c314a4e15dac97877617c912))
+
+
 ## v3.2.32 (2024-01-06)
 
 ### Other
