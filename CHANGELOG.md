@@ -2,6 +2,23 @@
 
 
 
+## v3.2.34 (2024-01-08)
+
+### Other
+
+* Merge pull request #272 from mraniki/dev
+
+⬆️ 🤖 - Big book big bore ([`53c3f00`](https://github.com/mraniki/cefi/commit/53c3f000e2419531ff6d158cb448b8b76560dfbf))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 (#271)
+
+Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.com&gt; ([`3958c9a`](https://github.com/mraniki/cefi/commit/3958c9a9a4a61f8ce2da983dfaea9e65c9acf51e))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 ([`a340a10`](https://github.com/mraniki/cefi/commit/a340a10865f1b348457faf22a880dae2088c7f97))
+
+
 ## v3.2.33 (2024-01-07)
 
 ### Other
