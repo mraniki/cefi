@@ -2,6 +2,25 @@
 
 
 
+## v3.2.35 (2024-01-10)
+
+### Other
+
+* Merge pull request #276 from mraniki/dev
+
+⬆️ 🤖 - Celebrate Hannibal Day this year  Take an elephant to lunch ([`2167803`](https://github.com/mraniki/cefi/commit/216780389d3389afff078271b1f553c28f4dcbf6))
+
+* Merge pull request #274 from mraniki/dev
+
+⬆️ 🤖 - So so is good very good very excellent good ([`59875d7`](https://github.com/mraniki/cefi/commit/59875d703e4f035906bd502ef16f8c81a3322f0d))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.11 ([`f44c454`](https://github.com/mraniki/cefi/commit/f44c454e73ab3af6d5f5bcf0b5aabc9a3e1b50ef))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.10 ([`0407d96`](https://github.com/mraniki/cefi/commit/0407d96f45cdc15236cfacd4f90a7e58b11ead69))
+
+
 ## v3.2.34 (2024-01-08)
 
 ### Other
