@@ -2,6 +2,19 @@
 
 
 
+## v3.2.37 (2024-01-13)
+
+### Other
+
+* Merge pull request #280 from mraniki/dev
+
+⬆️ 🤖 - Youre definitely on their list  The question to ask next is what list it is ([`3b24d24`](https://github.com/mraniki/cefi/commit/3b24d243cad9efb0dc410e77b97101991c3cdaf0))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.13 ([`f995eb8`](https://github.com/mraniki/cefi/commit/f995eb83ea8963b699ec22b8866122c296631bb1))
+
+
 ## v3.2.36 (2024-01-12)
 
 ### Other
