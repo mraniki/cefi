@@ -26,7 +26,7 @@ packages = [
 python = "^3.10"
 dynaconf = ">=3.1.12"
 loguru = ">=0.6"
-ccxt = "4.2.14"
+ccxt = "4.2.15"
 
 
 [ tool.poetry.group.dev.dependencies]
