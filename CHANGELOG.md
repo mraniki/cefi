@@ -2,6 +2,21 @@
 
 
 
+## v3.2.39 (2024-01-16)
+
+### Other
+
+* Merge pull request #284 from mraniki/dev
+
+⬆️ 🤖 - Your manuscript is both good and original but the part that is good is not ([`f5e6081`](https://github.com/mraniki/cefi/commit/f5e60819dc05d4ca46f0e3f5fcefa16c77697d93))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.16 ([`3ced9d6`](https://github.com/mraniki/cefi/commit/3ced9d6da44a9ea6b70a533ce7ab27ceb7ebf29f))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.15 ([`637b338`](https://github.com/mraniki/cefi/commit/637b338a5f6eb1296a69197517f88aab882c77d6))
+
+
 ## v3.2.38 (2024-01-15)
 
 ### Other
