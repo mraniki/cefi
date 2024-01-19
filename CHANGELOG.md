@@ -2,6 +2,19 @@
 
 
 
+## v3.2.41 (2024-01-19)
+
+### Other
+
+* Merge pull request #289 from mraniki/dev
+
+⬆️ 🤖 - Familiarity breeds contempt  and children ([`f70dfe0`](https://github.com/mraniki/cefi/commit/f70dfe0b4ba3bfe831a315349ab57bf7a29c4e46))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.18 ([`c535ad5`](https://github.com/mraniki/cefi/commit/c535ad598a36b7d0c85efbae8aef966343087940))
+
+
 ## v3.2.40 (2024-01-18)
 
 ### Other
