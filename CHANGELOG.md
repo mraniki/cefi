@@ -2,6 +2,19 @@
 
 
 
+## v3.2.42 (2024-01-22)
+
+### Other
+
+* Merge pull request #291 from mraniki/dev
+
+⬆️ 🤖 - Q	What do little WASPs want to be when they grow up ([`97cc381`](https://github.com/mraniki/cefi/commit/97cc3817d47c3802e1bdf5d485e6cf94b18d0d80))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.19 ([`5a17a91`](https://github.com/mraniki/cefi/commit/5a17a91cff18426b8772d9d3551d8f0b1e2085ae))
+
+
 ## v3.2.41 (2024-01-19)
 
 ### Other
