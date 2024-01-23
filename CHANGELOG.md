@@ -2,6 +2,19 @@
 
 
 
+## v3.2.43 (2024-01-23)
+
+### Other
+
+* Merge pull request #293 from mraniki/dev
+
+⬆️ 🤖 - They have been at a great feast of languages and stolen the scraps ([`4a48e60`](https://github.com/mraniki/cefi/commit/4a48e6086238fd18b447524b6294fe290d3f3529))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.20 ([`8208402`](https://github.com/mraniki/cefi/commit/82084022b1f24bef2cb693be1346c7f05ba6a960))
+
+
 ## v3.2.42 (2024-01-22)
 
 ### Other
