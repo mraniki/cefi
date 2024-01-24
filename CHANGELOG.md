@@ -2,6 +2,19 @@
 
 
 
+## v3.2.44 (2024-01-24)
+
+### Other
+
+* Merge pull request #295 from mraniki/dev
+
+⬆️ 🤖 - Q	What is the burning question on the mind of every dyslexic ([`c31581e`](https://github.com/mraniki/cefi/commit/c31581ef327dc66474ac3207ef7ef3831dbad37e))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.21 ([`7091911`](https://github.com/mraniki/cefi/commit/7091911916f48d74e12e5a18336175a29afec45b))
+
+
 ## v3.2.43 (2024-01-23)
 
 ### Other
