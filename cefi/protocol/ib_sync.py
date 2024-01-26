@@ -89,9 +89,9 @@ class CexIB(CexClient):
             readonly=settings.broker_read_only or False,
             account=settings.broker_account_number or "",
         )
-        logger.debug("Connected to IBKR {}", self.ib.isConnected())
+        logger.debug("Connected to IBKR {}", self.client.isConnected())
         self.name = self.client.id
-        self.account_number = self.ib.managedAccounts()[0]
+        self.account_number = self.client.managedAccounts()[0]
         self.trading_asset = trading_asset
         self.separator = trading_asset_separator
         self.trading_risk_percentage = trading_risk_percentage
@@ -132,7 +132,7 @@ class CexIB(CexClient):
 
             # todo add support for multiple contract type (Forex, stock, index, option)
             contract = Forex(instrument, "SMART", "USD")
-            self.ib.reqMktData(contract)
+            self.client.reqMktData(contract)
             quote = self.client.ticker(contract)
             logger.debug("Quote: {}", quote)
             return quote
