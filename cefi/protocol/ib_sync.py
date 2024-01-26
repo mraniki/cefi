@@ -8,8 +8,6 @@ Interactive Brokers client
 from ib_insync import IB, Forex, Order
 from loguru import logger
 
-from cefi.config import settings
-
 from .client import CexClient
 
 
@@ -31,6 +29,10 @@ class CexIB(CexClient):
         protocol="ib",
         name=None,
         api_key=None,
+        host="127.0.0.1",
+        port=7497,
+        broker_client_id=1,
+        broker_account_number=None,
         secret=None,
         password=None,
         testmode=True,
@@ -66,28 +68,13 @@ class CexIB(CexClient):
 
         """
 
-        # client = getattr(ccxt, name)
-        # self.client = client(
-        #     {
-        #         "apiKey": api_key,
-        #         "secret": secret,
-        #         "password": password,
-        #         "enableRateLimit": True,
-        #         "options": {
-        #             "defaultType": defaulttype,
-        #         },
-        #     }
-        # )
-        # if testmode:
-        #     self.client.set_sandbox_mode("enabled")
-
         self.client = IB()
         self.client.connect(
-            host=settings.broker_host or "127.0.0.1",
-            port=settings.broker_port or 7497,
-            clientId=settings.broker_clientId or 1,
-            readonly=settings.broker_read_only or False,
-            account=settings.broker_account_number or "",
+            host=host,
+            port=port,
+            clientId=broker_client_id or 1,
+            readonly=False,
+            account=broker_account_number or "",
         )
         logger.debug("Connected to IBKR {}", self.client.isConnected())
         self.name = self.client.id
