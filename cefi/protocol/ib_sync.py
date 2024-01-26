@@ -205,16 +205,7 @@ class CexIB(CexClient):
                 instrument=instrument,
                 is_percentage=self.trading_risk_percentage,
             )
-            # params = {
-            #     "stopLoss": {
-            #         "triggerPrice": order_params.get("stop_loss"),
-            #         # "price": order_params.get("action") * 0.98,
-            #     },
-            #     "takeProfit": {
-            #         "triggerPrice": order_params.get("take_profit"),
-            #         # "price": order_params.get("action") * 0.98,
-            #     },
-            # }
+
             logger.debug("amount {}", amount)
             pre_order_checks = await self.pre_order_checks(order_params)
             logger.debug("pre_order_checks {}", pre_order_checks)
