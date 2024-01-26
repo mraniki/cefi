@@ -221,7 +221,7 @@ class CexIB(CexClient):
 
             if amount and pre_order_checks:
                 # if order :=
-                # todo add support for multiple contract type 
+                # todo add support for multiple contract type
                 contract = Forex(instrument, "SMART", "USD")
                 order = Order()
                 order.action = order_params["action"]  # 'BUY' or 'SELL'
