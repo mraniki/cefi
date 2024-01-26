@@ -2,6 +2,27 @@
 
 
 
+## v3.3.0 (2024-01-26)
+
+### Other
+
+* Merge pull request #299 from mraniki/dev
+
+🚀 adding ibsync lib support for Interactive brokers ([`fa42acf`](https://github.com/mraniki/cefi/commit/fa42acf35ff6ea033efaaaec233c5e20ba70401a))
+
+### 🐛
+
+* 🐛 ib ref ([`2517a9d`](https://github.com/mraniki/cefi/commit/2517a9df71a4d6ef22751eff3ee001631ac63729))
+
+### 🚀
+
+* 🚀 adding ibsync lib support for Interactive brokers ([`c8cde50`](https://github.com/mraniki/cefi/commit/c8cde50a9d19443e1136fb805d55fb2d241414b6))
+
+### 🚨
+
+* 🚨 ([`03f58de`](https://github.com/mraniki/cefi/commit/03f58decab1e73fd996cb93abd3a221b676bab2a))
+
+
 ## v3.2.45 (2024-01-26)
 
 ### Other
