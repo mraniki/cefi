@@ -2,6 +2,19 @@
 
 
 
+## v3.2.45 (2024-01-26)
+
+### Other
+
+* Merge pull request #298 from mraniki/dev
+
+⬆️ 🤖 - Q	Whats buried in Grants tomb ([`dd3584e`](https://github.com/mraniki/cefi/commit/dd3584e5254705e6e1934e48bc4efe10e8fb6ee1))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.22 ([`4bc93e1`](https://github.com/mraniki/cefi/commit/4bc93e1ad916ccc42a3b8e8c794d9f7deafa8a3e))
+
+
 ## v3.2.44 (2024-01-24)
 
 ### Other
