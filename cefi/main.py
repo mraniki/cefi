@@ -3,7 +3,7 @@ from loguru import logger
 from cefi import __version__
 
 from .config import settings
-from .protocol.ccxt import CexCcxt
+from .protocol import CexCcxt, CexIB
 
 
 class CexTrader:
@@ -37,10 +37,14 @@ class CexTrader:
                 client = self._create_client(
                     protocol=_config.get("protocol") or "ccxt",
                     name=_config.get("name"),
+                    host=_config.get("host") or "127.0.0.1",
+                    port=_config.get("port") or  7497,
                     api_key=_config.get("api_key"),
                     secret=_config.get("secret") or "",
                     password=_config.get("password") or "",
                     testmode=_config.get("testmode") or False,
+                    broker_client_id=_config.get("broker_client_id") or 1,
+                    broker_account_number=_config.get("broker_account_number") or "",
                     defaulttype=_config.get("defaulttype") or "spot",
                     ordertype=_config.get("ordertype") or "market",
                     leverage_type=_config.get("leverage_type") or "isolated",
@@ -74,6 +78,8 @@ class CexTrader:
         protocol = kwargs["protocol"]
         if protocol == "ccxt":
             return CexCcxt(**kwargs)
+        elif protocol == "ib":
+            return CexIB(**kwargs)
         else:
             logger.error("Invalid platform {}", protocol)
 
