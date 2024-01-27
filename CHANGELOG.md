@@ -2,6 +2,31 @@
 
 
 
+## v3.3.1 (2024-01-27)
+
+### Other
+
+* Merge pull request #301 from mraniki/dev
+
+⬆️ 🤖 - Elves and Dragons I says to him  Cabbages and potatoes are better ([`2074e15`](https://github.com/mraniki/cefi/commit/2074e1582c951c58fbac1241eef18f358a72d446))
+
+### Update
+
+* :bug: Update IB connection parameters and add ib_insync library ([`2d07149`](https://github.com/mraniki/cefi/commit/2d0714907bc080e77c69d4598966ba5e66f58909))
+
+### ♻️
+
+* ♻️ IBKR ([`be20015`](https://github.com/mraniki/cefi/commit/be200153feec14596eb545999aff76a585049395))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.23 ([`58fb7b6`](https://github.com/mraniki/cefi/commit/58fb7b6d3da347a745aef5bb2210a8e830efe794))
+
+### 🔥
+
+* 🔥 ([`9e8b4cd`](https://github.com/mraniki/cefi/commit/9e8b4cdd95c6f9c712b86fcc9f8fe3e7f24492f6))
+
+
 ## v3.3.0 (2024-01-26)
 
 ### Other
