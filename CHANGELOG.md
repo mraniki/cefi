@@ -2,6 +2,29 @@
 
 
 
+## v3.3.2 (2024-01-27)
+
+### Other
+
+* Merge pull request #302 from mraniki/dev
+
+⚡ IBKR search contract ([`815a71b`](https://github.com/mraniki/cefi/commit/815a71bdae471feab1cb18692a3d3d3b0ee0aa83))
+
+### Update
+
+* Update README.md ([`93af999`](https://github.com/mraniki/cefi/commit/93af99958f1b5d2ccddbde3ec8062b5a88e54b34))
+
+* Update README.md ([`56fede3`](https://github.com/mraniki/cefi/commit/56fede3cccdd5c26976377dca2ff3992fddb88ea))
+
+### ⚡
+
+* ⚡ IBKR search contract ([`dfa7712`](https://github.com/mraniki/cefi/commit/dfa7712ddc15d8eb39d42a2e63d3536b249f1b4f))
+
+### 🔧
+
+* 🔧 ([`3882540`](https://github.com/mraniki/cefi/commit/38825408802adfd7468e34fc3c8304c143e5c603))
+
+
 ## v3.3.1 (2024-01-27)
 
 ### Other
