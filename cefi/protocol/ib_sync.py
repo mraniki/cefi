@@ -5,7 +5,7 @@ Interactive Brokers client
 
 """
 
-from ib_insync import IB, Forex, Order
+from ib_insync import IB, IBC, Contract, Order
 from loguru import logger
 
 from .client import CexClient
@@ -28,11 +28,13 @@ class CexIB(CexClient):
         self,
         protocol="ib",
         name=None,
+        user_id=None,
         api_key=None,
         host=None,
         port=None,
         broker_client_id=None,
         broker_account_number=None,
+        broker_gateway=True,
         secret=None,
         password=None,
         testmode=True,
@@ -68,17 +70,6 @@ class CexIB(CexClient):
 
         """
 
-        self.client = IB()
-        self.client.connect(
-            host=host,
-            port=port,
-            clientId=broker_client_id or 1,
-            readonly=False,
-            account=broker_account_number or "",
-        )
-        logger.debug("Connected to IBKR {}", self.client.isConnected())
-        self.name = self.client.id
-        self.account_number = self.client.managedAccounts()[0]
         self.trading_asset = trading_asset
         self.separator = trading_asset_separator
         self.trading_risk_percentage = trading_risk_percentage
@@ -90,7 +81,28 @@ class CexIB(CexClient):
         self.defaulttype = defaulttype
         self.ordertype = ordertype
         self.mapping = mapping
-        logger.debug("Broker_IBKR_Plugin initialized with account: {}", self.account)
+        if broker_gateway:
+            ibc = IBC(
+                976,
+                gateway=True,
+                tradingMode="paper" if testmode else "live",
+                userid=user_id,
+                password=password,
+            )
+            ibc.start()
+            IB.run()
+        self.client = IB()
+        self.client.connect(
+            host=host,
+            port=port,
+            clientId=broker_client_id or 1,
+            readonly=False,
+            account=broker_account_number or "",
+        )
+        self.name = self.client.id
+        self.account_number = self.client.managedAccounts()[0]
+        logger.debug("Connected to IBKR {}", self.client.isConnected())
+        logger.debug("Broker_IBKR initialized with account: {}", self.account)
 
     async def get_info(self):
         """
@@ -117,12 +129,12 @@ class CexIB(CexClient):
         try:
             instrument = await self.replace_instrument(instrument)
 
-            # todo add support for multiple contract type (Forex, stock, index, option)
-            contract = Forex(instrument, "SMART", "USD")
-            self.client.reqMktData(contract)
-            quote = self.client.ticker(contract)
-            logger.debug("Quote: {}", quote)
-            return quote
+            contract = self.search_contract(instrument)
+            if contract:
+                self.client.reqMktData(contract)
+                quote = self.client.ticker(contract)
+                logger.debug("Quote: {}", quote)
+                return quote
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
@@ -198,22 +210,56 @@ class CexIB(CexClient):
             logger.debug("pre_order_checks {}", pre_order_checks)
 
             if amount and pre_order_checks:
-                # if order :=
-                # todo add support for multiple contract type
-                contract = Forex(instrument, "SMART", "USD")
-                order = Order()
-                order.action = order_params["action"]  # 'BUY' or 'SELL'
-                order.orderType = order_params["order_type"] or "MKT"
-                order.totalQuantity = order_params["quantity"]
+                contract = self.search_contract(instrument)
+                if contract:
+                    order = Order()
+                    order.action = order_params["action"]
+                    order.orderType = order_params["order_type"] or "MKT"
+                    order.totalQuantity = amount
+                    trade = self.client.placeOrder(contract, order)
+                    return await self.get_trade_confirmation(trade, instrument, action)
 
-                # Set limit price if it's a limit order
-                # if order.orderType == 'LMT':
-                #     order.lmtPrice = order_details['limitPrice']
-
-                trade = self.client.placeOrder(contract, order)
-                return await self.get_trade_confirmation(trade, instrument, action)
             return f"Error executing {self.name}"
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}"
+
+    async def search_contract(self, instrument):
+        """
+        Asynchronously searches for a contract based on the given instrument.
+
+        Args:
+            self: The object instance.
+            instrument: The instrument to search for.
+
+        Returns:
+            Contract: The contract matching the instrument, or None if not found.
+        """
+        try:
+            asset = next(
+                (
+                    item
+                    for item in self.mapping
+                    if item["id"] == instrument or item["alt"] == instrument
+                ),
+                None,
+            )
+            if asset:
+                contract = Contract(
+                    secType=asset["type"],
+                    symbol=asset["id"],
+                    lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
+                    strike=asset["strike"],
+                    right=asset["right"],
+                    multiplier=asset["multiplier"],
+                    exchange=asset["exchange"],
+                    currency=asset["currency"],
+                )
+                return contract
+            else:
+                logger.warning("Asset {} not found in mapping", instrument)
+                return None
+
+        except Exception as e:
+            logger.error("search_contract {} Error {}", instrument, e)
