@@ -22,7 +22,7 @@
       </td>
       <td align="left"> 
         Interact with Centralised Exchanges (CEX)<br>
-        supported by CCXT.
+        supported by CCXT and IB_Sync libraries.
       </td>
     </tr>
   </table>
