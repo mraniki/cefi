@@ -2,6 +2,15 @@
 
 
 
+## v3.3.3 (2024-01-28)
+
+### Other
+
+* Merge pull request #304 from mraniki/dev
+
+⬆️ 🤖 - Whenever you find that you are on the side of the majority it is time ([`64fe496`](https://github.com/mraniki/cefi/commit/64fe49681706af60b92d2f851b942817162d1986))
+
+
 ## v3.3.2 (2024-01-27)
 
 ### Other
@@ -19,6 +28,10 @@
 ### ⚡
 
 * ⚡ IBKR search contract ([`dfa7712`](https://github.com/mraniki/cefi/commit/dfa7712ddc15d8eb39d42a2e63d3536b249f1b4f))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.24 ([`50fc5a7`](https://github.com/mraniki/cefi/commit/50fc5a7263f79a15e16e417f6c783558274ec066))
 
 ### 🔧
 
