@@ -2,6 +2,19 @@
 
 
 
+## v3.3.4 (2024-01-29)
+
+### Other
+
+* Merge pull request #306 from mraniki/dev
+
+⬆️ 🤖 - Fame is a vapor popularity an accident the only earthly certainty is ([`4e1c776`](https://github.com/mraniki/cefi/commit/4e1c776fb127755833d6fe98f084d590f9095108))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.25 ([`6c6521c`](https://github.com/mraniki/cefi/commit/6c6521c51c3398c0190843588a416b6428b8a769))
+
+
 ## v3.3.3 (2024-01-28)
 
 ### Other
