@@ -2,6 +2,21 @@
 
 
 
+## v3.3.5 (2024-01-30)
+
+### Other
+
+* Merge pull request #310 from mraniki/dev
+
+⬆️ 🤖 - Afternoon very favorable for romance  Try a single person for a change ([`f64d726`](https://github.com/mraniki/cefi/commit/f64d7267c85540dd50ae5ac1e6fa98fecf48e1b2))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.28 ([`5940c85`](https://github.com/mraniki/cefi/commit/5940c85521f555b848b9b9c1a62fafb932364be6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.27 ([`894ede4`](https://github.com/mraniki/cefi/commit/894ede4cf84969ebfab6e4a94c4fd104897f25f8))
+
+
 ## v3.3.4 (2024-01-29)
 
 ### Other
