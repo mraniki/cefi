@@ -2,6 +2,19 @@
 
 
 
+## v3.3.6 (2024-01-31)
+
+### Other
+
+* Merge pull request #313 from mraniki/dev
+
+⬆️ 🤖 - So so is good very good very excellent good ([`f180e57`](https://github.com/mraniki/cefi/commit/f180e577becbd8fae7c275773a232a480c9f1200))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.29 ([`9f05fdd`](https://github.com/mraniki/cefi/commit/9f05fdd9c4d55952ac1f30e2903f8d89fd7c477a))
+
+
 ## v3.3.5 (2024-01-30)
 
 ### Other
