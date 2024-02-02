@@ -2,6 +2,21 @@
 
 
 
+## v3.3.7 (2024-02-02)
+
+### Other
+
+* Merge pull request #315 from mraniki/dev
+
+⬆️ 🤖 - Excellent day to have a rotten day ([`40f0f14`](https://github.com/mraniki/cefi/commit/40f0f14071d90173f1a2264a7b3ab878d361c28b))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.31 ([`321ba6e`](https://github.com/mraniki/cefi/commit/321ba6ee8d26ebb260dfa65dae360598354a0952))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.30 ([`da10a0c`](https://github.com/mraniki/cefi/commit/da10a0c3e308456aba9854e127ad71f17b652e2f))
+
+
 ## v3.3.6 (2024-01-31)
 
 ### Other
