@@ -26,12 +26,12 @@ packages = [
 python = "^3.10"
 dynaconf = ">=3.1.12"
 loguru = ">=0.6"
-ccxt = "4.2.31"
+ccxt = "4.2.35"
 ib_insync = "0.9.86"
 
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"
-ruff = "^0.1.0"
+ruff = "^0.2.0"
 black = "^23.3.0"
 pre-commit = "^3.3.1"
 
