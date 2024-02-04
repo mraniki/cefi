@@ -2,6 +2,25 @@
 
 
 
+## v3.3.8 (2024-02-04)
+
+### Other
+
+* Merge pull request #319 from mraniki/dev
+
+⬆️ 🤖 - Tell the truth or trumpbut get the trick ([`afa5013`](https://github.com/mraniki/cefi/commit/afa50132278ce5cdf8ce179234991d8a48c0fd53))
+
+* Merge pull request #316 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.2.0 ([`dc8e64d`](https://github.com/mraniki/cefi/commit/dc8e64deef9e31c51575c9c6756e597352a14590))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.35 ([`453f426`](https://github.com/mraniki/cefi/commit/453f4269a32a5c6a2908ca4fc8228d50be8a924c))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.34 ([`8c4d720`](https://github.com/mraniki/cefi/commit/8c4d720784e2f754eccc818875adce64b4d11a45))
+
+
 ## v3.3.7 (2024-02-02)
 
 ### Other
@@ -13,6 +32,8 @@
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.31 ([`321ba6e`](https://github.com/mraniki/cefi/commit/321ba6ee8d26ebb260dfa65dae360598354a0952))
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.2.0 ([`9084437`](https://github.com/mraniki/cefi/commit/90844373049ba2171a6995949625276e2247079a))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.30 ([`da10a0c`](https://github.com/mraniki/cefi/commit/da10a0c3e308456aba9854e127ad71f17b652e2f))
 
