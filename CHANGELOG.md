@@ -2,6 +2,27 @@
 
 
 
+## v3.3.10 (2024-02-09)
+
+### Other
+
+* Merge pull request #327 from mraniki/dev
+
+⬆️ 🤖 - You will live a long healthy happy life and make bags of money ([`aacefeb`](https://github.com/mraniki/cefi/commit/aacefeb58af6439a95c4b2d7c5c58d20bd42cedb))
+
+* Merge pull request #325 from mraniki/dev
+
+⬆️ 🤖 - Never be led astray onto the path of virtue ([`0748c6b`](https://github.com/mraniki/cefi/commit/0748c6bad8b7a9269e4a61ce50e361ca53eb6cb5))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.39 ([`ac0c537`](https://github.com/mraniki/cefi/commit/ac0c537b8c5845c8359d76366009c59399f09f72))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.38 ([`2f0ab59`](https://github.com/mraniki/cefi/commit/2f0ab59cdbdc1b3338ecd57ccdc618fa0f5a31bf))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.37 ([`9281b65`](https://github.com/mraniki/cefi/commit/9281b65906e9ca91d824829ef211a95bbf1b5fe0))
+
+
 ## v3.3.9 (2024-02-06)
 
 ### Other
