@@ -2,6 +2,19 @@
 
 
 
+## v3.3.11 (2024-02-10)
+
+### Other
+
+* Merge pull request #329 from mraniki/dev
+
+⬆️ 🤖 - You get along very well with everyone except animals and people ([`630ac87`](https://github.com/mraniki/cefi/commit/630ac87f3c568dca9793722852ff0ac99baf01bf))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.40 ([`2ad93f3`](https://github.com/mraniki/cefi/commit/2ad93f36a2a7b822f66b1438b1c06d5867abe617))
+
+
 ## v3.3.10 (2024-02-09)
 
 ### Other
