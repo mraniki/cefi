@@ -2,6 +2,19 @@
 
 
 
+## v3.3.12 (2024-02-11)
+
+### Other
+
+* Merge pull request #331 from mraniki/dev
+
+⬆️ 🤖 - If you tell the truth you dont have to remember anything ([`c3e9f65`](https://github.com/mraniki/cefi/commit/c3e9f65b0297b87c55d7f98169ce83083a84096f))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.41 ([`56ed51f`](https://github.com/mraniki/cefi/commit/56ed51f02ec4379ceed208a3971fcfe0391e6bff))
+
+
 ## v3.3.11 (2024-02-10)
 
 ### Other
