@@ -26,29 +26,6 @@ class CexIB(CexClient):
 
     def __init__(
         self,
-        protocol="ib",
-        name=None,
-        user_id=None,
-        api_key=None,
-        host=None,
-        port=None,
-        broker_client_id=None,
-        broker_account_number=None,
-        broker_gateway=True,
-        secret=None,
-        password=None,
-        testmode=True,
-        defaulttype="spot",
-        ordertype="market",
-        leverage_type="isolated",
-        leverage=1,
-        trading_risk_percentage=True,
-        trading_risk_amount=1,
-        trading_slippage=2,
-        trading_amount_threshold=0,
-        trading_asset="USDT",
-        trading_asset_separator=None,
-        mapping=None,
         **kwargs,
     ):
         """
@@ -69,35 +46,25 @@ class CexIB(CexClient):
         a debug message using the logger module.
 
         """
-
-        self.trading_asset = trading_asset
-        self.separator = trading_asset_separator
-        self.trading_risk_percentage = trading_risk_percentage
-        self.trading_risk_amount = trading_risk_amount
-        self.trading_slippage = trading_slippage
-        self.trading_amount_threshold = trading_amount_threshold
-        self.leverage_type = leverage_type
-        self.leverage = leverage
-        self.defaulttype = defaulttype
-        self.ordertype = ordertype
-        self.mapping = mapping
-        if broker_gateway:
+        super().__init__(**kwargs)
+        self.protocol="ib"
+        if self.broker_gateway:
             ibc = IBC(
                 976,
                 gateway=True,
-                tradingMode="paper" if testmode else "live",
-                userid=user_id,
-                password=password,
+                tradingMode="paper" if self.testmode else "live",
+                userid=self.user_id,
+                password=self.password,
             )
             ibc.start()
             IB.run()
         self.client = IB()
         self.client.connect(
-            host=host,
-            port=port,
-            clientId=broker_client_id or 1,
+            host=self.host,
+            port=self.port,
+            clientId=self.broker_client_id or 1,
             readonly=False,
-            account=broker_account_number or "",
+            account=self.broker_account_number or "",
         )
         self.name = self.client.id
         self.account_number = self.client.managedAccounts()[0]
