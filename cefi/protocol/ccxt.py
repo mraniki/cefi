@@ -27,57 +27,32 @@ class CexCcxt(CexClient):
 
     def __init__(
         self,
-        protocol="ccxt",
-        name=None,
-        api_key=None,
-        secret=None,
-        password=None,
-        testmode=True,
-        defaulttype="spot",
-        ordertype="market",
-        leverage_type="isolated",
-        leverage=1,
-        trading_risk_percentage=True,
-        trading_risk_amount=1,
-        trading_slippage=2,
-        trading_amount_threshold=0,
-        trading_asset="USDT",
-        trading_asset_separator=None,
-        mapping=None,
         **kwargs,
     ):
         """
         Initialize the ccxt client
 
         """
+        super().__init__(**kwargs)
+        self.protocol="ccxt"
+        client = getattr(ccxt, self.name)
 
-        client = getattr(ccxt, name)
         self.client = client(
             {
-                "apiKey": api_key,
-                "secret": secret,
-                "password": password,
+                "apiKey": self.api_key,
+                "secret": self.secret,
+                "password": self.password,
                 "enableRateLimit": True,
                 "options": {
-                    "defaultType": defaulttype,
+                    "defaultType": self.defaulttype,
                 },
             }
         )
-        if testmode:
+        if self.testmode:
             self.client.set_sandbox_mode("enabled")
         self.account_number = self.client.uid
         self.name = self.client.id
-        self.trading_asset = trading_asset
-        self.separator = trading_asset_separator
-        self.trading_risk_percentage = trading_risk_percentage
-        self.trading_risk_amount = trading_risk_amount
-        self.trading_slippage = trading_slippage
-        self.trading_amount_threshold = trading_amount_threshold
-        self.leverage_type = leverage_type
-        self.leverage = leverage
-        self.defaulttype = defaulttype
-        self.ordertype = ordertype
-        self.mapping = mapping
+
 
     async def get_quote(self, instrument):
         """

@@ -26,12 +26,57 @@ class CexClient:
 
     def __init__(
         self,
-        **kwargs,
+        protocol=None,
+        name=None,
+        user_id=None,
+        api_key=None,
+        host=None,
+        port=None,
+        broker_client_id=None,
+        broker_account_number=None,
+        broker_gateway=True,
+        secret=None,
+        password=None,
+        testmode=True,
+        defaulttype="spot",
+        ordertype="market",
+        leverage_type="isolated",
+        leverage=1,
+        trading_risk_percentage=True,
+        trading_risk_amount=1,
+        trading_slippage=2,
+        trading_amount_threshold=0,
+        trading_asset="USDT",
+        trading_asset_separator=None,
+        mapping=None,
     ):
         """
         Initialize the Cex object
 
         """
+        self.protocol = protocol
+        self.name = name
+        self.user_id = user_id
+        self.api_key = api_key
+        self.host = host
+        self.port = port
+        self.broker_client_id = broker_client_id
+        self.broker_account_number = broker_account_number
+        self.broker_gateway = broker_gateway
+        self.secret = secret
+        self.password = password
+        self.testmode = testmode
+        self.trading_asset = trading_asset
+        self.separator = trading_asset_separator
+        self.trading_risk_percentage = trading_risk_percentage
+        self.trading_risk_amount = trading_risk_amount
+        self.trading_slippage = trading_slippage
+        self.trading_amount_threshold = trading_amount_threshold
+        self.leverage_type = leverage_type
+        self.leverage = leverage
+        self.defaulttype = defaulttype
+        self.ordertype = ordertype
+        self.mapping = mapping
 
     async def get_quote(self, symbol):
         """
