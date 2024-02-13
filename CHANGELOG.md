@@ -2,6 +2,19 @@
 
 
 
+## v3.3.14 (2024-02-13)
+
+### Other
+
+* Merge pull request #335 from mraniki/dev
+
+⬆️ 🤖 - A gift of a flower will soon be made to you ([`b95f9f6`](https://github.com/mraniki/cefi/commit/b95f9f6b3287e9c519c07cae9f36487363722e73))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.43 ([`5b4dbc4`](https://github.com/mraniki/cefi/commit/5b4dbc457d6ae7f72add24b6aa47a9468ff88ecd))
+
+
 ## v3.3.13 (2024-02-11)
 
 ### Other
