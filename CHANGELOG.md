@@ -2,6 +2,19 @@
 
 
 
+## v3.3.15 (2024-02-14)
+
+### Other
+
+* Merge pull request #337 from mraniki/dev
+
+⬆️ 🤖 - Q	Whats a WASPs idea of openmindedness ([`046be11`](https://github.com/mraniki/cefi/commit/046be11b3fa416715b990c3c86497c5a45b92421))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.44 ([`12d659e`](https://github.com/mraniki/cefi/commit/12d659e42d17c6319a494776b30d0b65ae2a35c2))
+
+
 ## v3.3.14 (2024-02-13)
 
 ### Other
