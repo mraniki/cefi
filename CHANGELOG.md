@@ -2,6 +2,19 @@
 
 
 
+## v3.3.16 (2024-02-15)
+
+### Other
+
+* Merge pull request #339 from mraniki/dev
+
+⬆️ 🤖 - Condense soup not books ([`91eba4e`](https://github.com/mraniki/cefi/commit/91eba4e7bceda96159ef0d61e64773999b5756a5))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.45 ([`3bed397`](https://github.com/mraniki/cefi/commit/3bed397d1c8494069083dc4b9b4ac95f2d33eadd))
+
+
 ## v3.3.15 (2024-02-14)
 
 ### Other
