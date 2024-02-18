@@ -2,6 +2,19 @@
 
 
 
+## v3.3.17 (2024-02-18)
+
+### Other
+
+* Merge pull request #341 from mraniki/dev
+
+⬆️ 🤖 - After your lover has gone you will still have PEANUT BUTTER ([`b11ab69`](https://github.com/mraniki/cefi/commit/b11ab69ffba7e3df2429b2e86f6fea414b8db69b))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.46 ([`fa9bfbe`](https://github.com/mraniki/cefi/commit/fa9bfbee3ff2bc5499aab5415c08def980cbd743))
+
+
 ## v3.3.16 (2024-02-15)
 
 ### Other
