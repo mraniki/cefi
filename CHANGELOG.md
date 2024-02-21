@@ -2,6 +2,21 @@
 
 
 
+## v3.3.18 (2024-02-21)
+
+### Other
+
+* Merge pull request #343 from mraniki/dev
+
+⬆️ 🤖 - Many changes of mind and mood do not hesitate too long ([`a25b9d0`](https://github.com/mraniki/cefi/commit/a25b9d046c85728ec263a59967fde2d462579a12))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.48 ([`76fc815`](https://github.com/mraniki/cefi/commit/76fc815d0a7bbdce367ac1690a1ebb8353bbbfdc))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.47 ([`2db71d1`](https://github.com/mraniki/cefi/commit/2db71d14e28a79fc67106e4f214dea7f65367fe1))
+
+
 ## v3.3.17 (2024-02-18)
 
 ### Other
