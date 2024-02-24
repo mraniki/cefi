@@ -2,6 +2,29 @@
 
 
 
+## v3.3.19 (2024-02-24)
+
+### Other
+
+* Merge pull request #348 from mraniki/dev
+
+⬆️ 🤖 - You display the wonderful traits of charm and courtesy ([`21fda0e`](https://github.com/mraniki/cefi/commit/21fda0ea735a7df37c061f4f6df91bd23283a9c0))
+
+* Merge pull request #346 from mraniki/dev
+
+⬆️ 🤖 - Q	How was Thomas J Watson buried ([`afc71bd`](https://github.com/mraniki/cefi/commit/afc71bd3739db40af877bff49620f7e457adcc63))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.50 ([`8d4c687`](https://github.com/mraniki/cefi/commit/8d4c687673b089a13aed362cfae92618a7016eb0))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.49 ([`340b2cf`](https://github.com/mraniki/cefi/commit/340b2cf63f8094f56e8d2a91be05303581847325))
+
+### 🙈
+
+* 🙈 ([`3c27ad8`](https://github.com/mraniki/cefi/commit/3c27ad83c9e86336abe2b0762c24f4c71d25193f))
+
+
 ## v3.3.18 (2024-02-21)
 
 ### Other
