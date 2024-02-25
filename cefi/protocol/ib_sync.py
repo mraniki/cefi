@@ -45,31 +45,39 @@ class CexIB(CexClient):
         After successfully connecting to IBKR, the function logs
         a debug message using the logger module.
 
+        For IBC gateway setup,
+        refer to https://github.com/IbcAlpha/IBC/blob/master/userguide.md
+
         """
-        super().__init__(**kwargs)
-        self.protocol="ib"
-        if self.broker_gateway:
-            ibc = IBC(
-                976,
-                gateway=True,
-                tradingMode="paper" if self.testmode else "live",
-                userid=self.user_id,
-                password=self.password,
+        try:
+            super().__init__(**kwargs)
+            self.protocol = "ib"
+            if self.broker_gateway:
+                ibc = IBC(
+                    976,
+                    gateway=True,
+                    tradingMode="paper" if self.testmode else "live",
+                    userid=self.user_id,
+                    password=self.password,
+                )
+                ibc.start()
+                IB.run()
+            self.client = IB()
+            self.client.connect(
+                host=self.host,
+                port=self.port,
+                clientId=self.broker_client_id or 1,
+                readonly=False,
+                account=self.broker_account_number or "",
             )
-            ibc.start()
-            IB.run()
-        self.client = IB()
-        self.client.connect(
-            host=self.host,
-            port=self.port,
-            clientId=self.broker_client_id or 1,
-            readonly=False,
-            account=self.broker_account_number or "",
-        )
-        self.name = self.client.id
-        self.account_number = self.client.managedAccounts()[0]
-        logger.debug("Connected to IBKR {}", self.client.isConnected())
-        logger.debug("Broker_IBKR initialized with account: {}", self.account)
+            self.name = self.client.id
+            self.account_number = self.client.managedAccounts()[0]
+            logger.debug("Connected to IBKR {}", self.client.isConnected())
+            logger.debug("Broker_IBKR initialized with account: {}", self.account)
+
+        except Exception as e:
+            logger.error("IBC Initialization Error {}", e)
+            return None
 
     async def get_info(self):
         """
@@ -96,8 +104,7 @@ class CexIB(CexClient):
         try:
             instrument = await self.replace_instrument(instrument)
 
-            contract = self.search_contract(instrument)
-            if contract:
+            if contract := self.search_contract(instrument):
                 self.client.reqMktData(contract)
                 quote = self.client.ticker(contract)
                 logger.debug("Quote: {}", quote)
@@ -177,8 +184,7 @@ class CexIB(CexClient):
             logger.debug("pre_order_checks {}", pre_order_checks)
 
             if amount and pre_order_checks:
-                contract = self.search_contract(instrument)
-                if contract:
+                if contract := self.search_contract(instrument):
                     order = Order()
                     order.action = order_params["action"]
                     order.orderType = order_params["order_type"] or "MKT"
@@ -204,16 +210,15 @@ class CexIB(CexClient):
             Contract: The contract matching the instrument, or None if not found.
         """
         try:
-            asset = next(
+            if asset := next(
                 (
                     item
                     for item in self.mapping
                     if item["id"] == instrument or item["alt"] == instrument
                 ),
                 None,
-            )
-            if asset:
-                contract = Contract(
+            ):
+                return Contract(
                     secType=asset["type"],
                     symbol=asset["id"],
                     lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
@@ -223,10 +228,8 @@ class CexIB(CexClient):
                     exchange=asset["exchange"],
                     currency=asset["currency"],
                 )
-                return contract
-            else:
-                logger.warning("Asset {} not found in mapping", instrument)
-                return None
+            logger.warning("Asset {} not found in mapping", instrument)
+            return None
 
         except Exception as e:
             logger.error("search_contract {} Error {}", instrument, e)

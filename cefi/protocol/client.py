@@ -56,6 +56,7 @@ class CexClient:
         """
         self.protocol = protocol
         self.name = name
+        self.client = None
         self.user_id = user_id
         self.api_key = api_key
         self.host = host

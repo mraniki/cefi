@@ -60,8 +60,9 @@ class CexTrader:
                     or "",
                     mapping=_config.get("mapping") or [],
                 )
-                self.clients.append(client)
-                logger.debug(f"Loaded {item}")
+                if client.client:
+                    self.clients.append(client)
+                    logger.debug(f"Loaded {item}")
             if self.clients:
                 logger.info(f"Loaded {len(self.clients)} CEX clients")
             else:
