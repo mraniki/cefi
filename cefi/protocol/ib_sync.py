@@ -45,34 +45,38 @@ class CexIB(CexClient):
         After successfully connecting to IBKR, the function logs
         a debug message using the logger module.
 
-        For IBC gateway, 
+        For IBC gateway,
         refer to https://github.com/IbcAlpha/IBC/blob/master/userguide.md
 
         """
-        super().__init__(**kwargs)
-        self.protocol="ib"
-        if self.broker_gateway:
-            ibc = IBC(
-                976,
-                gateway=True,
-                tradingMode="paper" if self.testmode else "live",
-                userid=self.user_id,
-                password=self.password,
+        try:
+            super().__init__(**kwargs)
+            self.protocol = "ib"
+            if self.broker_gateway:
+                ibc = IBC(
+                    976,
+                    gateway=True,
+                    tradingMode="paper" if self.testmode else "live",
+                    userid=self.user_id,
+                    password=self.password,
+                )
+                ibc.start()
+                IB.run()
+            self.client = IB()
+            self.client.connect(
+                host=self.host,
+                port=self.port,
+                clientId=self.broker_client_id or 1,
+                readonly=False,
+                account=self.broker_account_number or "",
             )
-            ibc.start()
-            IB.run()
-        self.client = IB()
-        self.client.connect(
-            host=self.host,
-            port=self.port,
-            clientId=self.broker_client_id or 1,
-            readonly=False,
-            account=self.broker_account_number or "",
-        )
-        self.name = self.client.id
-        self.account_number = self.client.managedAccounts()[0]
-        logger.debug("Connected to IBKR {}", self.client.isConnected())
-        logger.debug("Broker_IBKR initialized with account: {}", self.account)
+            self.name = self.client.id
+            self.account_number = self.client.managedAccounts()[0]
+            logger.debug("Connected to IBKR {}", self.client.isConnected())
+            logger.debug("Broker_IBKR initialized with account: {}", self.account)
+
+        except Exception as e:
+            logger.error("IBC Initialization Error {}", e)
 
     async def get_info(self):
         """
@@ -216,9 +220,7 @@ class CexIB(CexClient):
                 return Contract(
                     secType=asset["type"],
                     symbol=asset["id"],
-                    lastTradeDateOrContractMonth=asset[
-                        "lastTradeDateOrContractMonth"
-                    ],
+                    lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
                     strike=asset["strike"],
                     right=asset["right"],
                     multiplier=asset["multiplier"],
