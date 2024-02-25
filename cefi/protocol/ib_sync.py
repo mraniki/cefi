@@ -45,7 +45,7 @@ class CexIB(CexClient):
         After successfully connecting to IBKR, the function logs
         a debug message using the logger module.
 
-        For IBC gateway,
+        For IBC gateway setup,
         refer to https://github.com/IbcAlpha/IBC/blob/master/userguide.md
 
         """
