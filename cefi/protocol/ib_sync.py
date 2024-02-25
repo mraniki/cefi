@@ -77,6 +77,7 @@ class CexIB(CexClient):
 
         except Exception as e:
             logger.error("IBC Initialization Error {}", e)
+            return None
 
     async def get_info(self):
         """
