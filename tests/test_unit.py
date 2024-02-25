@@ -10,7 +10,6 @@ from cefi.config import settings
 def set_test_settings_CEX():
     settings.configure(FORCE_ENV_FOR_DYNACONF="cefi")
 
-
 @pytest.fixture(name="order")
 def order1():
     """return standard expected results"""
