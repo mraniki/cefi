@@ -2,6 +2,49 @@
 
 
 
+## v3.3.20 (2024-02-25)
+
+### :white_check_mark:
+
+* :white_check_mark: ([`6ff9209`](https://github.com/mraniki/cefi/commit/6ff9209e253964c43794f3e2bfb95957dba4c68b))
+
+### Other
+
+* Merge pull request #352 from mraniki/dev
+
+✅  ♻️ Unit Test and refactor ([`34a751a`](https://github.com/mraniki/cefi/commit/34a751a786f61266d10f68869a307186e5acd8ca))
+
+* :page_with_curl: ([`b15b8ac`](https://github.com/mraniki/cefi/commit/b15b8aca203223c201802f45fd8a5464e834c674))
+
+* Add return None in CexIB class for exception ([`f73e38a`](https://github.com/mraniki/cefi/commit/f73e38a6bf7d86947e68bc741ce4619c56e47903))
+
+* Merge pull request #350 from mraniki/dev
+
+⬆️ 🤖 - Life is to you a dashing and bold adventure ([`fabfbd5`](https://github.com/mraniki/cefi/commit/fabfbd5801c410267b08c561fc05193953651923))
+
+### Update
+
+* Update black version to 24.2.0 in pyproject.toml ([`652a84b`](https://github.com/mraniki/cefi/commit/652a84b906dc9f322c97fe8f3c2a992eadd0be48))
+
+### ♻️
+
+* ✅  ♻️ Unit Test and refactor ([`2832529`](https://github.com/mraniki/cefi/commit/2832529d58e832140b59a1234f3f6341be70eb47))
+
+### ⚡
+
+* ⚡ ([`04ce39c`](https://github.com/mraniki/cefi/commit/04ce39c1a08c143bd06fd0f29ce8e6646b287613))
+
+### ⬆️
+
+* ⬆️ ([`40a3c75`](https://github.com/mraniki/cefi/commit/40a3c75bb97ae3a5c998965fa2c4d826103f1346))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.51 ([`c21819b`](https://github.com/mraniki/cefi/commit/c21819becb39e6fdc1a95204d50d60ead5b47480))
+
+### 🥅
+
+* 🥅 ([`098997b`](https://github.com/mraniki/cefi/commit/098997bc0bf675794d36a48f9c9a9046c23251f3))
+
+
 ## v3.3.19 (2024-02-24)
 
 ### Other
