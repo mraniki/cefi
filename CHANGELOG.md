@@ -2,6 +2,19 @@
 
 
 
+## v3.3.21 (2024-02-27)
+
+### Other
+
+* Merge pull request #356 from mraniki/dev
+
+⬆️ 🤖 - Your domestic life may be harmonious ([`6fc8a8a`](https://github.com/mraniki/cefi/commit/6fc8a8a7c35710eb7e1ef972401608aceee02c6c))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.52 ([`13d87ca`](https://github.com/mraniki/cefi/commit/13d87ca47631adccd1c7e8d6be07f305c57c0d95))
+
+
 ## v3.3.20 (2024-02-25)
 
 ### :white_check_mark:
