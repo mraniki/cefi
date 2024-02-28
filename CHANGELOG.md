@@ -2,6 +2,23 @@
 
 
 
+## v3.3.22 (2024-02-28)
+
+### Other
+
+* Merge pull request #358 from mraniki/dev
+
+⬆️ 🤖 - Clothes make the man  Naked people have little or no influence on society ([`d9a38b1`](https://github.com/mraniki/cefi/commit/d9a38b16af6c4151df2a681b8466355951dcc4c6))
+
+* Merge pull request #355 from mraniki/renovate/pytest-8.x
+
+⬆️ 🛠️(deps): update dependency pytest to v8 ([`e22d9cf`](https://github.com/mraniki/cefi/commit/e22d9cfef0b1ec9d58c7fc54340144072f6603fe))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.53 ([`b70ac6a`](https://github.com/mraniki/cefi/commit/b70ac6a370adc5a2abc6002f039b4df873fb1111))
+
+
 ## v3.3.21 (2024-02-27)
 
 ### Other
@@ -11,6 +28,8 @@
 ⬆️ 🤖 - Your domestic life may be harmonious ([`6fc8a8a`](https://github.com/mraniki/cefi/commit/6fc8a8a7c35710eb7e1ef972401608aceee02c6c))
 
 ### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pytest to v8 ([`58d4cda`](https://github.com/mraniki/cefi/commit/58d4cdae57b02675f41ab03cc9cde09e262ad693))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.52 ([`13d87ca`](https://github.com/mraniki/cefi/commit/13d87ca47631adccd1c7e8d6be07f305c57c0d95))
 
