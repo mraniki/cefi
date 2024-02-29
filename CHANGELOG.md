@@ -2,6 +2,19 @@
 
 
 
+## v3.3.23 (2024-02-29)
+
+### Other
+
+* Merge pull request #360 from mraniki/dev
+
+⬆️ 🤖 - Green light in AM for new projects  Red light in PM for traffic tickets ([`341c7be`](https://github.com/mraniki/cefi/commit/341c7be305b16e3b237c517c440d764f9c9789d7))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.54 ([`2b91d95`](https://github.com/mraniki/cefi/commit/2b91d951d8968e3fdf3e4689bf6d24c915e12606))
+
+
 ## v3.3.22 (2024-02-28)
 
 ### Other
