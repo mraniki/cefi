@@ -2,6 +2,27 @@
 
 
 
+## v3.3.24 (2024-03-01)
+
+### Other
+
+* Merge pull request #364 from mraniki/dev
+
+⬆️ 🤖 - Dont tell any big lies today  Small ones can be just as effective ([`d727d39`](https://github.com/mraniki/cefi/commit/d727d3968a6c4e35667fac73187941386e3ef69d))
+
+* Merge pull request #362 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.3.0 ([`29c17b1`](https://github.com/mraniki/cefi/commit/29c17b1378a6e4d85aa45e463e4e94a23db2f63e))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.56 ([`7e55f08`](https://github.com/mraniki/cefi/commit/7e55f0863922f4dff7564c2d431636ef87cc20d6))
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.3.0 ([`6b24ac0`](https://github.com/mraniki/cefi/commit/6b24ac0b102a4eccd0080579606820da2a976860))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.55 ([`b850336`](https://github.com/mraniki/cefi/commit/b850336b2cdf973abbaa06851050957dfbe9fcc5))
+
+
 ## v3.3.23 (2024-02-29)
 
 ### Other
