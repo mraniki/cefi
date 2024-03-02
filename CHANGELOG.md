@@ -2,6 +2,19 @@
 
 
 
+## v3.3.25 (2024-03-02)
+
+### Other
+
+* Merge pull request #366 from mraniki/dev
+
+⬆️ 🤖 - You look like a million dollars  All green and wrinkled ([`143136d`](https://github.com/mraniki/cefi/commit/143136d330a73fd3bc59e3eb7ff12f1411f907d3))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.57 ([`1b90a77`](https://github.com/mraniki/cefi/commit/1b90a77dcc9ea97b45ac73e911aa68f6a9790aa0))
+
+
 ## v3.3.24 (2024-03-01)
 
 ### Other
