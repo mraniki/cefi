@@ -2,6 +2,19 @@
 
 
 
+## v3.3.26 (2024-03-03)
+
+### Other
+
+* Merge pull request #368 from mraniki/dev
+
+⬆️ 🤖 - You are a bundle of energy always on the go ([`ced7eea`](https://github.com/mraniki/cefi/commit/ced7eead0fb203a6c1376505a8c95dfb1041d490))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.58 ([`29bb39d`](https://github.com/mraniki/cefi/commit/29bb39d3d284309cbf07adb8f21b8380e6a5ef84))
+
+
 ## v3.3.25 (2024-03-02)
 
 ### Other
