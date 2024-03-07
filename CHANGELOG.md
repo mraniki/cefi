@@ -2,6 +2,23 @@
 
 
 
+## v3.3.27 (2024-03-07)
+
+### Other
+
+* Merge pull request #373 from mraniki/dev
+
+⬆️ 🤖 - Excellent time to become a missing person ([`6779fe1`](https://github.com/mraniki/cefi/commit/6779fe15a55f0a1a7e1f60b3e2f235ede1948d73))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.63 ([`befcf36`](https://github.com/mraniki/cefi/commit/befcf362f6e1a33a44dec511f3a5a022cc2705ce))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.61 ([`5356e0b`](https://github.com/mraniki/cefi/commit/5356e0b4f1ce665f1eadc8935868feeb739b200e))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.60 ([`d8146c1`](https://github.com/mraniki/cefi/commit/d8146c1084908b9995101de1d9a1c0ab9e695dd8))
+
+
 ## v3.3.26 (2024-03-03)
 
 ### Other
