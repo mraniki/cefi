@@ -2,6 +2,19 @@
 
 
 
+## v3.3.29 (2024-03-09)
+
+### Other
+
+* Merge pull request #378 from mraniki/dev
+
+⬆️ 🤖 - A banker is a fellow who lends you his umbrella when the sun is shining ([`045f38e`](https://github.com/mraniki/cefi/commit/045f38e026459a7790d131309b86430e5035b8bb))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.65 ([`927d79e`](https://github.com/mraniki/cefi/commit/927d79e220150181b4bd8fe6d53c4a7776100559))
+
+
 ## v3.3.28 (2024-03-08)
 
 ### Other
