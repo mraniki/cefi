@@ -2,6 +2,19 @@
 
 
 
+## v3.3.30 (2024-03-11)
+
+### Other
+
+* Merge pull request #380 from mraniki/dev
+
+⬆️ 🤖 - You will become rich and famous unless you dont ([`991a479`](https://github.com/mraniki/cefi/commit/991a479f808fbe355a07763d1db74dd2ab335da9))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.66 ([`98065b9`](https://github.com/mraniki/cefi/commit/98065b974aa235a96ef8edbf0bf244594df587a9))
+
+
 ## v3.3.29 (2024-03-09)
 
 ### Other
