@@ -2,6 +2,23 @@
 
 
 
+## v3.3.31 (2024-03-12)
+
+### Other
+
+* Merge pull request #383 from mraniki/dev
+
+⬆️ 🤖 - You enjoy the company of other people ([`45f1d0c`](https://github.com/mraniki/cefi/commit/45f1d0ce5cdf4464a27a00f679cdbb3cf6c53e36))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.69 ([`02ffbc8`](https://github.com/mraniki/cefi/commit/02ffbc8cc107496170edcd3109bceedb131c1803))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.68 ([`7f91e24`](https://github.com/mraniki/cefi/commit/7f91e24db3f7c2ccf4b1841966321f0273f706d7))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.67 ([`e1a15f7`](https://github.com/mraniki/cefi/commit/e1a15f7d9f0fec3a3e95dbc19e9524cb6bd6e020))
+
+
 ## v3.3.30 (2024-03-11)
 
 ### Other
