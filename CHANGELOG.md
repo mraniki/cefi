@@ -2,6 +2,21 @@
 
 
 
+## v3.3.32 (2024-03-14)
+
+### Other
+
+* Merge pull request #386 from mraniki/dev
+
+⬆️ 🤖 - Executive ability is prominent in your makeup ([`fa21553`](https://github.com/mraniki/cefi/commit/fa215537e94e4adc75d773c738ed4a3426ea37f8))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.71 ([`4502ae2`](https://github.com/mraniki/cefi/commit/4502ae298c3436b147ff150d145f773d335dace6))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.70 ([`6c0cda9`](https://github.com/mraniki/cefi/commit/6c0cda90d2c0baa6b99e4442f7c396e9b1993f52))
+
+
 ## v3.3.31 (2024-03-12)
 
 ### Other
