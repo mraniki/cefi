@@ -2,6 +2,25 @@
 
 
 
+## v3.3.33 (2024-03-16)
+
+### Other
+
+* Merge pull request #389 from mraniki/dev
+
+⬆️ 🤖 - Stay away from hurricanes for a while ([`30cb01b`](https://github.com/mraniki/cefi/commit/30cb01b3f401d8af5d7e71f4a057f5821f2c6d98))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.74 ([`b924cfc`](https://github.com/mraniki/cefi/commit/b924cfce1289397ac0a48229c83cfd06c56ff9ca))
+
+* ⬆️ 🛠️(deps): update dependency black to v24.3.0 ([`76d7232`](https://github.com/mraniki/cefi/commit/76d72326f0b90bceb75f20e0099a2e102cc2cb8a))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.73 ([`e233efc`](https://github.com/mraniki/cefi/commit/e233efc9919a83e1af693313bc93011682749d44))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.72 ([`1a083a8`](https://github.com/mraniki/cefi/commit/1a083a8722c0e0ed5bb027f8620f29927bd646cb))
+
+
 ## v3.3.32 (2024-03-14)
 
 ### Other
