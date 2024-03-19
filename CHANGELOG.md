@@ -2,6 +2,25 @@
 
 
 
+## v3.3.34 (2024-03-19)
+
+### Other
+
+* Merge pull request #396 from mraniki/dev
+
+⬆️ 🤖 - Blow it out your ear ([`82afe09`](https://github.com/mraniki/cefi/commit/82afe09140df0d3d98bab1e5b81d7e49987f74ea))
+
+* Merge pull request #394 from mraniki/dev
+
+⬆️ 🤖 - Q	How much does it cost to ride the Unibus ([`9542434`](https://github.com/mraniki/cefi/commit/95424349d3bdadaf4065b6e1000d8e01e9b56411))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.76 ([`b2d9efc`](https://github.com/mraniki/cefi/commit/b2d9efc67dfbe83603a79a8eb930ad8f42165724))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.75 ([`0403741`](https://github.com/mraniki/cefi/commit/0403741f70c5bf88b486cfb6c7c3c1cdec0a45f3))
+
+
 ## v3.3.33 (2024-03-16)
 
 ### Other
