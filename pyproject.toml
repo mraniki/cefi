@@ -122,7 +122,7 @@ pytest = "^8.0.0"
 pytest-cov = "^4.1"
 pytest-asyncio = "^0.23.0"
 pytest-mock = "^3.11.1"
-pytest-loguru = "^0.3.0"
+pytest-loguru = "^0.4.0"
 
 
 
