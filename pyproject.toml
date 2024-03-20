@@ -26,7 +26,7 @@ packages = [
 python = "^3.10"
 dynaconf = ">=3.1.12"
 loguru = ">=0.6"
-ccxt = "4.2.76"
+ccxt = "4.2.77"
 ib_insync = "0.9.86"
 
 [ tool.poetry.group.dev.dependencies]
@@ -122,7 +122,7 @@ pytest = "^8.0.0"
 pytest-cov = "^4.1"
 pytest-asyncio = "^0.23.0"
 pytest-mock = "^3.11.1"
-pytest-loguru = "^0.3.0"
+pytest-loguru = "^0.4.0"
 
 
 
