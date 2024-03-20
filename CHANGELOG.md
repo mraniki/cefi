@@ -2,6 +2,25 @@
 
 
 
+## v3.3.35 (2024-03-20)
+
+### Other
+
+* Merge pull request #398 from mraniki/dev
+
+⬆️ 🤖 - You may worry about your hairdo today but tomorrow much peanut butter will ([`3001a9c`](https://github.com/mraniki/cefi/commit/3001a9cd62f4400070b64cd6ec2165e9b3535abc))
+
+* Merge pull request #399 from mraniki/renovate/pytest-loguru-0.x
+
+⬆️ 🛠️(deps): update dependency pytest-loguru to ^0.4.0 ([`794594e`](https://github.com/mraniki/cefi/commit/794594ed102bef0d216e80f5de2bedb299f324b9))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pytest-loguru to ^0.4.0 ([`d22f504`](https://github.com/mraniki/cefi/commit/d22f504235f5cadd41df90627bcfe565e6258011))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.77 ([`30cc576`](https://github.com/mraniki/cefi/commit/30cc576432536840e1feac5861ea1228f658afca))
+
+
 ## v3.3.34 (2024-03-19)
 
 ### Other
