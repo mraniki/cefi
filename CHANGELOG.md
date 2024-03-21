@@ -2,6 +2,19 @@
 
 
 
+## v3.3.36 (2024-03-21)
+
+### Other
+
+* Merge pull request #401 from mraniki/dev
+
+⬆️ 🤖 - FORTUNE PROVIDES QUESTIONS FOR THE GREAT ANSWERS ([`f2bbaac`](https://github.com/mraniki/cefi/commit/f2bbaac96c36115ffff543a40e5a248365f07609))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.78 ([`31629c9`](https://github.com/mraniki/cefi/commit/31629c90e1a96f3bfebd0ab83145e4e198f7b2bd))
+
+
 ## v3.3.35 (2024-03-20)
 
 ### Other
