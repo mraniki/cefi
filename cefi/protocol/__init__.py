@@ -1,4 +1,4 @@
-from .capital import CexCapital
+from .capitalcom import CexCapital
 from .ccxt import CexCcxt
 from .ib_sync import CexIB
 
