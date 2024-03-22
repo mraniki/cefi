@@ -2,6 +2,19 @@
 
 
 
+## v3.3.37 (2024-03-22)
+
+### Other
+
+* Merge pull request #403 from mraniki/dev
+
+⬆️ 🤖 - Expect a letter from a friend who will ask a favor of you ([`af28076`](https://github.com/mraniki/cefi/commit/af28076f075217d704b17d8b47276e5277cf3fad))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.79 ([`8b5cf46`](https://github.com/mraniki/cefi/commit/8b5cf46e908c593f717525c414efc68cb85f59ce))
+
+
 ## v3.3.36 (2024-03-21)
 
 ### Other
