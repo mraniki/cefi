@@ -51,28 +51,29 @@ class CexIB(CexClient):
         """
         try:
             super().__init__(**kwargs)
-            if self.broker_gateway:
-                ibc = IBC(
-                    976,
-                    gateway=True,
-                    tradingMode="paper" if self.testmode else "live",
-                    userid=self.user_id,
-                    password=self.password,
+            if self.enabled:
+                if self.broker_gateway:
+                    ibc = IBC(
+                        976,
+                        gateway=True,
+                        tradingMode="paper" if self.testmode else "live",
+                        userid=self.user_id,
+                        password=self.password,
+                    )
+                    ibc.start()
+                    IB.run()
+                self.client = IB()
+                self.client.connect(
+                    host=self.host,
+                    port=self.port,
+                    clientId=self.broker_client_id or 1,
+                    readonly=False,
+                    account=self.broker_account_number or "",
                 )
-                ibc.start()
-                IB.run()
-            self.client = IB()
-            self.client.connect(
-                host=self.host,
-                port=self.port,
-                clientId=self.broker_client_id or 1,
-                readonly=False,
-                account=self.broker_account_number or "",
-            )
-            self.name = self.client.id
-            self.account_number = self.client.managedAccounts()[0]
-            logger.debug("Connected to IBKR {}", self.client.isConnected())
-            logger.debug("Broker_IBKR initialized with account: {}", self.account)
+                self.name = self.client.id
+                self.account_number = self.client.managedAccounts()[0]
+                logger.debug("Connected to IBKR {}", self.client.isConnected())
+                logger.debug("Broker_IBKR initialized with account: {}", self.account)
 
         except Exception as e:
             logger.error("IBC Initialization Error {}", e)

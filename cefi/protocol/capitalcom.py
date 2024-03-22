@@ -36,19 +36,22 @@ class CexCapital(CexClient):
 
         """
         super().__init__(**kwargs)
-        if self.testmode:
-            self.client = DemoClient(
-                log=self.user_id,
-                password=self.password,
-                api_key=self.api_key,
-                sandbox=True,
-            )
-        else:
-            self.client = Client(
-                log=self.user_id,
-                password=self.password,
-                api_key=self.api_key,
-            )
+        try:
+            if self.testmode:
+                self.client = DemoClient(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            else:
+                self.client = Client(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            self.account_number = self.client.all_accounts()
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
 
     async def get_quote(self, instrument):
         """

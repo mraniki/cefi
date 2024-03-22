@@ -72,6 +72,7 @@ class CexClient:
         self.testmode = testmode
         self.trading_asset = trading_asset
         self.separator = trading_asset_separator
+        self.account_number = None
         self.trading_risk_percentage = trading_risk_percentage
         self.trading_risk_amount = trading_risk_amount
         self.trading_slippage = trading_slippage
@@ -81,6 +82,7 @@ class CexClient:
         self.defaulttype = defaulttype
         self.ordertype = ordertype
         self.mapping = mapping
+        logger.debug("{} Init", self.name)
         if not self.enabled:
             logger.debug("{} Not enabled", self.name)
             return
