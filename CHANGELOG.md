@@ -2,6 +2,45 @@
 
 
 
+## v3.4.2 (2024-03-22)
+
+### :rotating_light:
+
+* :rotating_light: ([`7176c1c`](https://github.com/mraniki/cefi/commit/7176c1cba5aba246601ecf87aafc4d21b1d8be46))
+
+### :white_check_mark:
+
+* :white_check_mark: Unit Test for capitalcom ([`1260720`](https://github.com/mraniki/cefi/commit/126072085d3e6283c64d939f62354a9b73aeffb9))
+
+### Other
+
+* Merge pull request #407 from mraniki/dev
+
+✅ Unit Test for capitalcom ([`91d7a59`](https://github.com/mraniki/cefi/commit/91d7a59b346788e6a0c09bc836d41e5a2f1b6196))
+
+* Remove unnecessary condition in test_quote function. ([`16438ed`](https://github.com/mraniki/cefi/commit/16438ed09dc3462018ab861715e395390d7fc3f2))
+
+* Refactor quote retrieval logic and update test case. ([`ea18ab0`](https://github.com/mraniki/cefi/commit/ea18ab06a55df85981161c37b75462e2eb1d24a8))
+
+* Remove requirements.txt and examples/__init__.py, add symbol and quote in example.py ([`222b7fe`](https://github.com/mraniki/cefi/commit/222b7feac64d24ecfcbff630c087ae12524df186))
+
+### Update
+
+* Update ccxt version to ^4.2.80 in pyproject.toml ([`40b7b1e`](https://github.com/mraniki/cefi/commit/40b7b1e2797bf7c57b7b0c78babe35cf9d0df7e0))
+
+* Update get_quotes function call and linting configuration. ([`85b28cf`](https://github.com/mraniki/cefi/commit/85b28cff9ae99793b71f1cec0234d00aff51e348))
+
+### ✅
+
+* ✅ Unit Test for capitalcom ([`19896f7`](https://github.com/mraniki/cefi/commit/19896f7b663ad30880588e852f809bb75464037a))
+
+### 🎨
+
+* 🎨 ⚡ ([`eaca5e8`](https://github.com/mraniki/cefi/commit/eaca5e803805427d0f0cc2c772ba00c8b552f14d))
+
+* 🎨 ([`de6c324`](https://github.com/mraniki/cefi/commit/de6c324551c6ae858e23ff6d1995c6e7b30f7c39))
+
+
 ## v3.4.1 (2024-03-22)
 
 ### Other
