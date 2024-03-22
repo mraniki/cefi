@@ -11,7 +11,7 @@ from loguru import logger
 from .client import CexClient
 
 
-class CexCcxt(CexClient):
+class CexCapital(CexClient):
     """
     Capital.com client
     using
@@ -35,7 +35,6 @@ class CexCcxt(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.protocol = "capitalcom"
         self.client = Client(
             log=self.user_id,
             password=self.password,

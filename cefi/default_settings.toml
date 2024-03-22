@@ -24,6 +24,7 @@ cex_enabled = true
 [default.cex.template]
 protocol = "ccxt"
 name = ""
+enabled = true
 user_id = ""
 api_key= ""
 host = ""
@@ -49,9 +50,34 @@ mapping = [
     { id = "ETH", alt = "ETH/USDT" },
 ]
 
+# # CEFI example using ccxt binance
+# [default.cex.mybinance]
+# protocol = "ccxt"
+# name = "binance"
+# enabled = true
+# api_key= ""
+# secret= ""
+# password = ""
+# testmode = true
+# defaulttype = "spot"
+# ordertype = "market"
+# leverage_type = "isolated"
+# leverage = 1
+# trading_risk_percentage = true
+# trading_risk_amount = 10
+# trading_slippage = 2
+# trading_amount_threshold = 0
+# trading_asset = "USDT"
+# trading_asset_separator = ""
+# mapping = [
+#     { id = "BTC", alt = "BTC/USDT" },
+# ]
+
+# # Example using IBKR
 # [default.cex.ibkr]
 # protocol = "ib"
 # name = ""
+# enabled = true
 # user_id = ""
 # api_key= ""
 # host = ""
@@ -79,37 +105,32 @@ mapping = [
 #     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
 # ]
 
-# [default.cex.binance]
-# protocol = "ccxt"
-# cex_name = "binance"
-# cex_api=""
-# cex_secret=""
-# cex_testmode = true
-# cex_defaulttype = "spot"
-# cex_ordertype = "market"
+# # Example using Capital.com
+# [default.cex.capital]
+# protocol = "capitalcom"
+# name = "capital"
+# enabled = false
+# user_id = "12345678"
+# api_key= "myapi_DEADBEEF"
+# password = "12345678"
+# testmode = false
+# defaulttype = ""
+# ordertype = ""
+# leverage_type = ""
+# leverage = 1
 # trading_risk_percentage = true
 # trading_risk_amount = 10
 # trading_slippage = 2
 # trading_amount_threshold = 0
-# trading_asset = "USDT"
+# trading_asset = "USD"
 # trading_asset_separator = ""
-# mapping = []
+# mapping = [
+#     { id = "BTC", alt = "BTC/USDT", type="CRYPTO", exchange="SMART", currency="USD", multiplier="100000000", right="P", lastTradeDateOrContractMonth="202101" },
+#     { id = "ETH", alt = "ETH/USDT", type="CRYPTO", exchange="SMART", currency="USD" },
+#     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
+#     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
+# ]
 
-# [default.cex.huobi]
-# protocol = "ccxt"
-# cex_name ="huobi"
-# cex_api=""
-# cex_secret=""
-# cex_testmode = true
-# cex_defaulttype = "spot"
-# cex_ordertype = "market"
-# trading_risk_percentage = true
-# trading_risk_amount = 10
-# trading_slippage = 2
-# trading_amount_threshold = 0
-# trading_asset = "USDT"
-# trading_asset_separator = "/"
-# mapping = []
 
 ########################################
 ###     END OF DEFAULT SETTINGS      ###

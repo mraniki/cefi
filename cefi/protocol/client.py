@@ -28,6 +28,7 @@ class CexClient:
     def __init__(
         self,
         protocol=None,
+        enabled=True,
         name=None,
         user_id=None,
         api_key=None,
@@ -57,6 +58,7 @@ class CexClient:
         """
         self.protocol = protocol
         self.name = name
+        self.enabled = enabled
         self.client = None
         self.user_id = user_id
         self.api_key = api_key
