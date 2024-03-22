@@ -69,8 +69,9 @@ class CexCapital(CexClient):
         try:
             instrument = await self.replace_instrument(instrument)
 
-            ticker = self.client.single_market(instrument)
-            quote = ticker["snapshot"]["offer"]
+            market = self.client.single_market(instrument)
+            logger.debug("Raw Quote: {}", market)
+            quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
             return quote
         except Exception as e:
