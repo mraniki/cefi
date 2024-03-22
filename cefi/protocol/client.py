@@ -81,6 +81,9 @@ class CexClient:
         self.defaulttype = defaulttype
         self.ordertype = ordertype
         self.mapping = mapping
+        if not self.enabled:
+            logger.debug("{} Not enabled", self.name)
+            return
 
     async def get_quote(self, symbol):
         """

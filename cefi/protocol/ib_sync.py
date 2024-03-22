@@ -51,7 +51,6 @@ class CexIB(CexClient):
         """
         try:
             super().__init__(**kwargs)
-            self.protocol = "ib"
             if self.broker_gateway:
                 ibc = IBC(
                     976,
