@@ -11,7 +11,7 @@ async def main():
     """Main"""
     cex = CexTrader()
     await cex.get_account_balances()
-  
+
     symbol = "BTC"
 
     quote = await cex.get_quotes(symbol)
