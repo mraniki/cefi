@@ -34,7 +34,6 @@ class CexCcxt(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.protocol="ccxt"
         client = getattr(ccxt, self.name)
 
         self.client = client(

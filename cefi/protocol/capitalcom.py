@@ -6,6 +6,7 @@ Capital.com API client
 """
 
 from capitalcom.client import Client
+from capitalcom.client_demo import Client as DemoClient
 from loguru import logger
 
 from .client import CexClient
@@ -35,11 +36,22 @@ class CexCapital(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.client = Client(
-            log=self.user_id,
-            password=self.password,
-            api_key=self.api_key,
-        )
+        try:
+            if self.testmode:
+                self.client = DemoClient(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            else:
+                self.client = Client(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            self.account_number = self.client.all_accounts()
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
 
     async def get_quote(self, instrument):
         """
@@ -57,8 +69,9 @@ class CexCapital(CexClient):
         try:
             instrument = await self.replace_instrument(instrument)
 
-            ticker = self.client.single_market(instrument)
-            quote = ticker["snapshot"]["offer"]
+            market = self.client.single_market(instrument)
+            logger.debug("Raw Quote: {}", market)
+            quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
             return quote
         except Exception as e:
