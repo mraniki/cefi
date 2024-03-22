@@ -2,6 +2,19 @@
 
 
 
+## v3.4.0 (2024-03-22)
+
+### Other
+
+* Merge pull request #405 from mraniki/dev
+
+✨ new interface with capital.com broker api ([`090a2ee`](https://github.com/mraniki/cefi/commit/090a2eec293fdcccac591d6694168ef531327b7f))
+
+### ✨
+
+* ✨ new interface with capital.com broker api ([`25f6806`](https://github.com/mraniki/cefi/commit/25f680629c13aeb40daf9b73d2a4e33d98b154ed))
+
+
 ## v3.3.37 (2024-03-22)
 
 ### Other
