@@ -10,6 +10,7 @@ from cefi.config import settings
 def set_test_settings_CEX():
     settings.configure(FORCE_ENV_FOR_DYNACONF="cefi")
 
+
 @pytest.fixture(name="order")
 def order1():
     """return standard expected results"""
@@ -75,7 +76,7 @@ async def test_quote(CXTrader, caplog):
     result = await CXTrader.get_quotes("BTC")
     assert result is not None
     assert "⚖️" in result
-    assert ("binance" in result) or ("huobi" in result)
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
     assert ("No Quote" in result) or ("5" in result) or ("4" in result)
 
 

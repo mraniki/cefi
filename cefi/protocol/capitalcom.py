@@ -6,6 +6,7 @@ Capital.com API client
 """
 
 from capitalcom.client import Client
+from capitalcom.client_demo import Client as DemoClient
 from loguru import logger
 
 from .client import CexClient
@@ -35,11 +36,19 @@ class CexCapital(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.client = Client(
-            log=self.user_id,
-            password=self.password,
-            api_key=self.api_key,
-        )
+        if self.testmode:
+            self.client = DemoClient(
+                log=self.user_id,
+                password=self.password,
+                api_key=self.api_key,
+                sandbox=True,
+            )
+        else:
+            self.client = Client(
+                log=self.user_id,
+                password=self.password,
+                api_key=self.api_key,
+            )
 
     async def get_quote(self, instrument):
         """
