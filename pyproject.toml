@@ -38,16 +38,17 @@ pre-commit = "^3.3.1"
 
 
 [tool.ruff]
-select = [
-  "E",  # pycodestyle
-  "F",  # pyflakes
-  "I",  # isort
-]
 exclude = [
   ".github/*",
   "docs/*",
 ]
 
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle
+  "F",  # pyflakes
+  "I",  # isort
+]
 fixable = ["ALL"]
 
 [tool.pylint.exceptions]

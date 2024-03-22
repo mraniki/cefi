@@ -14,7 +14,7 @@ async def main():
   
     symbol = "BTC"
 
-    quote = await dex.get_quotes(symbol)
+    quote = await cex.get_quotes(symbol)
     print("quote ", quote)
 
 if __name__ == "__main__":
