@@ -51,12 +51,6 @@ def test_dynaconf_is_in_testing_env_CEX():
     assert settings.VALUE == "On Testing CEX"
 
 
-# @pytest.mark.asyncio
-# async def test_cefi_exception():
-#     with pytest.raises(Exception):
-#         return CexTrader("123")
-
-
 @pytest.mark.asyncio
 async def test_cefi(CXTrader):
     print(type(CXTrader))
