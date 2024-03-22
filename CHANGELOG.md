@@ -2,6 +2,23 @@
 
 
 
+## v3.4.1 (2024-03-22)
+
+### Other
+
+* Merge pull request #406 from mraniki/dev
+
+⚡ 🔧 added cex enabled flag and updated settings ([`0efe892`](https://github.com/mraniki/cefi/commit/0efe892715b3543e8f443948bbc0bd437513adb0))
+
+### ⚡
+
+* ⚡ 🔧 added cex enabled flag and updated settings ([`621ebc2`](https://github.com/mraniki/cefi/commit/621ebc2109e4cf4849ef724e868aab29467d9bf8))
+
+### 🚑
+
+* 🚑 ([`0490465`](https://github.com/mraniki/cefi/commit/04904656ae20ad14897b60c9c8268880f2e237a1))
+
+
 ## v3.4.0 (2024-03-22)
 
 ### Other
