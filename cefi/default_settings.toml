@@ -23,7 +23,6 @@ cex_enabled = true
 # to 1 or more exchanges
 [default.cex.template]
 protocol = "ccxt"
-name = ""
 enabled = true
 user_id = ""
 api_key= ""
@@ -53,7 +52,6 @@ mapping = [
 # # CEFI example using ccxt binance
 # [default.cex.mybinance]
 # protocol = "ccxt"
-# name = "binance"
 # enabled = true
 # api_key= ""
 # secret= ""
@@ -76,7 +74,6 @@ mapping = [
 # # Example using IBKR
 # [default.cex.ibkr]
 # protocol = "ib"
-# name = ""
 # enabled = true
 # user_id = ""
 # api_key= ""
@@ -108,7 +105,6 @@ mapping = [
 # # Example using Capital.com
 # [default.cex.capital]
 # protocol = "capitalcom"
-# name = "capital"
 # enabled = false
 # user_id = "12345678"
 # api_key= "myapi_DEADBEEF"

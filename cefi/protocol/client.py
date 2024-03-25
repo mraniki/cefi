@@ -6,7 +6,6 @@ class
 
 """
 
-# import aiohttp
 from loguru import logger
 
 
@@ -25,8 +24,7 @@ class CexClient:
 
     """
 
-    def __init__(
-        self,**kwargs):
+    def __init__(self, **kwargs):
         """
         Initialize the Cex object
 
@@ -36,7 +34,7 @@ class CexClient:
             self.protocol = kwargs.get("protocol", None)
             self.name = kwargs.get("name", None)
             self.enabled = kwargs.get("enabled", None)
-            self.client = None 
+            self.client = None
             self.user_id = kwargs.get("user_id", None)
             self.api_key = kwargs.get("api_key", None)
             self.host = kwargs.get("host", None)
@@ -135,7 +133,16 @@ class CexClient:
         """
 
     async def get_trading_asset_balance(self):
-        """ """
+        """
+        Return trading asset balance.
+
+        Args:
+            None
+
+        Returns:
+            balance
+
+        """
 
     async def get_order_amount(self, quantity, instrument, is_percentage=True):
         """
@@ -208,37 +215,3 @@ class CexClient:
         trade_confirmation += f"🗓️ {trade['datetime']}"
         if trade_confirmation:
             return f"{self.name}:\n{trade_confirmation}"
-
-    # async def fetch_url(self, url, params=None, headers=None):
-    #     """
-    #     Asynchronously gets a url payload
-    #     and returns the response.
-
-    #     Args:
-    #         url (str): The url to get.
-    #         params (dict, optional): The params to send. Defaults to None.
-    #         headers (dict, optional): The headers to send. Defaults to None.
-
-    #     Returns:
-    #         dict or None: The response or None if an
-    #         error occurs or the response is too large.
-
-    #     """
-    #     max_response_size = 10 * 1024 * 1024  # 10 MB
-    #     try:
-    #         async with aiohttp.ClientSession() as session:
-    #             async with session.get(
-    #                 url, params=params, headers=headers, timeout=20
-    #             ) as response:
-    #                 if response.status == 200:
-    #                     if (
-    #                         response.content_length
-    #                         and response.content_length > max_response_size
-    #                     ):
-    #                         logger.warning("Response content is too large.")
-    #                         return None
-    #                     return await response.json(content_type=None)
-    #                 logger.warning(f"Received non-200 status code: {response.status}")
-    #     except Exception as error:
-    #         logger.error(f"Unexpected error occurred: {error}")
-    #     return None

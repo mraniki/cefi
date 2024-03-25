@@ -1,5 +1,5 @@
-from .capitalcom import CexCapital
-from .ccxt import CexCcxt
-from .ib_sync import CexIB
+from .capitalcom import CAPITALCEX
+from .ccxt import CCXTCEX
+from .ib_sync import IBCEX
 
-__all__ = ["CexCcxt", "CexIB", "CexCapital"]
+__all__ = ["CCXTCEX", "IBCEX", "CAPITALCEX"]

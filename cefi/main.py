@@ -73,7 +73,8 @@ class CexTrader:
             logger.info("Module is disabled. No clients will be created.")
             return
         self.clients = []
-
+        logger.info("Module is enabled. Clients will be created.")
+        logger.debug("Settings {}", settings.cex.items())
         # Create a client for each client in settings.myllm
         for name, client_config in settings.cex.items():
             # Skip template and empty string client names
@@ -125,8 +126,9 @@ class CexTrader:
             library is not supported.
 
         """
+        logger.debug("kwargs {}", kwargs)
         library = kwargs.get("protocol") or kwargs.get("library")
-        client_class = self.client_classes.get(f"{library.upper()}LLM")
+        client_class = self.client_classes.get(f"{library.upper()}CEX")
 
         if client_class is None:
             logger.error(f"library {library} not supported")
