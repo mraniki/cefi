@@ -1,17 +1,21 @@
+"""
+
+CEFI Main 🤖
+
+"""
+
+import importlib
+
 from loguru import logger
 
 from cefi import __version__
-
-from .config import settings
-from .protocol import CexCapital, CexCcxt, CexIB
+from cefi.config import settings
 
 
 class CexTrader:
     """
-    CEX Object to support CEFI
-    exchange and trading
-    via CCXT library
-    https://github.com/ccxt/ccxt
+    CEX Object to support multiple
+    centralized exchanges and broker APIs.
 
     Args:
         None
@@ -19,78 +23,138 @@ class CexTrader:
     Returns:
         None
 
+    Methods:
+
+        _create_client(self, **kwargs)
+        get_all_client_classes(self)
+        get_info(self)
+        get_quotes(self, symbol)
+        get_balances(self)
+        get_positions(self)
+        get_pnls(self)
+        submit_order(self, order_params)
+
     """
 
     def __init__(self):
         """
-        Initialize the CexTrader object
+        Initializes the class instance by creating and appending clients
+        based on the configuration in `settings.cex`.
 
+        Checks if the module is enabled by looking at `settings.myllm_enabled`.
+        If the module is disabled, no clients will be created.
+
+        Creates a mapping of library names to client classes.
+        This mapping is used to create new clients based on the configuration.
+
+        If a client's configuration exists in `settings.cex_enabled` and is truthy,
+        it will be created.
+        Clients are not created if their name is "template" or empty string.
+
+        If a client is successfully created, it is appended to the `clients` list.
+
+        If a client fails to be created, a message is logged with the name of the
+        client and the error that occurred.
+
+        Parameters:
+            None
+
+        Returns:
+            None
         """
+        # Check if the module is enabled
+        self.enabled = settings.cex_enabled or True
 
-        try:
-            self.enabled = settings.cex_enabled
-            if not self.enabled:
-                return
-            config = settings.cex
-            self.clients = []
-            for item in config:
-                _config = config[item]
-                if item in ["", "template"]:
-                    continue
-                client = self._create_client(
-                    protocol=_config.get("protocol") or "ccxt",
-                    name=_config.get("name"),
-                    enabled=_config.get("enabled") or True,
-                    host=_config.get("host") or "127.0.0.1",
-                    port=_config.get("port") or 7497,
-                    user_id=_config.get("user_id") or "",
-                    api_key=_config.get("api_key"),
-                    secret=_config.get("secret") or "",
-                    password=_config.get("password") or "",
-                    testmode=_config.get("testmode") or False,
-                    broker_client_id=_config.get("broker_client_id") or 1,
-                    broker_account_number=_config.get("broker_account_number") or "",
-                    broker_gateway=_config.get("broker_gateway") or True,
-                    defaulttype=_config.get("defaulttype") or "spot",
-                    ordertype=_config.get("ordertype") or "market",
-                    leverage_type=_config.get("leverage_type") or "isolated",
-                    leverage=_config.get("leverage") or 1,
-                    trading_risk_percentage=_config.get("trading_risk_percentage")
-                    or True,
-                    trading_risk_amount=_config.get("trading_risk_amount") or 1,
-                    trading_slippage=_config.get("trading_slippage") or 2,
-                    trading_asset=_config.get("trading_asset") or "USDT",
-                    trading_asset_separator=_config.get("trading_asset_separator")
-                    or "",
-                    mapping=_config.get("mapping") or [],
-                )
-                if client.client:
+        # Create a mapping of library names to client classes
+        self.client_classes = self.get_all_client_classes()
+        logger.debug("client_classes available {}", self.client_classes)
+
+        if not self.enabled:
+            logger.info("Module is disabled. No clients will be created.")
+            return
+        self.clients = []
+        # Create a client for each client in settings.myllm
+        for name, client_config in settings.cex.items():
+            # Skip template and empty string client names
+            if name in ["", "template"] or not client_config.get("enabled"):
+                continue
+            try:
+                # Create the client
+                client = self._create_client(**client_config, name=name)
+                # If the client has a valid client attribute, append it to the list
+                if client and getattr(client, "client", None):
                     self.clients.append(client)
-                    logger.debug(f"Loaded {item}")
-            if self.clients:
-                logger.info(f"Loaded {len(self.clients)} CEX clients")
-            else:
-                logger.warning("No CEX clients loaded. Verify config")
+            except Exception as e:
+                # Log the error if the client fails to be created
+                logger.error(f"Failed to create client {name}: {e}")
 
-        except Exception as e:
-            logger.error("init: {}", e)
+        # Log the number of clients that were created
+        logger.info(f"Loaded {len(self.clients)} clients")
 
     def _create_client(self, **kwargs):
         """
-        Get the handler object based on the specified platform.
+        Create a client based on the given protocol.
+
+        This function takes in a dictionary of keyword arguments, `kwargs`,
+        containing the necessary information to create a client. The required
+        key in `kwargs` is "library", which specifies the protocol to use for
+        communication with the LLM. The value of "library" must match one of the
+        libraries supported by MyLLM.
+
+        This function retrieves the class used to create the client based on the
+        value of "library" from the mapping of library names to client classes
+        stored in `self.client_classes`. If the value of "library" does not
+        match any of the libraries supported, the function logs an error message
+        and returns None.
+
+        If the class used to create the client is found, the function creates a
+        new instance of the class using the keyword arguments in `kwargs` and
+        returns it.
+
+        The function returns a client object based on the specified protocol
+        or None if the library is not supported.
+
+        Parameters:
+            **kwargs (dict): A dictionary of keyword arguments containing the
+            necessary information for creating the client. The required key is
+            "library".
 
         Returns:
-            object: The handler object.
+            A client object based on the specified protocol or None if the
+            library is not supported.
+
         """
-        protocol = kwargs["protocol"]
-        if protocol == "ccxt":
-            return CexCcxt(**kwargs)
-        elif protocol == "ib":
-            return CexIB(**kwargs)
-        elif protocol == "capitalcom":
-            return CexCapital(**kwargs)
-        else:
-            logger.error("Invalid platform {}", protocol)
+        logger.debug("kwargs {}", kwargs)
+        library = kwargs.get("protocol") or kwargs.get("library")
+        client_class = self.client_classes.get(f"{library.upper()}CEX")
+
+        if client_class is None:
+            logger.error(f"library {library} not supported")
+            return None
+
+        return client_class(**kwargs)
+
+    def get_all_client_classes(self):
+        """
+        Retrieves all client classes from the `myllm.provider` module.
+
+        This function imports the `myllm.provider` module and retrieves
+        all the classes defined in it.
+
+        The function returns a dictionary where the keys are the
+        names of the classes and the values are the corresponding
+        class objects.
+
+        Returns:
+            dict: A dictionary containing all the client classes
+            from the `myllm.provider` module.
+        """
+        provider_module = importlib.import_module("cefi.protocol")
+        return {
+            name: cls
+            for name, cls in provider_module.__dict__.items()
+            if isinstance(cls, type)
+        }
 
     async def get_info(self):
         """
