@@ -2,6 +2,31 @@
 
 
 
+## v4.0.0 (2024-03-25)
+
+### Other
+
+* Merge pull request #410 from mraniki/dev
+
+💄 CexTrader &amp; _create_client refactor ([`b6601c3`](https://github.com/mraniki/cefi/commit/b6601c3212eb35c76f525d1778a9717be378a5cf))
+
+### 💄
+
+* 💄 CexTrader &amp; _create_client refactor ([`415b0df`](https://github.com/mraniki/cefi/commit/415b0dfd34a14b8d47103f95061d9fc3f95817c3))
+
+### 💥
+
+* 💥 breaking: class name change and name settings remove. ([`9983fa1`](https://github.com/mraniki/cefi/commit/9983fa1e61a77a3353e0b684849cfa68d9cfacd8))
+
+### 🔇
+
+* 🔇 ([`9a97888`](https://github.com/mraniki/cefi/commit/9a978885f6e84b7ff4e576c247cb4ff5c36836e4))
+
+### 🚨
+
+* 🚨 Linter setup update ([`34e28b3`](https://github.com/mraniki/cefi/commit/34e28b3b7ed4a7a010f9a527d63ec812127ba2c1))
+
+
 ## v3.4.2 (2024-03-22)
 
 ### :rotating_light:
