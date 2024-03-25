@@ -73,8 +73,6 @@ class CexTrader:
             logger.info("Module is disabled. No clients will be created.")
             return
         self.clients = []
-        logger.info("Module is enabled. Clients will be created.")
-        logger.debug("Settings {}", settings.cex.items())
         # Create a client for each client in settings.myllm
         for name, client_config in settings.cex.items():
             # Skip template and empty string client names
