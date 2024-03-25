@@ -26,63 +26,42 @@ class CexClient:
     """
 
     def __init__(
-        self,
-        protocol=None,
-        enabled=True,
-        name=None,
-        user_id=None,
-        api_key=None,
-        host=None,
-        port=None,
-        broker_client_id=None,
-        broker_account_number=None,
-        broker_gateway=True,
-        secret=None,
-        password=None,
-        testmode=True,
-        defaulttype="spot",
-        ordertype="market",
-        leverage_type="isolated",
-        leverage=1,
-        trading_risk_percentage=True,
-        trading_risk_amount=1,
-        trading_slippage=2,
-        trading_amount_threshold=0,
-        trading_asset="USDT",
-        trading_asset_separator=None,
-        mapping=None,
-    ):
+        self,**kwargs):
         """
         Initialize the Cex object
 
         """
-        self.protocol = protocol
-        self.name = name
-        self.enabled = enabled
-        self.client = None
-        self.user_id = user_id
-        self.api_key = api_key
-        self.host = host
-        self.port = port
-        self.broker_client_id = broker_client_id
-        self.broker_account_number = broker_account_number
-        self.broker_gateway = broker_gateway
-        self.secret = secret
-        self.password = password
-        self.testmode = testmode
-        self.trading_asset = trading_asset
-        self.separator = trading_asset_separator
-        self.account_number = None
-        self.trading_risk_percentage = trading_risk_percentage
-        self.trading_risk_amount = trading_risk_amount
-        self.trading_slippage = trading_slippage
-        self.trading_amount_threshold = trading_amount_threshold
-        self.leverage_type = leverage_type
-        self.leverage = leverage
-        self.defaulttype = defaulttype
-        self.ordertype = ordertype
-        self.mapping = mapping
-        logger.debug("{} Init", self.name)
+        logger.info("Initializing Client")
+        try:
+            self.protocol = kwargs.get("protocol", None)
+            self.name = kwargs.get("name", None)
+            self.enabled = kwargs.get("enabled", None)
+            self.client = None 
+            self.user_id = kwargs.get("user_id", None)
+            self.api_key = kwargs.get("api_key", None)
+            self.host = kwargs.get("host", None)
+            self.port = kwargs.get("port", None)
+            self.broker_client_id = kwargs.get("broker_client_id", None)
+            self.broker_account_number = kwargs.get("broker_account_number", None)
+            self.broker_gateway = kwargs.get("broker_gateway", None)
+            self.secret = kwargs.get("secret", None)
+            self.password = kwargs.get("password", None)
+            self.testmode = kwargs.get("testmode", None)
+            self.trading_asset = kwargs.get("trading_asset", None)
+            self.separator = kwargs.get("trading_asset_separator", None)
+            self.account_number = None
+            self.trading_risk_percentage = kwargs.get("trading_risk_percentage", None)
+            self.trading_risk_amount = kwargs.get("trading_risk_amount", None)
+            self.trading_slippage = kwargs.get("trading_slippage", None)
+            self.trading_amount_threshold = kwargs.get("trading_amount_threshold", None)
+            self.leverage_type = kwargs.get("leverage_type", None)
+            self.leverage = kwargs.get("leverage", None)
+            self.defaulttype = kwargs.get("defaulttype", None)
+            self.ordertype = kwargs.get("ordertype", None)
+            self.mapping = kwargs.get("mapping", None)
+        except Exception as error:
+            logger.error("Client initialization error {}", error)
+            return None
         if not self.enabled:
             logger.debug("{} Not enabled", self.name)
             return
