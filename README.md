@@ -30,8 +30,25 @@
   <h5>How to use it</h5>
   <pre>
   <code>
-      cex = CexTrader()
-      await cex.get_balances()
+
+
+    cex = CexTrader()
+
+    balance = await cex.get_balances()
+    print("balance ", balance)
+
+    symbol = "BTC"
+    quote = await cex.get_quotes(symbol)
+    print("quote ", quote)
+
+    order = {
+        "action": "BUY",
+        "instrument": "BTC",
+        "quantity": 1,
+    }
+    order = await cex.submit_order(order)
+    print("order ", order)
+
   </code>
   </pre>
   <h5>Documentation</h5>

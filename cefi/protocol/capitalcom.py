@@ -49,7 +49,9 @@ class CAPITALCEX(CexClient):
                     pas=self.password,
                     api_key=self.api_key,
                 )
+            logger.debug("Capitalcom Client: {}", self.client)
             self.account_number = self.client.all_accounts()
+            logger.debug("Account number: {}", self.account_number)
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
 
@@ -67,8 +69,9 @@ class CAPITALCEX(CexClient):
             quote
         """
         try:
+            logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
-
+            logger.debug("Changed Instrument: {}", instrument)
             market = self.client.single_market(instrument)
             logger.debug("Raw Quote: {}", market)
             quote = market["snapshot"]["offer"]
@@ -76,6 +79,7 @@ class CAPITALCEX(CexClient):
             return quote
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
+            return e
 
     async def get_account_balance(self):
         """
