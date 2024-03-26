@@ -2,6 +2,19 @@
 
 
 
+## v4.0.1 (2024-03-26)
+
+### Other
+
+* Merge pull request #412 from mraniki/dev
+
+🐛 Fix Capitalcom ([`7dee928`](https://github.com/mraniki/cefi/commit/7dee9280b686e5a7be210748e99001eae493125d))
+
+### 🐛
+
+* 🐛 Fix Capitalcom ([`26cf930`](https://github.com/mraniki/cefi/commit/26cf930596d041fdfebbad874feedabcf8114701))
+
+
 ## v4.0.0 (2024-03-25)
 
 ### Other
