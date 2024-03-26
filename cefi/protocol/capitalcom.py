@@ -52,6 +52,10 @@ class CAPITALCEX(CexClient):
             logger.debug("Capitalcom Client: {}", self.client)
             self.account_number = self.client.all_accounts()
             logger.debug("Account number: {}", self.account_number)
+
+            # sentiment = self.client.client_sentiment()
+            # logger.debug("Sentiment: {}", sentiment)
+
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
 
@@ -72,10 +76,15 @@ class CAPITALCEX(CexClient):
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
+            search_markets = self.client.searching_market(searchTerm=instrument)
+            logger.debug("Instrument verification: {}", search_markets)
+
             market = self.client.single_market(instrument)
             logger.debug("Raw Quote: {}", market)
+
             quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
+
             return quote
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
