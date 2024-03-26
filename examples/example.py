@@ -10,12 +10,22 @@ from cefi import CexTrader
 async def main():
     """Main"""
     cex = CexTrader()
-    await cex.get_account_balances()
 
-    symbol = "BTC"
+    # balance = await cex.get_balances()
+    # print("balance ", balance)
 
-    quote = await cex.get_quotes(symbol)
-    print("quote ", quote)
+    # symbol = "BTC"
+    # quote = await cex.get_quotes(symbol)
+    # print("quote ", quote)
+
+    order = {
+        "action": "BUY",
+        "instrument": "BTC",
+        "quantity": 1,
+    }
+    order = await cex.submit_order(order)
+    print("order ", order)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
