@@ -121,10 +121,14 @@ mapping = [
 # trading_asset = "USD"
 # trading_asset_separator = ""
 # mapping = [
-#     { id = "BTC", alt = "BTC/USDT", type="CRYPTO", exchange="SMART", currency="USD", multiplier="100000000", right="P", lastTradeDateOrContractMonth="202101" },
-#     { id = "ETH", alt = "ETH/USDT", type="CRYPTO", exchange="SMART", currency="USD" },
-#     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
-#     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
+#     { id = "EURUSD", alt = "EURUSD" },
+#     { id = "BTC", alt = "BTCUSD" },
+#     { id = "ETH", alt = "ETHUSD" },
+#     { id = "CRUDE", alt = "OIL_CRUDE" },
+#     { id = "BRENT", alt = "OIL_BRENT" },
+#     { id = "GOLD", alt = "GOLD" },
+#     { id = "SILVER", alt = "SILVER" },
+#     { id = "US500", alt = "US500" },
 # ]
 
 
