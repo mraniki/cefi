@@ -2,6 +2,19 @@
 
 
 
+## v4.0.2 (2024-03-26)
+
+### Other
+
+* Merge pull request #413 from mraniki/dev
+
+🔧 Updated capital.com instrument mapping ([`d3a1e9c`](https://github.com/mraniki/cefi/commit/d3a1e9c66970f8ebdc216abd1a40687dcec39604))
+
+### Update
+
+* 🔧 Updated capital.com instrument mapping ([`3759281`](https://github.com/mraniki/cefi/commit/37592814186a585e02514a706043f46095ac548e))
+
+
 ## v4.0.1 (2024-03-26)
 
 ### Other
