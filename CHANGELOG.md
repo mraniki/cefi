@@ -2,6 +2,25 @@
 
 
 
+## v4.2.0 (2024-03-27)
+
+### Other
+
+* Merge pull request #417 from mraniki/dev
+
+✨ capital.com execute_order ([`e391fd3`](https://github.com/mraniki/cefi/commit/e391fd33866d0e4d008ca1809ade9d1fa5e045b2))
+
+### ✨
+
+* ✨ capital.com execute_order ([`5be4ae8`](https://github.com/mraniki/cefi/commit/5be4ae827fce828fbeac89d928e111b60441cc16))
+
+### 🎨
+
+* 🎨 ([`ac01deb`](https://github.com/mraniki/cefi/commit/ac01deb693e1794643859dcdfba99b6f907f69ef))
+
+* 🎨 ([`ff6ddce`](https://github.com/mraniki/cefi/commit/ff6ddce27248a4142f1da3da33ee2d4b579fc218))
+
+
 ## v4.1.0 (2024-03-27)
 
 ### Fix
