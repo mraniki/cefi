@@ -21,13 +21,13 @@ async def main():
     # # binance: 69730.15
     # # capital: 69674.55
 
-    # order = {
-    #     "action": "BUY",
-    #     "instrument": "BTC",
-    #     "quantity": 1,
-    # }
-    # order = await cex.submit_order(order)
-    # print("order ", order)
+    order = {
+        "action": "BUY",
+        "instrument": "BTC",
+        "quantity": 100,
+    }
+    order = await cex.submit_order(order)
+    print("order ", order)
 
 
 if __name__ == "__main__":
