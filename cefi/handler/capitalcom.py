@@ -180,20 +180,27 @@ class CapitalHandler(CexClient):
             order = self.client.place_the_position(
                 direction=action, epic=instrument, size=amount
             )
-            deal_reference = order["dealReference"]
-            order_check = self.client.position_order_confirmation(
-                deal_reference=deal_reference
-            )
 
-            trade = {
-                "amount": order_check.get("size", 0),
-                "price": order_check.get("level", 0),
-                "takeProfitPrice": 0,
-                "stopLossPrice": 0,
-                "id": order_check.get("dealId", ""),
-                "datetime": order_check.get("date", ""),
-            }
-            return await self.get_trade_confirmation(trade, instrument, action)
+            logger.debug("Order: {}", order)
+            if "errorCode" in order:
+                error_code = order["errorCode"]
+                logger.error("Order error: {}", error_code)
+                return f"Order error: {error_code}"
+
+            if deal_reference := order["dealReference"]:
+                order_check = self.client.position_order_confirmation(
+                    deal_reference=deal_reference
+                )
+
+                trade = {
+                    "amount": order_check.get("size", 0),
+                    "price": order_check.get("level", 0),
+                    "takeProfitPrice": 0,
+                    "stopLossPrice": 0,
+                    "id": order_check.get("dealId", ""),
+                    "datetime": order_check.get("date", ""),
+                }
+                return await self.get_trade_confirmation(trade, instrument, action)
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
