@@ -141,7 +141,6 @@ class CapitalHandler(CexClient):
         Returns:
             float: The available balance of the trading asset.
         """
-        # accounts_data = self.client.all_accounts()
         return next(
             (
                 account["balance"]["available"]
