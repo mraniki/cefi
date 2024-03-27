@@ -208,15 +208,18 @@ class CexClient:
 
     async def get_trade_confirmation(self, trade, instrument, action):
         """ """
-
-        trade_confirmation = (
-            f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
-        )
-        trade_confirmation += f"⚫ {round(0 or trade['amount'], 4)}\n"
-        trade_confirmation += f"🔵 {round(0 or trade['price'], 4)}\n"
-        trade_confirmation += f"🟢 {round(0 or trade['takeProfitPrice'], 4)}\n"
-        trade_confirmation += f"🔴 {round(0 or trade['stopLossPrice'], 4)}\n"
-        trade_confirmation += f"ℹ️ {trade['id']}\n"
-        trade_confirmation += f"🗓️ {trade['datetime']}"
-        if trade_confirmation:
-            return f"{self.name}:\n{trade_confirmation}"
+        logger.debug("Confirmation {} {} {}", trade, instrument, action)
+        try:
+            trade_confirmation = (
+                f"⬇️ {instrument}" if (action == "SELL") else f"⬆️ {instrument}\n"
+            )
+            trade_confirmation += f"⚫ {round(0 or trade['amount'], 4)}\n"
+            trade_confirmation += f"🔵 {round(0 or trade['price'], 4)}\n"
+            trade_confirmation += f"🟢 {round(0 or trade['takeProfitPrice'], 4)}\n"
+            trade_confirmation += f"🔴 {round(0 or trade['stopLossPrice'], 4)}\n"
+            trade_confirmation += f"ℹ️ {trade['id']}\n"
+            trade_confirmation += f"🗓️ {trade['datetime']}"
+            if trade_confirmation:
+                return f"{self.name}:\n{trade_confirmation}"
+        except Exception as e:
+            logger.error("Error {}", e)

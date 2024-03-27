@@ -5,7 +5,7 @@ Capital.com API client
 
 """
 
-from capitalcom.client import Client
+from capitalcom.client import Client, DirectionType
 from capitalcom.client_demo import Client as DemoClient
 from loguru import logger
 
@@ -49,14 +49,10 @@ class CapitalHandler(CexClient):
                     pas=self.password,
                     api_key=self.api_key,
                 )
-            # logger.debug("Capitalcom Client: {}", self.client)
             self.accounts_data = self.client.all_accounts()
             logger.debug("Account data: {}", self.accounts_data)
-            self.account_number = self.accounts_data['accounts'][0]['accountId']
+            self.account_number = self.accounts_data["accounts"][0]["accountId"]
             logger.debug("Account number: {}", self.account_number)
-
-            # sentiment = self.client.client_sentiment()
-            # logger.debug("Sentiment: {}", sentiment)
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
@@ -145,11 +141,10 @@ class CapitalHandler(CexClient):
         Returns:
             float: The available balance of the trading asset.
         """
-        accounts_data = self.client.all_accounts()
         return next(
             (
                 account["balance"]["available"]
-                for account in accounts_data["accounts"]
+                for account in self.accounts_data["accounts"]
                 if account["accountName"] == self.trading_asset
             ),
             0,
@@ -170,29 +165,36 @@ class CapitalHandler(CexClient):
 
         """
         try:
-            action = order_params.get("action")
+            action_str = order_params.get("action")
+            action = DirectionType[action_str]
             instrument = await self.replace_instrument(order_params.get("instrument"))
             quantity = order_params.get("quantity", self.trading_risk_amount)
-            logger.debug("quantity {}", quantity)
             amount = await self.get_order_amount(
                 quantity=quantity,
                 instrument=instrument,
                 is_percentage=self.trading_risk_percentage,
             )
+            if not (await self.pre_order_checks(order_params)):
+                return f"Error executing {self.name}"
 
-            logger.debug("amount {}", amount)
-            pre_order_checks = await self.pre_order_checks(order_params)
-            logger.debug("pre_order_checks {}", pre_order_checks)
+            order = self.client.place_the_position(
+                direction=action, epic=instrument, size=amount
+            )
+            deal_reference = order["dealReference"]
+            order_check = self.client.position_order_confirmation(
+                deal_reference=deal_reference
+            )
 
-            if amount and pre_order_checks:
-                if order := self.client.place_the_position(
-                    direction=action,
-                    epic=instrument,
-                    size=amount,
-                ):
-                    return await self.get_trade_confirmation(order, instrument, action)
-            return f"Error executing {self.name}"
+            trade = {
+                "amount": order_check.get("size", 0),
+                "price": order_check.get("level", 0),
+                "takeProfitPrice": 0,
+                "stopLossPrice": 0,
+                "id": order_check.get("dealId", ""),
+                "datetime": order_check.get("date", ""),
+            }
+            return await self.get_trade_confirmation(trade, instrument, action)
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
-            return f"Error executing {self.name}"
+            return f"Error executing {self.name}: {e}"
