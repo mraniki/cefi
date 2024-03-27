@@ -19,6 +19,7 @@ VALUE = "On default"
 # Module Enable/Disable
 cex_enabled = true
 
+
 # CCXT Parameters to connect
 # to 1 or more exchanges
 [default.cex.template]
@@ -48,6 +49,8 @@ mapping = [
     { id = "BTC", alt = "BTC/USDT" },
     { id = "ETH", alt = "ETH/USDT" },
 ]
+balance_limit = true
+balance_limit_value = 10
 
 # # CEFI example using ccxt binance
 # [default.cex.mybinance]
@@ -70,6 +73,8 @@ mapping = [
 # mapping = [
 #     { id = "BTC", alt = "BTC/USDT" },
 # ]
+# balance_limit = true
+# balance_limit_value = 10
 
 # # Example using IBKR
 # [default.cex.ibkr]
@@ -101,6 +106,8 @@ mapping = [
 #     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
 #     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
 # ]
+# balance_limit = true
+# balance_limit_value = 10
 
 # # Example using Capital.com
 # [default.cex.capital]
@@ -130,6 +137,8 @@ mapping = [
 #     { id = "SILVER", alt = "SILVER" },
 #     { id = "US500", alt = "US500" },
 # ]
+# balance_limit = false
+# balance_limit_value = 10
 
 
 ########################################

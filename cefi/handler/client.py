@@ -49,6 +49,7 @@ class CexClient:
             self.trading_asset = kwargs.get("trading_asset", None)
             self.separator = kwargs.get("trading_asset_separator", None)
             self.account_number = None
+            self.accounts_data = None
             self.trading_risk_percentage = kwargs.get("trading_risk_percentage", None)
             self.trading_risk_amount = kwargs.get("trading_risk_amount", None)
             self.trading_slippage = kwargs.get("trading_slippage", None)
@@ -58,6 +59,9 @@ class CexClient:
             self.defaulttype = kwargs.get("defaulttype", None)
             self.ordertype = kwargs.get("ordertype", None)
             self.mapping = kwargs.get("mapping", None)
+            self.balance_limit = kwargs.get("balance_limit", True)
+            self.balance_limit_value = kwargs.get("balance_limit_value", 10)
+
         except Exception as error:
             logger.error("Client initialization error {}", error)
             return None

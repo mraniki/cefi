@@ -90,8 +90,11 @@ class CcxtHandler(CexClient):
         """
 
         raw_balance = self.client.fetch_free_balance()
+        data = list(raw_balance.items())
+        if self.balance_limit:
+            data = data[:self.balance_limit_value]
         if filtered_balance := {
-            k: v for k, v in raw_balance.items() if v is not None and v > 0
+            k: v for k, v in data if v is not None and v > 0
         }:
             balance_str = "".join(
                 f"{iterator}: {value} \n"
