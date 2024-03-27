@@ -49,14 +49,10 @@ class CapitalHandler(CexClient):
                     pas=self.password,
                     api_key=self.api_key,
                 )
-            # logger.debug("Capitalcom Client: {}", self.client)
             self.accounts_data = self.client.all_accounts()
             logger.debug("Account data: {}", self.accounts_data)
             self.account_number = self.accounts_data["accounts"][0]["accountId"]
             logger.debug("Account number: {}", self.account_number)
-
-            # sentiment = self.client.client_sentiment()
-            # logger.debug("Sentiment: {}", sentiment)
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
@@ -202,5 +198,4 @@ class CapitalHandler(CexClient):
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
-            return f"Error executing {self.name}"
-
+            return f"Error executing {self.name}: {e}"
