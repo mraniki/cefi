@@ -2,6 +2,23 @@
 
 
 
+## v4.1.0 (2024-03-27)
+
+### Fix
+
+* ⚡ adding Balance number of item limit + account number fix for capital ([`0d4fe8f`](https://github.com/mraniki/cefi/commit/0d4fe8f88f658d6c375565ea76ff011b36af33a5))
+
+### Other
+
+* Merge pull request #416 from mraniki/dev
+
+🚀 Using Handler wording for client class ([`5879751`](https://github.com/mraniki/cefi/commit/5879751882a13265e962a4de39277b753cba0cc1))
+
+### 🚀
+
+* 🚀 Using Handler wording for client class ([`c827ec6`](https://github.com/mraniki/cefi/commit/c827ec6f0b73abb04324f44b784d52a236a61f7e))
+
+
 ## v4.0.3 (2024-03-27)
 
 ### Other
