@@ -2,6 +2,23 @@
 
 
 
+## v4.0.3 (2024-03-27)
+
+### Other
+
+* Merge pull request #414 from mraniki/dev
+
+Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki/cefi/commit/e4cb2cddfdf011ac8aa7513a96722a8466635301))
+
+### Update
+
+* Update logger message in CexClient class ([`5f208db`](https://github.com/mraniki/cefi/commit/5f208db61d64942e58bb37f7e86fe72fcefb4590))
+
+### 🚨
+
+* 🚨 ([`4989efd`](https://github.com/mraniki/cefi/commit/4989efd0be6f7e1f62e0c2c81ca9865cc2024f87))
+
+
 ## v4.0.2 (2024-03-26)
 
 ### Other
