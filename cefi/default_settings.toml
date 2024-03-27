@@ -111,7 +111,7 @@ balance_limit_value = 10
 
 # # Example using Capital.com
 # [default.cex.capital]
-# protocol = "capitalcom"
+# protocol = "capital"
 # enabled = false
 # user_id = "12345678"
 # api_key= "myapi_DEADBEEF"
