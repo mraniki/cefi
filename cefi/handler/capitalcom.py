@@ -12,7 +12,7 @@ from loguru import logger
 from .client import CexClient
 
 
-class CAPITALCEX(CexClient):
+class CapitalHandler(CexClient):
     """
     Capital.com client
     using
@@ -49,8 +49,10 @@ class CAPITALCEX(CexClient):
                     pas=self.password,
                     api_key=self.api_key,
                 )
-            logger.debug("Capitalcom Client: {}", self.client)
-            self.account_number = self.client.all_accounts()
+            # logger.debug("Capitalcom Client: {}", self.client)
+            self.accounts_data = self.client.all_accounts()
+            logger.debug("Account data: {}", self.accounts_data)
+            self.account_number = self.accounts_data['accounts'][0]['accountId']
             logger.debug("Account number: {}", self.account_number)
 
             # sentiment = self.client.client_sentiment()
@@ -102,8 +104,8 @@ class CAPITALCEX(CexClient):
             balance
 
         """
-        accounts_data = self.client.all_accounts()
-        accounts = accounts_data.get("accounts", [])
+
+        accounts = self.accounts_data.get("accounts", [])
 
         balances = [
             f"{account['accountName']}: {account['balance']['balance']}\n"

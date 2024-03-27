@@ -11,12 +11,12 @@ async def main():
     """Main"""
     cex = CexTrader()
 
-    # balance = await cex.get_balances()
-    # print("balance ", balance)
+    balance = await cex.get_balances()
+    print("balance ", balance)
 
-    symbol = "BTC"
-    quote = await cex.get_quotes(symbol)
-    print("quote ", quote)
+    # symbol = "BTC"
+    # quote = await cex.get_quotes(symbol)
+    # print("quote ", quote)
     # # quote  ⚖️
     # # binance: 69730.15
     # # capital: 69674.55
