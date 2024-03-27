@@ -11,7 +11,7 @@ from loguru import logger
 from .client import CexClient
 
 
-class IBCEX(CexClient):
+class IbHandler(CexClient):
     """
     CEX client for IBKR
 

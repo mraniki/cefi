@@ -12,7 +12,7 @@ from loguru import logger
 from .client import CexClient
 
 
-class CAPITALCEX(CexClient):
+class CapitalHandler(CexClient):
     """
     Capital.com client
     using

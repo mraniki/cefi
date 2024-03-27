@@ -11,7 +11,7 @@ from loguru import logger
 from .client import CexClient
 
 
-class CCXTCEX(CexClient):
+class CcxtHandler(CexClient):
     """
     CEX client
     via CCXT library
