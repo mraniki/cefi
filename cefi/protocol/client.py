@@ -29,10 +29,11 @@ class CexClient:
         Initialize the Cex object
 
         """
-        logger.info("Initializing Client")
+        
         try:
             self.protocol = kwargs.get("protocol", None)
             self.name = kwargs.get("name", None)
+            logger.info("Initializing Client {}",self.name)
             self.enabled = kwargs.get("enabled", None)
             self.client = None
             self.user_id = kwargs.get("user_id", None)
