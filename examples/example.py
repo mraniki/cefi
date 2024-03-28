@@ -23,9 +23,9 @@ async def main():
 
     order = {
         "action": "BUY",
-        "instrument": "BTC",
+        "instrument": "EURUSD",
         "quantity": 200,
-        "take_profit": 400,
+        "take_profit": 4,
         "stop_loss": 2000,
         "comment": "test",
     }
