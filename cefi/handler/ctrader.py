@@ -37,10 +37,9 @@
 #         hostType = input("Host (Live/Demo): ")
 #         host = EndPoints.PROTOBUF_LIVE_HOST
 #         if hostType.lower() == "live" else EndPoints.PROTOBUF_DEMO_HOST
-#         client = 
+#         client =
 
 #         self.client = Client(host, EndPoints.PROTOBUF_PORT, TcpProtocol)
-
 
 
 #     async def get_quote(self, instrument):
@@ -86,7 +85,7 @@
 
 #         """
 
-        
+
 #         return 0
 
 #     async def get_trading_asset_balance(self):
