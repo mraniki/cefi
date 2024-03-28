@@ -165,6 +165,7 @@ class CapitalHandler(CexClient):
 
         """
         try:
+            logger.debug("Order params: {}", order_params)
             action_str = order_params.get("action")
             action = DirectionType[action_str]
             instrument = await self.replace_instrument(order_params.get("instrument"))
@@ -176,9 +177,15 @@ class CapitalHandler(CexClient):
             )
             if not (await self.pre_order_checks(order_params)):
                 return f"Error executing {self.name}"
+            profit_price = order_params.get("take_profit") or 0
+            stop_price = order_params.get("stop_loss") or 0
 
             order = self.client.place_the_position(
-                direction=action, epic=instrument, size=amount
+                direction=action,
+                epic=instrument,
+                size=amount,
+                profit_level=profit_price,
+                stop_level=stop_price,
             )
 
             logger.debug("Order: {}", order)
