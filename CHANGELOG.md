@@ -2,6 +2,27 @@
 
 
 
+## v4.4.0 (2024-03-28)
+
+### Other
+
+* Merge pull request #421 from mraniki/dev
+
+🥚 added position reporting for capital.com ([`6dd5a63`](https://github.com/mraniki/cefi/commit/6dd5a63906b928212dbf3f78a520fa55a9f79a4a))
+
+### 🎨
+
+* 🎨 ([`6520945`](https://github.com/mraniki/cefi/commit/6520945ed01aa2e15ff5d71037abfac5d988e1ac))
+
+### 🥚
+
+* 🥚 added position reporting for capital.com ([`7038648`](https://github.com/mraniki/cefi/commit/70386486a828041eb5a84fbe43739ada78f75ce0))
+
+### 🧐
+
+* 🧐 ([`d17d64f`](https://github.com/mraniki/cefi/commit/d17d64f7862360b6b3692fcab622894a4ab60c91))
+
+
 ## v4.3.2 (2024-03-28)
 
 ### Other
