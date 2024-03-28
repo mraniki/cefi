@@ -24,7 +24,10 @@ async def main():
     order = {
         "action": "BUY",
         "instrument": "BTC",
-        "quantity": 20,
+        "quantity": 200,
+        "take_profit": 400,
+        "stop_loss": 2000,
+        "comment": "test",
     }
     order = await cex.submit_order(order)
     print("order ", order)

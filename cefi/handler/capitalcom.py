@@ -177,8 +177,17 @@ class CapitalHandler(CexClient):
             )
             if not (await self.pre_order_checks(order_params)):
                 return f"Error executing {self.name}"
-            profit_price = order_params.get("take_profit") or 0
-            stop_price = order_params.get("stop_loss") or 0
+            quote = await self.get_quote(instrument)
+            profit_price = (
+                (quote + order_params.get("take_profit", 0))
+                if action_str == "BUY"
+                else (quote - order_params.get("take_profit", 0))
+            )
+            stop_price = (
+                (quote - order_params.get("stop_loss", 0))
+                if action_str == "BUY"
+                else (quote + order_params.get("stop_loss", 0))
+            )
 
             order = self.client.place_the_position(
                 direction=action,
