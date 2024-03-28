@@ -206,7 +206,7 @@ class CexClient:
 
         return instrument
 
-    async def get_instrument_decimals(self):
+    async def get_instrument_decimals(self, instrument):
         """
 
 
