@@ -2,6 +2,45 @@
 
 
 
+## v4.3.0 (2024-03-28)
+
+### Other
+
+* Merge pull request #418 from mraniki/dev
+
+⬆️ 🤖 - He that breaks a thing to find out what it is has left the path of wisdom ([`6f3388c`](https://github.com/mraniki/cefi/commit/6f3388cb6eaa617fef71a0eb37921f55f1104c6c))
+
+* Add cTrader client handler class and methods ([`7852db5`](https://github.com/mraniki/cefi/commit/7852db5b22d5c072f9aedbc685864382ec7ce26e))
+
+### ♻️
+
+* ♻️ ([`2e5f7f2`](https://github.com/mraniki/cefi/commit/2e5f7f21e360e760bcdef795dd1b1e76c9ea18fd))
+
+* ♻️ ([`8004e28`](https://github.com/mraniki/cefi/commit/8004e2840ebf398d1b41a125853ee6861f72aa7a))
+
+### 🎨
+
+* 🥅 🎨 Order error handling ([`a7d0d75`](https://github.com/mraniki/cefi/commit/a7d0d756143cf772e1ce550939096e18fd907f89))
+
+### 🐛
+
+* 🐛 🚨 ([`c54ea03`](https://github.com/mraniki/cefi/commit/c54ea03f0b6426dee66c22a40b839adf3dfb0624))
+
+### 🔧
+
+* 🔧 ([`0ae147b`](https://github.com/mraniki/cefi/commit/0ae147b671ee71d67ef4559ebbe0cc13d88aca69))
+
+* 🔧 ([`5ee6585`](https://github.com/mraniki/cefi/commit/5ee65859f3bb1382cb7792b905d9e8f79d5f65be))
+
+### 🚨
+
+* 🚨 ([`58166f9`](https://github.com/mraniki/cefi/commit/58166f97d0fe73dd850fbf4809bf2a8ca4baa694))
+
+### 🥚
+
+* 🥚 addding tp/sl for capital.com ([`6e883ef`](https://github.com/mraniki/cefi/commit/6e883ef2038836d4b618b71a6f9616df42917067))
+
+
 ## v4.2.0 (2024-03-27)
 
 ### Other
