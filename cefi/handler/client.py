@@ -216,7 +216,19 @@ class CexClient:
         """
 
     async def get_trade_confirmation(self, trade, instrument, action):
-        """ """
+        """
+        Asynchronously retrieves the trade confirmation for a given trade,
+        instrument, and action.
+
+        Args:
+            self: The object instance
+            trade: The trade object
+            instrument: The instrument for the trade
+            action: The action for the trade
+
+        Returns:
+            A string containing the trade confirmation, or None if an error occurs.
+        """
         logger.debug("Confirmation {} {} {}", trade, instrument, action)
         try:
             trade_confirmation = (
