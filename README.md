@@ -22,7 +22,7 @@
       </td>
       <td align="left"> 
         Interact with Centralised Exchanges (CEX)<br>
-        supported by CCXT or Broker via IB_Sync.
+        supported by CCXT or Broker (IB & Capital.com).
       </td>
     </tr>
   </table>
