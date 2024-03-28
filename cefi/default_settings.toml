@@ -136,6 +136,7 @@ balance_limit_value = 10
 #     { id = "GOLD", alt = "GOLD" },
 #     { id = "SILVER", alt = "SILVER" },
 #     { id = "US500", alt = "US500" },
+    # { id = "J225", alt = "J225" },
 # ]
 # balance_limit = false
 # balance_limit_value = 10
