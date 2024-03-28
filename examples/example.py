@@ -21,9 +21,12 @@ async def main():
     # # binance: 69730.15
     # # capital: 69674.55
 
-    position = await cex.get_positions()
-    print("position ", position)
-
+    # position = await cex.get_positions()
+    # print("position ", position)
+        # # position  📊
+        # # capital:
+        # # EURUSD: -3.7
+        # # EURUSD: -3.22
     # order = {
     #     "action": "BUY",
     #     "instrument": "EURUSD",
