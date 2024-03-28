@@ -2,6 +2,29 @@
 
 
 
+## v4.4.1 (2024-03-28)
+
+### Other
+
+* Merge pull request #422 from mraniki/dev
+
+Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https://github.com/mraniki/cefi/commit/8346fb90f2bc0082d5dd021efef631bff3d5dc43))
+
+* Refactor error handling in CcxtHandler ([`a8295f1`](https://github.com/mraniki/cefi/commit/a8295f1795346b98207e038779358d76baa6e8af))
+
+### Update
+
+* Update readthedocs.yaml with new poetry installation method. ([`7892ebc`](https://github.com/mraniki/cefi/commit/7892ebc0af0d39c1bd62f5d26224e4afca9a01e5))
+
+### 🎨
+
+* 🎨 ([`6846ee9`](https://github.com/mraniki/cefi/commit/6846ee9d4689bd87a87f4034a4cea964dc4b05a7))
+
+### 🔧
+
+* 🔧 ([`aa8b5c5`](https://github.com/mraniki/cefi/commit/aa8b5c55b690e34fe25e3a798dc28a155c412098))
+
+
 ## v4.4.0 (2024-03-28)
 
 ### Other
