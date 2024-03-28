@@ -206,6 +206,15 @@ class CexClient:
 
         return instrument
 
+    async def get_instrument_decimals(self, instrument):
+        """
+
+
+        Returns:
+            int: The number of decimal places for the token.
+
+        """
+
     async def get_trade_confirmation(self, trade, instrument, action):
         """ """
         logger.debug("Confirmation {} {} {}", trade, instrument, action)

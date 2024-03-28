@@ -150,6 +150,18 @@ class CapitalHandler(CexClient):
             0,
         )
 
+    async def get_instrument_decimals(self, instrument):
+        """
+        Get the number of decimal places for the instrument.
+
+        Returns:
+            int: The number of decimal places for the instrument.
+        """
+        instrument_info = self.client.single_market(instrument)
+        decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
+        logger.debug("Decimals {}", decimals)
+        return decimals
+
     async def execute_order(self, order_params):
         """
         Execute order
@@ -165,6 +177,7 @@ class CapitalHandler(CexClient):
 
         """
         try:
+            logger.debug("Order params: {}", order_params)
             action_str = order_params.get("action")
             action = DirectionType[action_str]
             instrument = await self.replace_instrument(order_params.get("instrument"))
@@ -176,24 +189,53 @@ class CapitalHandler(CexClient):
             )
             if not (await self.pre_order_checks(order_params)):
                 return f"Error executing {self.name}"
-
+            quote = await self.get_quote(instrument)
+            decimals = await self.get_instrument_decimals(instrument)
+            profit_price = (
+                (quote + (order_params.get("take_profit", 0) / (10**decimals)))
+                if action_str == "BUY"
+                else (quote - (order_params.get("take_profit", 0) / (10**decimals)))
+            )
+            stop_price = (
+                (quote - (order_params.get("stop_loss", 0) / (10**decimals)))
+                if action_str == "BUY"
+                else (quote + (order_params.get("stop_loss", 0) / (10**decimals)))
+            )
+            logger.debug("profit_price stop_price {}", (profit_price, stop_price))
             order = self.client.place_the_position(
-                direction=action, epic=instrument, size=amount
-            )
-            deal_reference = order["dealReference"]
-            order_check = self.client.position_order_confirmation(
-                deal_reference=deal_reference
+                direction=action,
+                epic=instrument,
+                size=amount,
+                gsl=False,
+                tsl=False,
+                stop_level=stop_price,
+                stop_distance=None,
+                stop_amount=None,
+                profit_level=profit_price,
+                profit_distance=None,
+                profit_amount=None,
             )
 
-            trade = {
-                "amount": order_check.get("size", 0),
-                "price": order_check.get("level", 0),
-                "takeProfitPrice": 0,
-                "stopLossPrice": 0,
-                "id": order_check.get("dealId", ""),
-                "datetime": order_check.get("date", ""),
-            }
-            return await self.get_trade_confirmation(trade, instrument, action)
+            logger.debug("Order: {}", order)
+            if "errorCode" in order:
+                error_code = order["errorCode"]
+                logger.error("Order error: {}", error_code)
+                return f"Order error: {error_code}"
+
+            if deal_reference := order["dealReference"]:
+                order_check = self.client.position_order_confirmation(
+                    deal_reference=deal_reference
+                )
+
+                trade = {
+                    "amount": order_check.get("size", 0),
+                    "price": order_check.get("level", 0),
+                    "takeProfitPrice": profit_price,
+                    "stopLossPrice": stop_price,
+                    "id": order_check.get("dealId", ""),
+                    "datetime": order_check.get("date", ""),
+                }
+                return await self.get_trade_confirmation(trade, instrument, action)
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
