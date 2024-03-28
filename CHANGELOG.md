@@ -2,6 +2,19 @@
 
 
 
+## v4.3.2 (2024-03-28)
+
+### Other
+
+* Merge pull request #420 from mraniki/dev
+
+♻️ Docstring update for confirmation ([`8df07d2`](https://github.com/mraniki/cefi/commit/8df07d27af5c02dd11aac3ab5c2d51c1f9ea4c38))
+
+### ♻️
+
+* ♻️ ([`79369af`](https://github.com/mraniki/cefi/commit/79369af79f7d60c5295e07a2712333d1e52db8e5))
+
+
 ## v4.3.1 (2024-03-28)
 
 ### Other
