@@ -123,12 +123,18 @@ class CapitalHandler(CexClient):
             position
 
         """
-
         try:
             if positions := self.client.all_positions():
-                return f"{positions}"
+                extracted_positions = []
+                for position_data in positions.get("positions", []):
+                    position_details = position_data.get("position", {})
+                    market_details = position_data.get("market", {})
+                    epic = market_details.get("epic", "")
+                    upl = position_details.get("upl", 0)
+                    extracted_positions.append(f"{epic}: {upl}")
+                return "\n".join(extracted_positions)
         except Exception as e:
-            logger.error("{} Error {}", self.name, e)
+            logger.error(f"{self.name} Error {e}")
 
     async def pre_order_checks(self, order_params):
         """ """
