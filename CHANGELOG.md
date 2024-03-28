@@ -2,6 +2,21 @@
 
 
 
+## v4.3.1 (2024-03-28)
+
+### Other
+
+* Merge pull request #419 from mraniki/dev
+
+:recycle:  Update supported brokers in README.md ([`5839052`](https://github.com/mraniki/cefi/commit/58390528bad9061d38baa10b0d600b81f93f5185))
+
+### Update
+
+* Update pyproject.toml with extended description and keywords ([`35d2598`](https://github.com/mraniki/cefi/commit/35d25984da27b9f5fb659dbc05f163764cf31836))
+
+* :recycle:  Update supported brokers in README.md ([`10db9b4`](https://github.com/mraniki/cefi/commit/10db9b41d43482a9ee7c139d3f77285b2b5681eb))
+
+
 ## v4.3.0 (2024-03-28)
 
 ### Other
