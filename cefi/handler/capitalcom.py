@@ -5,6 +5,8 @@ Capital.com API client
 
 """
 
+from datetime import datetime, timedelta
+
 from capitalcom.client import Client, DirectionType
 from capitalcom.client_demo import Client as DemoClient
 from loguru import logger
@@ -24,6 +26,16 @@ class CapitalHandler(CexClient):
 
     Returns:
         None
+
+    Methods:
+        get_quote(self, instrument)
+        get_account_balance(self)
+        get_account_position(self)
+        pre_order_checks(self, order_params)
+        get_trading_asset_balance(self)
+        get_instrument_decimals(self, instrument)
+        execute_order(self, order_params)
+
 
     """
 
@@ -135,6 +147,35 @@ class CapitalHandler(CexClient):
                 return "\n".join(extracted_positions)
         except Exception as e:
             logger.error(f"{self.name} Error {e}")
+
+    async def get_account_pnl(self, period=None):
+        """
+        Return account pnl.
+
+        Args:
+            None
+
+        Returns:
+            pnl
+        """
+        today = datetime.now().date()
+        if period is None:
+            start_date = today
+        elif period == "W":
+            start_date = today - timedelta(days=today.weekday())
+        elif period == "M":
+            start_date = today.replace(day=1)
+        elif period == "Y":
+            start_date = today.replace(month=1, day=1)
+
+        end_date = datetime.now()
+        formatted_end_date = end_date.strftime("%Y-%m-%dT%H:%M:%S")
+        logger.debug("{} {}", start_date, formatted_end_date)
+        # history = self.client.account_activity_history(
+        #     fr=start_date, to=formatted_end_date, detailed=True, type="TRADE"
+        # )
+        # no pnl info available via openapi endpoint
+        return 0
 
     async def pre_order_checks(self, order_params):
         """ """

@@ -109,7 +109,7 @@ class CexClient:
 
         """
 
-    async def get_account_pnl(self):
+    async def get_account_pnl(self, period=None):
         """
         Return account pnl.
 
@@ -119,8 +119,6 @@ class CexClient:
         Returns:
             pnl
         """
-
-        return 0
 
     async def execute_order(self, order_params):
         """

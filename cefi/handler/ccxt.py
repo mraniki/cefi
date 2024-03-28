@@ -121,6 +121,7 @@ class CcxtHandler(CexClient):
                 return f"{positions}"
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
+            return e
 
     async def pre_order_checks(self, order_params):
         """ """

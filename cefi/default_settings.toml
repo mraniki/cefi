@@ -76,38 +76,6 @@ balance_limit_value = 10
 # balance_limit = true
 # balance_limit_value = 10
 
-# # Example using IBKR
-# [default.cex.ibkr]
-# protocol = "ib"
-# enabled = true
-# user_id = ""
-# api_key= ""
-# host = ""
-# port = 7497
-# secret= ""
-# password = ""
-# testmode = true
-# broker_client_id = ""
-# broker_account_number = ""
-# broker_gateway = true
-# defaulttype = ""
-# ordertype = ""
-# leverage_type = ""
-# leverage = 1
-# trading_risk_percentage = true
-# trading_risk_amount = 10
-# trading_slippage = 2
-# trading_amount_threshold = 0
-# trading_asset = "USD"
-# trading_asset_separator = ""
-# mapping = [
-#     { id = "BTC", alt = "BTC/USDT", type="CRYPTO", exchange="SMART", currency="USD", multiplier="100000000", right="P", lastTradeDateOrContractMonth="202101" },
-#     { id = "ETH", alt = "ETH/USDT", type="CRYPTO", exchange="SMART", currency="USD" },
-#     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
-#     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
-# ]
-# balance_limit = true
-# balance_limit_value = 10
 
 # # Example using Capital.com
 # [default.cex.capital]
@@ -140,6 +108,40 @@ balance_limit_value = 10
 # ]
 # balance_limit = false
 # balance_limit_value = 10
+
+# # Example using IBKR
+# [default.cex.ibkr]
+# protocol = "ib"
+# enabled = true
+# user_id = ""
+# api_key= ""
+# host = ""
+# port = 7497
+# secret= ""
+# password = ""
+# testmode = true
+# broker_client_id = ""
+# broker_account_number = ""
+# broker_gateway = true
+# defaulttype = ""
+# ordertype = ""
+# leverage_type = ""
+# leverage = 1
+# trading_risk_percentage = true
+# trading_risk_amount = 10
+# trading_slippage = 2
+# trading_amount_threshold = 0
+# trading_asset = "USD"
+# trading_asset_separator = ""
+# mapping = [
+#     { id = "BTC", alt = "BTC/USDT", type="CRYPTO", exchange="SMART", currency="USD", multiplier="100000000", right="P", lastTradeDateOrContractMonth="202101" },
+#     { id = "ETH", alt = "ETH/USDT", type="CRYPTO", exchange="SMART", currency="USD" },
+#     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
+#     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
+# ]
+# balance_limit = false
+# balance_limit_value = 10
+
 
 
 ########################################
