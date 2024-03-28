@@ -6,11 +6,11 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "cefi"
 version = "4.3.0"
-description = "A python library, to interact with CCXT crypto exchange"
+description = "A python library, to interact  with Crypto Exchanges (CCXT library) and brokers (IB & Capital.com)"
 authors = ["mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
 readme = "README.md"
-keywords = ["cex, cefi, crypto, exchange"]
+keywords = ["cex, cefi, crypto, exchange, broker"]
 packages = [
     {include = "cefi"}
 ]
