@@ -2,6 +2,23 @@
 
 
 
+## v4.4.2 (2024-03-29)
+
+### Other
+
+* Merge pull request #423 from mraniki/dev
+
+🔊 Improve log when no clients loaded ([`7887699`](https://github.com/mraniki/cefi/commit/7887699d1cc6c41d5ec21f8189c902c77a265307))
+
+### 🔇
+
+* 🔇 ([`39dfc27`](https://github.com/mraniki/cefi/commit/39dfc27770d5454d58fa164ec50271473648aabc))
+
+### 🔊
+
+* 🔊 Improve log when no clients loaded ([`5f12661`](https://github.com/mraniki/cefi/commit/5f12661aece404bb749378702e17660c9d66a32b))
+
+
 ## v4.4.1 (2024-03-28)
 
 ### Other
