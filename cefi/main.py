@@ -92,7 +92,11 @@ class CexTrader:
         logger.info(f"Loaded {len(self.clients)} clients")
         if not self.clients:
             logger.warning(
-                "No clients were created. Check your settings or disable the module."
+                """
+                No clients were created.
+                Check your settings or disable the module.
+                https://talky.readthedocs.io/en/latest/02_config.html
+                """
             )
 
     def _create_client(self, **kwargs):
