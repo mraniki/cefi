@@ -2,6 +2,19 @@
 
 
 
+## v4.4.3 (2024-03-30)
+
+### Other
+
+* Merge pull request #424 from mraniki/dev
+
+⬆️ 🤖 - This night methinks is but the daylight sick ([`ab13736`](https://github.com/mraniki/cefi/commit/ab13736a77a2bf02defada9c762278d3fd79b9d4))
+
+### 🔊
+
+* 🔊 update  main.py ([`2538f9c`](https://github.com/mraniki/cefi/commit/2538f9c47c89341b32f7ddae7f23b05a39cc9143))
+
+
 ## v4.4.2 (2024-03-29)
 
 ### Other
