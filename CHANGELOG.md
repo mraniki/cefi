@@ -2,6 +2,19 @@
 
 
 
+## v4.4.4 (2024-04-05)
+
+### :bug:
+
+* :bug: Fix return type in CapitalHandler class method. ([`40a2dde`](https://github.com/mraniki/cefi/commit/40a2dded7e5649309f68982d337e67402ab1f520))
+
+### Other
+
+* Merge pull request #425 from mraniki/dev
+
+:bug: Fix return type in CapitalHandler class method. ([`232df15`](https://github.com/mraniki/cefi/commit/232df15ee818762d16f31895d4aa348f529860b6))
+
+
 ## v4.4.3 (2024-03-30)
 
 ### Other
