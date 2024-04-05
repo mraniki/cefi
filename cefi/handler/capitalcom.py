@@ -207,7 +207,7 @@ class CapitalHandler(CexClient):
         instrument_info = self.client.single_market(instrument)
         decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
         logger.debug("Decimals {}", decimals)
-        return decimals
+        return int(decimals)
 
     async def execute_order(self, order_params):
         """
