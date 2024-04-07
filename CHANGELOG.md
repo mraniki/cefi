@@ -2,6 +2,19 @@
 
 
 
+## v4.4.10 (2024-04-07)
+
+### :recycle:
+
+* :recycle: Refactor order placement logic in CapitalHandler class ([`79c1466`](https://github.com/mraniki/cefi/commit/79c1466b5d1f1d51a8b383fa77e4b378b7226da9))
+
+### Other
+
+* Merge pull request #431 from mraniki/dev
+
+:recycle: Refactor order placement logic in CapitalHandler class ([`c7e2c8d`](https://github.com/mraniki/cefi/commit/c7e2c8dccff4ae209b95158821dd9ec63e034d54))
+
+
 ## v4.4.9 (2024-04-07)
 
 ### Other
