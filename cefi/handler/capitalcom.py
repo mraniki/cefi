@@ -259,7 +259,8 @@ class CapitalHandler(CexClient):
                     + (order_params.get("stop_loss", 0) / (10**decimals))
                 )
             )
-
+            logger.debug("stop price {}", stop_price)
+            logger.debug("profit price {}", profit_price)
             try:
                 order = self.client.place_the_position(
                     direction=action,
