@@ -100,6 +100,40 @@ class CapitalHandler(CexClient):
             logger.error("{} Error {}", self.name, e)
             return e
 
+    async def get_bid(self, instrument):
+        """
+        Return a quote for a instrument
+        of a given exchange ccxt object
+
+
+        Args:
+            cex
+            instrument
+
+        Returns:
+            quote
+        """
+        try:
+            logger.debug("Instrument: {}", instrument)
+            instrument = await self.replace_instrument(instrument)
+            logger.debug("Changed Instrument: {}", instrument)
+            search_markets = self.client.searching_market(searchTerm=instrument)
+            logger.debug("Instrument verification: {}", search_markets)
+
+            market = self.client.single_market(instrument)
+            logger.debug("Raw Quote: {}", market)
+
+            quote = market["snapshot"]["bid"]
+            logger.debug("Quote: {}", quote)
+
+            return quote
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
+
+    # Alias for get_quote
+    get_offer = get_quote
+
     async def get_account_balance(self):
         """
         return account balance of
@@ -237,25 +271,26 @@ class CapitalHandler(CexClient):
                 return f"Error executing {self.name}"
 
             decimals = await self.get_instrument_decimals(instrument)
+
             profit_price = (
                 (
-                    await self.get_quote(instrument)
+                    await self.get_offer(instrument)
                     + (order_params.get("take_profit", 0) / (10**decimals))
                 )
                 if action_str == "BUY"
                 else (
-                    await self.get_quote(instrument)
+                    await self.get_bid(instrument)
                     - (order_params.get("take_profit", 0) / (10**decimals))
                 )
             )
             stop_price = (
                 (
-                    await self.get_quote(instrument)
+                    await self.get_bid(instrument)
                     - (order_params.get("stop_loss", 0) / (10**decimals))
                 )
                 if action_str == "BUY"
                 else (
-                    await self.get_quote(instrument)
+                    self.get_offer(instrument)
                     + (order_params.get("stop_loss", 0) / (10**decimals))
                 )
             )
