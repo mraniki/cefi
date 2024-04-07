@@ -259,7 +259,8 @@ class CapitalHandler(CexClient):
                     + (order_params.get("stop_loss", 0) / (10**decimals))
                 )
             )
-
+            logger.debug("stop price {}", stop_price)
+            logger.debug("profit price {}", profit_price)
             try:
                 order = self.client.place_the_position(
                     direction=action,
@@ -274,6 +275,11 @@ class CapitalHandler(CexClient):
                     profit_distance=None,
                     profit_amount=None,
                 )
+                # Check if the order response contains an errorCode
+                if "errorCode" in order:
+                    # Handle the error, e.g., log it or return a specific message
+                    logger.error(f"Error placing order: {order['errorCode']}")
+                    return f"Error placing order: {order['errorCode']}"
             except Exception as e:
                 return str(e)
 
