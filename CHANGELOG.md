@@ -2,6 +2,23 @@
 
 
 
+## v4.4.8 (2024-04-07)
+
+### Other
+
+* Merge pull request #429 from mraniki/dev
+
+♻️ update ccxt.py (bid / offer) and docs ([`0dce4fb`](https://github.com/mraniki/cefi/commit/0dce4fb4073b9a6850cf7e570ab50a2f9f796cd0))
+
+### ♻️
+
+* ♻️ update ccxt.py (bid / offer) ([`938ed11`](https://github.com/mraniki/cefi/commit/938ed115f2445fef1255d42e9e3da1d702f61bd6))
+
+### 💬
+
+* 💬 doc update ([`5c9a7c8`](https://github.com/mraniki/cefi/commit/5c9a7c87f4e5d3bf705033d7dfb2d860529f0d6e))
+
+
 ## v4.4.7 (2024-04-07)
 
 ### Other
