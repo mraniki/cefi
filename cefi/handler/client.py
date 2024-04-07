@@ -71,16 +71,27 @@ class CexClient:
 
     async def get_quote(self, symbol):
         """
-        Return a quote for a symbol
-        of a given exchange ccxt object
+        Asynchronously fetches a ask/offer quote
+        for the specified instrument.
 
+        :param instrument: The instrument for which the quote is to be fetched.
+        :return: The fetched quote.
+        """
+
+    # Alias for get_quote
+    get_offer = get_quote
+
+    async def get_bid(self, instrument):
+        """
+        Asynchronously retrieves the bid
+        for the specified instrument.
 
         Args:
-            cex
-            symbol
+            instrument: The instrument for which
+            the bid is to be retrieved.
 
         Returns:
-            quote
+            The bid for the specified instrument.
         """
 
     async def get_account_balance(self):

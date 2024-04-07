@@ -55,16 +55,11 @@ class CcxtHandler(CexClient):
 
     async def get_quote(self, instrument):
         """
-        Return a quote for a instrument
-        of a given exchange ccxt object
+        Asynchronously fetches a ask/offer quote
+        for the specified instrument.
 
-
-        Args:
-            cex
-            instrument
-
-        Returns:
-            quote
+        :param instrument: The instrument for which the quote is to be fetched.
+        :return: The fetched quote.
         """
         try:
             instrument = await self.replace_instrument(instrument)
@@ -76,21 +71,19 @@ class CcxtHandler(CexClient):
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
 
-    # Alias for get_quote
-    get_offer = get_quote
+
 
     async def get_bid(self, instrument):
         """
-        Return a quote for a instrument
-        of a given exchange ccxt object
-
+        Asynchronously retrieves the bid
+        for the specified instrument.
 
         Args:
-            cex
-            instrument
+            instrument: The instrument for which
+            the bid is to be retrieved.
 
         Returns:
-            quote
+            The bid for the specified instrument.
         """
         try:
             instrument = await self.replace_instrument(instrument)
