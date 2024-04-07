@@ -61,6 +61,8 @@ class CapitalHandler(CexClient):
                     pas=self.password,
                     api_key=self.api_key,
                 )
+
+            logger.debug("Client: {}", self.client)
             self.accounts_data = self.client.all_accounts()
             logger.debug("Account data: {}", self.accounts_data)
             self.account_number = self.accounts_data["accounts"][0]["accountId"]
