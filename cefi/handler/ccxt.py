@@ -70,7 +70,33 @@ class CcxtHandler(CexClient):
             instrument = await self.replace_instrument(instrument)
 
             ticker = self.client.fetch_ticker(instrument)
-            quote = ticker["last"]
+            quote = ticker["ask"]
+            logger.debug("Quote: {}", quote)
+            return quote
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+
+    # Alias for get_quote
+    get_offer = get_quote
+
+    async def get_bid(self, instrument):
+        """
+        Return a quote for a instrument
+        of a given exchange ccxt object
+
+
+        Args:
+            cex
+            instrument
+
+        Returns:
+            quote
+        """
+        try:
+            instrument = await self.replace_instrument(instrument)
+
+            ticker = self.client.fetch_ticker(instrument)
+            quote = ticker["bid"]
             logger.debug("Quote: {}", quote)
             return quote
         except Exception as e:
