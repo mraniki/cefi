@@ -2,6 +2,23 @@
 
 
 
+## v4.4.6 (2024-04-07)
+
+### Other
+
+* Merge pull request #427 from mraniki/dev
+
+🥅 update capitalcom.py for better error handling during order processing ([`4fc32bd`](https://github.com/mraniki/cefi/commit/4fc32bdb0c3d057f7f618e93819adf7599826469))
+
+### ♻️
+
+* ♻️ update capitalcom.py ([`fde3ed6`](https://github.com/mraniki/cefi/commit/fde3ed6135506705139d4067bf75c797012411e9))
+
+### 🥅
+
+* 🥅 update capitalcom.py for better error handling ([`45745f9`](https://github.com/mraniki/cefi/commit/45745f922a2ae206c13b33349d2112f67cd9d436))
+
+
 ## v4.4.5 (2024-04-06)
 
 ### Other
