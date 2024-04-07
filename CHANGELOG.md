@@ -2,6 +2,19 @@
 
 
 
+## v4.4.7 (2024-04-07)
+
+### Other
+
+* Merge pull request #428 from mraniki/dev
+
+🚑 update capitalcom.py improve the SL/TP logic ([`be192ee`](https://github.com/mraniki/cefi/commit/be192ee3d348bdd003c88c7f2ff0bbc38d42785c))
+
+### 🚑
+
+* 🚑 update capitalcom.py improve the SL/TP logic ([`cfd705a`](https://github.com/mraniki/cefi/commit/cfd705a57c9418fac2c2a12f03da00243e5281c9))
+
+
 ## v4.4.6 (2024-04-07)
 
 ### Other
