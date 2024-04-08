@@ -2,6 +2,19 @@
 
 
 
+## v4.4.14 (2024-04-08)
+
+### Other
+
+* Merge pull request #435 from mraniki/dev
+
+🐛 Fix TP/SL type ([`2633412`](https://github.com/mraniki/cefi/commit/2633412bc3b61183745e7805b31f10386fbf99a6))
+
+### 🐛
+
+* 🐛 ([`33cd12f`](https://github.com/mraniki/cefi/commit/33cd12f433dd0bbd99f0627d3d6c61ca22005abb))
+
+
 ## v4.4.13 (2024-04-08)
 
 ### Other
