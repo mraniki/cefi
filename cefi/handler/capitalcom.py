@@ -67,6 +67,7 @@ class CapitalHandler(CexClient):
             logger.debug("Account data: {}", self.accounts_data)
             self.account_number = self.accounts_data["accounts"][0]["accountId"]
             logger.debug("Account number: {}", self.account_number)
+            logger.debug("Session details: {}", self.client.get_sesion_details())
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
@@ -80,6 +81,7 @@ class CapitalHandler(CexClient):
         :return: The fetched quote.
         """
         try:
+            logger.debug("Client: {}", self.client)
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
