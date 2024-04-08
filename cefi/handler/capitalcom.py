@@ -130,7 +130,7 @@ class CapitalHandler(CexClient):
             logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
-            logger.debug("Raw Quote: {}", market)
+            logger.debug("market: {}", market)
 
             quote = market["snapshot"]["bid"]
             logger.debug("Quote: {}", quote)
@@ -311,7 +311,7 @@ class CapitalHandler(CexClient):
 
             if "errorCode" in order:
                 logger.error(f"Error placing order: {order['errorCode']}")
-                return order["errorCode"]
+                return str(order["errorCode"])
 
             logger.debug("Order: {}", order)
             deal_reference = order["dealReference"]
