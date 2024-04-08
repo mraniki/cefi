@@ -2,6 +2,19 @@
 
 
 
+## v4.4.12 (2024-04-08)
+
+### Other
+
+* Merge pull request #433 from mraniki/dev
+
+⚡ ([`764c887`](https://github.com/mraniki/cefi/commit/764c887be0b6c84f5e6bde77615f8147dafb930c))
+
+### ⚡
+
+* ⚡ ([`aaaeaad`](https://github.com/mraniki/cefi/commit/aaaeaad399615c48de9b1517c51af8d7e1800818))
+
+
 ## v4.4.11 (2024-04-08)
 
 ### Other
