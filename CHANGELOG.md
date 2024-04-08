@@ -2,6 +2,19 @@
 
 
 
+## v4.4.11 (2024-04-08)
+
+### Other
+
+* Merge pull request #432 from mraniki/dev
+
+🐛 update capitalcom.py, main.py and example.py ([`0005c1c`](https://github.com/mraniki/cefi/commit/0005c1c76d168f25c381bdfaf2b2162f32d159d2))
+
+### 🐛
+
+* 🐛 update capitalcom.py, main.py and example.py ([`2100a87`](https://github.com/mraniki/cefi/commit/2100a87ec44c1d375db583ec291aca900593f349))
+
+
 ## v4.4.10 (2024-04-07)
 
 ### :recycle:
