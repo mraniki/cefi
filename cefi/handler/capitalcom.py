@@ -280,28 +280,18 @@ class CapitalHandler(CexClient):
                 return f"Error executing {self.name}"
 
             decimals = await self.get_instrument_decimals(instrument)
+            offer = await self.get_offer(instrument)
+            bid = await self.get_bid(instrument)
 
             profit_price = (
-                (
-                    await self.get_offer(instrument)
-                    + (int(order_params.get("take_profit", 0)) / (10**decimals))
-                )
+                (offer + (int(order_params.get("take_profit", 0)) / (10**decimals)))
                 if action_str == "BUY"
-                else (
-                    await self.get_bid(instrument)
-                    - (int(order_params.get("take_profit", 0)) / (10**decimals))
-                )
+                else (bid - (int(order_params.get("take_profit", 0)) / (10**decimals)))
             )
             stop_price = (
-                (
-                    await self.get_bid(instrument)
-                    - (int(order_params.get("stop_loss", 0)) / (10**decimals))
-                )
+                (bid - (int(order_params.get("stop_loss", 0)) / (10**decimals)))
                 if action_str == "BUY"
-                else (
-                    self.get_offer(instrument)
-                    + (int(order_params.get("stop_loss", 0))  / (10**decimals))
-                )
+                else (offer + (int(order_params.get("stop_loss", 0)) / (10**decimals)))
             )
             logger.debug("stop price {}", stop_price)
             logger.debug("profit price {}", profit_price)
