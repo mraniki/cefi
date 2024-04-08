@@ -2,6 +2,19 @@
 
 
 
+## v4.4.13 (2024-04-08)
+
+### Other
+
+* Merge pull request #434 from mraniki/dev
+
+⚡ _build_client for capital.com to bypass the 10min session limit ([`5347356`](https://github.com/mraniki/cefi/commit/53473567e1980df27f5634f370aa1a058c769a12))
+
+### ⚡
+
+* ⚡ _build_client for capital.com to bypass the 10min session limit ([`c88126f`](https://github.com/mraniki/cefi/commit/c88126f873b23863dcdf6c842b47ef2dbffffd60))
+
+
 ## v4.4.12 (2024-04-08)
 
 ### Other
