@@ -5,6 +5,7 @@ Capital.com API client
 
 """
 
+import asyncio
 from datetime import datetime, timedelta
 
 from capitalcom.client import Client, DirectionType
@@ -96,6 +97,7 @@ class CapitalHandler(CexClient):
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
             search_markets = self.client.searching_market(searchTerm=instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
             logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
@@ -108,6 +110,9 @@ class CapitalHandler(CexClient):
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return e
+
+    # Alias for get_quote
+    get_offer = get_quote
 
     async def get_bid(self, instrument):
         """
@@ -127,10 +132,11 @@ class CapitalHandler(CexClient):
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
             search_markets = self.client.searching_market(searchTerm=instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
             logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
-            logger.debug("Raw Quote: {}", market)
+            logger.debug("market: {}", market)
 
             quote = market["snapshot"]["bid"]
             logger.debug("Quote: {}", quote)
@@ -139,9 +145,6 @@ class CapitalHandler(CexClient):
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return e
-
-    # Alias for get_quote
-    get_offer = get_quote
 
     async def get_account_balance(self):
         """
@@ -276,13 +279,22 @@ class CapitalHandler(CexClient):
                 instrument=instrument,
                 is_percentage=self.trading_risk_percentage,
             )
+            await asyncio.sleep(1)  # Wait for 1 second
+
             if not (await self.pre_order_checks(order_params)):
                 return f"Error executing {self.name}"
 
             decimals = await self.get_instrument_decimals(instrument)
-            offer = await self.get_offer(instrument)
-            bid = await self.get_bid(instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
 
+            offer = await self.get_offer(instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
+
+            bid = await self.get_bid(instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
+
+            logger.debug("bid {}", bid)
+            logger.debug("offer {}", offer)
             profit_price = (
                 (offer + (int(order_params.get("take_profit", 0)) / (10**decimals)))
                 if action_str == "BUY"
@@ -311,7 +323,7 @@ class CapitalHandler(CexClient):
 
             if "errorCode" in order:
                 logger.error(f"Error placing order: {order['errorCode']}")
-                return order["errorCode"]
+                return str(order["errorCode"])
 
             logger.debug("Order: {}", order)
             deal_reference = order["dealReference"]
