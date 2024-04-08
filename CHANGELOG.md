@@ -2,6 +2,19 @@
 
 
 
+## v4.4.15 (2024-04-08)
+
+### Other
+
+* Merge pull request #436 from mraniki/dev
+
+🐛 update capitalcom.py ([`8e4ac94`](https://github.com/mraniki/cefi/commit/8e4ac94bb532aa634d86dec9ff2d80d94ba75563))
+
+### 🐛
+
+* 🐛 update capitalcom.py ([`bd5a6e8`](https://github.com/mraniki/cefi/commit/bd5a6e8bfa98b6f98ae35422e5f60906165c6f05))
+
+
 ## v4.4.14 (2024-04-08)
 
 ### Other
