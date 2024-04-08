@@ -2,6 +2,19 @@
 
 
 
+## v4.4.16 (2024-04-08)
+
+### Other
+
+* Merge pull request #437 from mraniki/dev
+
+🐛 update main.py ([`7be8d9a`](https://github.com/mraniki/cefi/commit/7be8d9af38ff55af1d92011ef986e61e3c407b1b))
+
+### 🐛
+
+* 🐛 update main.py ([`2a57d05`](https://github.com/mraniki/cefi/commit/2a57d051b86b2c6142349c1e947cc1342fb1df4b))
+
+
 ## v4.4.15 (2024-04-08)
 
 ### Other
