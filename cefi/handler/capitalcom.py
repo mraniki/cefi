@@ -49,19 +49,8 @@ class CapitalHandler(CexClient):
         """
         super().__init__(**kwargs)
         try:
-            if self.testmode:
-                self.client = DemoClient(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
-            else:
-                self.client = Client(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
 
+            self._build_client()
             logger.debug("Client: {}", self.client)
             self.accounts_data = self.client.all_accounts()
             logger.debug("Account data: {}", self.accounts_data)
@@ -72,6 +61,27 @@ class CapitalHandler(CexClient):
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
 
+    def _build_client(self):
+        """
+        Builds and sets the client based on the testmode flag.
+
+        Capital.com session last only 10 minutes
+
+        """
+
+        if self.testmode:
+            self.client = DemoClient(
+                log=self.user_id,
+                pas=self.password,
+                api_key=self.api_key,
+            )
+        else:
+            self.client = Client(
+                log=self.user_id,
+                pas=self.password,
+                api_key=self.api_key,
+            )
+
     async def get_quote(self, instrument):
         """
         Asynchronously fetches a ask/offer quote
@@ -81,7 +91,7 @@ class CapitalHandler(CexClient):
         :return: The fetched quote.
         """
         try:
-            logger.debug("Client: {}", self.client)
+            self._build_client()
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
@@ -112,6 +122,7 @@ class CapitalHandler(CexClient):
             The bid for the specified instrument.
         """
         try:
+            self._build_client()
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
