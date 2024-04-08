@@ -2,6 +2,23 @@
 
 
 
+## v4.4.17 (2024-04-08)
+
+### Other
+
+* Merge pull request #438 from mraniki/dev
+
+♻️ update capitalcom.py with api waiting time between call ([`526918a`](https://github.com/mraniki/cefi/commit/526918a0eca655fc443f6e84eb4b5faeb083ace7))
+
+### ♻️
+
+* ♻️ update capitalcom.py with api waiting time between call ([`bb9f899`](https://github.com/mraniki/cefi/commit/bb9f899c0bd49b5a456d5a705c42001ab6a5928d))
+
+### 🎨
+
+* 🎨 update capitalcom.py ([`694bb53`](https://github.com/mraniki/cefi/commit/694bb53544ffa5c8a4ba7dacf7877b24bdea0503))
+
+
 ## v4.4.16 (2024-04-08)
 
 ### Other
