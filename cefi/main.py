@@ -263,4 +263,5 @@ class CexTrader:
                 order.append(trade)
             except Exception as e:
                 logger.error("submit_order - client {} error {}", client.name, e)
+        logger.debug("order {}", order)
         return order
