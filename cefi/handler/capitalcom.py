@@ -284,23 +284,23 @@ class CapitalHandler(CexClient):
             profit_price = (
                 (
                     await self.get_offer(instrument)
-                    + (order_params.get("take_profit", 0) / (10**decimals))
+                    + (int(order_params.get("take_profit", 0)) / (10**decimals))
                 )
                 if action_str == "BUY"
                 else (
                     await self.get_bid(instrument)
-                    - (order_params.get("take_profit", 0) / (10**decimals))
+                    - (int(order_params.get("take_profit", 0)) / (10**decimals))
                 )
             )
             stop_price = (
                 (
                     await self.get_bid(instrument)
-                    - (order_params.get("stop_loss", 0) / (10**decimals))
+                    - (int(order_params.get("stop_loss", 0)) / (10**decimals))
                 )
                 if action_str == "BUY"
                 else (
                     self.get_offer(instrument)
-                    + (order_params.get("stop_loss", 0) / (10**decimals))
+                    + (int(order_params.get("stop_loss", 0))  / (10**decimals))
                 )
             )
             logger.debug("stop price {}", stop_price)
