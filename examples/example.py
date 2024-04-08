@@ -29,10 +29,10 @@ async def main():
         # # EURUSD: -3.22
     order = {
         "action": "BUY",
-        "instrument": "BTCUSD",
-        "quantity": 200,
-        "take_profit": 10000,
-        "stop_loss": 100000,
+        "instrument": "EURUSD",
+        "quantity": 10,
+        "take_profit": 100,
+        "stop_loss": 1000,
         "comment": "test",
     }
     order = await cex.submit_order(order)

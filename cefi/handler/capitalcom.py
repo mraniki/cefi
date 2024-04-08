@@ -92,7 +92,7 @@ class CapitalHandler(CexClient):
             quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
 
-            return quote
+            return float(quote)
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return e
@@ -122,7 +122,7 @@ class CapitalHandler(CexClient):
             quote = market["snapshot"]["bid"]
             logger.debug("Quote: {}", quote)
 
-            return quote
+            return float(quote)
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return e
@@ -293,23 +293,22 @@ class CapitalHandler(CexClient):
             logger.debug("stop price {}", stop_price)
             logger.debug("profit price {}", profit_price)
             order = self.client.place_the_position(
-                    direction=action,
-                    epic=instrument,
-                    size=amount,
-                    gsl=False,
-                    tsl=False,
-                    stop_level=stop_price,
-                    stop_distance=None,
-                    stop_amount=None,
-                    profit_level=profit_price,
-                    profit_distance=None,
-                    profit_amount=None,
-                )
-                # Check if the order response contains an errorCode
+                direction=action,
+                epic=instrument,
+                size=amount,
+                gsl=False,
+                tsl=False,
+                stop_level=stop_price,
+                stop_distance=None,
+                stop_amount=None,
+                profit_level=profit_price,
+                profit_distance=None,
+                profit_amount=None,
+            )
+
             if "errorCode" in order:
-                    # Handle the error, e.g., log it or return a specific message
-                    logger.error(f"Error placing order: {order['errorCode']}")
-                    return f"Error placing order: {order['errorCode']}"
+                logger.error(f"Error placing order: {order['errorCode']}")
+                return order["errorCode"]
 
             logger.debug("Order: {}", order)
             deal_reference = order["dealReference"]

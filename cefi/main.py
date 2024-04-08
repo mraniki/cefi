@@ -259,6 +259,7 @@ class CexTrader:
         for client in self.clients:
             try:
                 trade = await client.execute_order(order_params)
+                logger.debug("trade {}", trade)
                 order.append(trade)
             except Exception as e:
                 logger.error("submit_order - client {} error {}", client.name, e)
