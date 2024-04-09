@@ -260,8 +260,8 @@ class CexTrader:
             try:
                 trade = await client.execute_order(order_params)
                 logger.debug("trade {}", trade)
-                order.append(trade)
+                order.append(str(trade))
             except Exception as e:
                 logger.error("submit_order - client {} error {}", client.name, e)
         logger.debug("order {}", order)
-        return order
+        return ", ".join(order)
