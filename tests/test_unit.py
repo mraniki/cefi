@@ -101,10 +101,9 @@ async def test_submit_order(CXTrader, order):
     result = await CXTrader.submit_order(order)
     assert result is not None
     print(result)
-    assert "binance" in result[0]
-    assert "🔵" in result[0] or ("Error" in result[0])
-    assert "huobi" in result[1]
-    assert ("🔵" in result[1]) or ("Error" in result[1])
+    assert ("🧾" in result)
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
+    assert ("🔵" in result) or ("Error" in result)
 
 
 @pytest.mark.asyncio
