@@ -2,6 +2,27 @@
 
 
 
+## v4.4.18 (2024-04-09)
+
+### Other
+
+* Merge pull request #439 from mraniki/dev
+
+🐛 update main.py submit_order return format ([`f5fc30a`](https://github.com/mraniki/cefi/commit/f5fc30a1d3857c6a0a57c71c512c06fc0a1c4cdc))
+
+### ✅
+
+* ✅ Unit Test ([`b03718d`](https://github.com/mraniki/cefi/commit/b03718da73a652928a95ae923b2079519608d010))
+
+### 🎨
+
+* 🎨 update main.py ([`777c457`](https://github.com/mraniki/cefi/commit/777c457934a187d0a55c0bb13e33840797410ec9))
+
+### 🐛
+
+* 🐛 update main.py submit_order return format ([`185cc21`](https://github.com/mraniki/cefi/commit/185cc2112b9552f119ffab7f2c4e2f0b1541fdbc))
+
+
 ## v4.4.17 (2024-04-08)
 
 ### Other
