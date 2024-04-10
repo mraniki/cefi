@@ -2,6 +2,33 @@
 
 
 
+## v4.4.19 (2024-04-10)
+
+### Other
+
+* Merge pull request #440 from mraniki/dev
+
+🔇 update capitalcom.py and main.py ([`b4eac79`](https://github.com/mraniki/cefi/commit/b4eac79dcf54410e577f6dbd518a1cb732a67ad2))
+
+### ✅
+
+* ✅ Unit Test ([`78df318`](https://github.com/mraniki/cefi/commit/78df318be46b7c6317f72da34293e2b0d3f3acb2))
+
+### 🎨
+
+* 🎨 update client.py and main.py ([`706e3b0`](https://github.com/mraniki/cefi/commit/706e3b0d1e2868af21f39282ad310a5f7406bc4d))
+
+### 🔇
+
+* 🔇 update capitalcom.py ([`1a817d6`](https://github.com/mraniki/cefi/commit/1a817d68ae40a3739cb8379469eef3694cf50fbf))
+
+* 🔇 update capitalcom.py and main.py ([`f5bebfa`](https://github.com/mraniki/cefi/commit/f5bebfa4f6129d5c79aadf0378d4c611bb0ef06c))
+
+### 🔊
+
+* 🔊 update client.py and main.py ([`bc39cf3`](https://github.com/mraniki/cefi/commit/bc39cf319e20a99aeb97b96fbba8102bb4b87b99))
+
+
 ## v4.4.18 (2024-04-09)
 
 ### Other
