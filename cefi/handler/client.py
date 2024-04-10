@@ -250,6 +250,6 @@ class CexClient:
             trade_confirmation += f"ℹ️ {trade['id']}\n"
             trade_confirmation += f"🗓️ {trade['datetime']}"
             if trade_confirmation:
-                return f"{self.name}:\n{trade_confirmation}"
+                return f"{trade_confirmation}"
         except Exception as e:
             logger.error("Error {}", e)
