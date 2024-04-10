@@ -178,13 +178,15 @@ class CexClient:
         logger.debug("Quote {}", quote)
 
         if not is_percentage and balance and quote:
+            logger.debug("Amount based on money {}", balance * quantity / quote)
             return quantity
 
         if balance and quote:
             risk_percentage = float(quantity) / 100
             amount = balance * risk_percentage / quote
-            logger.debug("Amount {}", amount)
+            logger.debug("Amount based on percentage {}", amount)
         if amount >= self.trading_amount_threshold:
+            logger.debug("Amount above threshold {}", amount)
             return amount
 
     async def pre_order_checks(self, order_params):
