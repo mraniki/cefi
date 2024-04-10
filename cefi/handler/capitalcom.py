@@ -96,12 +96,12 @@ class CapitalHandler(CexClient):
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
-            search_markets = self.client.searching_market(searchTerm=instrument)
+            # search_markets = self.client.searching_market(searchTerm=instrument)
             await asyncio.sleep(1)  # Wait for 1 second
-            logger.debug("Instrument verification: {}", search_markets)
+            # logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
-            logger.debug("Raw Quote: {}", market)
+            # logger.debug("Raw Quote: {}", market)
 
             quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
@@ -131,12 +131,12 @@ class CapitalHandler(CexClient):
             logger.debug("Instrument: {}", instrument)
             instrument = await self.replace_instrument(instrument)
             logger.debug("Changed Instrument: {}", instrument)
-            search_markets = self.client.searching_market(searchTerm=instrument)
+            # search_markets = self.client.searching_market(searchTerm=instrument)
             await asyncio.sleep(1)  # Wait for 1 second
-            logger.debug("Instrument verification: {}", search_markets)
+            # logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
-            logger.debug("market: {}", market)
+            # logger.debug("market: {}", market)
 
             quote = market["snapshot"]["bid"]
             logger.debug("Quote: {}", quote)

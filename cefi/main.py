@@ -257,5 +257,7 @@ class CexTrader:
         """
         _order = ["🧾 Order\n"]
         for client in self.clients:
-            _order.append(f"{client.name}: {await client.execute_order(order_params)}")
+            _order.append(
+                f"{client.name}:\n{await client.execute_order(order_params)}\n"
+            )
         return "\n".join(_order)
