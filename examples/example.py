@@ -38,6 +38,9 @@ async def main():
     order = await cex.submit_order(order)
     print("order ", order)
 
+    # pnl = await cex.get_pnls()
+    # print("pnl ", pnl)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -218,8 +218,9 @@ class CapitalHandler(CexClient):
         formatted_end_date = end_date.strftime("%Y-%m-%dT%H:%M:%S")
         logger.debug("{} {}", start_date, formatted_end_date)
         # history = self.client.account_activity_history(
-        #     fr=start_date, to=formatted_end_date, detailed=True, type="TRADE"
+        #     fr=start_date, to=formatted_end_date, detailed=True
         # )
+        # logger.debug("History: {}", history)
         # no pnl info available via openapi endpoint
         return 0
 
