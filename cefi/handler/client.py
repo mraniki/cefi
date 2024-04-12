@@ -6,6 +6,8 @@ class
 
 """
 
+from datetime import datetime, timedelta
+
 from loguru import logger
 
 
@@ -21,6 +23,23 @@ class CexClient:
 
     Returns:
         None
+
+    Methods:
+        get_quote(self, instrument)
+        get_offer(self, instrument)
+        get_bid(self, instrument)
+        get_account_balance(self)
+        get_account_position(self)
+        calculate_pnl(self, period=None)
+        get_account_pnl(self, start_date)
+        execute_order(self, order_params)
+        get_trading_asset_balance(self)
+        get_order_amount(self, quantity, instrument, is_percentage)
+        pre_order_checks(self, order_params)
+        replace_instrument(self, instrument)
+        get_instrument_decimals(self, instrument)
+        get_trade_confirmation(self, order_params)
+
 
     """
 
@@ -61,6 +80,7 @@ class CexClient:
             self.mapping = kwargs.get("mapping", None)
             self.balance_limit = kwargs.get("balance_limit", True)
             self.balance_limit_value = kwargs.get("balance_limit_value", 10)
+            self.is_pnl_active = kwargs.get("is_pnl_active", False)
 
         except Exception as error:
             logger.error("Client initialization error {}", error)
@@ -129,6 +149,30 @@ class CexClient:
 
         Returns:
             pnl
+        """
+        today = datetime.now().date()
+        if period is None:
+            start_date = today
+        elif period == "W":
+            start_date = today - timedelta(days=today.weekday())
+        elif period == "M":
+            start_date = today.replace(day=1)
+        elif period == "Y":
+            start_date = today.replace(month=1, day=1)
+        else:
+            return 0
+        return self.calculate_pnl(start_date) if self.is_pnl_active else 0
+
+    async def calculate_pnl(self, period=None):
+        """
+        Calculate the PnL for a given period.
+
+        Parameters:
+            period (str): The period for which
+            to calculate PnL ('W', 'M', 'Y', or None).
+
+        Returns:
+            pnl: The calculated PnL value.
         """
 
     async def execute_order(self, order_params):

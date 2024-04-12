@@ -93,7 +93,7 @@ async def test_get_positions(CXTrader):
 async def test_get_pnls(CXTrader):
     """Test pnl"""
     result = await CXTrader.get_pnls()
-    assert "📊" in result
+    assert "🏆" in result
 
 
 @pytest.mark.asyncio
