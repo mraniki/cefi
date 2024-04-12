@@ -150,11 +150,11 @@ class CexClient:
         Returns:
             pnl
         """
-        today = datetime.date.today()
+        today = datetime.now().date()
         if period is None:
             start_date = today
         elif period == "W":
-            start_date = today - timedelta(days=today.isoweekday() - 1)
+            start_date = today - timedelta(days=today.weekday())
         elif period == "M":
             start_date = today.replace(day=1)
         elif period == "Y":
