@@ -2,6 +2,37 @@
 
 
 
+## v4.5.0 (2024-04-12)
+
+### :rotating_light:
+
+* :rotating_light: ([`96565ba`](https://github.com/mraniki/cefi/commit/96565ba51ea130349132eebf36a580ee85a6d662))
+
+### Other
+
+* Merge pull request #442 from mraniki/dev
+
+💄 PnL code structure alignement ([`f6306ef`](https://github.com/mraniki/cefi/commit/f6306ef40d0d6133432ef3a8887ede0084705621))
+
+* Merge pull request #441 from mraniki/dev
+
+⬆️ 🤖 - You look like a million dollars  All green and wrinkled ([`63bcfdf`](https://github.com/mraniki/cefi/commit/63bcfdfd659b5a607c794396c0b035f907e5b212))
+
+* update capitalcom.py and example.py ([`b6cc807`](https://github.com/mraniki/cefi/commit/b6cc80750cebbdf2b790da8ddd87df340e92f507))
+
+### ♻️
+
+* ♻️ ([`2fcefb1`](https://github.com/mraniki/cefi/commit/2fcefb115a743a6736cf345e5a68a00a5ff3ef9b))
+
+### 🐛
+
+* 🐛 ([`18dd2c1`](https://github.com/mraniki/cefi/commit/18dd2c1e4d5d81a211726112b37706d473639d2b))
+
+### 💄
+
+* 💄 PnL code structure alignement ([`e9e0a61`](https://github.com/mraniki/cefi/commit/e9e0a61d13c39ca2636ec6a0e5afad4bf43e00fc))
+
+
 ## v4.4.19 (2024-04-10)
 
 ### Other
