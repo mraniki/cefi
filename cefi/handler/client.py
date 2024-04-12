@@ -168,7 +168,8 @@ class CexClient:
         Calculate the PnL for a given period.
 
         Parameters:
-            period (str): The period for which to calculate PnL ('W', 'M', 'Y', or None).
+            period (str): The period for which
+            to calculate PnL ('W', 'M', 'Y', or None).
 
         Returns:
             pnl: The calculated PnL value.
