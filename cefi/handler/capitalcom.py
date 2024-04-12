@@ -6,7 +6,6 @@ Capital.com API client
 """
 
 import asyncio
-from datetime import datetime, timedelta
 
 from capitalcom.client import Client, DirectionType
 from capitalcom.client_demo import Client as DemoClient
@@ -194,9 +193,9 @@ class CapitalHandler(CexClient):
         except Exception as e:
             logger.error(f"{self.name} Error {e}")
 
-    async def get_account_pnl(self, period=None):
+    async def calculate_pnl(self, period=None):
         """
-        Return account pnl.
+        no pnl info available via openapi endpoint
 
         Args:
             None
@@ -204,24 +203,14 @@ class CapitalHandler(CexClient):
         Returns:
             pnl
         """
-        today = datetime.now().date()
-        if period is None:
-            start_date = today
-        elif period == "W":
-            start_date = today - timedelta(days=today.weekday())
-        elif period == "M":
-            start_date = today.replace(day=1)
-        elif period == "Y":
-            start_date = today.replace(month=1, day=1)
-
-        end_date = datetime.now()
-        formatted_end_date = end_date.strftime("%Y-%m-%dT%H:%M:%S")
-        logger.debug("{} {}", start_date, formatted_end_date)
+        # end_date = datetime.now()
+        # formatted_end_date = end_date.strftime("%Y-%m-%dT%H:%M:%S")
+        # logger.debug("{} {}", start_date, formatted_end_date)
         # history = self.client.account_activity_history(
         #     fr=start_date, to=formatted_end_date, detailed=True
         # )
         # logger.debug("History: {}", history)
-        # no pnl info available via openapi endpoint
+
         return 0
 
     async def pre_order_checks(self, order_params):
