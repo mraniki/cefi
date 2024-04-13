@@ -2,6 +2,19 @@
 
 
 
+## v4.5.1 (2024-04-13)
+
+### Other
+
+* Merge pull request #444 from mraniki/dev
+
+⬆️ 🤖 - Q	How many college football players does it take to screw in a light bulb ([`bbf7a58`](https://github.com/mraniki/cefi/commit/bbf7a58e657f65b58150895a8f4e7748474e90b5))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency black to v24.4.0 ([`570aa74`](https://github.com/mraniki/cefi/commit/570aa74acc8fb1eefab778ba69652bd2fdb7b1fd))
+
+
 ## v4.5.0 (2024-04-12)
 
 ### :rotating_light:
