@@ -2,6 +2,23 @@
 
 
 
+## v4.6.1 (2024-04-16)
+
+### Other
+
+* Merge pull request #446 from mraniki/dev
+
+⬆️🐛 ([`4fa9875`](https://github.com/mraniki/cefi/commit/4fa98757c216d86a24e320642c730053bd1080d1))
+
+* Refactor minimum_amount assignment for better readability ([`ac1b57e`](https://github.com/mraniki/cefi/commit/ac1b57e6baee49a168d819b6a95ce3876a23badc))
+
+* Add debug log for instrument_info in CapitalHandler ([`6248927`](https://github.com/mraniki/cefi/commit/624892793261eb9593652e575bf9943a82be17b7))
+
+### Update
+
+* Update minimum amount retrieval in CapitalHandler class. ([`93d286b`](https://github.com/mraniki/cefi/commit/93d286bccba9dae9c29162f755d1f859220832c2))
+
+
 ## v4.6.0 (2024-04-16)
 
 ### Feat
