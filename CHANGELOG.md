@@ -2,6 +2,19 @@
 
 
 
+## v4.6.0 (2024-04-16)
+
+### Feat
+
+* ✨ feature update capitalcom.py to include minimum amount by default incase amount is too low ([`8007f96`](https://github.com/mraniki/cefi/commit/8007f96e27f5721b4044cf7f56a0cf3522410bcf))
+
+### Other
+
+* Merge pull request #445 from mraniki/dev
+
+✨ feature update capitalcom.py to include minimum amount by default i… ([`c47a27f`](https://github.com/mraniki/cefi/commit/c47a27f3e13a2769c4a4865081a5d31b57dfce59))
+
+
 ## v4.5.1 (2024-04-13)
 
 ### Other
