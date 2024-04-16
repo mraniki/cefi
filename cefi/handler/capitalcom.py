@@ -248,6 +248,7 @@ class CapitalHandler(CexClient):
     async def get_instrument_min_amount(self, instrument):
         """ """
         instrument_info = self.client.single_market(instrument)
+        logger.debug("instrument_info {}", instrument_info)
         minimum_amount = instrument_info.get("minDealSize", {}).get("value", 0)
         logger.debug("Minimum {}", minimum_amount)
         return int(minimum_amount)
