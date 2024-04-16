@@ -245,6 +245,13 @@ class CapitalHandler(CexClient):
         logger.debug("Decimals {}", decimals)
         return int(decimals)
 
+    async def get_instrument_min_amount(self, instrument):
+        """ """
+        instrument_info = self.client.single_market(instrument)
+        minimum_amount = instrument_info.get("minDealSize", {}).get("value", 0)
+        logger.debug("Minimum {}", minimum_amount)
+        return int(minimum_amount)
+
     async def execute_order(self, order_params):
         """
         Execute order
@@ -263,12 +270,15 @@ class CapitalHandler(CexClient):
             action_str = order_params.get("action")
             action = DirectionType[action_str]
             instrument = await self.replace_instrument(order_params.get("instrument"))
+
             quantity = order_params.get("quantity", self.trading_risk_amount)
             amount = await self.get_order_amount(
                 quantity=quantity,
                 instrument=instrument,
                 is_percentage=self.trading_risk_percentage,
             )
+            min_amount = await self.get_instrument_min_amount(instrument)
+            amount = max(amount, min_amount)
             await asyncio.sleep(1)  # Wait for 1 second
 
             if not (await self.pre_order_checks(order_params)):
