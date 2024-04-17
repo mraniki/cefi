@@ -2,6 +2,19 @@
 
 
 
+## v4.6.2 (2024-04-17)
+
+### Other
+
+* Merge pull request #448 from mraniki/dev
+
+⬆️ 🤖 - Your love life will be happy and harmonious ([`5eaba67`](https://github.com/mraniki/cefi/commit/5eaba67602b1bdb0483c91ddca88887b3df4e65f))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.1 ([`c7c6d6f`](https://github.com/mraniki/cefi/commit/c7c6d6f97c9f5cb40aa14d6947b63d3ae19c11f1))
+
+
 ## v4.6.1 (2024-04-16)
 
 ### Other
