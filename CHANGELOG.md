@@ -2,6 +2,21 @@
 
 
 
+## v4.6.3 (2024-04-18)
+
+### Other
+
+* Merge pull request #452 from mraniki/dev
+
+⬆️ 🤖 - You will be the victim of a bizarre joke ([`0ef4687`](https://github.com/mraniki/cefi/commit/0ef468777053cffb86cd87eda6bb9e20806eb67e))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.6 ([`e9b898a`](https://github.com/mraniki/cefi/commit/e9b898a90728b7627a6290715f1dfdd915bbc041))
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.5 ([`cfe7d5f`](https://github.com/mraniki/cefi/commit/cfe7d5fa0ac4692ea6ecc705fd928bbf3f0b45ae))
+
+
 ## v4.6.2 (2024-04-17)
 
 ### Other
@@ -11,6 +26,8 @@
 ⬆️ 🤖 - Your love life will be happy and harmonious ([`5eaba67`](https://github.com/mraniki/cefi/commit/5eaba67602b1bdb0483c91ddca88887b3df4e65f))
 
 ### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.4 ([`385d57d`](https://github.com/mraniki/cefi/commit/385d57d605d41cbd3a01a9e0f0703f8fc7e741d7))
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.1 ([`c7c6d6f`](https://github.com/mraniki/cefi/commit/c7c6d6f97c9f5cb40aa14d6947b63d3ae19c11f1))
 
