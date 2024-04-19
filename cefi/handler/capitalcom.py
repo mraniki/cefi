@@ -100,7 +100,7 @@ class CapitalHandler(CexClient):
             # logger.debug("Instrument verification: {}", search_markets)
 
             market = self.client.single_market(instrument)
-            # logger.debug("Raw Quote: {}", market)
+            # logger.debug("market: {}", market)
 
             quote = market["snapshot"]["offer"]
             logger.debug("Quote: {}", quote)
@@ -254,8 +254,8 @@ class CapitalHandler(CexClient):
             .get("minDealSize", {})
             .get("value", 0)
         )
-        logger.debug("Minimum {}", minimum_amount)
-        return int(minimum_amount)
+        logger.debug("Minimum Amount Needed {}", minimum_amount)
+        return float(minimum_amount)
 
     async def execute_order(self, order_params):
         """
@@ -283,9 +283,8 @@ class CapitalHandler(CexClient):
                 is_percentage=self.trading_risk_percentage,
             )
             min_amount = await self.get_instrument_min_amount(instrument)
-            logger.debug("min_amount {}", min_amount)
             amount = max(amount, min_amount)
-            logger.debug("amount {}", amount)
+            logger.debug("Amount to execute {}", amount)
             await asyncio.sleep(1)  # Wait for 1 second
 
             if not (await self.pre_order_checks(order_params)):

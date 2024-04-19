@@ -29,7 +29,7 @@ async def main():
         # # EURUSD: -3.22
     order = {
         "action": "BUY",
-        "instrument": "EURUSD",
+        "instrument": "US500",
         "quantity": 10,
         "take_profit": 100,
         "stop_loss": 1000,
