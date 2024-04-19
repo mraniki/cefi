@@ -249,8 +249,11 @@ class CapitalHandler(CexClient):
         """ """
         instrument_info = self.client.single_market(instrument)
         logger.debug("instrument_info {}", instrument_info)
-        minimum_amount = instrument_info.get("dealingRules", {}).get(
-        "minDealSize", {}).get("value", 0)
+        minimum_amount = (
+            instrument_info.get("dealingRules", {})
+            .get("minDealSize", {})
+            .get("value", 0)
+        )
         logger.debug("Minimum {}", minimum_amount)
         return int(minimum_amount)
 
@@ -280,7 +283,9 @@ class CapitalHandler(CexClient):
                 is_percentage=self.trading_risk_percentage,
             )
             min_amount = await self.get_instrument_min_amount(instrument)
+            logger.debug("min_amount {}", min_amount)
             amount = max(amount, min_amount)
+            logger.debug("amount {}", amount)
             await asyncio.sleep(1)  # Wait for 1 second
 
             if not (await self.pre_order_checks(order_params)):
