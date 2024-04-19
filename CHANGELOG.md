@@ -2,6 +2,25 @@
 
 
 
+## v4.6.4 (2024-04-19)
+
+### Other
+
+* Merge pull request #454 from mraniki/dev
+
+⬆️ 🤖 - Q	How many Marxists does it take to screw in a light bulb ([`632e908`](https://github.com/mraniki/cefi/commit/632e908ff0f63f93ec4f8cea5bab3a886dfeae3c))
+
+* Merge pull request #453 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.4.0 ([`cc27758`](https://github.com/mraniki/cefi/commit/cc27758964e72776ad1f3349fd022cb6151dc70e))
+
+* update capitalcom.py ([`d99377f`](https://github.com/mraniki/cefi/commit/d99377f73fab81968c3d1f5023cfc349218a74ec))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.4.0 ([`0b1abf4`](https://github.com/mraniki/cefi/commit/0b1abf43c2a872ca18aa12114a13db8ff8a1146e))
+
+
 ## v4.6.3 (2024-04-18)
 
 ### Other
