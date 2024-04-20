@@ -2,6 +2,15 @@
 
 
 
+## v4.6.6 (2024-04-20)
+
+### Other
+
+* Merge pull request #457 from mraniki/dev
+
+⬆️ 🤖 - Q	What do you say to a New Yorker with a job ([`48535fb`](https://github.com/mraniki/cefi/commit/48535fb37616399ed1971ffccd4582829048ec0d))
+
+
 ## v4.6.5 (2024-04-19)
 
 ### Other
@@ -9,6 +18,10 @@
 * Merge pull request #455 from mraniki/dev
 
 🐛 update capitalcom.py and example.py ([`7485dee`](https://github.com/mraniki/cefi/commit/7485dee54fbf22f8e002bc6fd10e914efc0c2c52))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.7 ([`c6e1588`](https://github.com/mraniki/cefi/commit/c6e15882b2f3c32e403a2c4944101f9f418d1fc2))
 
 ### 🐛
 
