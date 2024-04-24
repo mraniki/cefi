@@ -2,6 +2,23 @@
 
 
 
+## v4.6.7 (2024-04-24)
+
+### Other
+
+* Merge pull request #459 from mraniki/dev
+
+⬆️ 🤖 - You will be surrounded by luxury ([`85454a3`](https://github.com/mraniki/cefi/commit/85454a37e231cea6279653cd1f2c09a74b9192d6))
+
+* Merge pull request #458 from mraniki/renovate/pytest-cov-5.x
+
+⬆️ 🛠️(deps): update dependency pytest-cov to v5 ([`1755fea`](https://github.com/mraniki/cefi/commit/1755fea34febfb90cbd5128be4460908d7171984))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pytest-cov to v5 ([`988f865`](https://github.com/mraniki/cefi/commit/988f865044a9fbb48dce23f94fb03034d6af7a2e))
+
+
 ## v4.6.6 (2024-04-20)
 
 ### Other
