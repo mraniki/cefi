@@ -2,6 +2,19 @@
 
 
 
+## v4.6.8 (2024-04-25)
+
+### Other
+
+* Merge pull request #461 from mraniki/dev
+
+⬆️ 🤖 - Q	How was Thomas J Watson buried ([`cce49ac`](https://github.com/mraniki/cefi/commit/cce49ac0c96e11c0ff0987c2d78c870df53bdf43))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency black to v24.4.1 ([`2bbc72a`](https://github.com/mraniki/cefi/commit/2bbc72ae0b2319e299cb31e19f888e511c14c82a))
+
+
 ## v4.6.7 (2024-04-24)
 
 ### Other
