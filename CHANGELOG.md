@@ -2,6 +2,19 @@
 
 
 
+## v4.6.9 (2024-04-27)
+
+### Other
+
+* Merge pull request #463 from mraniki/dev
+
+⬆️ 🤖 - Dont go around saying the world owes you a living  The world owes you ([`6c0794d`](https://github.com/mraniki/cefi/commit/6c0794d508952d6bc13b08d3bad37c2e383e269f))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency black to v24.4.2 ([`b378b1a`](https://github.com/mraniki/cefi/commit/b378b1a5d0e675a4c0fab36deb0d55603837b9b5))
+
+
 ## v4.6.8 (2024-04-25)
 
 ### Other
