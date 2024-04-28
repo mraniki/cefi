@@ -266,3 +266,21 @@ class CexTrader:
                 f"{client.name}:\n{await client.execute_order(order_params)}\n"
             )
         return "\n".join(_order)
+
+    async def modify_position(self, order_params):
+        """
+        Modify order
+
+        Args:
+            order_params (dict)
+
+        Returns:
+            trade_confirmation(dict)
+
+        """
+        _order = ["🧾 Order\n"]
+        for client in self.clients:
+            _order.append(
+                f"{client.name}:\n{await client.modify_position(order_params)}\n"
+            )
+        return "\n".join(_order)

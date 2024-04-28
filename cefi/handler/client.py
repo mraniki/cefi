@@ -299,3 +299,15 @@ class CexClient:
                 return f"{trade_confirmation}"
         except Exception as e:
             logger.error("Error {}", e)
+
+    async def modify_position(self, order_params):
+        """
+        Modify opened position
+
+        Args:
+            order_params (dict)
+
+        Returns:
+            trade_confirmation(dict)
+
+        """
