@@ -401,7 +401,9 @@ class CapitalHandler(CexClient):
                 "id": order_check.get("dealId", ""),
                 "datetime": order_check.get("date", ""),
             }
-            return await self.get_trade_confirmation(trade)
+            return await self.get_trade_confirmation(
+                trade, order_params.get("instrument"), order_params.get("action")
+            )
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}: {e}"
