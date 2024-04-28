@@ -350,3 +350,60 @@ class CapitalHandler(CexClient):
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}: {e}"
+
+    async def modify_position(self, order_params):
+        """
+        Modify parameters such as SL / TP of a position that is opened
+        No capability to modify amount to reduce
+
+        Args:
+            order_params (dict):
+                action(str)
+                instrument(str)
+                quantity(int)
+                stop_price(int)
+                stop_distance(int)
+                stop_amount(int)
+                take_profit_price(int)
+                take_profit_distance(int)
+                take_profit_amount(int)
+
+        Returns:
+            trade_confirmation(dict)
+
+        """
+        try:
+            order = self.client.update_the_position(
+                dealid=order_params["id"],
+                gsl=order_params.get("trailing_stop_enabled", False),
+                tsl=order_params.get("trailing_stop_enabled", False),
+                stop_level=order_params.get("stop_price"),
+                stop_distance=order_params.get("stop_distance"),
+                stop_amount=order_params.get("stop_amount"),
+                profit_level=order_params.get("take_profit_price"),
+                profit_distance=order_params.get("take_profit_distance"),
+                profit_amount=order_params.get("take_profit_amount"),
+            )
+
+            if "errorCode" in order:
+                logger.error(f"Error modifying order: {order['errorCode']}")
+                return str(order["errorCode"])
+
+            logger.debug("Order: {}", order)
+            deal_reference = order["dealReference"]
+            order_check = self.client.position_order_confirmation(
+                deal_reference=deal_reference
+            )
+
+            trade = {
+                "amount": order_check.get("size", 0),
+                "price": order_check.get("level", 0),
+                "id": order_check.get("dealId", ""),
+                "datetime": order_check.get("date", ""),
+            }
+            return await self.get_trade_confirmation(
+                trade, order_params.get("instrument"), order_params.get("action")
+            )
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return f"Error executing {self.name}: {e}"
