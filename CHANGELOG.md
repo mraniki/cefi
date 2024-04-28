@@ -2,6 +2,23 @@
 
 
 
+## v4.7.0 (2024-04-28)
+
+### Other
+
+* Merge pull request #464 from mraniki/dev
+
+🥚 update capitalcom.py Modify parameters SL / TP of a position.  Modi… ([`8f9b904`](https://github.com/mraniki/cefi/commit/8f9b904d670b820525b30c4a98bfa8748b0bcf84))
+
+### 🐛
+
+* 🐛 ([`7a96e73`](https://github.com/mraniki/cefi/commit/7a96e7329e7e9cc62c86055644efbc6eb36070b5))
+
+### 🥚
+
+* 🥚 update capitalcom.py Modify parameters SL / TP of a position.  Modify parameters such as SL / TP of a position that is opened. No capability to modify amount to reduce size ([`364af98`](https://github.com/mraniki/cefi/commit/364af98c6a12fd55d0ea2bb86a0f7c2f1bc869e4))
+
+
 ## v4.6.9 (2024-04-27)
 
 ### Other
