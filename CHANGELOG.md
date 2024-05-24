@@ -2,6 +2,29 @@
 
 
 
+## v4.7.1 (2024-05-24)
+
+### Other
+
+* Merge pull request #468 from mraniki/dev
+
+⬆️ 🤖 - Youre a card which will have to be dealt with ([`76312e3`](https://github.com/mraniki/cefi/commit/76312e3b59a53c0eedd9cf89d70ce9b18e05e9dd))
+
+* Merge pull request #467 from mraniki/renovate/myst_parser-3.x
+
+⬆️ 🛠️(deps): update dependency myst_parser to v3 ([`e5f266c`](https://github.com/mraniki/cefi/commit/e5f266cc96c51125c84c7e02469cf1ed75e60cc8))
+
+* Merge pull request #466 from mraniki/renovate/sphinx_design-0.x
+
+⬆️ 🛠️(deps): update dependency sphinx_design to ^0.6.0 ([`e279617`](https://github.com/mraniki/cefi/commit/e27961764119957adbe199007378d583323602ab))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency myst_parser to v3 ([`1b988a8`](https://github.com/mraniki/cefi/commit/1b988a88500c5839e9f8ca037130c9febbc87ad6))
+
+* ⬆️ 🛠️(deps): update dependency sphinx_design to ^0.6.0 ([`fdc7c4b`](https://github.com/mraniki/cefi/commit/fdc7c4b3e8ef8d0a03df63043d68f1d8ffffc4a1))
+
+
 ## v4.7.0 (2024-04-28)
 
 ### Other
