@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.7.4 (2024-06-28)
+
+### Other
+
+* Merge pull request #473 from mraniki/dev
+
+♻️Improvement for capitalcom client in case of error ([`f121309`](https://github.com/mraniki/cefi/commit/f121309b86ab284620f2b82a81516b123f6f5c6c))
+
+### ♻️
+
+* ♻️ ([`2437eeb`](https://github.com/mraniki/cefi/commit/2437eeb7392994103f022b4804058e6e375c0c6d))
+
 ## v4.7.3 (2024-06-28)
 
 ### Other
