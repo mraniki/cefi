@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.7.3 (2024-06-28)
+
+### Other
+
+* Merge pull request #472 from mraniki/dev
+
+🥅 ([`f711240`](https://github.com/mraniki/cefi/commit/f71124009ef43cfc146240ae895514052c8fda25))
+
+### 🥅
+
+* 🥅 ([`f17a51b`](https://github.com/mraniki/cefi/commit/f17a51bc6a3b299c5974d6999be450ae000e8c5b))
+
 ## v4.7.2 (2024-06-28)
 
 ### Other
