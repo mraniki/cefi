@@ -1,6 +1,16 @@
 # CHANGELOG
 
+## v4.7.2 (2024-06-28)
 
+### Other
+
+* Merge pull request #471 from mraniki/dev
+
+🥅 update capitalcom.py ([`0251e46`](https://github.com/mraniki/cefi/commit/0251e46af42a404fcd0816bc8bf2ce40517fd942))
+
+### 🥅
+
+* 🥅 update capitalcom.py ([`41fb3ca`](https://github.com/mraniki/cefi/commit/41fb3ca44c4c23831ad63671986191439bacd466))
 
 ## v4.7.1 (2024-05-24)
 
@@ -24,7 +34,6 @@
 
 * ⬆️ 🛠️(deps): update dependency sphinx_design to ^0.6.0 ([`fdc7c4b`](https://github.com/mraniki/cefi/commit/fdc7c4b3e8ef8d0a03df63043d68f1d8ffffc4a1))
 
-
 ## v4.7.0 (2024-04-28)
 
 ### Other
@@ -41,7 +50,6 @@
 
 * 🥚 update capitalcom.py Modify parameters SL / TP of a position.  Modify parameters such as SL / TP of a position that is opened. No capability to modify amount to reduce size ([`364af98`](https://github.com/mraniki/cefi/commit/364af98c6a12fd55d0ea2bb86a0f7c2f1bc869e4))
 
-
 ## v4.6.9 (2024-04-27)
 
 ### Other
@@ -54,7 +62,6 @@
 
 * ⬆️ 🛠️(deps): update dependency black to v24.4.2 ([`b378b1a`](https://github.com/mraniki/cefi/commit/b378b1a5d0e675a4c0fab36deb0d55603837b9b5))
 
-
 ## v4.6.8 (2024-04-25)
 
 ### Other
@@ -66,7 +73,6 @@
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency black to v24.4.1 ([`2bbc72a`](https://github.com/mraniki/cefi/commit/2bbc72ae0b2319e299cb31e19f888e511c14c82a))
-
 
 ## v4.6.7 (2024-04-24)
 
@@ -84,7 +90,6 @@
 
 * ⬆️ 🛠️(deps): update dependency pytest-cov to v5 ([`988f865`](https://github.com/mraniki/cefi/commit/988f865044a9fbb48dce23f94fb03034d6af7a2e))
 
-
 ## v4.6.6 (2024-04-20)
 
 ### Other
@@ -92,7 +97,6 @@
 * Merge pull request #457 from mraniki/dev
 
 ⬆️ 🤖 - Q	What do you say to a New Yorker with a job ([`48535fb`](https://github.com/mraniki/cefi/commit/48535fb37616399ed1971ffccd4582829048ec0d))
-
 
 ## v4.6.5 (2024-04-19)
 
@@ -109,7 +113,6 @@
 ### 🐛
 
 * 🐛 update capitalcom.py and example.py ([`cb662c8`](https://github.com/mraniki/cefi/commit/cb662c82b1e9d4e13677322c610fea239276e4d7))
-
 
 ## v4.6.4 (2024-04-19)
 
@@ -129,7 +132,6 @@
 
 * ⬆️ 🛠️(deps): update dependency ruff to ^0.4.0 ([`0b1abf4`](https://github.com/mraniki/cefi/commit/0b1abf43c2a872ca18aa12114a13db8ff8a1146e))
 
-
 ## v4.6.3 (2024-04-18)
 
 ### Other
@@ -144,7 +146,6 @@
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.5 ([`cfe7d5f`](https://github.com/mraniki/cefi/commit/cfe7d5fa0ac4692ea6ecc705fd928bbf3f0b45ae))
 
-
 ## v4.6.2 (2024-04-17)
 
 ### Other
@@ -158,7 +159,6 @@
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.4 ([`385d57d`](https://github.com/mraniki/cefi/commit/385d57d605d41cbd3a01a9e0f0703f8fc7e741d7))
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.1 ([`c7c6d6f`](https://github.com/mraniki/cefi/commit/c7c6d6f97c9f5cb40aa14d6947b63d3ae19c11f1))
-
 
 ## v4.6.1 (2024-04-16)
 
@@ -176,7 +176,6 @@
 
 * Update minimum amount retrieval in CapitalHandler class. ([`93d286b`](https://github.com/mraniki/cefi/commit/93d286bccba9dae9c29162f755d1f859220832c2))
 
-
 ## v4.6.0 (2024-04-16)
 
 ### Feat
@@ -189,7 +188,6 @@
 
 ✨ feature update capitalcom.py to include minimum amount by default i… ([`c47a27f`](https://github.com/mraniki/cefi/commit/c47a27f3e13a2769c4a4865081a5d31b57dfce59))
 
-
 ## v4.5.1 (2024-04-13)
 
 ### Other
@@ -201,7 +199,6 @@
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency black to v24.4.0 ([`570aa74`](https://github.com/mraniki/cefi/commit/570aa74acc8fb1eefab778ba69652bd2fdb7b1fd))
-
 
 ## v4.5.0 (2024-04-12)
 
@@ -233,7 +230,6 @@
 
 * 💄 PnL code structure alignement ([`e9e0a61`](https://github.com/mraniki/cefi/commit/e9e0a61d13c39ca2636ec6a0e5afad4bf43e00fc))
 
-
 ## v4.4.19 (2024-04-10)
 
 ### Other
@@ -260,7 +256,6 @@
 
 * 🔊 update client.py and main.py ([`bc39cf3`](https://github.com/mraniki/cefi/commit/bc39cf319e20a99aeb97b96fbba8102bb4b87b99))
 
-
 ## v4.4.18 (2024-04-09)
 
 ### Other
@@ -281,7 +276,6 @@
 
 * 🐛 update main.py submit_order return format ([`185cc21`](https://github.com/mraniki/cefi/commit/185cc2112b9552f119ffab7f2c4e2f0b1541fdbc))
 
-
 ## v4.4.17 (2024-04-08)
 
 ### Other
@@ -298,7 +292,6 @@
 
 * 🎨 update capitalcom.py ([`694bb53`](https://github.com/mraniki/cefi/commit/694bb53544ffa5c8a4ba7dacf7877b24bdea0503))
 
-
 ## v4.4.16 (2024-04-08)
 
 ### Other
@@ -310,7 +303,6 @@
 ### 🐛
 
 * 🐛 update main.py ([`2a57d05`](https://github.com/mraniki/cefi/commit/2a57d051b86b2c6142349c1e947cc1342fb1df4b))
-
 
 ## v4.4.15 (2024-04-08)
 
@@ -324,7 +316,6 @@
 
 * 🐛 update capitalcom.py ([`bd5a6e8`](https://github.com/mraniki/cefi/commit/bd5a6e8bfa98b6f98ae35422e5f60906165c6f05))
 
-
 ## v4.4.14 (2024-04-08)
 
 ### Other
@@ -336,7 +327,6 @@
 ### 🐛
 
 * 🐛 ([`33cd12f`](https://github.com/mraniki/cefi/commit/33cd12f433dd0bbd99f0627d3d6c61ca22005abb))
-
 
 ## v4.4.13 (2024-04-08)
 
@@ -350,7 +340,6 @@
 
 * ⚡ _build_client for capital.com to bypass the 10min session limit ([`c88126f`](https://github.com/mraniki/cefi/commit/c88126f873b23863dcdf6c842b47ef2dbffffd60))
 
-
 ## v4.4.12 (2024-04-08)
 
 ### Other
@@ -362,7 +351,6 @@
 ### ⚡
 
 * ⚡ ([`aaaeaad`](https://github.com/mraniki/cefi/commit/aaaeaad399615c48de9b1517c51af8d7e1800818))
-
 
 ## v4.4.11 (2024-04-08)
 
@@ -376,7 +364,6 @@
 
 * 🐛 update capitalcom.py, main.py and example.py ([`2100a87`](https://github.com/mraniki/cefi/commit/2100a87ec44c1d375db583ec291aca900593f349))
 
-
 ## v4.4.10 (2024-04-07)
 
 ### :recycle:
@@ -389,7 +376,6 @@
 
 :recycle: Refactor order placement logic in CapitalHandler class ([`c7e2c8d`](https://github.com/mraniki/cefi/commit/c7e2c8dccff4ae209b95158821dd9ec63e034d54))
 
-
 ## v4.4.9 (2024-04-07)
 
 ### Other
@@ -401,7 +387,6 @@
 ### 🐛
 
 * 🐛 update capitalcom.py ([`10df6d7`](https://github.com/mraniki/cefi/commit/10df6d70b076bb40c0e449070e506195835c0b19))
-
 
 ## v4.4.8 (2024-04-07)
 
@@ -419,7 +404,6 @@
 
 * 💬 doc update ([`5c9a7c8`](https://github.com/mraniki/cefi/commit/5c9a7c87f4e5d3bf705033d7dfb2d860529f0d6e))
 
-
 ## v4.4.7 (2024-04-07)
 
 ### Other
@@ -431,7 +415,6 @@
 ### 🚑
 
 * 🚑 update capitalcom.py improve the SL/TP logic ([`cfd705a`](https://github.com/mraniki/cefi/commit/cfd705a57c9418fac2c2a12f03da00243e5281c9))
-
 
 ## v4.4.6 (2024-04-07)
 
@@ -449,7 +432,6 @@
 
 * 🥅 update capitalcom.py for better error handling ([`45745f9`](https://github.com/mraniki/cefi/commit/45745f922a2ae206c13b33349d2112f67cd9d436))
 
-
 ## v4.4.5 (2024-04-06)
 
 ### Other
@@ -461,7 +443,6 @@
 ### 🥅
 
 * 🥅  update capitalcom.py ([`2f17305`](https://github.com/mraniki/cefi/commit/2f17305c21130108ccd0b390edb78bb0f405622b))
-
 
 ## v4.4.4 (2024-04-05)
 
@@ -475,7 +456,6 @@
 
 :bug: Fix return type in CapitalHandler class method. ([`232df15`](https://github.com/mraniki/cefi/commit/232df15ee818762d16f31895d4aa348f529860b6))
 
-
 ## v4.4.3 (2024-03-30)
 
 ### Other
@@ -487,7 +467,6 @@
 ### 🔊
 
 * 🔊 update  main.py ([`2538f9c`](https://github.com/mraniki/cefi/commit/2538f9c47c89341b32f7ddae7f23b05a39cc9143))
-
 
 ## v4.4.2 (2024-03-29)
 
@@ -504,7 +483,6 @@
 ### 🔊
 
 * 🔊 Improve log when no clients loaded ([`5f12661`](https://github.com/mraniki/cefi/commit/5f12661aece404bb749378702e17660c9d66a32b))
-
 
 ## v4.4.1 (2024-03-28)
 
@@ -528,7 +506,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 
 * 🔧 ([`aa8b5c5`](https://github.com/mraniki/cefi/commit/aa8b5c55b690e34fe25e3a798dc28a155c412098))
 
-
 ## v4.4.0 (2024-03-28)
 
 ### Other
@@ -549,7 +526,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 
 * 🧐 ([`d17d64f`](https://github.com/mraniki/cefi/commit/d17d64f7862360b6b3692fcab622894a4ab60c91))
 
-
 ## v4.3.2 (2024-03-28)
 
 ### Other
@@ -561,7 +537,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 ### ♻️
 
 * ♻️ ([`79369af`](https://github.com/mraniki/cefi/commit/79369af79f7d60c5295e07a2712333d1e52db8e5))
-
 
 ## v4.3.1 (2024-03-28)
 
@@ -576,7 +551,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 * Update pyproject.toml with extended description and keywords ([`35d2598`](https://github.com/mraniki/cefi/commit/35d25984da27b9f5fb659dbc05f163764cf31836))
 
 * :recycle:  Update supported brokers in README.md ([`10db9b4`](https://github.com/mraniki/cefi/commit/10db9b41d43482a9ee7c139d3f77285b2b5681eb))
-
 
 ## v4.3.0 (2024-03-28)
 
@@ -616,7 +590,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 
 * 🥚 addding tp/sl for capital.com ([`6e883ef`](https://github.com/mraniki/cefi/commit/6e883ef2038836d4b618b71a6f9616df42917067))
 
-
 ## v4.2.0 (2024-03-27)
 
 ### Other
@@ -635,7 +608,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 
 * 🎨 ([`ff6ddce`](https://github.com/mraniki/cefi/commit/ff6ddce27248a4142f1da3da33ee2d4b579fc218))
 
-
 ## v4.1.0 (2024-03-27)
 
 ### Fix
@@ -651,7 +623,6 @@ Update readthedocs.yaml and conf.py for poetry installation ([`8346fb9`](https:/
 ### 🚀
 
 * 🚀 Using Handler wording for client class ([`c827ec6`](https://github.com/mraniki/cefi/commit/c827ec6f0b73abb04324f44b784d52a236a61f7e))
-
 
 ## v4.0.3 (2024-03-27)
 
@@ -669,7 +640,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🚨 ([`4989efd`](https://github.com/mraniki/cefi/commit/4989efd0be6f7e1f62e0c2c81ca9865cc2024f87))
 
-
 ## v4.0.2 (2024-03-26)
 
 ### Other
@@ -682,7 +652,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🔧 Updated capital.com instrument mapping ([`3759281`](https://github.com/mraniki/cefi/commit/37592814186a585e02514a706043f46095ac548e))
 
-
 ## v4.0.1 (2024-03-26)
 
 ### Other
@@ -694,7 +663,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### 🐛
 
 * 🐛 Fix Capitalcom ([`26cf930`](https://github.com/mraniki/cefi/commit/26cf930596d041fdfebbad874feedabcf8114701))
-
 
 ## v4.0.0 (2024-03-25)
 
@@ -719,7 +687,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### 🚨
 
 * 🚨 Linter setup update ([`34e28b3`](https://github.com/mraniki/cefi/commit/34e28b3b7ed4a7a010f9a527d63ec812127ba2c1))
-
 
 ## v3.4.2 (2024-03-22)
 
@@ -759,7 +726,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🎨 ([`de6c324`](https://github.com/mraniki/cefi/commit/de6c324551c6ae858e23ff6d1995c6e7b30f7c39))
 
-
 ## v3.4.1 (2024-03-22)
 
 ### Other
@@ -776,7 +742,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🚑 ([`0490465`](https://github.com/mraniki/cefi/commit/04904656ae20ad14897b60c9c8268880f2e237a1))
 
-
 ## v3.4.0 (2024-03-22)
 
 ### Other
@@ -788,7 +753,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ✨
 
 * ✨ new interface with capital.com broker api ([`25f6806`](https://github.com/mraniki/cefi/commit/25f680629c13aeb40daf9b73d2a4e33d98b154ed))
-
 
 ## v3.3.37 (2024-03-22)
 
@@ -802,7 +766,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.79 ([`8b5cf46`](https://github.com/mraniki/cefi/commit/8b5cf46e908c593f717525c414efc68cb85f59ce))
 
-
 ## v3.3.36 (2024-03-21)
 
 ### Other
@@ -814,7 +777,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.78 ([`31629c9`](https://github.com/mraniki/cefi/commit/31629c90e1a96f3bfebd0ab83145e4e198f7b2bd))
-
 
 ## v3.3.35 (2024-03-20)
 
@@ -834,7 +796,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.77 ([`30cc576`](https://github.com/mraniki/cefi/commit/30cc576432536840e1feac5861ea1228f658afca))
 
-
 ## v3.3.34 (2024-03-19)
 
 ### Other
@@ -852,7 +813,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.76 ([`b2d9efc`](https://github.com/mraniki/cefi/commit/b2d9efc67dfbe83603a79a8eb930ad8f42165724))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.75 ([`0403741`](https://github.com/mraniki/cefi/commit/0403741f70c5bf88b486cfb6c7c3c1cdec0a45f3))
-
 
 ## v3.3.33 (2024-03-16)
 
@@ -872,7 +832,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.72 ([`1a083a8`](https://github.com/mraniki/cefi/commit/1a083a8722c0e0ed5bb027f8620f29927bd646cb))
 
-
 ## v3.3.32 (2024-03-14)
 
 ### Other
@@ -886,7 +845,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.71 ([`4502ae2`](https://github.com/mraniki/cefi/commit/4502ae298c3436b147ff150d145f773d335dace6))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.70 ([`6c0cda9`](https://github.com/mraniki/cefi/commit/6c0cda90d2c0baa6b99e4442f7c396e9b1993f52))
-
 
 ## v3.3.31 (2024-03-12)
 
@@ -904,7 +862,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.67 ([`e1a15f7`](https://github.com/mraniki/cefi/commit/e1a15f7d9f0fec3a3e95dbc19e9524cb6bd6e020))
 
-
 ## v3.3.30 (2024-03-11)
 
 ### Other
@@ -916,7 +873,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.66 ([`98065b9`](https://github.com/mraniki/cefi/commit/98065b974aa235a96ef8edbf0bf244594df587a9))
-
 
 ## v3.3.29 (2024-03-09)
 
@@ -930,7 +886,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.65 ([`927d79e`](https://github.com/mraniki/cefi/commit/927d79e220150181b4bd8fe6d53c4a7776100559))
 
-
 ## v3.3.28 (2024-03-08)
 
 ### Other
@@ -942,7 +897,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.64 ([`b63c02d`](https://github.com/mraniki/cefi/commit/b63c02deb0d70cdeff2e713709359f7550415294))
-
 
 ## v3.3.27 (2024-03-07)
 
@@ -960,7 +914,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.60 ([`d8146c1`](https://github.com/mraniki/cefi/commit/d8146c1084908b9995101de1d9a1c0ab9e695dd8))
 
-
 ## v3.3.26 (2024-03-03)
 
 ### Other
@@ -973,7 +926,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.58 ([`29bb39d`](https://github.com/mraniki/cefi/commit/29bb39d3d284309cbf07adb8f21b8380e6a5ef84))
 
-
 ## v3.3.25 (2024-03-02)
 
 ### Other
@@ -985,7 +937,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.57 ([`1b90a77`](https://github.com/mraniki/cefi/commit/1b90a77dcc9ea97b45ac73e911aa68f6a9790aa0))
-
 
 ## v3.3.24 (2024-03-01)
 
@@ -1007,7 +958,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.55 ([`b850336`](https://github.com/mraniki/cefi/commit/b850336b2cdf973abbaa06851050957dfbe9fcc5))
 
-
 ## v3.3.23 (2024-02-29)
 
 ### Other
@@ -1019,7 +969,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.54 ([`2b91d95`](https://github.com/mraniki/cefi/commit/2b91d951d8968e3fdf3e4689bf6d24c915e12606))
-
 
 ## v3.3.22 (2024-02-28)
 
@@ -1037,7 +986,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.53 ([`b70ac6a`](https://github.com/mraniki/cefi/commit/b70ac6a370adc5a2abc6002f039b4df873fb1111))
 
-
 ## v3.3.21 (2024-02-27)
 
 ### Other
@@ -1051,7 +999,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 * ⬆️ 🛠️(deps): update dependency pytest to v8 ([`58d4cda`](https://github.com/mraniki/cefi/commit/58d4cdae57b02675f41ab03cc9cde09e262ad693))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.52 ([`13d87ca`](https://github.com/mraniki/cefi/commit/13d87ca47631adccd1c7e8d6be07f305c57c0d95))
-
 
 ## v3.3.20 (2024-02-25)
 
@@ -1095,7 +1042,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🥅 ([`098997b`](https://github.com/mraniki/cefi/commit/098997bc0bf675794d36a48f9c9a9046c23251f3))
 
-
 ## v3.3.19 (2024-02-24)
 
 ### Other
@@ -1118,7 +1064,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🙈 ([`3c27ad8`](https://github.com/mraniki/cefi/commit/3c27ad83c9e86336abe2b0762c24f4c71d25193f))
 
-
 ## v3.3.18 (2024-02-21)
 
 ### Other
@@ -1133,7 +1078,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.47 ([`2db71d1`](https://github.com/mraniki/cefi/commit/2db71d14e28a79fc67106e4f214dea7f65367fe1))
 
-
 ## v3.3.17 (2024-02-18)
 
 ### Other
@@ -1145,7 +1089,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.46 ([`fa9bfbe`](https://github.com/mraniki/cefi/commit/fa9bfbee3ff2bc5499aab5415c08def980cbd743))
-
 
 ## v3.3.16 (2024-02-15)
 
@@ -1159,7 +1102,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.45 ([`3bed397`](https://github.com/mraniki/cefi/commit/3bed397d1c8494069083dc4b9b4ac95f2d33eadd))
 
-
 ## v3.3.15 (2024-02-14)
 
 ### Other
@@ -1172,7 +1114,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.44 ([`12d659e`](https://github.com/mraniki/cefi/commit/12d659e42d17c6319a494776b30d0b65ae2a35c2))
 
-
 ## v3.3.14 (2024-02-13)
 
 ### Other
@@ -1184,7 +1125,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.43 ([`5b4dbc4`](https://github.com/mraniki/cefi/commit/5b4dbc457d6ae7f72add24b6aa47a9468ff88ecd))
-
 
 ## v3.3.13 (2024-02-11)
 
@@ -1202,7 +1142,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.42 ([`70e5b4a`](https://github.com/mraniki/cefi/commit/70e5b4a2b5aa666d0df488e4611f41afb75017f9))
 
-
 ## v3.3.12 (2024-02-11)
 
 ### Other
@@ -1215,7 +1154,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.41 ([`56ed51f`](https://github.com/mraniki/cefi/commit/56ed51f02ec4379ceed208a3971fcfe0391e6bff))
 
-
 ## v3.3.11 (2024-02-10)
 
 ### Other
@@ -1227,7 +1165,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.40 ([`2ad93f3`](https://github.com/mraniki/cefi/commit/2ad93f36a2a7b822f66b1438b1c06d5867abe617))
-
 
 ## v3.3.10 (2024-02-09)
 
@@ -1249,7 +1186,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.37 ([`9281b65`](https://github.com/mraniki/cefi/commit/9281b65906e9ca91d824829ef211a95bbf1b5fe0))
 
-
 ## v3.3.9 (2024-02-06)
 
 ### Other
@@ -1261,7 +1197,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.36 ([`01d8c11`](https://github.com/mraniki/cefi/commit/01d8c11e3f2b4731ca5a53c602d2d65f1d51cf18))
-
 
 ## v3.3.8 (2024-02-04)
 
@@ -1281,7 +1216,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.34 ([`8c4d720`](https://github.com/mraniki/cefi/commit/8c4d720784e2f754eccc818875adce64b4d11a45))
 
-
 ## v3.3.7 (2024-02-02)
 
 ### Other
@@ -1298,7 +1232,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.30 ([`da10a0c`](https://github.com/mraniki/cefi/commit/da10a0c3e308456aba9854e127ad71f17b652e2f))
 
-
 ## v3.3.6 (2024-01-31)
 
 ### Other
@@ -1310,7 +1243,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.29 ([`9f05fdd`](https://github.com/mraniki/cefi/commit/9f05fdd9c4d55952ac1f30e2903f8d89fd7c477a))
-
 
 ## v3.3.5 (2024-01-30)
 
@@ -1326,7 +1258,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.27 ([`894ede4`](https://github.com/mraniki/cefi/commit/894ede4cf84969ebfab6e4a94c4fd104897f25f8))
 
-
 ## v3.3.4 (2024-01-29)
 
 ### Other
@@ -1339,7 +1270,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.25 ([`6c6521c`](https://github.com/mraniki/cefi/commit/6c6521c51c3398c0190843588a416b6428b8a769))
 
-
 ## v3.3.3 (2024-01-28)
 
 ### Other
@@ -1347,7 +1277,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 * Merge pull request #304 from mraniki/dev
 
 ⬆️ 🤖 - Whenever you find that you are on the side of the majority it is time ([`64fe496`](https://github.com/mraniki/cefi/commit/64fe49681706af60b92d2f851b942817162d1986))
-
 
 ## v3.3.2 (2024-01-27)
 
@@ -1375,7 +1304,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🔧 ([`3882540`](https://github.com/mraniki/cefi/commit/38825408802adfd7468e34fc3c8304c143e5c603))
 
-
 ## v3.3.1 (2024-01-27)
 
 ### Other
@@ -1400,7 +1328,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🔥 ([`9e8b4cd`](https://github.com/mraniki/cefi/commit/9e8b4cdd95c6f9c712b86fcc9f8fe3e7f24492f6))
 
-
 ## v3.3.0 (2024-01-26)
 
 ### Other
@@ -1421,7 +1348,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * 🚨 ([`03f58de`](https://github.com/mraniki/cefi/commit/03f58decab1e73fd996cb93abd3a221b676bab2a))
 
-
 ## v3.2.45 (2024-01-26)
 
 ### Other
@@ -1433,7 +1359,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.22 ([`4bc93e1`](https://github.com/mraniki/cefi/commit/4bc93e1ad916ccc42a3b8e8c794d9f7deafa8a3e))
-
 
 ## v3.2.44 (2024-01-24)
 
@@ -1447,7 +1372,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.21 ([`7091911`](https://github.com/mraniki/cefi/commit/7091911916f48d74e12e5a18336175a29afec45b))
 
-
 ## v3.2.43 (2024-01-23)
 
 ### Other
@@ -1459,7 +1383,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.20 ([`8208402`](https://github.com/mraniki/cefi/commit/82084022b1f24bef2cb693be1346c7f05ba6a960))
-
 
 ## v3.2.42 (2024-01-22)
 
@@ -1473,7 +1396,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.19 ([`5a17a91`](https://github.com/mraniki/cefi/commit/5a17a91cff18426b8772d9d3551d8f0b1e2085ae))
 
-
 ## v3.2.41 (2024-01-19)
 
 ### Other
@@ -1486,7 +1408,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.18 ([`c535ad5`](https://github.com/mraniki/cefi/commit/c535ad598a36b7d0c85efbae8aef966343087940))
 
-
 ## v3.2.40 (2024-01-18)
 
 ### Other
@@ -1498,7 +1419,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.17 ([`18676a3`](https://github.com/mraniki/cefi/commit/18676a34982da488092fd22a3c2fffc9410b6acc))
-
 
 ## v3.2.39 (2024-01-16)
 
@@ -1514,7 +1434,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.15 ([`637b338`](https://github.com/mraniki/cefi/commit/637b338a5f6eb1296a69197517f88aab882c77d6))
 
-
 ## v3.2.38 (2024-01-15)
 
 ### Other
@@ -1526,7 +1445,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.14 ([`7146596`](https://github.com/mraniki/cefi/commit/71465961b723acb660a2abb437bdbcdc64f1e9a4))
-
 
 ## v3.2.37 (2024-01-13)
 
@@ -1540,7 +1458,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.13 ([`f995eb8`](https://github.com/mraniki/cefi/commit/f995eb83ea8963b699ec22b8866122c296631bb1))
 
-
 ## v3.2.36 (2024-01-12)
 
 ### Other
@@ -1552,7 +1469,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.12 ([`57884b2`](https://github.com/mraniki/cefi/commit/57884b2851e250bbb01bb7870af78bef99e4089e))
-
 
 ## v3.2.35 (2024-01-10)
 
@@ -1572,7 +1488,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.10 ([`0407d96`](https://github.com/mraniki/cefi/commit/0407d96f45cdc15236cfacd4f90a7e58b11ead69))
 
-
 ## v3.2.34 (2024-01-08)
 
 ### Other
@@ -1589,7 +1504,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 ([`a340a10`](https://github.com/mraniki/cefi/commit/a340a10865f1b348457faf22a880dae2088c7f97))
 
-
 ## v3.2.33 (2024-01-07)
 
 ### Other
@@ -1602,7 +1516,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.8 ([`dfdbbb6`](https://github.com/mraniki/cefi/commit/dfdbbb6b84afaa60c314a4e15dac97877617c912))
 
-
 ## v3.2.32 (2024-01-06)
 
 ### Other
@@ -1614,7 +1527,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.7 ([`5f8df63`](https://github.com/mraniki/cefi/commit/5f8df639e098c9d33cdf41248f75650b41916f12))
-
 
 ## v3.2.31 (2024-01-05)
 
@@ -1636,7 +1548,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.5 ([`540f2c5`](https://github.com/mraniki/cefi/commit/540f2c50d451405c53a8504b39258101aaad0745))
 
-
 ## v3.2.30 (2024-01-03)
 
 ### Other
@@ -1653,7 +1564,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.4 ([`7dcc35e`](https://github.com/mraniki/cefi/commit/7dcc35e35ade39da14cfc2ac8d05dfe18808c6b4))
 
-
 ## v3.2.29 (2023-12-31)
 
 ### Other
@@ -1665,7 +1575,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.2 ([`987cde6`](https://github.com/mraniki/cefi/commit/987cde618fe14c167a572286d60127601523ac11))
-
 
 ## v3.2.28 (2023-12-28)
 
@@ -1683,7 +1592,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.99 ([`f1f5191`](https://github.com/mraniki/cefi/commit/f1f5191ec0e9c7f08f38fe5e8ac1919c7bb35062))
 
-
 ## v3.2.27 (2023-12-25)
 
 ### Other
@@ -1695,7 +1603,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.98 ([`31116ad`](https://github.com/mraniki/cefi/commit/31116adf03891b95854a5d5e73e83633a3f3cd34))
-
 
 ## v3.2.26 (2023-12-24)
 
@@ -1709,7 +1616,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.97 ([`8bca5d0`](https://github.com/mraniki/cefi/commit/8bca5d0e0c04f0ef925afc44e5c16248cdd31cf7))
 
-
 ## v3.2.25 (2023-12-23)
 
 ### Other
@@ -1722,7 +1628,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.96 ([`6897bf5`](https://github.com/mraniki/cefi/commit/6897bf5776dfaa26d45bddde49e506781970ffd2))
 
-
 ## v3.2.24 (2023-12-21)
 
 ### Other
@@ -1734,7 +1639,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.95 ([`826e14f`](https://github.com/mraniki/cefi/commit/826e14fe03ff09501afdcb23099bd3331187d8fa))
-
 
 ## v3.2.23 (2023-12-20)
 
@@ -1752,7 +1656,6 @@ Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.co
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.94 ([`bfe0c5b`](https://github.com/mraniki/cefi/commit/bfe0c5b988835904fddb87142b82f40c791853b1))
 
-
 ## v3.2.22 (2023-12-17)
 
 ### Other
@@ -1764,7 +1667,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 ### Update
 
 * Update pyproject.toml ([`e8e4e32`](https://github.com/mraniki/cefi/commit/e8e4e329fee9775c56d0b3a3f4f198196b684768))
-
 
 ## v3.2.21 (2023-12-17)
 
@@ -1781,7 +1683,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.90 ([`03740b9`](https://github.com/mraniki/cefi/commit/03740b9c0e9aff945dab96e4f963a9cae2320fec))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.89 ([`042fe8c`](https://github.com/mraniki/cefi/commit/042fe8ce885603bd5c77d132804b2d0957de7d4d))
-
 
 ## v3.2.20 (2023-12-14)
 
@@ -1803,7 +1704,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.84 ([`e31f728`](https://github.com/mraniki/cefi/commit/e31f728c15e27e5f29c73924c9856903e686c029))
 
-
 ## v3.2.19 (2023-12-10)
 
 ### Other
@@ -1821,7 +1721,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.81 ([`90b240f`](https://github.com/mraniki/cefi/commit/90b240fcc917395e589f0a06f41c4b7c90f63a4b))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.80 ([`0780bb5`](https://github.com/mraniki/cefi/commit/0780bb573d554def7668dd9436f3d108aec95ae8))
-
 
 ## v3.2.18 (2023-12-07)
 
@@ -1849,7 +1748,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 
 * ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.23.0 ([`fba5ab6`](https://github.com/mraniki/cefi/commit/fba5ab653e3e88f067f73d54a567ef2accbb8cdc))
 
-
 ## v3.2.17 (2023-12-02)
 
 ### Other
@@ -1868,7 +1766,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.71 ([`790a636`](https://github.com/mraniki/cefi/commit/790a636e1865aa32d220a0e999c28217316fced7))
 
-
 ## v3.2.16 (2023-11-29)
 
 ### Other
@@ -1880,7 +1777,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.70 ([`c7cc8b6`](https://github.com/mraniki/cefi/commit/c7cc8b653be6805926e7e3612c4f6ef1946532e2))
-
 
 ## v3.2.15 (2023-11-29)
 
@@ -1896,7 +1792,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.68 ([`8892964`](https://github.com/mraniki/cefi/commit/88929646cea954a6e593208eb5520b04bc3dc561))
 
-
 ## v3.2.14 (2023-11-27)
 
 ### Other
@@ -1909,7 +1804,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.67 ([`368338c`](https://github.com/mraniki/cefi/commit/368338cb67c344e88885daa161f3bec10a6e2696))
 
-
 ## v3.2.13 (2023-11-26)
 
 ### Other
@@ -1921,7 +1815,6 @@ Update pyproject.toml ([`b4a1e43`](https://github.com/mraniki/cefi/commit/b4a1e4
 ### 🔥
 
 * 🔥 cleanup ([`a3b2c29`](https://github.com/mraniki/cefi/commit/a3b2c29002572d796425ae0ba35ea21dd104ce5c))
-
 
 ## v3.2.12 (2023-11-26)
 
@@ -2065,7 +1958,6 @@ Merge pull request #181 from mraniki/dev ([`437b3a0`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.43 ([`af9a7f6`](https://github.com/mraniki/cefi/commit/af9a7f6fa0ef33ee130d0743b20d2bc4fc3fa095))
 
-
 ## v3.2.11 (2023-11-07)
 
 ### Other
@@ -2135,7 +2027,6 @@ Merge ([`6a1c563`](https://github.com/mraniki/cefi/commit/6a1c5633a282b33e091f20
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.33 ([`10b0a48`](https://github.com/mraniki/cefi/commit/10b0a48a6dbd6d62d8fd7107c148e3ac11996024))
 
 * ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.22.0 ([`ca650df`](https://github.com/mraniki/cefi/commit/ca650df4789ee9d15e70f645de0d2481128e87bf))
-
 
 ## v3.2.10 (2023-10-30)
 
@@ -2221,7 +2112,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * 👷 CI Change ([`0913018`](https://github.com/mraniki/cefi/commit/091301851347ef5cffa4053c7fd4e7655dc48bbb))
 
-
 ## v3.2.9 (2023-10-27)
 
 ### Other
@@ -2270,7 +2160,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * 🔧 ([`17cb6ea`](https://github.com/mraniki/cefi/commit/17cb6ea37229d7b31f483195396c1fe4858e364e))
 
-
 ## v3.2.8 (2023-10-25)
 
 ### Other
@@ -2284,7 +2173,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.25 ([`cd56bd0`](https://github.com/mraniki/cefi/commit/cd56bd082d8b033485285e38949fed5f2b3bef1a))
-
 
 ## v3.2.7 (2023-10-24)
 
@@ -2316,7 +2204,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.23 ([`b511b9a`](https://github.com/mraniki/cefi/commit/b511b9a2ee6637d063ff0c63ba6ea8897c4d5171))
 
-
 ## v3.2.6 (2023-10-23)
 
 ### Other
@@ -2339,7 +2226,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.22 ([`2676415`](https://github.com/mraniki/cefi/commit/26764156e4ef94778e0d51f7f102db402c17d786))
 
-
 ## v3.2.5 (2023-10-22)
 
 ### Other
@@ -2360,7 +2246,6 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * 🥅 better error handling for no config ([`42d8755`](https://github.com/mraniki/cefi/commit/42d8755a6271d86aad3e3b7dc5d8c36df376b2e8))
 
-
 ## v3.2.4 (2023-10-20)
 
 ### Other
@@ -2376,7 +2261,6 @@ Dev ([`3c20994`](https://github.com/mraniki/cefi/commit/3c209947911c5cbffecf6d9f
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.19 ([`f199dad`](https://github.com/mraniki/cefi/commit/f199dad0558b79f4b4190f252504178804c37bb0))
-
 
 ## v3.2.3 (2023-10-20)
 
@@ -2426,7 +2310,6 @@ Dev ([`c0120c5`](https://github.com/mraniki/cefi/commit/c0120c59b214c290cf8bb816
 
 * 🥅 ([`2a6e7e5`](https://github.com/mraniki/cefi/commit/2a6e7e5d6da22b6a36100e2c34b883668a6176a1))
 
-
 ## v3.2.2 (2023-10-17)
 
 ### Other
@@ -2443,7 +2326,6 @@ Dev ([`dd28813`](https://github.com/mraniki/cefi/commit/dd28813c8c54f52d49d41994
 
 * Update README.md ([`c6d3101`](https://github.com/mraniki/cefi/commit/c6d3101d37f67a15a329031faec3342492992489))
 
-
 ## v3.2.1 (2023-10-17)
 
 ### Other
@@ -2459,7 +2341,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 ### Update
 
 * Update README.md ([`d6ca9a3`](https://github.com/mraniki/cefi/commit/d6ca9a3b491eaab277a5ab8461e0eb45f945e241))
-
 
 ## v3.2.0 (2023-10-17)
 
@@ -2482,7 +2363,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.16 ([`0c95447`](https://github.com/mraniki/cefi/commit/0c95447bf9e4e526c56d560591eff56201bd8af4))
-
 
 ## v3.1.12 (2023-10-17)
 
@@ -2510,7 +2390,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 
 * 👷 CI Change ([`c3a812e`](https://github.com/mraniki/cefi/commit/c3a812ed900f2c6c85084241c4057f57a1668f1c))
 
-
 ## v3.1.11 (2023-10-15)
 
 ### Other
@@ -2526,7 +2405,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.13 ([`946f01a`](https://github.com/mraniki/cefi/commit/946f01a212e327b3a21928ee27027ac14d532132))
-
 
 ## v3.1.10 (2023-10-14)
 
@@ -2559,7 +2437,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.12 ([`044808f`](https://github.com/mraniki/cefi/commit/044808f1e6bb306a64dc119d9cae345d629cca03))
 
-
 ## v3.1.9 (2023-10-11)
 
 ### Other
@@ -2580,7 +2457,6 @@ Signed-off-by: null &lt;null&gt; ([`5d7899f`](https://github.com/mraniki/cefi/co
 
 * 👷 CI Change ([`9e1431f`](https://github.com/mraniki/cefi/commit/9e1431ff2d3412fcfd00a85b38e899b5629a24ce))
 
-
 ## v3.1.8 (2023-10-11)
 
 ### Other
@@ -2592,7 +2468,6 @@ Signed-off-by: null &lt;null&gt; ([`5d7899f`](https://github.com/mraniki/cefi/co
 ### 👷
 
 * 👷 CI Change ([`53e7cf6`](https://github.com/mraniki/cefi/commit/53e7cf606148a0f983dab344024a9ad615f2e753))
-
 
 ## v3.1.7 (2023-10-10)
 
@@ -2625,7 +2500,6 @@ there are no check failures. ([`cea9efb`](https://github.com/mraniki/cefi/commit
 
 * 🚨 ([`3340fc2`](https://github.com/mraniki/cefi/commit/3340fc2171c11b104989bdcfd2dc0f470bbece53))
 
-
 ## v3.1.6 (2023-10-10)
 
 ### Other
@@ -2645,7 +2519,6 @@ there are no check failures. ([`cea9efb`](https://github.com/mraniki/cefi/commit
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ruff to ^0.0.292 ([`6c527c1`](https://github.com/mraniki/cefi/commit/6c527c1618fcb79ac10b83421db2f209bc0c7203))
-
 
 ## v3.1.5 (2023-10-10)
 
@@ -2677,7 +2550,6 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f36257e`](https://github.com/mraniki/cefi/commit/f36257ec9ecae09dbd57f11b1a8190d8761a757d))
-
 
 ## v3.1.4 (2023-10-07)
 
@@ -2746,7 +2618,6 @@ Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7
 
 * 🚨 ([`e166af3`](https://github.com/mraniki/cefi/commit/e166af3ceab9443ee265a0a9d17d63016b5f0b23))
 
-
 ## v3.1.3 (2023-10-05)
 
 ### Other
@@ -2779,7 +2650,6 @@ Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7
 
 * 🔥 ([`8ca3447`](https://github.com/mraniki/cefi/commit/8ca3447e342795438cede85b4756c5d59972b063))
 
-
 ## v3.1.2 (2023-10-05)
 
 ### Other
@@ -2791,7 +2661,6 @@ Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7
 ### 🥅
 
 * 🥅 ([`89841ff`](https://github.com/mraniki/cefi/commit/89841ffc6bc106437c125f1d448cbd236571b335))
-
 
 ## v3.1.1 (2023-10-05)
 
@@ -2815,7 +2684,6 @@ Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7
 
 * ⬆️ 🛠️(deps): update dependency pytest-loguru to ^0.3.0 ([`cdaca14`](https://github.com/mraniki/cefi/commit/cdaca14f6bdbdcefcb3752a892654b8d9f7ee5e3))
 
-
 ## v3.1.0 (2023-10-04)
 
 ### Other
@@ -2827,7 +2695,6 @@ Add support for &#34;huobi&#34; in addition to &#34;binance&#34; in result. ([`7
 ### 🥚
 
 * 🥚Add support for .op.toml configuration file ([`eaebe17`](https://github.com/mraniki/cefi/commit/eaebe17b9bdc665e17c2c4571b71c361fe27c3ff))
-
 
 ## v3.0.4 (2023-10-04)
 
@@ -2868,7 +2735,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`88f2739`](https://g
 
 * 🔧 ([`7ce3297`](https://github.com/mraniki/cefi/commit/7ce32972e5c02f83a6834a9f3e4aa17c8e161f17))
 
-
 ## v3.0.3 (2023-10-01)
 
 ### Other
@@ -2895,7 +2761,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`88f2739`](https://g
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.0.112 ([`eff8759`](https://github.com/mraniki/cefi/commit/eff87595338de30d6538869f49270dd10ab16911))
 
-
 ## v3.0.2 (2023-10-01)
 
 ### Other
@@ -2911,7 +2776,6 @@ CI ([`241fb96`](https://github.com/mraniki/cefi/commit/241fb96b87bf0235a592242b9
 ### 👷
 
 * 👷 CI Change ([`b301191`](https://github.com/mraniki/cefi/commit/b3011910c30f9f9ec148fb09b9ef26869b96f1b8))
-
 
 ## v3.0.1 (2023-09-30)
 
@@ -2942,7 +2806,6 @@ CI ([`241fb96`](https://github.com/mraniki/cefi/commit/241fb96b87bf0235a592242b9
 ### 🔧
 
 * 🔧 ([`8eef9f8`](https://github.com/mraniki/cefi/commit/8eef9f8efd317fab8a777b12c164e5330d0083af))
-
 
 ## v3.0.0 (2023-09-29)
 
@@ -3113,7 +2976,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 🚨 ([`7ec03d0`](https://github.com/mraniki/cefi/commit/7ec03d0d83dfc3e615c6fd30f9437b702b2edea9))
 
-
 ## v2.0.10 (2023-09-27)
 
 ### Other
@@ -3127,7 +2989,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 ### Update
 
 * Update default cex settings ([`3c1bcbd`](https://github.com/mraniki/cefi/commit/3c1bcbd2d80653458775e93f8e61fc994d6f3305))
-
 
 ## v2.0.9 (2023-09-27)
 
@@ -3179,7 +3040,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 🚨 ([`234d9da`](https://github.com/mraniki/cefi/commit/234d9da3eb8923ca338feca39a7d4bf946e97ec5))
 
-
 ## v2.0.8 (2023-09-27)
 
 ### Other
@@ -3191,7 +3051,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 ### 🩹
 
 * 🩹 version declaration ([`992196f`](https://github.com/mraniki/cefi/commit/992196f75859b3d19de17617a4b5dba919952a6f))
-
 
 ## v2.0.7 (2023-09-27)
 
@@ -3205,7 +3064,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 👷 CI Change ([`5ab26f2`](https://github.com/mraniki/cefi/commit/5ab26f2ce47c81d49e6a9fc639c5b48d5f2101c2))
 
-
 ## v2.0.6 (2023-09-23)
 
 ### Other
@@ -3217,7 +3075,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 ### 🔊
 
 * 🔊 ([`f194c23`](https://github.com/mraniki/cefi/commit/f194c238e4b7bba893837d78367591f2043f65f1))
-
 
 ## v2.0.5 (2023-09-23)
 
@@ -3231,7 +3088,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 🔧 ([`1d20c38`](https://github.com/mraniki/cefi/commit/1d20c38d22b0da8059578b1ec586af84447bffb7))
 
-
 ## v2.0.4 (2023-09-20)
 
 ### Other
@@ -3244,7 +3100,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * ✅ Unit Test ([`6f1499c`](https://github.com/mraniki/cefi/commit/6f1499cc733afef50f6a486083fb2db2fd913557))
 
-
 ## v2.0.3 (2023-09-19)
 
 ### Other
@@ -3256,7 +3111,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 ### 🚨
 
 * 🚨 ([`89851a7`](https://github.com/mraniki/cefi/commit/89851a77462b7379665fd3964ee63df4f87198ce))
-
 
 ## v2.0.2 (2023-09-19)
 
@@ -3278,13 +3132,11 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * ✅ Unit Test ([`096fa63`](https://github.com/mraniki/cefi/commit/096fa63e900efa9d8843bf164ba7d7e5d875b750))
 
-
 ## v2.0.1 (2023-09-19)
 
 ### Update
 
 * Update README.md ([`51842b8`](https://github.com/mraniki/cefi/commit/51842b8331cad55844351f8696378d29b8d61afa))
-
 
 ## v2.0.0 (2023-09-19)
 
@@ -3444,7 +3296,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 🥅 ([`7c2d2f7`](https://github.com/mraniki/cefi/commit/7c2d2f7d2aeb72ff187abe415b1c4f68bbabd159))
 
-
 ## v1.1.35 (2023-09-09)
 
 ### Other
@@ -3461,20 +3312,17 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * 👷 CI Change ([`2819fb3`](https://github.com/mraniki/cefi/commit/2819fb3b9a7591d55c17321b401e9ffc7171e2f4))
 
-
 ## v1.1.34 (2023-09-07)
 
 ### Update
 
 * Update README.md ([`c7b3dc6`](https://github.com/mraniki/cefi/commit/c7b3dc62626605beb79e5bbf24386aee4cd02052))
 
-
 ## v1.1.33 (2023-09-07)
 
 ### Update
 
 * Update README.md ([`b1b09cd`](https://github.com/mraniki/cefi/commit/b1b09cdcfe148db8385e65451c2755179ba0e9ac))
-
 
 ## v1.1.32 (2023-09-07)
 
@@ -3487,7 +3335,6 @@ Update README.md ([`1aec7bb`](https://github.com/mraniki/cefi/commit/1aec7bbe726
 ### Update
 
 * Update README.md ([`bb17200`](https://github.com/mraniki/cefi/commit/bb17200491e9f41eaf3f42f570fdb4b52fa55030))
-
 
 ## v1.1.31 (2023-09-07)
 
@@ -3515,13 +3362,11 @@ Update README.md ([`1aec7bb`](https://github.com/mraniki/cefi/commit/1aec7bbe726
 
 * ⬆️ ([`051f371`](https://github.com/mraniki/cefi/commit/051f3712a88051ec68bad1020ed154734dd44bdb))
 
-
 ## v1.1.30 (2023-09-06)
 
 ### Update
 
 * Update pyproject.toml ([`3139f41`](https://github.com/mraniki/cefi/commit/3139f41adfefbbc44bfb3bfa618754fd313d50a4))
-
 
 ## v1.1.29 (2023-09-05)
 
@@ -3543,7 +3388,6 @@ Merge ([`03377bd`](https://github.com/mraniki/cefi/commit/03377bdd3bd7f7f137e858
 
 * Update Requirements ([`3d443a9`](https://github.com/mraniki/cefi/commit/3d443a96878f7296a6f5f1d3fdd9d47f83bd55c6))
 
-
 ## v1.1.28 (2023-09-03)
 
 ### Other
@@ -3553,7 +3397,6 @@ Merge ([`03377bd`](https://github.com/mraniki/cefi/commit/03377bdd3bd7f7f137e858
 ⬆️ 🛠️(deps): update dependency sphinx to v7.2.5 ([`b1b241a`](https://github.com/mraniki/cefi/commit/b1b241ad4aae35ae9d50c5c523ee7b0bd67e63a0))
 
 * Merge branch &#39;main&#39; into renovate/sphinx-7.x ([`38796b1`](https://github.com/mraniki/cefi/commit/38796b159b6ba8c951047fb29954c89cd3e7a4b0))
-
 
 ## v1.1.27 (2023-09-01)
 
@@ -3596,7 +3439,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.2.5 ([`9419799`](https://github.com/mraniki/cefi/commit/9419799f86fd6cca19f73272317a519bf258b474))
 
-
 ## v1.1.26 (2023-08-30)
 
 ### Update
@@ -3607,7 +3449,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 * ♻️ ([`a3e0644`](https://github.com/mraniki/cefi/commit/a3e0644938aa9c63c998174a1571c0627d7b5621))
 
-
 ## v1.1.25 (2023-08-28)
 
 ### Other
@@ -3617,7 +3458,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.286,&lt;0.0.287 ([`6036c66`](https://github.com/mraniki/cefi/commit/6036c6674a57b1daecbd95742a54984b37bb02d1))
 
 * Merge branch &#39;main&#39; into dev ([`58750c1`](https://github.com/mraniki/cefi/commit/58750c1a9a086d6c9f59d263e06b5d4acc2cb896))
-
 
 ## v1.1.24 (2023-08-28)
 
@@ -3643,7 +3483,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 * 🐛 📝  extension error ([`bd77653`](https://github.com/mraniki/cefi/commit/bd77653fca29d0fdfefae4a7586202850371375b))
 
-
 ## v1.1.23 (2023-08-24)
 
 ### Other
@@ -3666,13 +3505,11 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 * 🔥 cleanup ([`9c7ee51`](https://github.com/mraniki/cefi/commit/9c7ee51b77721fcb72992b4d25ebb1280436fff0))
 
-
 ## v1.1.22 (2023-08-24)
 
 ### Update
 
 * Update pyproject.toml ([`a293de7`](https://github.com/mraniki/cefi/commit/a293de7acd66b85d4d6f1e7cca28f7c2f42e6681))
-
 
 ## v1.1.21 (2023-08-22)
 
@@ -3701,7 +3538,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`392d4a3`](https://github.com/mraniki/cefi/commit/392d4a3c42e34de10e42201d974161542c6234b5))
 
-
 ## v1.1.20 (2023-08-21)
 
 ### Other
@@ -3716,20 +3552,17 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`392d4a3`](https://g
 
 * Update Requirements ([`3f9546c`](https://github.com/mraniki/cefi/commit/3f9546cddb647d89aa5a414f09437c3ce01bad33))
 
-
 ## v1.1.19 (2023-08-20)
 
 ### Update
 
 * Update renovate.json ([`f889682`](https://github.com/mraniki/cefi/commit/f8896820c99ed13cea24177cb766e9a9018bf163))
 
-
 ## v1.1.18 (2023-08-20)
 
 ### Update
 
 * Update pyproject.toml ([`d0a2478`](https://github.com/mraniki/cefi/commit/d0a2478b7a2e67ecf95d94c59cc67e347683218b))
-
 
 ## v1.1.17 (2023-08-19)
 
@@ -3758,7 +3591,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://github.com/mraniki/cefi/commit/933d3cf364bb77f2d8ecb47afb0301fc301d510a))
 
-
 ## v1.1.16 (2023-08-18)
 
 ### :recycle:
@@ -3775,7 +3607,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * Update Requirements ([`379cc92`](https://github.com/mraniki/cefi/commit/379cc926bacc2bb7d93c47e9b8bfb01e7acf5cd1))
 
-
 ## v1.1.15 (2023-08-18)
 
 ### Other
@@ -3791,7 +3622,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 ### ⬆️
 
 * ⬆️(deps): update dependency ruff to &gt;=0.0.285,&lt;0.0.286 ([`977b6f9`](https://github.com/mraniki/cefi/commit/977b6f9763ce2386aca86321964a18526c130353))
-
 
 ## v1.1.14 (2023-08-12)
 
@@ -3811,7 +3641,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * 📝 ([`ad0a005`](https://github.com/mraniki/cefi/commit/ad0a005ed0f07b37b7644edb6ad083cc910bbf68))
 
-
 ## v1.1.13 (2023-08-11)
 
 ### :memo:
@@ -3829,7 +3658,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 ### Update
 
 * Update Requirements ([`bbbcd1d`](https://github.com/mraniki/cefi/commit/bbbcd1d0d41aa36a6cefeba450b87a520282a67f))
-
 
 ## v1.1.12 (2023-08-10)
 
@@ -3849,7 +3677,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * 📝 docs ([`f1efc7c`](https://github.com/mraniki/cefi/commit/f1efc7c0c7c5cb9f3408efaba4c1f24c3ca29044))
 
-
 ## v1.1.11 (2023-08-10)
 
 ### Other
@@ -3868,13 +3695,11 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * 👷 CI Change ([`67a999e`](https://github.com/mraniki/cefi/commit/67a999e3ddf5a3ee35d98659db8259c42a077a9f))
 
-
 ## v1.1.10 (2023-08-10)
 
 ### Update
 
 * Update README.md ([`0b498b3`](https://github.com/mraniki/cefi/commit/0b498b30db11e300c38ba4e025f371274be330ec))
-
 
 ## v1.1.9 (2023-08-09)
 
@@ -3889,7 +3714,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 📝 ([`0a0b374`](https://github.com/mraniki/cefi/commit/0a0b37448b682d4eeecdb4dee893c44f8f0f7a02))
 
 * Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`6dba475`](https://github.com/mraniki/cefi/commit/6dba4758c102b3cb36f56404ca55e0900927c886))
-
 
 ## v1.1.8 (2023-08-09)
 
@@ -3923,20 +3747,17 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 :white_check_mark: ([`ab450e0`](https://github.com/mraniki/cefi/commit/ab450e082dd835ecc7fbf6cf3fdd1063ee6acb34))
 
-
 ## v1.1.7 (2023-08-09)
 
 ### Update
 
 * Update README.md ([`bef456c`](https://github.com/mraniki/cefi/commit/bef456c0e68c8e9f5aa0d2ab7258be04f772c741))
 
-
 ## v1.1.6 (2023-08-09)
 
 ### Update
 
 * Update README.md ([`f6f959a`](https://github.com/mraniki/cefi/commit/f6f959aede4423dae0412ca7bbd7ee18aadf884c))
-
 
 ## v1.1.5 (2023-08-09)
 
@@ -3962,7 +3783,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * 📝 ([`77c0459`](https://github.com/mraniki/cefi/commit/77c0459948ea022afa35685faf3c7f5c3f66a7c7))
 
-
 ## v1.1.4 (2023-08-09)
 
 ### Other
@@ -3977,13 +3797,11 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 * 📝 ([`576f8f4`](https://github.com/mraniki/cefi/commit/576f8f4250e932261aea9f2c83a34c5277837cc3))
 
-
 ## v1.1.3 (2023-08-09)
 
 ### 📝
 
 * 📝 ([`6a31722`](https://github.com/mraniki/cefi/commit/6a317220ee28e6b41e4a80ff548949e675a4b914))
-
 
 ## v1.1.2 (2023-08-09)
 
@@ -3996,7 +3814,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 * Merge pull request #8 from mraniki/dev
 
 :memo: ([`612ce1e`](https://github.com/mraniki/cefi/commit/612ce1e07bcea3193160c799789c4672bcf2358d))
-
 
 ## v1.1.1 (2023-08-09)
 
@@ -4011,7 +3828,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 🐳 ([`3b6757f`](https://github.com/mraniki/cefi/commit/3b6757f0f498e55094115da65129576d2876c9d6))
 
 * Merge branch &#39;main&#39; into dev ([`e9d8d48`](https://github.com/mraniki/cefi/commit/e9d8d48f9939c8365cdc502a5d7f3383da78ac12))
-
 
 ## v1.1.0 (2023-08-09)
 
@@ -4037,7 +3853,6 @@ Conflicts:
 
 * Update Requirements ([`615ba79`](https://github.com/mraniki/cefi/commit/615ba7948f0d28bf1e530d5c2d6db89bcade375c))
 
-
 ## v1.0.3 (2023-08-09)
 
 ### :memo:
@@ -4056,7 +3871,6 @@ Conflicts:
 
 * Update README.md ([`4300998`](https://github.com/mraniki/cefi/commit/43009984acef0d41bc5e402d948b63aef325e3ec))
 
-
 ## v1.0.2 (2023-08-09)
 
 ### :white_check_mark:
@@ -4066,7 +3880,6 @@ Conflicts:
 ### Other
 
 * Merge branch &#39;main&#39; of git@github.com:mraniki/cex.git ([`0b4aec3`](https://github.com/mraniki/cefi/commit/0b4aec38083ab03a03ca6a769d1e6ec057cc583e))
-
 
 ## v1.0.1 (2023-08-09)
 
@@ -4079,7 +3892,6 @@ Conflicts:
 ### Other
 
 * Merge branch &#39;main&#39; of git@github.com:mraniki/cex.git ([`22d29f4`](https://github.com/mraniki/cefi/commit/22d29f4edcd8c64275bc2170432b956adee93321))
-
 
 ## v1.0.0 (2023-08-09)
 
