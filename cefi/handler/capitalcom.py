@@ -84,8 +84,14 @@ class CapitalHandler(CexClient):
                     api_key=self.api_key,
                 )
             logger.debug("Client: {}", self.client)
+            if self.client.accounts_data():
+                return self.client
+            else:
+                logger.warning("No valid capital.com client. Verify settings.")
+                self.client = None
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
+            self.client = None
             return e
 
     async def get_quote(self, instrument):
