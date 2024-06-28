@@ -157,16 +157,20 @@ class CapitalHandler(CexClient):
             balance
 
         """
+        try:
+            accounts = self.accounts_data.get("accounts", [])
 
-        accounts = self.accounts_data.get("accounts", [])
+            balances = [
+                f"{account['accountName']}: {account['balance']['balance']}\n"
+                for account in accounts
+                if "balance" in account
+                and account["balance"].get("balance") is not None
+            ]
 
-        balances = [
-            f"{account['accountName']}: {account['balance']['balance']}\n"
-            for account in accounts
-            if "balance" in account and account["balance"].get("balance") is not None
-        ]
-
-        return "".join(balances)
+            return "".join(balances)
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
 
     async def get_account_position(self):
         """
@@ -224,14 +228,18 @@ class CapitalHandler(CexClient):
         Returns:
             float: The available balance of the trading asset.
         """
-        return next(
-            (
-                account["balance"]["available"]
-                for account in self.accounts_data["accounts"]
-                if account["accountName"] == self.trading_asset
-            ),
-            0,
-        )
+        try:
+            return next(
+                (
+                    account["balance"]["available"]
+                    for account in self.accounts_data["accounts"]
+                    if account["accountName"] == self.trading_asset
+                ),
+                0,
+            )
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
 
     async def get_instrument_decimals(self, instrument):
         """
@@ -240,22 +248,30 @@ class CapitalHandler(CexClient):
         Returns:
             int: The number of decimal places for the instrument.
         """
-        instrument_info = self.client.single_market(instrument)
-        decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
-        logger.debug("Decimals {}", decimals)
-        return int(decimals)
+        try:
+            instrument_info = self.client.single_market(instrument)
+            decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
+            logger.debug("Decimals {}", decimals)
+            return int(decimals)
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
 
     async def get_instrument_min_amount(self, instrument):
         """ """
-        instrument_info = self.client.single_market(instrument)
-        logger.debug("instrument_info {}", instrument_info)
-        minimum_amount = (
-            instrument_info.get("dealingRules", {})
-            .get("minDealSize", {})
-            .get("value", 0)
-        )
-        logger.debug("Minimum Amount Needed {}", minimum_amount)
-        return float(minimum_amount)
+        try:
+            instrument_info = self.client.single_market(instrument)
+            logger.debug("instrument_info {}", instrument_info)
+            minimum_amount = (
+                instrument_info.get("dealingRules", {})
+                .get("minDealSize", {})
+                .get("value", 0)
+            )
+            logger.debug("Minimum Amount Needed {}", minimum_amount)
+            return float(minimum_amount)
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
 
     async def execute_order(self, order_params):
         """
