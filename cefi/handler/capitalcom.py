@@ -51,12 +51,14 @@ class CapitalHandler(CexClient):
         try:
 
             self._build_client()
-            logger.debug("Client: {}", self.client)
-            self.accounts_data = self.client.all_accounts()
-            logger.debug("Account data: {}", self.accounts_data)
-            self.account_number = self.accounts_data["accounts"][0]["accountId"]
-            logger.debug("Account number: {}", self.account_number)
-            logger.debug("Session details: {}", self.client.get_sesion_details())
+            if self.client:
+                self.accounts_data = self.client.all_accounts()
+                logger.debug("Account data: {}", self.accounts_data)
+                self.account_number = self.accounts_data["accounts"][0]["accountId"]
+                logger.debug("Account number: {}", self.account_number)
+                logger.debug("Session details: {}", self.client.get_sesion_details())
+            else:
+                logger.warning("No capital.com client. Verify settings.")
 
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
@@ -68,19 +70,23 @@ class CapitalHandler(CexClient):
         Capital.com session last only 10 minutes
 
         """
-
-        if self.testmode:
-            self.client = DemoClient(
-                log=self.user_id,
-                pas=self.password,
-                api_key=self.api_key,
-            )
-        else:
-            self.client = Client(
-                log=self.user_id,
-                pas=self.password,
-                api_key=self.api_key,
-            )
+        try:
+            if self.testmode:
+                self.client = DemoClient(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            else:
+                self.client = Client(
+                    log=self.user_id,
+                    pas=self.password,
+                    api_key=self.api_key,
+                )
+            logger.debug("Client: {}", self.client)
+        except Exception as e:
+            logger.error("{} Error {}", self.name, e)
+            return e
 
     async def get_quote(self, instrument):
         """
