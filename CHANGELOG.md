@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v4.7.5 (2024-06-28)
+
+### Other
+
+* Merge pull request #474 from mraniki/dev
+
+🔥 update capitalcom.py ([`15f0ee9`](https://github.com/mraniki/cefi/commit/15f0ee9aaf8c68e45c9df2152cf428d9b81fe729))
+
+* Merge pull request #470 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.5.0 ([`8b93915`](https://github.com/mraniki/cefi/commit/8b939151fe14fa59949b9cf98e9303dc08ea3be3))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.5.0 ([`1a1dd59`](https://github.com/mraniki/cefi/commit/1a1dd59d1dcb82370270c04a733f70e8c92fc3c7))
+
+### 🔥
+
+* 🔥 update capitalcom.py ([`4cfe66e`](https://github.com/mraniki/cefi/commit/4cfe66e55662624f3d7e1f24e07b8d63e0fe022c))
+
 ## v4.7.4 (2024-06-28)
 
 ### Other
