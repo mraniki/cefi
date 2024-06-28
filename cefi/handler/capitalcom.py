@@ -48,20 +48,15 @@ class CapitalHandler(CexClient):
 
         """
         super().__init__(**kwargs)
-        try:
-
-            self._build_client()
-            if self.client:
-                self.accounts_data = self.client.all_accounts()
-                logger.debug("Account data: {}", self.accounts_data)
-                self.account_number = self.accounts_data["accounts"][0]["accountId"]
-                logger.debug("Account number: {}", self.account_number)
-                logger.debug("Session details: {}", self.client.get_sesion_details())
-            else:
-                logger.warning("No capital.com client. Verify settings.")
-
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
+        self._build_client()
+        if self.client:
+            self.accounts_data = self.client.all_accounts()
+            logger.debug("Account data: {}", self.accounts_data)
+            self.account_number = self.accounts_data["accounts"][0]["accountId"]
+            logger.debug("Account number: {}", self.account_number)
+            logger.debug("Session details: {}", self.client.get_sesion_details())
+        else:
+            logger.warning("No capital.com client. Verify settings.")
 
     def _build_client(self):
         """
@@ -102,25 +97,21 @@ class CapitalHandler(CexClient):
         :param instrument: The instrument for which the quote is to be fetched.
         :return: The fetched quote.
         """
-        try:
-            self._build_client()
-            logger.debug("Instrument: {}", instrument)
-            instrument = await self.replace_instrument(instrument)
-            logger.debug("Changed Instrument: {}", instrument)
-            # search_markets = self.client.searching_market(searchTerm=instrument)
-            await asyncio.sleep(1)  # Wait for 1 second
-            # logger.debug("Instrument verification: {}", search_markets)
+        self._build_client()
+        logger.debug("Instrument: {}", instrument)
+        instrument = await self.replace_instrument(instrument)
+        logger.debug("Changed Instrument: {}", instrument)
+        # search_markets = self.client.searching_market(searchTerm=instrument)
+        await asyncio.sleep(1)  # Wait for 1 second
+        # logger.debug("Instrument verification: {}", search_markets)
 
-            market = self.client.single_market(instrument)
-            # logger.debug("market: {}", market)
+        market = self.client.single_market(instrument)
+        # logger.debug("market: {}", market)
 
-            quote = market["snapshot"]["offer"]
-            logger.debug("Quote: {}", quote)
+        quote = market["snapshot"]["offer"]
+        logger.debug("Quote: {}", quote)
 
-            return float(quote)
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        return float(quote)
 
     # Alias for get_quote
     get_offer = get_quote
@@ -137,25 +128,21 @@ class CapitalHandler(CexClient):
         Returns:
             The bid for the specified instrument.
         """
-        try:
-            self._build_client()
-            logger.debug("Instrument: {}", instrument)
-            instrument = await self.replace_instrument(instrument)
-            logger.debug("Changed Instrument: {}", instrument)
-            # search_markets = self.client.searching_market(searchTerm=instrument)
-            await asyncio.sleep(1)  # Wait for 1 second
-            # logger.debug("Instrument verification: {}", search_markets)
+        self._build_client()
+        logger.debug("Instrument: {}", instrument)
+        instrument = await self.replace_instrument(instrument)
+        logger.debug("Changed Instrument: {}", instrument)
+        # search_markets = self.client.searching_market(searchTerm=instrument)
+        await asyncio.sleep(1)  # Wait for 1 second
+        # logger.debug("Instrument verification: {}", search_markets)
 
-            market = self.client.single_market(instrument)
-            # logger.debug("market: {}", market)
+        market = self.client.single_market(instrument)
+        # logger.debug("market: {}", market)
 
-            quote = market["snapshot"]["bid"]
-            logger.debug("Quote: {}", quote)
+        quote = market["snapshot"]["bid"]
+        logger.debug("Quote: {}", quote)
 
-            return float(quote)
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        return float(quote)
 
     async def get_account_balance(self):
         """
@@ -169,20 +156,15 @@ class CapitalHandler(CexClient):
             balance
 
         """
-        try:
-            accounts = self.accounts_data.get("accounts", [])
+        accounts = self.accounts_data.get("accounts", [])
 
-            balances = [
-                f"{account['accountName']}: {account['balance']['balance']}\n"
-                for account in accounts
-                if "balance" in account
-                and account["balance"].get("balance") is not None
-            ]
+        balances = [
+            f"{account['accountName']}: {account['balance']['balance']}\n"
+            for account in accounts
+            if "balance" in account and account["balance"].get("balance") is not None
+        ]
 
-            return "".join(balances)
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        return "".join(balances)
 
     async def get_account_position(self):
         """
@@ -196,18 +178,15 @@ class CapitalHandler(CexClient):
             position
 
         """
-        try:
-            if positions := self.client.all_positions():
-                extracted_positions = []
-                for position_data in positions.get("positions", []):
-                    position_details = position_data.get("position", {})
-                    market_details = position_data.get("market", {})
-                    epic = market_details.get("epic", "")
-                    upl = position_details.get("upl", 0)
-                    extracted_positions.append(f"{epic}: {upl}")
-                return "\n".join(extracted_positions)
-        except Exception as e:
-            logger.error(f"{self.name} Error {e}")
+        if positions := self.client.all_positions():
+            extracted_positions = []
+            for position_data in positions.get("positions", []):
+                position_details = position_data.get("position", {})
+                market_details = position_data.get("market", {})
+                epic = market_details.get("epic", "")
+                upl = position_details.get("upl", 0)
+                extracted_positions.append(f"{epic}: {upl}")
+            return "\n".join(extracted_positions)
 
     async def calculate_pnl(self, period=None):
         """
@@ -240,18 +219,14 @@ class CapitalHandler(CexClient):
         Returns:
             float: The available balance of the trading asset.
         """
-        try:
-            return next(
-                (
-                    account["balance"]["available"]
-                    for account in self.accounts_data["accounts"]
-                    if account["accountName"] == self.trading_asset
-                ),
-                0,
-            )
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        return next(
+            (
+                account["balance"]["available"]
+                for account in self.accounts_data["accounts"]
+                if account["accountName"] == self.trading_asset
+            ),
+            0,
+        )
 
     async def get_instrument_decimals(self, instrument):
         """
@@ -260,30 +235,30 @@ class CapitalHandler(CexClient):
         Returns:
             int: The number of decimal places for the instrument.
         """
-        try:
-            instrument_info = self.client.single_market(instrument)
-            decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
-            logger.debug("Decimals {}", decimals)
-            return int(decimals)
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        instrument_info = self.client.single_market(instrument)
+        decimals = instrument_info.get("snapshot", {}).get("decimalPlacesFactor", 0)
+        logger.debug("Decimals {}", decimals)
+        return int(decimals)
 
     async def get_instrument_min_amount(self, instrument):
-        """ """
-        try:
-            instrument_info = self.client.single_market(instrument)
-            logger.debug("instrument_info {}", instrument_info)
-            minimum_amount = (
-                instrument_info.get("dealingRules", {})
-                .get("minDealSize", {})
-                .get("value", 0)
-            )
-            logger.debug("Minimum Amount Needed {}", minimum_amount)
-            return float(minimum_amount)
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return e
+        """
+        Get the minimum amount needed for a specific instrument.
+
+        Args:
+            instrument (str): The instrument for which the minimum amount is needed.
+
+        Returns:
+            float: The minimum amount needed for the specified instrument.
+        """
+        instrument_info = self.client.single_market(instrument)
+        logger.debug("instrument_info {}", instrument_info)
+        minimum_amount = (
+            instrument_info.get("dealingRules", {})
+            .get("minDealSize", {})
+            .get("value", 0)
+        )
+        logger.debug("Minimum Amount Needed {}", minimum_amount)
+        return float(minimum_amount)
 
     async def execute_order(self, order_params):
         """
