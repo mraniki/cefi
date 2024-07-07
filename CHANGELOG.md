@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## v4.8.0 (2024-07-07)
+
+### Other
+
+* Merge pull request #475 from mraniki/dev
+
+✅ Unit Test ([`9f8a3f2`](https://github.com/mraniki/cefi/commit/9f8a3f238c1353fba3a4c2e98badc5be9b7b3dbe))
+
+* build(deps): update pyproject.toml ([`b126e87`](https://github.com/mraniki/cefi/commit/b126e875d9cfba800be6c5c0e55c6fbe5f7d8dd9))
+
+### ♻️
+
+* ♻️ ([`f1c4037`](https://github.com/mraniki/cefi/commit/f1c40378c4eedc0bdac76eac69929d510c70dd02))
+
+* ♻️ ([`cf4418f`](https://github.com/mraniki/cefi/commit/cf4418fbe77a9f323bed3ca557fd5f79d4b905b0))
+
+### ✅
+
+* ✅ Unit Test ([`7869a0e`](https://github.com/mraniki/cefi/commit/7869a0e3cd05256fbf2cf65c7ca6f5653b641fd7))
+
+### 🎨
+
+* 🎨 ([`1420dfb`](https://github.com/mraniki/cefi/commit/1420dfb9faf8f132de63ff01054edb5550c44688))
+
+### 🐛
+
+* 🐛 ([`77cca82`](https://github.com/mraniki/cefi/commit/77cca821c4c7d0b978288b3d65149a330fea2bf7))
+
+* 🐛 ♻️ ([`5d2206e`](https://github.com/mraniki/cefi/commit/5d2206ec836da33275164359b885fda71e137859))
+
+### 💄
+
+* 💄 _create_client update ([`f1d58fc`](https://github.com/mraniki/cefi/commit/f1d58fca5b3350c832f8129ded1e5225da502be5))
+
 ## v4.7.5 (2024-06-28)
 
 ### Other
