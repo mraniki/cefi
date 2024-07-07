@@ -70,7 +70,7 @@ class CexTrader:
         # logger.debug("client_classes available {}", self.client_classes)
 
         if not self.enabled:
-            logger.info("Module is disabled. No clients will be created.")
+            logger.info("Module is disabled. No Client will be created.")
             return
         self.clients = []
         # Create a client for each client in settings.myllm
@@ -93,9 +93,7 @@ class CexTrader:
         if not self.clients:
             logger.warning(
                 """
-                No clients were created.
-                Check your settings or disable the module.
-                https://talky.readthedocs.io/en/latest/02_config.html
+                No Client were created. Check your settings or disable the module.
                 """
             )
 
