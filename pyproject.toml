@@ -312,6 +312,7 @@ addopts = """
 -v
 --show-capture=stderr
 """
+asyncio_mode = "auto"
 
 [tool.coverage.run]
 omit = [
