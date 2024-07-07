@@ -34,6 +34,8 @@ class CcxtHandler(CexClient):
 
         """
         super().__init__(**kwargs)
+        if self.name is None:
+            return
         client = getattr(ccxt, self.name)
 
         self.client = client(
@@ -52,7 +54,6 @@ class CcxtHandler(CexClient):
         self.account_number = self.client.uid
         self.name = self.client.id
 
-
     async def get_quote(self, instrument):
         """
         Asynchronously fetches a ask/offer quote
@@ -70,8 +71,6 @@ class CcxtHandler(CexClient):
             return quote
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
-
-
 
     async def get_bid(self, instrument):
         """
@@ -111,10 +110,8 @@ class CcxtHandler(CexClient):
         raw_balance = self.client.fetch_free_balance()
         data = list(raw_balance.items())
         if self.balance_limit:
-            data = data[:self.balance_limit_value]
-        if filtered_balance := {
-            k: v for k, v in data if v is not None and v > 0
-        }:
+            data = data[: self.balance_limit_value]
+        if filtered_balance := {k: v for k, v in data if v is not None and v > 0}:
             balance_str = "".join(
                 f"{iterator}: {value} \n"
                 for iterator, value in filtered_balance.items()
