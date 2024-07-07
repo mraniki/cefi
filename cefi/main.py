@@ -63,7 +63,7 @@ class CexTrader:
             None
         """
         # Check if the module is enabled
-        self.enabled = settings.cex_enabled or True
+        self.enabled = settings.cex_enabled
 
         # Create a mapping of library names to client classes
         self.client_classes = self.get_all_client_classes()
