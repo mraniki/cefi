@@ -100,6 +100,7 @@ class CexTrader:
             logger.warning(
                 "No Client were created. Check your settings or disable the module."
             )
+            return None
 
     def _create_client(self, **kwargs):
         """
