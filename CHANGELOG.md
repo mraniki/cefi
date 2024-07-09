@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## v4.8.1 (2024-07-09)
+
+### Other
+
+* Merge pull request #476 from mraniki/dev
+
+🎨 update main.py ([`63838d8`](https://github.com/mraniki/cefi/commit/63838d88a643b7ca9f26f110d0fa302fe547399f))
+
+* update main.py ([`012601b`](https://github.com/mraniki/cefi/commit/012601b50392fbff7a4d9bf4ca01025effb26621))
+
+### ✅
+
+* ✅ Unit Test ([`243dd28`](https://github.com/mraniki/cefi/commit/243dd2860ce2aaccfa949555d90f9196cfc63021))
+
+* ✅ Unit Test ([`fb7741b`](https://github.com/mraniki/cefi/commit/fb7741b9f1a89bd6574cd77cb06605897198c44c))
+
+### 🎨
+
+* 🎨 update main.py ([`22a9d84`](https://github.com/mraniki/cefi/commit/22a9d844972708871be27167bff10b551854ec6e))
+
+### 🔧
+
+* 🔧 ([`826a0e5`](https://github.com/mraniki/cefi/commit/826a0e5c115b5461172490b732dbd0327732d158))
+
 ## v4.8.0 (2024-07-07)
 
 ### Other
