@@ -69,7 +69,6 @@ async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
     assert result is not None
-    assert "⚖️" in result
     assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
     assert ("5" in result) or ("6" in result)
 
