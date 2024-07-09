@@ -1,6 +1,7 @@
 """
  DEX SWAP CONFIG
 """
+
 import os
 
 from dynaconf import Dynaconf
@@ -18,6 +19,7 @@ settings = Dynaconf(
         ".op.toml",
     ],
     load_dotenv=True,
+    merge_enabled=True,
     environments=True,
     default_env="default",
 )
