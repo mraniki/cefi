@@ -56,7 +56,7 @@ async def test_cefi(CXTrader):
     print(type(CXTrader))
     result = await CXTrader.get_info()
     assert "ℹ️" in result
-    assert "💱 binance" in result
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
     assert CXTrader is not None
     assert isinstance(CXTrader, CexTrader)
     assert callable(CXTrader.get_balances)
@@ -69,7 +69,6 @@ async def test_quote(CXTrader, caplog):
     """Test quote"""
     result = await CXTrader.get_quotes("BTC")
     assert result is not None
-    assert "⚖️" in result
     assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
     assert ("5" in result) or ("6" in result)
 
@@ -79,21 +78,20 @@ async def test_get_balances(CXTrader):
     """Test balance"""
     result = await CXTrader.get_balances()
     assert result is not None
-    assert "💵" in result
-    assert ("binance" in result) or ("huobi" in result)
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
 
 
 @pytest.mark.asyncio
 async def test_get_positions(CXTrader):
     result = await CXTrader.get_positions()
-    assert "📊" in result
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
 
 
 @pytest.mark.asyncio
 async def test_get_pnls(CXTrader):
     """Test pnl"""
     result = await CXTrader.get_pnls()
-    assert "🏆" in result
+    assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
 
 
 @pytest.mark.asyncio
@@ -101,7 +99,6 @@ async def test_submit_order(CXTrader, order):
     result = await CXTrader.submit_order(order)
     assert result is not None
     print(result)
-    assert ("🧾" in result)
     assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
     assert ("🔵" in result) or ("Error" in result)
 

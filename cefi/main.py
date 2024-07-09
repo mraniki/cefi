@@ -100,6 +100,7 @@ class CexTrader:
             logger.warning(
                 "No Client were created. Check your settings or disable the module."
             )
+            return None
 
     def _create_client(self, **kwargs):
         """
@@ -192,7 +193,7 @@ class CexTrader:
         Returns:
             quotes
         """
-        _info = ["⚖️\n"]
+        _info = []
         for client in self.clients:
             _info.append(f"{client.name}: {await client.get_quote(symbol)}")
         return "\n".join(_info)
@@ -208,7 +209,7 @@ class CexTrader:
             balance
 
         """
-        _info = ["💵\n"]
+        _info = []
         for client in self.clients:
             _info.append(f"{client.name}:\n{await client.get_account_balance()}")
         return "\n".join(_info)
@@ -224,7 +225,7 @@ class CexTrader:
             position
 
         """
-        _info = ["📊\n"]
+        _info = []
         for client in self.clients:
             _info.append(f"{client.name}:\n{await client.get_account_position()}")
         return "\n".join(_info)
@@ -239,7 +240,7 @@ class CexTrader:
         Returns:
             pnl
         """
-        _info = ["🏆\n"]
+        _info = []
         for client in self.clients:
             client_name = f"{client.name}:\n"
             account_pnl = await client.get_account_pnl(
@@ -263,7 +264,7 @@ class CexTrader:
             trade_confirmation(dict)
 
         """
-        _order = ["🧾 Order\n"]
+        _order = []
         for client in self.clients:
             _order.append(
                 f"{client.name}:\n{await client.execute_order(order_params)}\n"
@@ -281,7 +282,7 @@ class CexTrader:
             trade_confirmation(dict)
 
         """
-        _order = ["🧾 Order\n"]
+        _order = []
         for client in self.clients:
             _order.append(
                 f"{client.name}:\n{await client.modify_position(order_params)}\n"
