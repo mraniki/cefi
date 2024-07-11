@@ -49,14 +49,6 @@ class CapitalHandler(CexClient):
         """
         super().__init__(**kwargs)
         self._build_client()
-        if self.client:
-            self.accounts_data = self.client.all_accounts()
-            logger.debug("Account data: {}", self.accounts_data)
-            self.account_number = self.accounts_data["accounts"][0]["accountId"]
-            logger.debug("Account number: {}", self.account_number)
-            logger.debug("Session details: {}", self.client.get_sesion_details())
-        else:
-            logger.warning("No capital.com client. Verify settings.")
 
     def _build_client(self):
         """
@@ -65,29 +57,57 @@ class CapitalHandler(CexClient):
         Capital.com session last only 10 minutes
 
         """
-        try:
-            if self.testmode:
-                self.client = DemoClient(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
-            else:
-                self.client = Client(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
-            logger.debug("Client: {}", self.client)
-            if self.client.accounts_data():
-                return self.client
-            else:
-                logger.warning("No valid capital.com client. Verify settings.")
-                self.client = None
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
+        self.client = DemoClient if self.testmode else Client
+        self.client = self.client(
+            log=self.user_id,
+            pas=self.password,
+            api_key=self.api_key,
+        )
+        logger.debug("Client: {}", self.client)
+        if self._fetch_account_data():
+            logger.debug("Capital.com client set with account {}", self.account_number)
+            return self.client
+        else:
             self.client = None
-            return e
+            logger.warning("No capital.com client. Verify settings.")
+            return False
+
+    def _fetch_account_data(self):
+        """
+        Fetches account data from the client,
+        extracts the account number,
+        and logs account data and session details.
+
+        Parameters:
+            self: the CapitalHandler object
+
+        Returns:
+            None
+        """
+        try:
+            if self.default_account:
+                logger.debug("Default account: {}", self.default_account)
+                self.switch_account(self.default_account)
+            self.accounts_data = self.client.all_accounts()
+        except Exception as e:
+            logger.error("Error fetching account data: {}", e)
+            return False
+        logger.debug("Account data: {}", self.accounts_data)
+        self.account_number = self.accounts_data["accounts"][0]["accountId"]
+        logger.debug("Account number: {}", self.account_number)
+        logger.debug("Session details: {}", self.client.get_sesion_details())
+
+    def switch_account(self, account_number):
+        """
+        Switches to the specified account.
+
+        Parameters:
+            account_number: The account number to switch to.
+
+        Returns:
+            None
+        """
+        self.client.switch_account(self.default_account)
 
     async def get_quote(self, instrument):
         """
@@ -97,21 +117,21 @@ class CapitalHandler(CexClient):
         :param instrument: The instrument for which the quote is to be fetched.
         :return: The fetched quote.
         """
-        self._build_client()
-        logger.debug("Instrument: {}", instrument)
-        instrument = await self.replace_instrument(instrument)
-        logger.debug("Changed Instrument: {}", instrument)
-        # search_markets = self.client.searching_market(searchTerm=instrument)
-        await asyncio.sleep(1)  # Wait for 1 second
-        # logger.debug("Instrument verification: {}", search_markets)
+        if self._build_client():
+            logger.debug("Instrument: {}", instrument)
+            instrument = await self.replace_instrument(instrument)
+            logger.debug("Changed Instrument: {}", instrument)
+            # search_markets = self.client.searching_market(searchTerm=instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
+            # logger.debug("Instrument verification: {}", search_markets)
 
-        market = self.client.single_market(instrument)
-        # logger.debug("market: {}", market)
+            market = self.client.single_market(instrument)
+            # logger.debug("market: {}", market)
 
-        quote = market["snapshot"]["offer"]
-        logger.debug("Quote: {}", quote)
+            quote = market["snapshot"]["offer"]
+            logger.debug("Quote: {}", quote)
 
-        return float(quote)
+            return float(quote)
 
     # Alias for get_quote
     get_offer = get_quote
@@ -128,21 +148,21 @@ class CapitalHandler(CexClient):
         Returns:
             The bid for the specified instrument.
         """
-        self._build_client()
-        logger.debug("Instrument: {}", instrument)
-        instrument = await self.replace_instrument(instrument)
-        logger.debug("Changed Instrument: {}", instrument)
-        # search_markets = self.client.searching_market(searchTerm=instrument)
-        await asyncio.sleep(1)  # Wait for 1 second
-        # logger.debug("Instrument verification: {}", search_markets)
+        if self._build_client():
+            logger.debug("Instrument: {}", instrument)
+            instrument = await self.replace_instrument(instrument)
+            logger.debug("Changed Instrument: {}", instrument)
+            # search_markets = self.client.searching_market(searchTerm=instrument)
+            await asyncio.sleep(1)  # Wait for 1 second
+            # logger.debug("Instrument verification: {}", search_markets)
 
-        market = self.client.single_market(instrument)
-        # logger.debug("market: {}", market)
+            market = self.client.single_market(instrument)
+            # logger.debug("market: {}", market)
 
-        quote = market["snapshot"]["bid"]
-        logger.debug("Quote: {}", quote)
+            quote = market["snapshot"]["bid"]
+            logger.debug("Quote: {}", quote)
 
-        return float(quote)
+            return float(quote)
 
     async def get_account_balance(self):
         """

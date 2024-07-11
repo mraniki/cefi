@@ -65,6 +65,7 @@ class CexClient:
             self.secret = kwargs.get("secret", None)
             self.password = kwargs.get("password", None)
             self.testmode = kwargs.get("testmode", None)
+            self.default_account = kwargs.get("default_account", None)
             self.trading_asset = kwargs.get("trading_asset", None)
             self.separator = kwargs.get("trading_asset_separator", None)
             self.account_number = None
