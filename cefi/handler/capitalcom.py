@@ -65,7 +65,7 @@ class CapitalHandler(CexClient):
         )
         logger.debug("Client: {}", self.client)
         if self._fetch_account_data():
-            logger.debug("Capital.com client set: {}", self.account_number)
+            logger.debug("Capital.com client set with account {}", self.account_number)
             return self.client
         else:
             self.client = None
@@ -84,14 +84,30 @@ class CapitalHandler(CexClient):
         Returns:
             None
         """
-        self.accounts_data = self.client.all_accounts()
-        if self.accounts_data is None:
-            logger.error("No accounts found")
+        try:
+            if self.default_account:
+                logger.debug("Default account: {}", self.default_account)
+                self.switch_account(self.default_account)
+            self.accounts_data = self.client.all_accounts()
+        except Exception as e:
+            logger.error("Error fetching account data: {}", e)
             return False
         logger.debug("Account data: {}", self.accounts_data)
         self.account_number = self.accounts_data["accounts"][0]["accountId"]
         logger.debug("Account number: {}", self.account_number)
         logger.debug("Session details: {}", self.client.get_sesion_details())
+
+    def switch_account(self, account_number):
+        """
+        Switches to the specified account.
+
+        Parameters:
+            account_number: The account number to switch to.
+
+        Returns:
+            None
+        """
+        self.client.switch_account(self.default_account)
 
     async def get_quote(self, instrument):
         """
