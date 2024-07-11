@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v4.9.0 (2024-07-11)
+
+### Other
+
+* Merge pull request #478 from mraniki/dev
+
+🥚 update capitalcom.py with _fetch_account_data ([`85b8193`](https://github.com/mraniki/cefi/commit/85b8193dfa4a83baa5b88ec08fa37e1dd1e45797))
+
+### ♻️
+
+* ♻️ update capitalcom.py ([`3b5572f`](https://github.com/mraniki/cefi/commit/3b5572f009ca921cd62d780bb977643130690891))
+
+### 🔧
+
+* 🔧 added default_account capability ([`9b43143`](https://github.com/mraniki/cefi/commit/9b4314374f715cd803cca8e804924d23440f8799))
+
+### 🥚
+
+* 🥚 update capitalcom.py with _fetch_account_data ([`944b4e2`](https://github.com/mraniki/cefi/commit/944b4e2ad53440bc6632255ace53cb77d250d753))
+
 ## v4.8.1 (2024-07-09)
 
 ### Other
@@ -200,6 +220,10 @@
 
 ⬆️ 🤖 - Q	What do you say to a New Yorker with a job ([`48535fb`](https://github.com/mraniki/cefi/commit/48535fb37616399ed1971ffccd4582829048ec0d))
 
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.7 ([`c6e1588`](https://github.com/mraniki/cefi/commit/c6e15882b2f3c32e403a2c4944101f9f418d1fc2))
+
 ## v4.6.5 (2024-04-19)
 
 ### Other
@@ -207,10 +231,6 @@
 * Merge pull request #455 from mraniki/dev
 
 🐛 update capitalcom.py and example.py ([`7485dee`](https://github.com/mraniki/cefi/commit/7485dee54fbf22f8e002bc6fd10e914efc0c2c52))
-
-### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.7 ([`c6e1588`](https://github.com/mraniki/cefi/commit/c6e15882b2f3c32e403a2c4944101f9f418d1fc2))
 
 ### 🐛
 
@@ -248,6 +268,8 @@
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.5 ([`cfe7d5f`](https://github.com/mraniki/cefi/commit/cfe7d5fa0ac4692ea6ecc705fd928bbf3f0b45ae))
 
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.4 ([`385d57d`](https://github.com/mraniki/cefi/commit/385d57d605d41cbd3a01a9e0f0703f8fc7e741d7))
+
 ## v4.6.2 (2024-04-17)
 
 ### Other
@@ -257,8 +279,6 @@
 ⬆️ 🤖 - Your love life will be happy and harmonious ([`5eaba67`](https://github.com/mraniki/cefi/commit/5eaba67602b1bdb0483c91ddca88887b3df4e65f))
 
 ### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency sphinx to v7.3.4 ([`385d57d`](https://github.com/mraniki/cefi/commit/385d57d605d41cbd3a01a9e0f0703f8fc7e741d7))
 
 * ⬆️ 🛠️(deps): update dependency sphinx to v7.3.1 ([`c7c6d6f`](https://github.com/mraniki/cefi/commit/c7c6d6f97c9f5cb40aa14d6947b63d3ae19c11f1))
 
@@ -1088,6 +1108,8 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.53 ([`b70ac6a`](https://github.com/mraniki/cefi/commit/b70ac6a370adc5a2abc6002f039b4df873fb1111))
 
+* ⬆️ 🛠️(deps): update dependency pytest to v8 ([`58d4cda`](https://github.com/mraniki/cefi/commit/58d4cdae57b02675f41ab03cc9cde09e262ad693))
+
 ## v3.3.21 (2024-02-27)
 
 ### Other
@@ -1097,8 +1119,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ⬆️ 🤖 - Your domestic life may be harmonious ([`6fc8a8a`](https://github.com/mraniki/cefi/commit/6fc8a8a7c35710eb7e1ef972401608aceee02c6c))
 
 ### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency pytest to v8 ([`58d4cda`](https://github.com/mraniki/cefi/commit/58d4cdae57b02675f41ab03cc9cde09e262ad693))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.52 ([`13d87ca`](https://github.com/mraniki/cefi/commit/13d87ca47631adccd1c7e8d6be07f305c57c0d95))
 
@@ -1316,6 +1336,8 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.35 ([`453f426`](https://github.com/mraniki/cefi/commit/453f4269a32a5c6a2908ca4fc8228d50be8a924c))
 
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.2.0 ([`9084437`](https://github.com/mraniki/cefi/commit/90844373049ba2171a6995949625276e2247079a))
+
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.34 ([`8c4d720`](https://github.com/mraniki/cefi/commit/8c4d720784e2f754eccc818875adce64b4d11a45))
 
 ## v3.3.7 (2024-02-02)
@@ -1329,8 +1351,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.31 ([`321ba6e`](https://github.com/mraniki/cefi/commit/321ba6ee8d26ebb260dfa65dae360598354a0952))
-
-* ⬆️ 🛠️(deps): update dependency ruff to ^0.2.0 ([`9084437`](https://github.com/mraniki/cefi/commit/90844373049ba2171a6995949625276e2247079a))
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.30 ([`da10a0c`](https://github.com/mraniki/cefi/commit/da10a0c3e308456aba9854e127ad71f17b652e2f))
 
@@ -1380,6 +1400,10 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 ⬆️ 🤖 - Whenever you find that you are on the side of the majority it is time ([`64fe496`](https://github.com/mraniki/cefi/commit/64fe49681706af60b92d2f851b942817162d1986))
 
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.24 ([`50fc5a7`](https://github.com/mraniki/cefi/commit/50fc5a7263f79a15e16e417f6c783558274ec066))
+
 ## v3.3.2 (2024-01-27)
 
 ### Other
@@ -1397,10 +1421,6 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 ### ⚡
 
 * ⚡ IBKR search contract ([`dfa7712`](https://github.com/mraniki/cefi/commit/dfa7712ddc15d8eb39d42a2e63d3536b249f1b4f))
-
-### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.24 ([`50fc5a7`](https://github.com/mraniki/cefi/commit/50fc5a7263f79a15e16e417f6c783558274ec066))
 
 ### 🔧
 
@@ -1600,11 +1620,11 @@ Update logger message in CexClient class ([`e4cb2cd`](https://github.com/mraniki
 
 ### ⬆️
 
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 ([`a340a10`](https://github.com/mraniki/cefi/commit/a340a10865f1b348457faf22a880dae2088c7f97))
+
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 (#271)
 
 Co-authored-by: renovate[bot] &lt;29139614+renovate[bot]@users.noreply.github.com&gt; ([`3958c9a`](https://github.com/mraniki/cefi/commit/3958c9a9a4a61f8ce2da983dfaea9e65c9acf51e))
-
-* ⬆️ 🛠️(deps): update dependency ccxt to v4.2.9 ([`a340a10`](https://github.com/mraniki/cefi/commit/a340a10865f1b348457faf22a880dae2088c7f97))
 
 ## v3.2.33 (2024-01-07)
 
@@ -2008,8 +2028,6 @@ Merge pull request #181 from mraniki/dev ([`437b3a0`](https://github.com/mraniki
 
 * Merge remote-tracking branch &#39;origin/main&#39; into dev ([`91d078a`](https://github.com/mraniki/cefi/commit/91d078a8e0148dfd0210021c8e9b6c84b6fa5164))
 
-* Merge remote-tracking branch &#39;origin/main&#39; into dev ([`4a89d78`](https://github.com/mraniki/cefi/commit/4a89d7831d6ded6f2129e4915b9a461fc8fe6683))
-
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.66 ([`51b7f72`](https://github.com/mraniki/cefi/commit/51b7f72a9b797ad97956605315acd09cacf90485))
@@ -2063,6 +2081,8 @@ Merge pull request #181 from mraniki/dev ([`437b3a0`](https://github.com/mraniki
 ## v3.2.11 (2023-11-07)
 
 ### Other
+
+* Merge remote-tracking branch &#39;origin/main&#39; into dev ([`4a89d78`](https://github.com/mraniki/cefi/commit/4a89d7831d6ded6f2129e4915b9a461fc8fe6683))
 
 * Merge pull request #154 from mraniki/dev
 
@@ -2126,9 +2146,9 @@ Merge ([`6a1c563`](https://github.com/mraniki/cefi/commit/6a1c5633a282b33e091f20
 
 * ⬆️ 🛠️(deps): update dependency ccxt to v4.1.34 ([`deea5b7`](https://github.com/mraniki/cefi/commit/deea5b70573378ab457a5e8b28eb06e347a2ee5d))
 
-* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.33 ([`10b0a48`](https://github.com/mraniki/cefi/commit/10b0a48a6dbd6d62d8fd7107c148e3ac11996024))
-
 * ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.22.0 ([`ca650df`](https://github.com/mraniki/cefi/commit/ca650df4789ee9d15e70f645de0d2481128e87bf))
+
+* ⬆️ 🛠️(deps): update dependency ccxt to v4.1.33 ([`10b0a48`](https://github.com/mraniki/cefi/commit/10b0a48a6dbd6d62d8fd7107c148e3ac11996024))
 
 ## v3.2.10 (2023-10-30)
 
@@ -2228,11 +2248,11 @@ Dev ([`b13e598`](https://github.com/mraniki/cefi/commit/b13e598f2fb11a3935608f2a
 
 * Merge branch &#39;main&#39; into dev ([`8474653`](https://github.com/mraniki/cefi/commit/8474653e3d414a34ff8e801028ab5e7eea31aacc))
 
-* Auto ([`83c9c09`](https://github.com/mraniki/cefi/commit/83c9c095993a7fa48784d155c9be0bdee20e7e76))
-
 * Merge pull request #114 from mraniki/dev
 
 ⬆️ 🤖 - Auto Release ([`85f21bb`](https://github.com/mraniki/cefi/commit/85f21bb9b19ee9cb2badf4d22b547ff77e98ddce))
+
+* Auto ([`83c9c09`](https://github.com/mraniki/cefi/commit/83c9c095993a7fa48784d155c9be0bdee20e7e76))
 
 * Auto ([`d2f7b5f`](https://github.com/mraniki/cefi/commit/d2f7b5ffa003e5bf74efc40e47687c32e17dfda9))
 
@@ -2428,6 +2448,10 @@ Dev ([`dd28813`](https://github.com/mraniki/cefi/commit/dd28813c8c54f52d49d41994
 
 * Update README.md ([`c6d3101`](https://github.com/mraniki/cefi/commit/c6d3101d37f67a15a329031faec3342492992489))
 
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.1.0 ([`694f7e2`](https://github.com/mraniki/cefi/commit/694f7e220f85ec490d76c879dfdd4cde40c1ad44))
+
 ## v3.2.1 (2023-10-17)
 
 ### Other
@@ -2483,10 +2507,6 @@ Update README.md ([`0334472`](https://github.com/mraniki/cefi/commit/0334472f134
 * ✅ Unit Test ([`134f063`](https://github.com/mraniki/cefi/commit/134f063538fbf1b161c820c6237861771960d02a))
 
 * ✅ Unit Test ([`1050893`](https://github.com/mraniki/cefi/commit/105089393f840d5aa90093308bc1b2b81e1970ba))
-
-### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency ruff to ^0.1.0 ([`694f7e2`](https://github.com/mraniki/cefi/commit/694f7e220f85ec490d76c879dfdd4cde40c1ad44))
 
 ### 👷
 
@@ -2950,13 +2970,13 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`41d0ded`](https://github.com/mraniki/cefi/commit/41d0ded36cdb2a6ef64e37800009408e1056d904))
 
-* Fix leverage type and order parameters ([`eeca433`](https://github.com/mraniki/cefi/commit/eeca43308621c3cdc7b6711f9b234c1ca8763992))
-
 * Merge pull request #57 from mraniki/sourcery/dev
 
 💥refactoring and instrument mapping per exchange (Sourcery refactored) ([`24bc83f`](https://github.com/mraniki/cefi/commit/24bc83f6c713adccbf392c49299e176eeaeecc67))
 
 * &#39;Refactored by Sourcery&#39; ([`224a4ae`](https://github.com/mraniki/cefi/commit/224a4ae127fb204dbe7cd98039b87a516f55a67d))
+
+* Fix leverage type and order parameters ([`eeca433`](https://github.com/mraniki/cefi/commit/eeca43308621c3cdc7b6711f9b234c1ca8763992))
 
 * Refactor CexCcxt to return quote instead of ticker[&#34;last&#34;] ([`76dec82`](https://github.com/mraniki/cefi/commit/76dec829e050dab9ab4a7bbb8936ff700fca5474))
 
@@ -3234,6 +3254,10 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * ✅ Unit Test ([`096fa63`](https://github.com/mraniki/cefi/commit/096fa63e900efa9d8843bf164ba7d7e5d875b750))
 
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.14.0 ([`7504438`](https://github.com/mraniki/cefi/commit/75044382690626caa5e4f0e7b40ac71af0c09624))
+
 ## v2.0.1 (2023-09-19)
 
 ### Update
@@ -3362,10 +3386,6 @@ y files. ([`62da87f`](https://github.com/mraniki/cefi/commit/62da87ff6910602b9c8
 
 * ✨ multi exchange support initial update ([`5fb04e2`](https://github.com/mraniki/cefi/commit/5fb04e2026d72f07d67d35704b99aca5ad4ed468))
 
-### ⬆️
-
-* ⬆️ 🛠️(deps): update dependency pydata-sphinx-theme to ^0.14.0 ([`7504438`](https://github.com/mraniki/cefi/commit/75044382690626caa5e4f0e7b40ac71af0c09624))
-
 ### 🎨
 
 * 🎨 ([`02b08fa`](https://github.com/mraniki/cefi/commit/02b08fafce1a40090a08ae6a5fe54a396c775505))
@@ -3486,9 +3506,40 @@ Merge ([`03377bd`](https://github.com/mraniki/cefi/commit/03377bdd3bd7f7f137e858
 
 * Merge branch &#39;dev&#39; into main ([`9a7c629`](https://github.com/mraniki/cefi/commit/9a7c629818d1a4b5e43aba3c7fba87d1d61e52f7))
 
+* Merge pull request #29 from mraniki/dependabot/pip/dev/sphinx-7.2.5
+
+⬆️ 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5 ([`07a2719`](https://github.com/mraniki/cefi/commit/07a2719e712558b5f783ca136b2a51d0107aaa3b))
+
+* Merge branch &#39;main&#39; into dev ([`58750c1`](https://github.com/mraniki/cefi/commit/58750c1a9a086d6c9f59d263e06b5d4acc2cb896))
+
+* Merge branch &#39;main&#39; into dev ([`acb42a7`](https://github.com/mraniki/cefi/commit/acb42a7556140fc1254ee59fb3ed01ae6253ec6b))
+
 ### Update
 
 * Update Requirements ([`3d443a9`](https://github.com/mraniki/cefi/commit/3d443a96878f7296a6f5f1d3fdd9d47f83bd55c6))
+
+* Update Requirements ([`912659f`](https://github.com/mraniki/cefi/commit/912659f1354e16bf6a832fd05566e7797d6901de))
+
+* :arrow_up: 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5
+
+Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to permit the latest version.
+- [Release notes](https://github.com/sphinx-doc/sphinx/releases)
+- [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES)
+- [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.2.4...v7.2.5)
+
+---
+updated-dependencies:
+- dependency-name: sphinx
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://github.com/mraniki/cefi/commit/bbfa6cd1a6f8062c3e1d709861faa8609f0af4ab))
+
+* Update Requirements ([`fbb5b97`](https://github.com/mraniki/cefi/commit/fbb5b9764023263422d5e23f21c8e48bae42c4e6))
+
+### ♻️
+
+* ♻️ ([`a3e0644`](https://github.com/mraniki/cefi/commit/a3e0644938aa9c63c998174a1571c0627d7b5621))
 
 ## v1.1.28 (2023-09-03)
 
@@ -3508,30 +3559,9 @@ Merge ([`03377bd`](https://github.com/mraniki/cefi/commit/03377bdd3bd7f7f137e858
 
 ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.287,&lt;0.0.288 ([`7e71f49`](https://github.com/mraniki/cefi/commit/7e71f49361e81dbc03dca4725b8d43bc27602e84))
 
-* Merge pull request #29 from mraniki/dependabot/pip/dev/sphinx-7.2.5
-
-⬆️ 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5 ([`07a2719`](https://github.com/mraniki/cefi/commit/07a2719e712558b5f783ca136b2a51d0107aaa3b))
-
 ### Update
 
 * Update Requirements ([`63ea682`](https://github.com/mraniki/cefi/commit/63ea68265fa2b4687a8ede018157821b1ef8431c))
-
-* Update Requirements ([`912659f`](https://github.com/mraniki/cefi/commit/912659f1354e16bf6a832fd05566e7797d6901de))
-
-* :arrow_up: 🤖 Dependencies: Update sphinx requirement from 7.2.4 to 7.2.5
-
-Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to permit the latest version.
-- [Release notes](https://github.com/sphinx-doc/sphinx/releases)
-- [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES)
-- [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.2.4...v7.2.5)
-
----
-updated-dependencies:
-- dependency-name: sphinx
-  dependency-type: direct:development
-...
-
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://github.com/mraniki/cefi/commit/bbfa6cd1a6f8062c3e1d709861faa8609f0af4ab))
 
 * Update Requirements ([`7d1a1a1`](https://github.com/mraniki/cefi/commit/7d1a1a1357646ec71afca9a33378c926c207cd08))
 
@@ -3547,10 +3577,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 * Update README.md ([`6a00efe`](https://github.com/mraniki/cefi/commit/6a00efe6eedd493db8f3469bf7227432e203fd96))
 
-### ♻️
-
-* ♻️ ([`a3e0644`](https://github.com/mraniki/cefi/commit/a3e0644938aa9c63c998174a1571c0627d7b5621))
-
 ## v1.1.25 (2023-08-28)
 
 ### Other
@@ -3559,27 +3585,21 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bbfa6cd`](https://g
 
 ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.286,&lt;0.0.287 ([`6036c66`](https://github.com/mraniki/cefi/commit/6036c6674a57b1daecbd95742a54984b37bb02d1))
 
-* Merge branch &#39;main&#39; into dev ([`58750c1`](https://github.com/mraniki/cefi/commit/58750c1a9a086d6c9f59d263e06b5d4acc2cb896))
-
-## v1.1.24 (2023-08-28)
-
-### Other
-
-* Merge branch &#39;main&#39; into dev ([`acb42a7`](https://github.com/mraniki/cefi/commit/acb42a7556140fc1254ee59fb3ed01ae6253ec6b))
-
-* Merge pull request #27 from mraniki/dev
-
-🐛 📝  extension error ([`4e5f11f`](https://github.com/mraniki/cefi/commit/4e5f11fa32670cefd768c0be22769cd064c0c34f))
-
 ### Update
-
-* Update Requirements ([`fbb5b97`](https://github.com/mraniki/cefi/commit/fbb5b9764023263422d5e23f21c8e48bae42c4e6))
 
 * Update Requirements ([`b4e5959`](https://github.com/mraniki/cefi/commit/b4e5959b6db6de0bcee4bb4be0674ff016fb28fd))
 
 ### ⬆️
 
 * ⬆️ 🛠️(deps): update dependency ruff to &gt;=0.0.286,&lt;0.0.287 ([`e460fa3`](https://github.com/mraniki/cefi/commit/e460fa3abf02e57842949734136faf3660d7bf2a))
+
+## v1.1.24 (2023-08-28)
+
+### Other
+
+* Merge pull request #27 from mraniki/dev
+
+🐛 📝  extension error ([`4e5f11f`](https://github.com/mraniki/cefi/commit/4e5f11fa32670cefd768c0be22769cd064c0c34f))
 
 ### 🐛
 
@@ -3805,10 +3825,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 ## v1.1.9 (2023-08-09)
 
-### :memo:
-
-* :memo: ([`f642f20`](https://github.com/mraniki/cefi/commit/f642f20fab208e69425d75a3113941fd82b35f0f))
-
 ### Other
 
 * Merge pull request #12 from mraniki/dev
@@ -3824,6 +3840,8 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 * :bug::white_check_mark: ([`22c8061`](https://github.com/mraniki/cefi/commit/22c806118572a77006b5fc2f8e69d4a8c468f4a9))
 
 ### :memo:
+
+* :memo: ([`f642f20`](https://github.com/mraniki/cefi/commit/f642f20fab208e69425d75a3113941fd82b35f0f))
 
 * :memo::white_check_mark: ([`b824b08`](https://github.com/mraniki/cefi/commit/b824b08d82e9914f2ef8cfea1b84c811c73dd4d6))
 
@@ -3933,10 +3951,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`933d3cf`](https://g
 
 ## v1.1.0 (2023-08-09)
 
-### :sparkles:
-
-* :sparkles: rename package ([`1c0e9d6`](https://github.com/mraniki/cefi/commit/1c0e9d6624470853f68c7ddd61be838709924f12))
-
 ### Other
 
 * Merge branch &#39;main&#39; into dev ([`ce25df7`](https://github.com/mraniki/cefi/commit/ce25df7577d4166634e51d42bbee158dfae62a6b))
@@ -3957,9 +3971,9 @@ Conflicts:
 
 ## v1.0.3 (2023-08-09)
 
-### :memo:
+### :sparkles:
 
-* :memo: readme update ([`0e9e870`](https://github.com/mraniki/cefi/commit/0e9e8701b1600a799eeb19b056b43a91b70a64e2))
+* :sparkles: rename package ([`1c0e9d6`](https://github.com/mraniki/cefi/commit/1c0e9d6624470853f68c7ddd61be838709924f12))
 
 ### Other
 
@@ -3973,11 +3987,15 @@ Conflicts:
 
 * Update README.md ([`4300998`](https://github.com/mraniki/cefi/commit/43009984acef0d41bc5e402d948b63aef325e3ec))
 
+### ⬆️
+
+* ⬆️(deps): update dependency ruff to &gt;=0.0.283,&lt;0.0.284 ([`f48429a`](https://github.com/mraniki/cefi/commit/f48429a622eb0e2d48e1fe3174f9268c4ad6df19))
+
 ## v1.0.2 (2023-08-09)
 
-### :white_check_mark:
+### :memo:
 
-* :white_check_mark: unit test ([`3d76fe3`](https://github.com/mraniki/cefi/commit/3d76fe37957f3caaf87296e07325b9bc9aaa8a41))
+* :memo: readme update ([`0e9e870`](https://github.com/mraniki/cefi/commit/0e9e8701b1600a799eeb19b056b43a91b70a64e2))
 
 ### Other
 
@@ -3987,9 +4005,9 @@ Conflicts:
 
 ### :white_check_mark:
 
-* :white_check_mark: unit test ([`54e37bc`](https://github.com/mraniki/cefi/commit/54e37bc4e0f6b4fa3456a6468029c8b7d1decb07))
+* :white_check_mark: unit test ([`3d76fe3`](https://github.com/mraniki/cefi/commit/3d76fe37957f3caaf87296e07325b9bc9aaa8a41))
 
-* :white_check_mark: unit test ([`dc085f5`](https://github.com/mraniki/cefi/commit/dc085f540fdc6a426f1d75e63d002c748c7c7d86))
+* :white_check_mark: unit test ([`54e37bc`](https://github.com/mraniki/cefi/commit/54e37bc4e0f6b4fa3456a6468029c8b7d1decb07))
 
 ### Other
 
@@ -4007,15 +4025,13 @@ Conflicts:
 
 ### :white_check_mark:
 
+* :white_check_mark: unit test ([`dc085f5`](https://github.com/mraniki/cefi/commit/dc085f540fdc6a426f1d75e63d002c748c7c7d86))
+
 * :white_check_mark: unit test ([`85ce9a9`](https://github.com/mraniki/cefi/commit/85ce9a9e9bce0941065e573997ab3853795f4611))
 
 ### Other
 
 * Initial commit ([`db2f177`](https://github.com/mraniki/cefi/commit/db2f177b514e22e31c4922b02361933b0bb41a9f))
-
-### ⬆️
-
-* ⬆️(deps): update dependency ruff to &gt;=0.0.283,&lt;0.0.284 ([`f48429a`](https://github.com/mraniki/cefi/commit/f48429a622eb0e2d48e1fe3174f9268c4ad6df19))
 
 ### 💥
 
