@@ -50,11 +50,7 @@ class CapitalHandler(CexClient):
         super().__init__(**kwargs)
         self._build_client()
         if self.client:
-            self.accounts_data = self.client.all_accounts()
-            logger.debug("Account data: {}", self.accounts_data)
-            self.account_number = self.accounts_data["accounts"][0]["accountId"]
-            logger.debug("Account number: {}", self.account_number)
-            logger.debug("Session details: {}", self.client.get_sesion_details())
+            logger.debug("Capital.com client set: {}", self.account_number)
         else:
             logger.warning("No capital.com client. Verify settings.")
 
@@ -65,29 +61,33 @@ class CapitalHandler(CexClient):
         Capital.com session last only 10 minutes
 
         """
-        try:
-            if self.testmode:
-                self.client = DemoClient(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
-            else:
-                self.client = Client(
-                    log=self.user_id,
-                    pas=self.password,
-                    api_key=self.api_key,
-                )
-            logger.debug("Client: {}", self.client)
-            if self.client.accounts_data():
-                return self.client
-            else:
-                logger.warning("No valid capital.com client. Verify settings.")
-                self.client = None
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            self.client = None
-            return e
+        self.client = DemoClient if self.testmode else Client
+        self.client = self.client(
+            log=self.user_id,
+            pas=self.password,
+            api_key=self.api_key,
+        )
+        logger.debug("Client: {}", self.client)
+        if self._fetch_account_data():
+            return self.client
+
+    def _fetch_account_data(self):
+        """
+        Fetches account data from the client,
+        extracts the account number,
+        and logs account data and session details.
+
+        Parameters:
+            self: the CapitalHandler object
+
+        Returns:
+            None
+        """
+        self.accounts_data = self.client.all_accounts()
+        logger.debug("Account data: {}", self.accounts_data)
+        self.account_number = self.accounts_data["accounts"][0]["accountId"]
+        logger.debug("Account number: {}", self.account_number)
+        logger.debug("Session details: {}", self.client.get_sesion_details())
 
     async def get_quote(self, instrument):
         """
