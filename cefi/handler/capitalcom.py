@@ -19,9 +19,8 @@ class CapitalHandler(CexClient):
     Capital.com client
     using
     https://pypi.org/project/capitalcom-python/
-    via Capital.com API endpoint
+    via Capital.com API
     https://open-api.capital.com/
-    Args:
         None
 
     Returns:
