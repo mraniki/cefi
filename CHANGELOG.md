@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.9.1 (2024-07-13)
+
+### Other
+
+* Merge pull request #479 from mraniki/dev
+
+⬆️ 🤖 - The Public is merely a multiplied me ([`98099ab`](https://github.com/mraniki/cefi/commit/98099ab7ad502c9746899d48abe8d793b4a9c716))
+
+### 📝
+
+* 📝 ([`728e50e`](https://github.com/mraniki/cefi/commit/728e50e0093cb110f0d40a02f9601409d0fab38b))
+
 ## v4.9.0 (2024-07-11)
 
 ### Other
