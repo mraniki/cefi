@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v4.9.2 (2024-07-15)
+
+### Other
+
+* Merge pull request #481 from mraniki/dev
+
+♻️ Capitalcom _fetch_account_data refactor ([`b3c4171`](https://github.com/mraniki/cefi/commit/b3c41714b95cc089108df92cc09b3fa891a66999))
+
+### ♻️
+
+* ♻️ Capitalcom _fetch_account_data refactor ([`619ef9d`](https://github.com/mraniki/cefi/commit/619ef9db070ae515effbafb557bcb9cd675c656f))
+
+* ♻️ ([`fc61ed1`](https://github.com/mraniki/cefi/commit/fc61ed14d4ddf485afd4a364dba4f25fc78fbd4a))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.3 ([`541dd7a`](https://github.com/mraniki/cefi/commit/541dd7a07d93461ae5ef194fecccafbf64d9f779))
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.0 ([`348c5ea`](https://github.com/mraniki/cefi/commit/348c5eacff7dfe710e1ea571918bfcdb17c5f608))
+
 ## v4.9.1 (2024-07-13)
 
 ### Other
