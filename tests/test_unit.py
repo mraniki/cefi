@@ -109,6 +109,14 @@ async def test_submit_order_exception(CXTrader):
         CXTrader.clients = []
         await CXTrader.submit_order()
 
+@pytest.mark.asyncio
+async def test_modify_position(CXTrader, order):
+    result = await CXTrader.modify_position(order)
+    print(result)
+    assert result is not None
+
+    # assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
+    # assert ("🔵" in result) or ("Error" in result)
 
 # @pytest.mark.asyncio
 # async def test_submit_limit_order(CXTrader, limit_order):
