@@ -83,18 +83,35 @@ class CapitalHandler(CexClient):
         Returns:
             None
         """
+        # try:
+        #     if self.default_account:
+        #         logger.debug("Default account: {}", self.default_account)
+        #         self.switch_account(self.default_account)
+        #     self.accounts_data = self.client.all_accounts()
+        # except Exception as e:
+        #     logger.error("Error fetching account data: {}", e)
+        #     return False
+        # logger.debug("Account data: {}", self.accounts_data)
+        # self.account_number = self.accounts_data["accounts"][0]["accountId"]
+        # logger.debug("Account number: {}", self.account_number)
+        # logger.debug("Session details: {}", self.client.get_sesion_details())
         try:
-            if self.default_account:
-                logger.debug("Default account: {}", self.default_account)
-                self.switch_account(self.default_account)
             self.accounts_data = self.client.all_accounts()
+            logger.debug("Account data: {}", self.accounts_data)
+            if self.default_account:
+                self.switch_account(self.default_account)
+                for account in self.accounts_data["accounts"]:
+                    if account["accountId"] == self.default_account:
+                        self.account_number = account["accountId"]
+            else:
+                self.account_number = self.accounts_data["accounts"][0]["accountId"]
+
+            logger.debug("Account number: {}", self.account_number)
+            logger.debug("Session details: {}", self.client.get_sesion_details())
+            return True
         except Exception as e:
             logger.error("Error fetching account data: {}", e)
             return False
-        logger.debug("Account data: {}", self.accounts_data)
-        self.account_number = self.accounts_data["accounts"][0]["accountId"]
-        logger.debug("Account number: {}", self.account_number)
-        logger.debug("Session details: {}", self.client.get_sesion_details())
 
     def switch_account(self, account_number):
         """
@@ -106,7 +123,9 @@ class CapitalHandler(CexClient):
         Returns:
             None
         """
-        self.client.switch_account(self.default_account)
+        logger.debug("Switching to account {}", account_number)
+        switch = self.client.switch_account(self.default_account)
+        logger.debug("Switch: {}", switch)
 
     async def get_quote(self, instrument):
         """
