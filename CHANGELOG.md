@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.9.3 (2024-07-16)
+
+### Other
+
+* Merge pull request #484 from mraniki/dev
+
+⬆️ 🤖 - Its a very UNlucky week in which to be took dead ([`82cbf31`](https://github.com/mraniki/cefi/commit/82cbf31075d75ab67cd1eed407ebf2612d391991))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.4 ([`de378e2`](https://github.com/mraniki/cefi/commit/de378e2b14fbd68907485b50c84bc957d5092c11))
+
 ## v4.9.2 (2024-07-15)
 
 ### Other
