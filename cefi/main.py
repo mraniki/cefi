@@ -227,7 +227,7 @@ class CexTrader:
     async def get_pnls(self, **kwargs):
         """
         Return account pnl.
- 
+
         Args:
             None
 
