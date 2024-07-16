@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v4.10.0 (2024-07-16)
+
+### Other
+
+* Merge pull request #485 from mraniki/dev
+
+💄 Refactor CexClient ([`38b21a5`](https://github.com/mraniki/cefi/commit/38b21a5c219c680d48965b672a5bbb97ce0cee60))
+
+### 💄
+
+* 💄 Refactor CexClient ([`fff0c70`](https://github.com/mraniki/cefi/commit/fff0c70901a7fadd1e8400f7bdb609eef397b6e9))
+
+### 🚨
+
+* 🚨 ([`90e1dbf`](https://github.com/mraniki/cefi/commit/90e1dbf77a53411994e405d3bfa58184f67c621c))
+
 ## v4.9.3 (2024-07-16)
 
 ### Other
