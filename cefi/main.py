@@ -135,22 +135,16 @@ class CexTrader:
             library is not supported.
 
         """
-
-        library = (
-            kwargs.get("library")
-            or kwargs.get("platform")
-            or kwargs.get("protocol")
-            or kwargs.get("parser_library")
-            or "ccxt"
+        library = kwargs.get("library") or kwargs.get("protocol") or "ccxt"
+        return self.client_classes.get(f"{library.capitalize()}Handler", None).__call__(
+            **kwargs
         )
-        cls = self.client_classes.get((f"{library.capitalize()}Handler"))
-        return None if cls is None else cls(**kwargs)
 
     def get_all_client_classes(self):
         """
         Retrieves all client classes from the `myllm.provider` module.
 
-        This function imports the `myllm.provider` module and retrieves
+        This function imports the `cefi.provider` module and retrieves
         all the classes defined in it.
 
         The function returns a dictionary where the keys are the
@@ -159,7 +153,7 @@ class CexTrader:
 
         Returns:
             dict: A dictionary containing all the client classes
-            from the `myllm.provider` module.
+            from the `cefi.provider` module.
         """
         provider_module = importlib.import_module("cefi.handler")
         return {
