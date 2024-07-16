@@ -48,47 +48,19 @@ class CexClient:
         Initialize the Cex object
 
         """
-
-        try:
-            self.protocol = kwargs.get("protocol", None)
-            self.name = kwargs.get("name", None)
-            logger.info("Initializing Client {}", self.name)
-            self.enabled = kwargs.get("enabled", None)
-            self.client = None
-            self.user_id = kwargs.get("user_id", None)
-            self.api_key = kwargs.get("api_key", None)
-            self.host = kwargs.get("host", None)
-            self.port = kwargs.get("port", None)
-            self.broker_client_id = kwargs.get("broker_client_id", None)
-            self.broker_account_number = kwargs.get("broker_account_number", None)
-            self.broker_gateway = kwargs.get("broker_gateway", None)
-            self.secret = kwargs.get("secret", None)
-            self.password = kwargs.get("password", None)
-            self.testmode = kwargs.get("testmode", None)
-            self.default_account = kwargs.get("default_account", None)
-            self.trading_asset = kwargs.get("trading_asset", None)
-            self.separator = kwargs.get("trading_asset_separator", None)
-            self.account_number = None
-            self.accounts_data = None
-            self.trading_risk_percentage = kwargs.get("trading_risk_percentage", None)
-            self.trading_risk_amount = kwargs.get("trading_risk_amount", None)
-            self.trading_slippage = kwargs.get("trading_slippage", None)
-            self.trading_amount_threshold = kwargs.get("trading_amount_threshold", None)
-            self.leverage_type = kwargs.get("leverage_type", None)
-            self.leverage = kwargs.get("leverage", None)
-            self.defaulttype = kwargs.get("defaulttype", None)
-            self.ordertype = kwargs.get("ordertype", None)
-            self.mapping = kwargs.get("mapping", None)
-            self.balance_limit = kwargs.get("balance_limit", True)
-            self.balance_limit_value = kwargs.get("balance_limit_value", 10)
-            self.is_pnl_active = kwargs.get("is_pnl_active", False)
-
-        except Exception as error:
-            logger.error("Client initialization error {}", error)
-            return None
+        self.protocol = kwargs.get("protocol")
+        self.name = kwargs.get("name")
+        logger.info("Initializing Client {}", self.name)
+        self.enabled = kwargs.get("enabled", False)
         if not self.enabled:
             logger.debug("{} Not enabled", self.name)
             return
+
+        self.__dict__.update(kwargs)
+        self.is_pnl_active = kwargs.get("is_pnl_active", False)
+        self.client = None
+        self.account_number = None
+        self.accounts_data = None
 
     async def get_quote(self, symbol):
         """

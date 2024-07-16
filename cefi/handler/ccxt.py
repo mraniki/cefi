@@ -37,7 +37,8 @@ class CcxtHandler(CexClient):
         if self.name is None:
             return
         client = getattr(ccxt, self.name)
-
+        self.balance_limit = kwargs.get("balance_limit", True)
+        self.balance_limit_value = kwargs.get("balance_limit_value", 5)
         self.client = client(
             {
                 "apiKey": self.api_key,
