@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.10.1 (2024-07-17)
+
+### Other
+
+* Merge pull request #487 from mraniki/dev
+
+⬆️ 🤖 - They spell it da Vinci and pronounce it da Vinchy  Foreigners ([`9fb66f7`](https://github.com/mraniki/cefi/commit/9fb66f7d068e73f09e27149c4aaf8182bbac03d2))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.5 ([`901a56d`](https://github.com/mraniki/cefi/commit/901a56d7f76a1f69de572bee1cf8f59b1a45e3e8))
+
 ## v4.10.0 (2024-07-16)
 
 ### Other
