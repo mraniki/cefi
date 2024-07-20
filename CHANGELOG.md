@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.10.2 (2024-07-20)
+
+### Other
+
+* Merge pull request #489 from mraniki/dev
+
+⬆️ 🤖 - You have been in Afghanistan I perceive ([`e0c8066`](https://github.com/mraniki/cefi/commit/e0c8066c6af7f5a31237832981c2ea7f12b41890))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.6 ([`bc55c28`](https://github.com/mraniki/cefi/commit/bc55c28f180ee75452ba8bdbb8f5b971ff5ee144))
+
 ## v4.10.1 (2024-07-17)
 
 ### Other
