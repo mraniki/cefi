@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.10.3 (2024-07-21)
+
+### Other
+
+* Merge pull request #491 from mraniki/dev
+
+⬆️ 🤖 - Your mode of life will be changed for the better because of good news soon ([`cd39507`](https://github.com/mraniki/cefi/commit/cd39507d99cfcefa45d29eb77d2c39d1cbd84d11))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency sphinx to v7.4.7 ([`29dde72`](https://github.com/mraniki/cefi/commit/29dde72727c4ff5ebad6d3a300aff9fb82e02d3c))
+
 ## v4.10.2 (2024-07-20)
 
 ### Other
