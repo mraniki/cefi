@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.10.4 (2024-08-03)
+
+### Other
+
+* Merge pull request #493 from mraniki/dev
+
+⬆️ 🤖 - Dont relax  Its only your tension thats holding you together ([`7953e55`](https://github.com/mraniki/cefi/commit/7953e558be7631e0f435e8aecba6a6a56328686b))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency black to v24.8.0 ([`fe51aca`](https://github.com/mraniki/cefi/commit/fe51aca2ec12d4d717d62986e976165c42d17a17))
+
 ## v4.10.3 (2024-07-21)
 
 ### Other
