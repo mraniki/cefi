@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v4.10.5 (2024-08-16)
+
+### Other
+
+* Merge pull request #496 from mraniki/dev
+
+⬆️ 🤖 - You will gain money by an illegal action ([`e8a4d32`](https://github.com/mraniki/cefi/commit/e8a4d320b497ea3a344a30830084e99294bccdc3))
+
+* Merge pull request #495 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.6.0 ([`0ba617e`](https://github.com/mraniki/cefi/commit/0ba617e70fc409667a77a43c41eb408922bf0be0))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.6.0 ([`20a7255`](https://github.com/mraniki/cefi/commit/20a7255bbfe5e3aee7f8cbc328422a54a100356b))
+
 ## v4.10.4 (2024-08-03)
 
 ### Other
