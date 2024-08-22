@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v4.11.0 (2024-08-22)
+
+### Other
+
+* Merge pull request #497 from mraniki/dev
+
+⬆️ 🤖 - You are standing on my toes ([`f4d07ec`](https://github.com/mraniki/cefi/commit/f4d07ec1707277aa66d0a6be9e9e4d049c169fe4))
+
+* Merge pull request #498 from mraniki/renovate/pytest-asyncio-0.x
+
+⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.24.0 ([`5dd0a55`](https://github.com/mraniki/cefi/commit/5dd0a552ad05ad45a80c404bb6328d0ff799f32e))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.24.0 ([`82640e1`](https://github.com/mraniki/cefi/commit/82640e17ca69a7f5d212033bab9465d6877a4c5a))
+
+### 🥚
+
+* 🥚 Initial Degiro Client ([`28fff57`](https://github.com/mraniki/cefi/commit/28fff57462c9bbaac7b3f5f7c4750b7f42a8fcad))
+
+* 🥚 Degiro ([`86db945`](https://github.com/mraniki/cefi/commit/86db945dd0bba3f68dbf892cffa1322612591ebe))
+
 ## v4.10.5 (2024-08-16)
 
 ### Other
