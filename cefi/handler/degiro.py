@@ -1,162 +1,178 @@
-# """
+"""
 
-# Degiro client
-
-
-# """
-
-# import ccxt
-# from loguru import logger
-# from degiro_connector.trading.api import API as TradingAPI
-# from degiro_connector.trading.models.credentials import build_credentials
-# from degiro_connector.trading.models.order import Action, Order, OrderType, TimeType
-# from .client import CexClient
+Degiro client
 
 
-# class DegiroHandler(CexClient):
-#     """
-#     CEX client
-#     via Degiro API
-#     https://github.com/Chavithra/degiro-connector
+"""
 
-#     Args:
-#         None
+from datetime import date
 
-#     Returns:
-#         None
+from degiro_connector.trading.api import API as TradingAPI
+from degiro_connector.trading.models.account import Format, ReportRequest
+from degiro_connector.trading.models.credentials import build_credentials
+from degiro_connector.trading.models.order import Action, Order, OrderType, TimeType
+from loguru import logger
 
-#     """
-
-#     def __init__(
-#         self,
-#         **kwargs,
-#     ):
-#         """
-#         Initialize the ccxt client
-
-#         """
-#         super().__init__(**kwargs)
-#         if self.name is None:
-#             return
-#         client = TradingAPI(credentials=credentials)
-#         client.connect()
-
-#     async def get_quote(self, instrument):
-#         """
-#         Asynchronously fetches a ask/offer quote
-#         for the specified instrument.
-
-#         :param instrument: The instrument for which the quote is to be fetched.
-#         :return: The fetched quote.
-#         """
-#         try:
-#             instrument = await self.replace_instrument(instrument)
-
-#             ticker = self.client.fetch_ticker(instrument)
-#             quote = ticker["ask"]
-#             logger.debug("Quote: {}", quote)
-#             return quote
-#         except Exception as e:
-#             logger.error("{} Error {}", self.name, e)
+from .client import CexClient
 
 
-#     async def get_account_balance(self):
-#         """
-#         return account balance of
-#         a given ccxt exchange
+class DegiroHandler(CexClient):
+    """
+    CEX client
+    via Degiro API
+    https://github.com/Chavithra/degiro-connector
 
-#         Args:
-#             None
+    Args:
+        None
 
-#         Returns:
-#             balance
+    Returns:
+        None
 
-#         """
+    """
 
+    def __init__(
+        self,
+        **kwargs,
+    ):
+        """
+        Initialize the ccxt client
 
-#     async def get_account_position(self):
-#         """
-#         Return account position.
-#         of a given exchange
+        """
+        super().__init__(**kwargs)
+        if self.name is None:
+            return
+        credentials = build_credentials(
+            # location="config/config.json",
+            override={
+                "username": self.user_id,
+                "password": self.password,
+                "int_account": self.broker_account_number,  # From `get_client_details`
+                "totp_secret_key": self.secret,  # For 2FA
+            },
+        )
+        client = TradingAPI(credentials=credentials)
+        client.connect()
+        self.accounts_data = client.get_account_info()
 
-#         Args:
-#             None
+    async def get_quote(self, instrument):
+        """
+        Asynchronously fetches a ask/offer quote
+        for the specified instrument.
 
-#         Returns:
-#             position
+        :param instrument: The instrument for which the quote is to be fetched.
+        :return: The fetched quote.
+        """
+        # try:
+        #     instrument = await self.replace_instrument(instrument)
 
-#         """
+        #     ticker = self.client.
+        #     quote =
+        #     logger.debug("Quote: {}", quote)
+        #     return quote
+        # except Exception as e:
+        #     logger.error("{} Error {}", self.name, e)
 
+    async def get_account_balance(self):
+        """
+        return account balance of
+        a given ccxt exchange
 
+        Args:
+            None
 
-#     async def pre_order_checks(self, order_params):
-#         """ """
-#         return True
+        Returns:
+            balance
 
-#     async def get_trading_asset_balance(self):
-#         """ """
-#         return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
+        """
+        return self.client.get_account_report(
+            report_request=ReportRequest(
+                country="FR",
+                lang="fr",
+                format=Format.CSV,
+                from_date=date(year=date.today().year - 1, month=1, day=1),
+                to_date=date.today(),
+            ),
+            raw=False,
+        )
 
-#     async def execute_order(self, order_params):
-#         """
-#         Execute order
+    async def get_account_position(self):
+        """
+        Return account position.
+        of a given exchange
 
-#         Args:
-#             order_params (dict):
-#                 action(str)
-#                 instrument(str)
-#                 quantity(int)
+        Args:
+            None
 
-#         Returns:
-#             trade_confirmation(dict)
+        Returns:
+            position
 
-#         """
-#         try:
-#             action = order_params.get("action")
-#             instrument = await self.replace_instrument(order_params.get("instrument"))
-#             quantity = order_params.get("quantity", self.trading_risk_amount)
-#             logger.debug("quantity {}", quantity)
-#             amount = await self.get_order_amount(
-#                 quantity=quantity,
-#                 instrument=instrument,
-#                 is_percentage=self.trading_risk_percentage,
-#             )
-#             params = {
-#                 "stopLoss": {
-#                     "triggerPrice": order_params.get("stop_loss"),
-#                     # "price": order_params.get("action") * 0.98,
-#                 },
-#                 "takeProfit": {
-#                     "triggerPrice": order_params.get("take_profit"),
-#                     # "price": order_params.get("action") * 0.98,
-#                 },
-#             }
-#             logger.debug("amount {}", amount)
-#             pre_order_checks = await self.pre_order_checks(order_params)
-#             logger.debug("pre_order_checks {}", pre_order_checks)
+        """
+        return self.client.get_position_report(
+            report_request=ReportRequest(
+                country="FR",
+                lang="fr",
+                format=Format.XLS,
+                from_date=date(year=date.today().year - 1, month=1, day=1),
+                to_date=date.today(),
+            ),
+            raw=False,
+        )
 
-#             if amount and pre_order_checks:
-#                 if order := # PASS ORDER
-# order = Order(
-#     buy_sell=Action.BUY,
-#     order_type=OrderType.LIMIT,
-#     price=12.1,
-#     product_id=72160,
-#     size=1,
-#     time_type=TimeType.GOOD_TILL_DAY,
-# )
+    async def pre_order_checks(self, order_params):
+        """ """
+        return True
 
-# checking_response = trading_api.check_order(order=order)
-# print(checking_response)
+    async def get_trading_asset_balance(self):
+        """ """
+        return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
 
-# confirmation_response = trading_api.confirm_order(
-#     confirmation_id=checking_response.confirmation_id,
-#     order=order,
-# )
-# print(confirmation_response):
-#                     return await self.get_trade_confirmation(order, instrument, action)
-#             return f"Error executing {self.name}"
+    async def execute_order(self, order_params):
+        """
+        Execute order
 
-#         except Exception as e:
-#             logger.error("{} Error {}", self.name, e)
-#             return f"Error executing {self.name}"
+        Args:
+            order_params (dict):
+                action(str)
+                instrument(str)
+                quantity(int)
+
+        Returns:
+            trade_confirmation(dict)
+
+        """
+        try:
+            action = order_params.get("action")
+            instrument = await self.replace_instrument(order_params.get("instrument"))
+            quantity = order_params.get("quantity", self.trading_risk_amount)
+            if not action or not instrument:
+                raise ValueError("Missing required parameters: action or instrument")
+            logger.debug(f"quantity {quantity}")
+            amount = await self.get_order_amount(
+                quantity=quantity,
+                instrument=instrument,
+                is_percentage=self.trading_risk_percentage,
+            )
+            if not amount:
+                raise ValueError("Failed to calculate order amount")
+            logger.debug(f"amount {amount}")
+            pre_order_checks = await self.pre_order_checks(order_params)
+            if not pre_order_checks:
+                raise ValueError("Pre-order checks failed")
+            order = Order(
+                buy_sell=Action.BUY if action == "BUY" else Action.SELL,
+                order_type=OrderType.LIMIT,
+                price=12.1,
+                product_id=72160,
+                size=amount,
+                time_type=TimeType.GOOD_TILL_DAY,
+            )
+            if checking_response := self.client.check_order(order=order):
+                if confirmation_response := self.client.confirm_order(
+                    confirmation_id=checking_response.confirmation_id,
+                    order=order,
+                ):
+                    logger.debug("Confirmation: {}", confirmation_response)
+                    return await self.get_trade_confirmation(order, instrument, action)
+        except Exception as e:
+            logger.error(f"{self.name} Error {e}")
+            return f"Error executing {self.name}"

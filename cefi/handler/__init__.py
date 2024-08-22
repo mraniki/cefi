@@ -1,7 +1,6 @@
 from .capitalcom import CapitalHandler
 from .ccxt import CcxtHandler
+from .degiro import DegiroHandler
 from .ib_sync import IbHandler
 
-# from .degiro import DegiroHandler
-
-__all__ = ["CcxtHandler", "IbHandler", "CapitalHandler"]
+__all__ = ["CapitalHandler", "CcxtHandler", "DegiroHandler", "IbHandler"]
