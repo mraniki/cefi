@@ -62,6 +62,7 @@ class DegiroHandler(CexClient):
         :param instrument: The instrument for which the quote is to be fetched.
         :return: The fetched quote.
         """
+        # TODO
         # try:
         #     instrument = await self.replace_instrument(instrument)
 
@@ -124,7 +125,8 @@ class DegiroHandler(CexClient):
 
     async def get_trading_asset_balance(self):
         """ """
-        return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
+        # TODO
+        # return self.client.fetchBalance()[f"{self.trading_asset}"]["free"]
 
     async def execute_order(self, order_params):
         """
@@ -140,6 +142,7 @@ class DegiroHandler(CexClient):
             trade_confirmation(dict)
 
         """
+        # TODO: Test and fix order call
         try:
             action = order_params.get("action")
             instrument = await self.replace_instrument(order_params.get("instrument"))
