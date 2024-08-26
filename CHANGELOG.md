@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.11.1 (2024-08-26)
+
+### Other
+
+* Merge pull request #499 from mraniki/dev
+
+⬆️ 🤖 - How apt the poor are to be proud ([`ff66f7d`](https://github.com/mraniki/cefi/commit/ff66f7dcc32f73f7ac83e5b9515704e2af77f7d6))
+
+### 📝
+
+* 📝 update degiro.py ([`e37ca16`](https://github.com/mraniki/cefi/commit/e37ca167f812dcd5630dd44547b1e1be3febe06f))
+
 ## v4.11.0 (2024-08-22)
 
 ### Other
