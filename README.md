@@ -21,8 +21,8 @@
     <a href="https://codecov.io/gh/mraniki/cefi"> <img src="https://codecov.io/gh/mraniki/cefi/branch/main/graph/badge.svg?token=BTIoKrcXNq"/></a><br>
       </td>
       <td align="left"> 
-        Interact with Centralised trading platforms (CEX)<br>
-        supported by CCXT-supported brokers, IB, Capital.com and others.
+        Interact with centralized trading platforms (CEX)<br>
+        supported by CCXT, IBKR, Capital.com, and others.
       </td>
     </tr>
   </table>
