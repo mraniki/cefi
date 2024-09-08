@@ -13,7 +13,7 @@
 
 # class FxcmHandler(CexClient):
 #     """
-#     library:
+#     library: https://github.com/fxcm/ForexConnectAPI
 
 #     Args:
 #         None
