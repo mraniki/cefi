@@ -1,21 +1,19 @@
 # """
 
-# cTrader client
+# etoro client
 
 
 # """
 
-# from ctrader_open_api import Client
+# 
 # from loguru import logger
 
 # from .client import CexClient
 
 
-# class CtraderHandler(CexClient):
+# class EtoroHandler(CexClient):
 #     """
-#     CEX client
-#     via openApiPy library
-#     https://github.com/spotware/openApiPy
+#     library: https://github.com/mkhaled87/etoro-api
 
 #     Args:
 #         None
@@ -30,21 +28,17 @@
 #         **kwargs,
 #     ):
 #         """
-#         Initialize the client
+#         Initialize the ccxt client
 
 #         """
 #         super().__init__(**kwargs)
-#         hostType = input("Host (Live/Demo): ")
-#         host = EndPoints.PROTOBUF_LIVE_HOST
-#         if hostType.lower() == "live" else EndPoints.PROTOBUF_DEMO_HOST
-#         client =
 
-#         self.client = Client(host, EndPoints.PROTOBUF_PORT, TcpProtocol)
 
 
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
+
 
 #         Args:
 #             cex
@@ -57,7 +51,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance 
+#         return account balance
 
 #         Args:
 #             None

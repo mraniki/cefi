@@ -1,21 +1,19 @@
 # """
 
-# cTrader client
+# Sierrachart client
 
 
 # """
 
-# from ctrader_open_api import Client
+
 # from loguru import logger
 
 # from .client import CexClient
 
 
-# class CtraderHandler(CexClient):
+# class SierrachartHandler(CexClient):
 #     """
-#     CEX client
-#     via openApiPy library
-#     https://github.com/spotware/openApiPy
+#     library:https://github.com/jseparovic/python-ws-dtc-client
 
 #     Args:
 #         None
@@ -34,12 +32,6 @@
 
 #         """
 #         super().__init__(**kwargs)
-#         hostType = input("Host (Live/Demo): ")
-#         host = EndPoints.PROTOBUF_LIVE_HOST
-#         if hostType.lower() == "live" else EndPoints.PROTOBUF_DEMO_HOST
-#         client =
-
-#         self.client = Client(host, EndPoints.PROTOBUF_PORT, TcpProtocol)
 
 
 #     async def get_quote(self, instrument):

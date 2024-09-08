@@ -30,7 +30,7 @@ class CcxtHandler(CexClient):
         **kwargs,
     ):
         """
-        Initialize the ccxt client
+        Initialize the client
 
         """
         super().__init__(**kwargs)

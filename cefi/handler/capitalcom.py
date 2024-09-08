@@ -43,7 +43,7 @@ class CapitalHandler(CexClient):
         **kwargs,
     ):
         """
-        Initialize the capital.com client
+        Initialize the client
 
         """
         super().__init__(**kwargs)
