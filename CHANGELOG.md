@@ -1,6 +1,28 @@
 # CHANGELOG
 
+## v4.11.4 (2024-09-08)
+
+### :rotating_light:
+
+* :rotating_light: ([`407bb64`](https://github.com/mraniki/cefi/commit/407bb64970adf64fd61998ae99fd30fc3e5fb643))
+
+### Other
+
+* Merge pull request #511 from mraniki/dev
+
+Dev ([`384d6d4`](https://github.com/mraniki/cefi/commit/384d6d4516e02db165a286881b9dac9ac4e9f749))
+
+* Merge branch &#39;dev&#39; of git@github.com:mraniki/cefi.git ([`482d718`](https://github.com/mraniki/cefi/commit/482d718e4256c2cfe6211c26167f27b124fb090d))
+
 ## v4.11.3 (2024-09-08)
+
+### Other
+
+* Merge pull request #510 from mraniki/dev
+
+Dev ([`63b5c0b`](https://github.com/mraniki/cefi/commit/63b5c0b88ed43238b4fd2a3c9cebeefa3a0dfcbd))
+
+## v4.11.2 (2024-09-08)
 
 ### :rotating_light:
 
@@ -8,9 +30,11 @@
 
 ### Other
 
-* Merge pull request #510 from mraniki/dev
+* Merge pull request #509 from mraniki/dev
 
-Dev ([`63b5c0b`](https://github.com/mraniki/cefi/commit/63b5c0b88ed43238b4fd2a3c9cebeefa3a0dfcbd))
+Update README.md with more detailed information about supported platf… ([`1772de5`](https://github.com/mraniki/cefi/commit/1772de57ab97b8e37e9eaf773ea57cba74c95fd8))
+
+* Add Fxcm client handler with basic methods ([`a9c9c13`](https://github.com/mraniki/cefi/commit/a9c9c13859ec8961d07e83090a7e20b1f3335190))
 
 * Refactor client initialization in handler classes. ([`fd5cf23`](https://github.com/mraniki/cefi/commit/fd5cf235962ff836a2bc7b890a9eeacdd38599a6))
 
@@ -21,16 +45,6 @@ Dev ([`63b5c0b`](https://github.com/mraniki/cefi/commit/63b5c0b88ed43238b4fd2a3c
 * Update README with changes to trading platforms section. ([`189916a`](https://github.com/mraniki/cefi/commit/189916a8269469c996d370e41d1eff42dbd90bd3))
 
 * Update IbHandler import and add placeholder class. ([`b07658a`](https://github.com/mraniki/cefi/commit/b07658a8400b5b2751c2142891cb5433654a5bab))
-
-## v4.11.2 (2024-09-08)
-
-### Other
-
-* Merge pull request #509 from mraniki/dev
-
-Update README.md with more detailed information about supported platf… ([`1772de5`](https://github.com/mraniki/cefi/commit/1772de57ab97b8e37e9eaf773ea57cba74c95fd8))
-
-### Update
 
 * Update README.md with more detailed information about supported platforms. ([`3a94f78`](https://github.com/mraniki/cefi/commit/3a94f784f769eb77847cee0e3e69415edb5c5886))
 
