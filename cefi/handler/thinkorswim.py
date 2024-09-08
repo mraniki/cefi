@@ -1,21 +1,18 @@
 # """
 
-# cTrader client
+# Thinkorswim client
 
 
 # """
 
-# from ctrader_open_api import Client
 # from loguru import logger
 
 # from .client import CexClient
 
 
-# class CtraderHandler(CexClient):
+# class ThinkorswimHandler(CexClient):
 #     """
-#     CEX client
-#     via openApiPy library
-#     https://github.com/spotware/openApiPy
+#     library: https://github.com/alexgolec/tda-api
 
 #     Args:
 #         None
@@ -30,23 +27,16 @@
 #         **kwargs,
 #     ):
 #         """
-#         Initialize the ccxt client
+#         Initialize the client
 
 #         """
 #         super().__init__(**kwargs)
-#         hostType = input("Host (Live/Demo): ")
-#         host = EndPoints.PROTOBUF_LIVE_HOST
-#         if hostType.lower() == "live" else EndPoints.PROTOBUF_DEMO_HOST
-#         client =
 
-#         self.client = Client(host, EndPoints.PROTOBUF_PORT, TcpProtocol)
 
 
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
-#         of a given exchange ccxt object
-
 
 #         Args:
 #             cex
@@ -59,8 +49,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance of
-#         a given ccxt exchange
+#         return account balance 
 
 #         Args:
 #             None
@@ -75,7 +64,6 @@
 #     async def get_account_position(self):
 #         """
 #         Return account position.
-#         of a given exchange
 
 #         Args:
 #             None

@@ -35,7 +35,7 @@ class DegiroHandler(CexClient):
         **kwargs,
     ):
         """
-        Initialize the ccxt client
+        Initialize the client
 
         """
         super().__init__(**kwargs)
@@ -75,8 +75,7 @@ class DegiroHandler(CexClient):
 
     async def get_account_balance(self):
         """
-        return account balance of
-        a given ccxt exchange
+        return account balance 
 
         Args:
             None
@@ -99,7 +98,6 @@ class DegiroHandler(CexClient):
     async def get_account_position(self):
         """
         Return account position.
-        of a given exchange
 
         Args:
             None

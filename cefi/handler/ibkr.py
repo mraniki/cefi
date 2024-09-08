@@ -115,8 +115,7 @@ class IbHandler(CexClient):
 
     async def get_account_balance(self):
         """
-        return account balance of
-        a given ccxt exchange
+        return account balance 
 
         Args:
             None
@@ -131,7 +130,6 @@ class IbHandler(CexClient):
     async def get_account_position(self):
         """
         Return account position.
-        of a given exchange
 
         Args:
             None

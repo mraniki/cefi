@@ -30,7 +30,7 @@
 #         **kwargs,
 #     ):
 #         """
-#         Initialize the ccxt client
+#         Initialize the client
 
 #         """
 #         super().__init__(**kwargs)
@@ -45,8 +45,6 @@
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
-#         of a given exchange ccxt object
-
 
 #         Args:
 #             cex
@@ -59,8 +57,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance of
-#         a given ccxt exchange
+#         return account balance 
 
 #         Args:
 #             None
@@ -75,7 +72,6 @@
 #     async def get_account_position(self):
 #         """
 #         Return account position.
-#         of a given exchange
 
 #         Args:
 #             None
