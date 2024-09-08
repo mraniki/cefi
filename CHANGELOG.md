@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v4.11.3 (2024-09-08)
+
+### :rotating_light:
+
+* :rotating_light: ([`ec21013`](https://github.com/mraniki/cefi/commit/ec21013e01ce85abcdcdcb14f6bc3e0511f5168f))
+
+### Other
+
+* Merge pull request #510 from mraniki/dev
+
+Dev ([`63b5c0b`](https://github.com/mraniki/cefi/commit/63b5c0b88ed43238b4fd2a3c9cebeefa3a0dfcbd))
+
+* Refactor client initialization in handler classes. ([`fd5cf23`](https://github.com/mraniki/cefi/commit/fd5cf235962ff836a2bc7b890a9eeacdd38599a6))
+
+### Update
+
+* Update supported centralized trading platforms in README.md ([`356a928`](https://github.com/mraniki/cefi/commit/356a928b508dd0264788453e75d2f41aa92df4aa))
+
+* Update README with changes to trading platforms section. ([`189916a`](https://github.com/mraniki/cefi/commit/189916a8269469c996d370e41d1eff42dbd90bd3))
+
+* Update IbHandler import and add placeholder class. ([`b07658a`](https://github.com/mraniki/cefi/commit/b07658a8400b5b2751c2142891cb5433654a5bab))
+
 ## v4.11.2 (2024-09-08)
 
 ### Other
