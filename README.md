@@ -22,7 +22,7 @@
       </td>
       <td align="left"> 
         Interact with centralized trading platforms (CEX)<br>
-        supported by CCXT, IBKR, Capital.com, and others.
+        supported by CCXT, Capital.com, DEGIRO, IBKR and others.
       </td>
     </tr>
   </table>
