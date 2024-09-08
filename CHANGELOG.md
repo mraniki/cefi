@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.11.2 (2024-09-08)
+
+### Other
+
+* Merge pull request #509 from mraniki/dev
+
+Update README.md with more detailed information about supported platf… ([`1772de5`](https://github.com/mraniki/cefi/commit/1772de57ab97b8e37e9eaf773ea57cba74c95fd8))
+
+### Update
+
+* Update README.md with more detailed information about supported platforms. ([`3a94f78`](https://github.com/mraniki/cefi/commit/3a94f784f769eb77847cee0e3e69415edb5c5886))
+
 ## v4.11.1 (2024-08-26)
 
 ### Other
