@@ -13,7 +13,7 @@
 
 # class FxcmHandler(CexClient):
 #     """
-#     library: 
+#     library:
 
 #     Args:
 #         None
