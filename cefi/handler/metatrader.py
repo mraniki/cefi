@@ -13,7 +13,7 @@
 
 # class MetatraderHandler(CexClient):
 #     """
-#     library:
+# library: https://github.com/TheSnowGuru/PythonNinja-Python-NinjaTrader8-trading-api-connector-drag-n-drop
 
 #     Args:
 #         None
