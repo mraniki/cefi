@@ -5,7 +5,7 @@
 
 # """
 
-# 
+#
 # from loguru import logger
 
 # from ._client import CexClient
@@ -32,7 +32,6 @@
 
 #         """
 #         super().__init__(**kwargs)
-
 
 
 #     async def get_quote(self, instrument):

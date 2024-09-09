@@ -33,7 +33,6 @@
 #         super().__init__(**kwargs)
 
 
-
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
@@ -50,7 +49,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance 
+#         return account balance
 
 #         Args:
 #             None
