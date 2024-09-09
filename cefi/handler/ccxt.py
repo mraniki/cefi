@@ -161,40 +161,82 @@ class CcxtHandler(CexClient):
 
         """
         try:
-            action = order_params.get("action")
-            instrument = await self.replace_instrument(order_params.get("instrument"))
+            action = order_params["action"]
+            instrument = await self.replace_instrument(order_params["instrument"])
             quantity = order_params.get("quantity", self.trading_risk_amount)
-            logger.debug("quantity {}", quantity)
             amount = await self.get_order_amount(
                 quantity=quantity,
                 instrument=instrument,
                 is_percentage=self.trading_risk_percentage,
             )
             params = {
-                "stopLoss": {
-                    "triggerPrice": order_params.get("stop_loss"),
-                    # "price": order_params.get("action") * 0.98,
-                },
-                "takeProfit": {
-                    "triggerPrice": order_params.get("take_profit"),
-                    # "price": order_params.get("action") * 0.98,
-                },
+                "stopLoss": {"triggerPrice": order_params.get("stop_loss")},
+                "takeProfit": {"triggerPrice": order_params.get("take_profit")},
             }
-            logger.debug("amount {}", amount)
-            pre_order_checks = await self.pre_order_checks(order_params)
-            logger.debug("pre_order_checks {}", pre_order_checks)
-
-            if amount and pre_order_checks:
-                if order := self.client.create_order(
+            if amount and await self.pre_order_checks(order_params):
+                order = self.client.create_order(
                     symbol=instrument,
                     type=self.ordertype,
                     side=action,
                     amount=amount,
                     params=params,
-                ):
-                    return await self.get_trade_confirmation(order, instrument, action)
+                )
+                return await self.get_trade_confirmation(order, instrument, action)
             return f"Error executing {self.name}"
-
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}"
+
+
+    # async def execute_order(self, order_params):
+    #     """
+    #     Execute order
+
+    #     Args:
+    #         order_params (dict):
+    #             action(str)
+    #             instrument(str)
+    #             quantity(int)
+
+    #     Returns:
+    #         trade_confirmation(dict)
+
+    #     """
+    #     try:
+    #         action = order_params.get("action")
+    #         instrument = await self.replace_instrument(order_params.get("instrument"))
+    #         quantity = order_params.get("quantity", self.trading_risk_amount)
+    #         logger.debug("quantity {}", quantity)
+    #         amount = await self.get_order_amount(
+    #             quantity=quantity,
+    #             instrument=instrument,
+    #             is_percentage=self.trading_risk_percentage,
+    #         )
+    #         params = {
+    #             "stopLoss": {
+    #                 "triggerPrice": order_params.get("stop_loss"),
+    #                 # "price": order_params.get("action") * 0.98,
+    #             },
+    #             "takeProfit": {
+    #                 "triggerPrice": order_params.get("take_profit"),
+    #                 # "price": order_params.get("action") * 0.98,
+    #             },
+    #         }
+    #         logger.debug("amount {}", amount)
+    #         pre_order_checks = await self.pre_order_checks(order_params)
+    #         logger.debug("pre_order_checks {}", pre_order_checks)
+
+    #         if amount and pre_order_checks:
+    #             if order := self.client.create_order(
+    #                 symbol=instrument,
+    #                 type=self.ordertype,
+    #                 side=action,
+    #                 amount=amount,
+    #                 params=params,
+    #             ):
+    #                 return await self.get_trade_confirmation(order, instrument, action)
+    #         return f"Error executing {self.name}"
+
+    #     except Exception as e:
+    #         logger.error("{} Error {}", self.name, e)
+    #         return f"Error executing {self.name}"
