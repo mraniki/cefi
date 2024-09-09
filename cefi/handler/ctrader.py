@@ -8,14 +8,13 @@
 # from ctrader_open_api import Client
 # from loguru import logger
 
-# from .client import CexClient
+# from ._client import CexClient
 
 
 # class CtraderHandler(CexClient):
 #     """
-#     CEX client
-#     via openApiPy library
-#     https://github.com/spotware/openApiPy
+#     Library: https://github.com/spotware/openApiPy and
+#       https://ctraderacademy.com/ctrader-api/
 
 #     Args:
 #         None
@@ -57,7 +56,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance 
+#         return account balance
 
 #         Args:
 #             None

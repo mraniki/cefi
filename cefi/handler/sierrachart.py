@@ -8,7 +8,7 @@
 
 # from loguru import logger
 
-# from .client import CexClient
+# from ._client import CexClient
 
 
 # class SierrachartHandler(CexClient):
@@ -49,7 +49,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance 
+#         return account balance
 
 #         Args:
 #             None

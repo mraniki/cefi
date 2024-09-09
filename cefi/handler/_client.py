@@ -14,9 +14,7 @@ from loguru import logger
 class CexClient:
     """
     CEX Object to support CEFI
-    exchange and trading
-    via CCXT library
-    https://github.com/ccxt/ccxt
+    exchange and trading platform
 
     Args:
         None
@@ -89,8 +87,7 @@ class CexClient:
 
     async def get_account_balance(self):
         """
-        return account balance of
-        a given ccxt exchange
+        return account balance
 
         Args:
             None
@@ -103,7 +100,6 @@ class CexClient:
     async def get_account_position(self):
         """
         Return account position.
-        of a given exchange
 
         Args:
             None
@@ -236,7 +232,7 @@ class CexClient:
 
     async def get_instrument_decimals(self, instrument):
         """
-
+        Get the number of decimal places for the token.
 
         Returns:
             int: The number of decimal places for the token.

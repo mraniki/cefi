@@ -8,7 +8,7 @@
 
 # from loguru import logger
 
-# from .client import CexClient
+# from ._client import CexClient
 
 
 # class TradingviewHandler(CexClient):
@@ -34,7 +34,6 @@
 #         super().__init__(**kwargs)
 
 
-
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
@@ -51,7 +50,7 @@
 
 #     async def get_account_balance(self):
 #         """
-#         return account balance 
+#         return account balance
 
 #         Args:
 #             None

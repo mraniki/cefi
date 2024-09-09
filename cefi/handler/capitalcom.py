@@ -11,7 +11,7 @@ from capitalcom.client import Client, DirectionType
 from capitalcom.client_demo import Client as DemoClient
 from loguru import logger
 
-from .client import CexClient
+from ._client import CexClient
 
 
 class CapitalHandler(CexClient):

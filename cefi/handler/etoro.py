@@ -5,10 +5,10 @@
 
 # """
 
-# 
+#
 # from loguru import logger
 
-# from .client import CexClient
+# from ._client import CexClient
 
 
 # class EtoroHandler(CexClient):
@@ -32,7 +32,6 @@
 
 #         """
 #         super().__init__(**kwargs)
-
 
 
 #     async def get_quote(self, instrument):
