@@ -187,7 +187,6 @@ class CcxtHandler(CexClient):
             logger.error("{} Error {}", self.name, e)
             return f"Error executing {self.name}"
 
-
     # async def execute_order(self, order_params):
     #     """
     #     Execute order
