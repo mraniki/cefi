@@ -13,9 +13,7 @@ from ._client import CexClient
 
 class CcxtHandler(CexClient):
     """
-    CEX client
-    via CCXT library
-    https://github.com/ccxt/ccxt
+    Library: https://github.com/ccxt/ccxt
 
     Args:
         None
