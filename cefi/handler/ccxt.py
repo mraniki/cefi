@@ -63,9 +63,7 @@ class CcxtHandler(CexClient):
         """
         try:
             instrument = await self.replace_instrument(instrument)
-
-            ticker = self.client.fetch_ticker(instrument)
-            quote = ticker["ask"]
+            quote = self.client.fetch_ticker(instrument)["ask"]
             logger.debug("Quote: {}", quote)
             return quote
         except Exception as e:
@@ -85,11 +83,7 @@ class CcxtHandler(CexClient):
         """
         try:
             instrument = await self.replace_instrument(instrument)
-
-            ticker = self.client.fetch_ticker(instrument)
-            quote = ticker["bid"]
-            logger.debug("Quote: {}", quote)
-            return quote
+            return await self.client.fetch_ticker(instrument)["bid"]
         except Exception as e:
             logger.error("{} Error {}", self.name, e)
 
