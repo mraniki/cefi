@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## v4.12.0 (2024-09-09)
+
+### Other
+
+* Merge pull request #513 from mraniki/dev
+
+🎨 and ♻️ ccxt execute_order refactoring ([`a6df6bb`](https://github.com/mraniki/cefi/commit/a6df6bb59097cb7ef703ee75249d6ee39fb25be3))
+
+* build(deps): update pyproject.toml ([`aec490b`](https://github.com/mraniki/cefi/commit/aec490b24acde52e8be80101273d3d374edd0181))
+
+* Merge pull request #512 from mraniki/dev
+
+⬆️ 🤖 - But for my own part it was Greek to me ([`5a1ceaf`](https://github.com/mraniki/cefi/commit/5a1ceaf7b237184c946eed2a82ace0da0737103f))
+
+### Update
+
+* Update library URLs for Fxcm, Oanda, and Schwab handlers ([`5e77cd6`](https://github.com/mraniki/cefi/commit/5e77cd67dc65190833c682a48f973f7d832eb80e))
+
+### ♻️
+
+* ♻️ ([`59ae1be`](https://github.com/mraniki/cefi/commit/59ae1befad19401c72666a77af8182106bd62f3a))
+
+* ♻️ ccxt execute_order refactoring ([`d2d6c9f`](https://github.com/mraniki/cefi/commit/d2d6c9fa01fc3e5d53b6243a1b6057e07a468c08))
+
+### 🎨
+
+* 🎨 update _client.py ([`cb5ed3a`](https://github.com/mraniki/cefi/commit/cb5ed3a3eff7a08e223318d78d568e27e4efcd0a))
+
+* 🎨 update 15 files and delete 1 file ([`18f6588`](https://github.com/mraniki/cefi/commit/18f65882a2c0e5dc453a5d1e110f922365c0c614))
+
+### 🐛
+
+* 🐛 build(deps): update pyproject.toml ([`42f89ce`](https://github.com/mraniki/cefi/commit/42f89cebf0c7425d3d33c89df90f1a44485ce599))
+
+### 💬
+
+* 💬 ([`2ac8937`](https://github.com/mraniki/cefi/commit/2ac89378b4ea250afc2a444ff564ce8054ad2bc2))
+
+* 💬 ([`d284f66`](https://github.com/mraniki/cefi/commit/d284f66e12e44a38c50841a92a81f488f1a0391f))
+
+### 🚨
+
+* 🚨 ([`bde0747`](https://github.com/mraniki/cefi/commit/bde074755114928ba39b6c7a517825f861ca41d2))
+
+* 🚨 ([`0c721be`](https://github.com/mraniki/cefi/commit/0c721bee6de6844a5126648238e19dcb2b624700))
+
+* 🚨 ([`0d915ce`](https://github.com/mraniki/cefi/commit/0d915ce0a52dbbe0e671aa555305437fd647b081))
+
+### 🥚
+
+* 🥚 Basic Oanda client ([`96cd547`](https://github.com/mraniki/cefi/commit/96cd547b7eae0cd1822889bb025e98d8effdee7b))
+
 ## v4.11.4 (2024-09-08)
 
 ### :rotating_light:
