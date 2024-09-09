@@ -8,7 +8,7 @@
 # from ctrader_open_api import Client
 # from loguru import logger
 
-# from .client import CexClient
+# from ._client import CexClient
 
 
 # class CtraderHandler(CexClient):

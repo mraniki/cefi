@@ -13,7 +13,7 @@ from degiro_connector.trading.models.credentials import build_credentials
 from degiro_connector.trading.models.order import Action, Order, OrderType, TimeType
 from loguru import logger
 
-from .client import CexClient
+from ._client import CexClient
 
 
 class DegiroHandler(CexClient):

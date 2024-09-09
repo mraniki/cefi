@@ -8,7 +8,7 @@ CCXT client
 import ccxt
 from loguru import logger
 
-from .client import CexClient
+from ._client import CexClient
 
 
 class CcxtHandler(CexClient):

@@ -8,7 +8,7 @@ Interactive Brokers client
 from ib_insync import IB, IBC, Contract, Order
 from loguru import logger
 
-from .client import CexClient
+from ._client import CexClient
 
 
 class IbHandler(CexClient):
