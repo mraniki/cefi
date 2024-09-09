@@ -13,9 +13,8 @@
 
 # class CtraderHandler(CexClient):
 #     """
-#     CEX client
-#     via openApiPy library
-#     https://github.com/spotware/openApiPy
+#     Library: https://github.com/spotware/openApiPy and
+#       https://ctraderacademy.com/ctrader-api/
 
 #     Args:
 #         None
