@@ -233,7 +233,8 @@ class CcxtHandler(CexClient):
     #                 amount=amount,
     #                 params=params,
     #             ):
-    #                 return await self.get_trade_confirmation(order, instrument, action)
+    #                 return await self.get_trade_confirmation(
+    # order, instrument, action)
     #         return f"Error executing {self.name}"
 
     #     except Exception as e:
