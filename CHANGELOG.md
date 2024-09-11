@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v4.13.0 (2024-09-11)
+
+### Other
+
+* Merge pull request #514 from mraniki/dev
+
+⬆️ 🤖 - This is the first age thats paid much attention to the future which is a ([`401c661`](https://github.com/mraniki/cefi/commit/401c661b87084ca47f5b7ccd077f8d80845ecd6f))
+
+### 🎨
+
+* 🎨 ([`f7bebcf`](https://github.com/mraniki/cefi/commit/f7bebcfa32cb2b50f4ad974957e9e19b7ebd8972))
+
+### 🥚
+
+* 🥚 etrade ([`b035eca`](https://github.com/mraniki/cefi/commit/b035ecaff7bc1743e3c836534f3b9baeee7b16ae))
+
+* 🥚 Add etrade client handler with basic methods. ([`ace6926`](https://github.com/mraniki/cefi/commit/ace6926e372d812885d4f2da08fb94efcff2be4e))
+
 ## v4.12.0 (2024-09-09)
 
 ### Other
