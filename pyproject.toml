@@ -31,6 +31,7 @@ ib_insync = "0.9.86"
 capitalcom-python = "0.2.3"
 degiro-connector = "3.0.22"
 easyoanda = {version ="1.0.19", python = ">=3.11,<4.0"}
+pyetrade = "2.1.0"
 
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"

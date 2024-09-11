@@ -5,8 +5,7 @@
 
 # """
 
-
-# from loguru import logger
+# import pyetrade
 
 # from ._client import CexClient
 
@@ -32,8 +31,14 @@
 
 #         """
 #         super().__init__(**kwargs)
-
-
+#         self.client = pyetrade.ETradeAccounts(
+#             self.api_key,
+#             self.secret,
+#             self.oauth_token,
+#             self.oauth_token_secret,
+#         )
+#         self.account_data = self.client.list_accounts(resp_format="json")
+#         self.account_number = self.account_data["Accounts"]["Account"][0]["accountId"]
 
 #     async def get_quote(self, instrument):
 #         """
@@ -47,7 +52,7 @@
 #         Returns:
 #             quote
 #         """
-#         pass
+#         return self.client.get_quote(symbols=[instrument], resp_format="json")
 
 #     async def get_account_balance(self):
 #         """
@@ -61,7 +66,7 @@
 
 #         """
 
-#         return 0
+#         return self.client.get_account_balance(account_id_key=self.account_number)
 
 #     async def get_account_position(self):
 #         """
@@ -76,8 +81,7 @@
 
 #         """
 
-
-#         return 0
+#         return self.client.list_transactions(account_id_key=self.account_number)
 
 #     async def get_trading_asset_balance(self):
 #         """ """
