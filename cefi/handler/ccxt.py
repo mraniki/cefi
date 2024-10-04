@@ -99,17 +99,20 @@ class CcxtHandler(CexClient):
             balance
 
         """
-
-        raw_balance = self.client.fetch_free_balance()
-        data = list(raw_balance.items())
-        if self.balance_limit:
-            data = data[: self.balance_limit_value]
-        if filtered_balance := {k: v for k, v in data if v is not None and v > 0}:
-            balance_str = "".join(
-                f"{iterator}: {value} \n"
-                for iterator, value in filtered_balance.items()
-            )
-            return f"{balance_str}"
+        try:
+            raw_balance = self.client.fetch_free_balance()
+            data = list(raw_balance.items())
+            if self.balance_limit:
+                data = data[: self.balance_limit_value]
+            if filtered_balance := {k: v for k, v in data if v is not None and v > 0}:
+                balance_str = "".join(
+                    f"{iterator}: {value} \n"
+                    for iterator, value in filtered_balance.items()
+                )
+                return f"{balance_str}"
+        except Exception as e:
+            logger.error("{} get_account_balance {}", self.name, e)
+            return e
 
     async def get_account_position(self):
         """
