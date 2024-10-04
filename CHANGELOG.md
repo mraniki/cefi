@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## v4.14.0 (2024-10-04)
+
+### Other
+
+* Merge pull request #522 from mraniki/dev
+
+⬆️ 🤖 - Courage is your greatest present need ([`a64c175`](https://github.com/mraniki/cefi/commit/a64c1757a9b3faf41d0f3deef2f4b766c98104f0))
+
+* Merge pull request #518 from mraniki/dev
+
+🐛 build(deps): update pyproject.toml ([`c2de546`](https://github.com/mraniki/cefi/commit/c2de546b5eca2510bb2e9d2778fe5216f75f00d9))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pyetrade to v2.1.0 ([`763e929`](https://github.com/mraniki/cefi/commit/763e92966f45d3e38d9b94dd59276bb28f1cb0eb))
+
+### 🎨
+
+* 🎨 ([`09b63ab`](https://github.com/mraniki/cefi/commit/09b63ab4952668a857a3c378fcfc34adaddc0afe))
+
+### 🐛
+
+* 🐛 build(deps): update pyproject.toml ([`aac1e1c`](https://github.com/mraniki/cefi/commit/aac1e1cf12d483b2400ed72ec2b4c4528f4c8c20))
+
+### 🥅
+
+* 🥅 ccxt bal error handling ([`6f60abe`](https://github.com/mraniki/cefi/commit/6f60abee98a2dbee525e796322a35279a902dbaa))
+
+### 🥚
+
+* 🥚 ig placeholder ([`98d1631`](https://github.com/mraniki/cefi/commit/98d16319afb0add143e728a9b073fe74d65a0ac2))
+
 ## v4.13.0 (2024-09-11)
 
 ### Other
