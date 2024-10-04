@@ -1,21 +1,19 @@
 # """
 
-# cTrader client
+# ig client
 
 
 # """
 
-# from ctrader_open_api import Client
+#
 # from loguru import logger
 
 # from ._client import CexClient
 
 
-# class CtraderHandler(CexClient):
+# class IgHandler(CexClient):
 #     """
-#     Library: https://github.com/spotware/openApiPy and
-#       https://ctraderacademy.com/ctrader-api/
-#       or https://github.com/ejtraderLabs/ejtraderCT
+#     library: https://github.com/ig-python/trading-ig
 
 #     Args:
 #         None
@@ -30,21 +28,16 @@
 #         **kwargs,
 #     ):
 #         """
-#         Initialize the client
+#         Initialize the ccxt client
 
 #         """
 #         super().__init__(**kwargs)
-#         hostType = input("Host (Live/Demo): ")
-#         host = EndPoints.PROTOBUF_LIVE_HOST
-#         if hostType.lower() == "live" else EndPoints.PROTOBUF_DEMO_HOST
-#         client =
-
-#         self.client = Client(host, EndPoints.PROTOBUF_PORT, TcpProtocol)
 
 
 #     async def get_quote(self, instrument):
 #         """
 #         Return a quote for a instrument
+
 
 #         Args:
 #             cex
