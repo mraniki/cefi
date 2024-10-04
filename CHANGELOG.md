@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v4.14.1 (2024-10-04)
+
+### Other
+
+* Merge pull request #523 from mraniki/dev
+
+🚑 ([`b603ddc`](https://github.com/mraniki/cefi/commit/b603ddcec9811f3e2e18545b6350fdaf756b0fb0))
+
+### 🚑
+
+* 🚑 ([`10d513c`](https://github.com/mraniki/cefi/commit/10d513c1b52656d36da38f273931a051343dc85f))
+
 ## v4.14.0 (2024-10-04)
 
 ### Other
