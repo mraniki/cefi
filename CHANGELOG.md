@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v4.14.2 (2024-10-09)
+
+### Other
+
+* Merge pull request #526 from mraniki/dev
+
+⬆️ 🤖 - Be cheerful while you are alive ([`43bfd59`](https://github.com/mraniki/cefi/commit/43bfd5939e2de77748a1933065040a3dc121aea9))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update python docker tag to v3.13 ([`b9d8960`](https://github.com/mraniki/cefi/commit/b9d8960ef4b69a96d3da119741380ec697934a47))
+
+* ⬆️ 🛠️(deps): update dependency black to v24.10.0 ([`31dddeb`](https://github.com/mraniki/cefi/commit/31dddebdae3668bbb2be8ac069919af4535921df))
+
 ## v4.14.1 (2024-10-04)
 
 ### Other
