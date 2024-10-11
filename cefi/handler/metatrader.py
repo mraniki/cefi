@@ -5,7 +5,8 @@ Metatrader 5 client
 
 """
 
-from mt5linux import MetaTrader5
+import MetaTrader5 as mt5
+from loguru import logger
 
 from ._client import CexClient
 
@@ -33,11 +34,13 @@ class MetatraderHandler(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.client = MetaTrader5(
-            host=self.host or "localhost", port=self.port or 18812
+        self.client = mt5(host=self.host or "localhost", port=self.port or 18812)
+        if not self.client.initialize():
+            logger.error("initialize() failed")
+            mt5.shutdown()
+        logger.info(
+            "MT5 initialized {} {}", self.client.terminal_info(), self.client.version()
         )
-        self.client.initialize()
-        self.client.terminal_info()
 
     async def get_quote(self, instrument):
         """
@@ -51,7 +54,12 @@ class MetatraderHandler(CexClient):
         Returns:
             quote
         """
-        pass
+        if not instrument:
+            raise ValueError("instrument cannot be empty")
+        if quote := self.client.symbol_info_tick(instrument):
+            return quote.bid
+        else:
+            raise ValueError("quote is empty")
 
     async def get_account_balance(self):
         """
