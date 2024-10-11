@@ -280,3 +280,7 @@ class CexClient:
             trade_confirmation(dict)
 
         """
+
+    async def shutdown(self):
+        """ """
+        pass
