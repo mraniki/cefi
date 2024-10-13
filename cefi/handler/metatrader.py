@@ -72,8 +72,10 @@ class MetatraderHandler(CexClient):
             balance
 
         """
-
-        return 0
+        if balance := self.client.account_info():
+            return balance.balance
+        else:
+            raise ValueError("account balance is empty")
 
     async def get_account_position(self):
         """
@@ -87,12 +89,14 @@ class MetatraderHandler(CexClient):
             position
 
         """
-
-        return 0
+        if positions := self.client.positions():
+            return [f"{p.symbol} {p.profit}" for p in positions]
+        else:
+            return []
 
     async def get_trading_asset_balance(self):
         """ """
-        return 0
+        return self.get_account_balance()
 
     async def execute_order(self, order_params):
         """
