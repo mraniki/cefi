@@ -32,7 +32,7 @@ capitalcom-python = "0.2.3"
 degiro-connector = "3.0.22"
 easyoanda = {version ="1.0.19", python = ">=3.11,<4.0"}
 # pyetrade = {version ="2.1.0"}
-metatrader5 = "5.0.45"
+metatrader5 = "5.0.4424"
 #mt5linux = "0.1.9"
 
 [ tool.poetry.group.dev.dependencies]
