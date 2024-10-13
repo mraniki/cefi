@@ -39,8 +39,69 @@ class MetatraderHandler(CexClient):
             logger.error("initialize() failed")
             mt5.shutdown()
         logger.info(
-            "MT5 initialized {} {}", self.client.terminal_info(), self.client.version()
+            "MT5 initialized\n{}\n{}",
+            self.client.terminal_info(),
+            self.client.version(),
         )
+
+    async def get_account_info(self):
+        """
+        Returns:
+            str
+        """
+        self.accounts_data = self.client.get_account_info()
+        return self.accounts_data
+
+    async def get_account_balance(self):
+        """
+        return account balance
+
+        Args:
+            None
+
+        Returns:
+            balance
+
+        """
+        if account_info := self.get_account_info():
+            return account_info.balance
+
+    async def get_account_free_margin(self):
+        """
+        return account balance
+
+        Args:
+            None
+
+        Returns:
+            balance
+
+        """
+        if account_info := self.get_account_info():
+            return account_info.margin_free
+
+    async def get_account_position(self):
+        """
+        Return account position.
+        of a given exchange
+
+        Args:
+            None
+
+        Returns:
+            position
+
+        """
+        if account_info := self.get_account_info():
+            currency = account_info.currency
+            if positions := self.client.positions():
+                return [f"{p.symbol} {p.profit} {currency}" for p in positions if p]
+        else:
+            return []
+
+    async def get_trading_asset_balance(self):
+        """ """
+        return self.get_account_balance()
 
     async def get_quote(self, instrument):
         """
@@ -60,43 +121,6 @@ class MetatraderHandler(CexClient):
             return quote.bid
         else:
             raise ValueError("quote is empty")
-
-    async def get_account_balance(self):
-        """
-        return account balance
-
-        Args:
-            None
-
-        Returns:
-            balance
-
-        """
-        if balance := self.client.account_info():
-            return balance.balance
-        else:
-            raise ValueError("account balance is empty")
-
-    async def get_account_position(self):
-        """
-        Return account position.
-        of a given exchange
-
-        Args:
-            None
-
-        Returns:
-            position
-
-        """
-        if positions := self.client.positions():
-            return [f"{p.symbol} {p.profit}" for p in positions]
-        else:
-            return []
-
-    async def get_trading_asset_balance(self):
-        """ """
-        return self.get_account_balance()
 
     async def execute_order(self, order_params):
         """
