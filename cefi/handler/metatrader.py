@@ -14,7 +14,7 @@ from ._client import CexClient
 class MetatraderHandler(CexClient):
     """
     library: https://github.com/lucas-campagna/mt5linux
-    leveraging metatrder python integration:
+    leveraging metatrader python integration:
     https://www.mql5.com/en/docs/integration/python_metatrader5/
 
         Args:
@@ -52,6 +52,9 @@ class MetatraderHandler(CexClient):
         self.accounts_data = self.client.get_account_info()
         return self.accounts_data
 
+    async def shutdown(self):
+        self.client.shutdown()
+
     async def get_account_balance(self):
         """
         return account balance
@@ -65,6 +68,10 @@ class MetatraderHandler(CexClient):
         """
         if account_info := self.get_account_info():
             return account_info.balance
+
+    async def get_trading_asset_balance(self):
+        """ """
+        return self.get_account_balance()
 
     async def get_account_free_margin(self):
         """
@@ -98,10 +105,6 @@ class MetatraderHandler(CexClient):
                 return [f"{p.symbol} {p.profit} {currency}" for p in positions if p]
         else:
             return []
-
-    async def get_trading_asset_balance(self):
-        """ """
-        return self.get_account_balance()
 
     async def get_quote(self, instrument):
         """
@@ -138,5 +141,16 @@ class MetatraderHandler(CexClient):
         """
         pass
 
-    async def shutdown(self):
-        self.client.shutdown()
+    async def calculate_pnl(self, from_date, to_date):
+        """
+        Calculate the PnL for a given period.
+
+        Parameters:
+            period (str): The period for which
+            to calculate PnL ('W', 'M', 'Y', or None).
+
+        Returns:
+            pnl: The calculated PnL value.
+        """
+
+        return self.client.history_orders_get(from_date, to_date)
