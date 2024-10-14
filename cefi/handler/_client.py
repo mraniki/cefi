@@ -109,7 +109,7 @@ class CexClient:
 
         """
 
-    async def get_account_pnl(self, period=None):
+    async def get_account_pnl(self, period=None, from_date=None, to_date=None):
         """
         Return account pnl.
 
@@ -119,26 +119,34 @@ class CexClient:
         Returns:
             pnl
         """
-        today = datetime.now().date()
-        if period is None:
-            start_date = today
-        elif period == "W":
-            start_date = today - timedelta(days=today.weekday())
-        elif period == "M":
-            start_date = today.replace(day=1)
-        elif period == "Y":
-            start_date = today.replace(month=1, day=1)
-        else:
+        if from_date is None or to_date is None:
+            to_date = datetime.now().date()
+            if period is None:
+                from_date = to_date
+            elif period == "W":
+                from_date = to_date - timedelta(days=to_date.weekday())
+            elif period == "M":
+                from_date = to_date.replace(day=1)
+            elif period == "Y":
+                from_date = to_date.replace(month=1, day=1)
+            else:
+                return 0
+        try:
+            return (
+                await self.calculate_pnl(from_date=from_date, to_date=to_date)
+                if self.is_pnl_active
+                else 0
+            )
+        except Exception as e:
+            logger.error("Error calculating PnL: {}", e)
             return 0
-        return self.calculate_pnl(start_date) if self.is_pnl_active else 0
 
-    async def calculate_pnl(self, period=None):
+    async def calculate_pnl(self, from_date=None, to_date=None):
         """
-        Calculate the PnL for a given period.
+        Calculate the PnL for a given start date.
 
         Parameters:
-            period (str): The period for which
-            to calculate PnL ('W', 'M', 'Y', or None).
+            from_date: The start date for which to calculate PnL.
 
         Returns:
             pnl: The calculated PnL value.
@@ -280,3 +288,7 @@ class CexClient:
             trade_confirmation(dict)
 
         """
+
+    async def shutdown(self):
+        """ """
+        pass
