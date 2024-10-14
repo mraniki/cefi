@@ -34,6 +34,8 @@ easyoanda = {version ="1.0.19", python = ">=3.11,<4.0"}
 mt5linux = "0.1.9"
 # pyetrade = {version ="2.1.0"}
 
+
+
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"
 ruff = "^0.6.0"
