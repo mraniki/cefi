@@ -5,8 +5,8 @@ Metatrader 5 client
 
 """
 
-from mt5linux import MetaTrader5 as mt5
 from loguru import logger
+from mt5linux import MetaTrader5 as mt5
 
 from ._client import CexClient
 
