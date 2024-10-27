@@ -17,6 +17,11 @@ class MetatraderHandler(CexClient):
     leveraging metatrader python integration:
     https://www.mql5.com/en/docs/integration/python_metatrader5/
 
+    You can use MT5 via the docker image
+    gmag11/metatrader5_vnc which include the python integration
+    if your metatrader container is named metatrader5
+    and the python port is 8001 it will connect
+
         Args:
             None
 
@@ -34,7 +39,7 @@ class MetatraderHandler(CexClient):
 
         """
         super().__init__(**kwargs)
-        self.client = mt5(host=self.host or "localhost", port=self.port or 18812)
+        self.client = mt5(host=self.host or "metatrader5", port=self.port or 8001)
         if not self.client.initialize():
             logger.error("initialize() failed")
             mt5.shutdown()
