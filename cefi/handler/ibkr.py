@@ -188,7 +188,7 @@
 #                     order.orderType = order_params["order_type"] or "MKT"
 #                     order.totalQuantity = amount
 #                     trade = self.client.placeOrder(contract, order)
-#                     return await self.get_trade_confirmation(trade, instrument, action)
+#                return await self.get_trade_confirmation(trade, instrument, action)
 
 #             return f"Error executing {self.name}"
 
@@ -219,7 +219,8 @@
 #                 return Contract(
 #                     secType=asset["type"],
 #                     symbol=asset["id"],
-#                     lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
+#
+#  lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
 #                     strike=asset["strike"],
 #                     right=asset["right"],
 #                     multiplier=asset["multiplier"],
