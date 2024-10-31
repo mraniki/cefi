@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v5.0.0 (2024-10-31)
+
+### Other
+
+* Merge pull request #534 from mraniki/dev
+
+💥 breaking 🔥 dep issue deactivating ib handler ([`61e3d26`](https://github.com/mraniki/cefi/commit/61e3d2608ae9c24fb4707ee79151f42053197a73))
+
+* update ibkr.py ([`ec56ddb`](https://github.com/mraniki/cefi/commit/ec56ddbd917821fd5da2bacc2efcd8ed545d34a4))
+
+### 💥
+
+* 💥 breaking 🔥 dep issue deactivating ib handler ([`84bf982`](https://github.com/mraniki/cefi/commit/84bf982b29628acbb069c618cd52384b05f0d520))
+
+
 ## v4.15.0 (2024-10-29)
 
 ### Fix
