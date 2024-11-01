@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v5.3.1 (2024-11-01)
+
+### Other
+
+* Merge pull request #539 from mraniki/dev
+
+Dev ([`85beafe`](https://github.com/mraniki/cefi/commit/85beafe4e463605c98e24836e8b508b3c8789e8d))
+
+* update metatrader.py ([`9f0b3a2`](https://github.com/mraniki/cefi/commit/9f0b3a2bd6aec287131bcb93a2a7497743e6e70e))
+
+* Merge pull request #538 from mraniki/dev
+
+Remove unused Docker configuration files ([`8fbb643`](https://github.com/mraniki/cefi/commit/8fbb643494df9b4443e9e0ae05d3cf72daa5156b))
+
+* Remove unused Docker configuration files ([`9caca0b`](https://github.com/mraniki/cefi/commit/9caca0bb633760ee182171d7b3b1db0017adc2ef))
+
+### Update
+
+* Update test to include additional condition for result ([`ba39bef`](https://github.com/mraniki/cefi/commit/ba39beffd81a47ac7284b874eb1086972a05a1ea))
+
+
 ## v5.3.0 (2024-11-01)
 
 ### Other
