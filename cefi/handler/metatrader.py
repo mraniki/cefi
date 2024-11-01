@@ -157,5 +157,4 @@ class MetatraderHandler(CexClient):
         Returns:
             pnl: The calculated PnL value.
         """
-
         return self.client.history_orders_get(from_date, to_date)
