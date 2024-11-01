@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v5.1.0 (2024-11-01)
+
+### Other
+
+* Merge pull request #535 from mraniki/dev
+
+🥚 build(deps): update ibkr.py and pyproject.toml ([`6e6985b`](https://github.com/mraniki/cefi/commit/6e6985bbfabbd4b2af98e24eb127556735b8708c))
+
+### 🚨
+
+* 🚨 ([`319f522`](https://github.com/mraniki/cefi/commit/319f5228d4ca79bc16108a99d8e0f8c9245df353))
+
+### 🥚
+
+* 🥚 build(deps): update ibkr.py and pyproject.toml ([`134afd0`](https://github.com/mraniki/cefi/commit/134afd0d1ff7266db14a153132f3658dda5e73ad))
+
+
 ## v5.0.0 (2024-10-31)
 
 ### Other
