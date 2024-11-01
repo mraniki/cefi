@@ -31,7 +31,7 @@ capitalcom-python = "0.2.3"
 degiro-connector = "3.0.23"
 easyoanda = {version ="1.0.19", python = ">=3.11,<4.0"}
 ib_insync = "0.9.86"
-# mt5linux = "0.1.9"
+mt5linux = "0.1.9"
 # pyetrade = {version ="2.1.0"}
 
 
