@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v5.3.0 (2024-11-01)
+
+### Other
+
+* Merge pull request #537 from mraniki/dev
+
+🥚 mt5linux_updated ([`7a4a876`](https://github.com/mraniki/cefi/commit/7a4a8760a49c65f0effc5d5be7782640f2b4b460))
+
+* build(deps): update pyproject.toml ([`e19a729`](https://github.com/mraniki/cefi/commit/e19a7293004a0ba68684fdea6aee5baebda0c16c))
+
+### 🥚
+
+* 🥚 mt5linux_updated ([`d9a1839`](https://github.com/mraniki/cefi/commit/d9a1839071175d46839225dd955e146fb62c6dba))
+
+
 ## v5.2.0 (2024-11-01)
 
 ### Other
