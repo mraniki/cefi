@@ -1,6 +1,35 @@
 # CHANGELOG
 
 
+## v5.2.0 (2024-11-01)
+
+### Other
+
+* Merge pull request #536 from mraniki/dev
+
+🥚 sorting dep ([`bc49833`](https://github.com/mraniki/cefi/commit/bc49833949dad827679ecabb859778e84d76bd23))
+
+* update cefi/handler/__init__.py ([`5c3938c`](https://github.com/mraniki/cefi/commit/5c3938ce3f9817277f6f782b4b2cf1e8414a79bd))
+
+### 🔥
+
+* 🔥 ⬆️ mt5linux dep issue ([`404e462`](https://github.com/mraniki/cefi/commit/404e462ad3ab5a8f33005f59f39dbfe2fb2d43a8))
+
+* 🔥 black ([`3a669a9`](https://github.com/mraniki/cefi/commit/3a669a9635bc17158f2a8510c8724b47c6efad02))
+
+### 🚑
+
+* 🚑 missing import ([`18144c0`](https://github.com/mraniki/cefi/commit/18144c03b037345f357cec48945d305bcee1c181))
+
+### 🚨
+
+* 🚨 ([`60c92cc`](https://github.com/mraniki/cefi/commit/60c92cc4df3b373a843c70b245c9292cc7a75953))
+
+### 🥚
+
+* 🥚 addind back metatrader interface ([`08e534f`](https://github.com/mraniki/cefi/commit/08e534f6880926d80565d1889c2f2c5f90b2451d))
+
+
 ## v5.1.0 (2024-11-01)
 
 ### Other
