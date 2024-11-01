@@ -39,7 +39,6 @@ mt5linux = "0.1.9"
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"
 ruff = "^0.6.0"
-black = "24.10.0"
 pre-commit = "^3.3.1"
 
 [tool.ruff]
