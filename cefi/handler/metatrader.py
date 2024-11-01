@@ -144,15 +144,15 @@ class MetatraderHandler(CexClient):
             trade_confirmation(dict)
 
         """
-        pass
+        # TODO: implement
 
     async def calculate_pnl(self, from_date, to_date):
         """
-        Calculate the PnL for a given period.
+        Calculate the PnL for a given start date.
 
         Parameters:
-            period (str): The period for which
-            to calculate PnL ('W', 'M', 'Y', or None).
+            from_date: The start date for which to calculate PnL.
+            to_date: The end date for which to calculate PnL.
 
         Returns:
             pnl: The calculated PnL value.

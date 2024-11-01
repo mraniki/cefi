@@ -147,6 +147,7 @@ class CexClient:
 
         Parameters:
             from_date: The start date for which to calculate PnL.
+            to_date: The end date for which to calculate PnL.
 
         Returns:
             pnl: The calculated PnL value.
