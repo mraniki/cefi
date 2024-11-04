@@ -40,7 +40,7 @@ mt5linux_updated = "0.0.1"
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"
 ruff = "^0.6.0"
-pre-commit = "^3.3.1"
+pre-commit = ">=3.3.1,<5.0.0"
 
 [tool.ruff]
 exclude = [
