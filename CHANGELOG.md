@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v5.3.2 (2024-11-05)
+
+### Other
+
+* Merge pull request #545 from mraniki/dev
+
+⬆️ 🤖 - You have been in Afghanistan I perceive ([`edf9093`](https://github.com/mraniki/cefi/commit/edf9093858e9b4b489d8bf37c30342669a813f30))
+
+* Merge pull request #544 from mraniki/renovate/pre-commit-4.x
+
+⬆️ 🛠️(deps): update dependency pre-commit to v4 ([`cc2cefc`](https://github.com/mraniki/cefi/commit/cc2cefcca719b0e7e7a8f4b1666380713343c218))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency pre-commit to v4 ([`8c7683c`](https://github.com/mraniki/cefi/commit/8c7683c0521dcd5d80fc8e689d66b8cd9a5ef248))
+
+
 ## v5.3.1 (2024-11-01)
 
 ### Other
