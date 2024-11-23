@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v5.3.3 (2024-11-23)
+
+### Other
+
+* Merge pull request #549 from mraniki/dev
+
+⬆️ 🤖 - Be careful  Is it classified ([`96a629b`](https://github.com/mraniki/cefi/commit/96a629b1ce407085beec9e8646f50547d7973e47))
+
+* Merge pull request #548 from mraniki/renovate/ruff-0.x
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.8.0 ([`859129a`](https://github.com/mraniki/cefi/commit/859129ab4176349d86fd861a67a78f5a416cfb81))
+
+### ⬆️
+
+* ⬆️ 🛠️(deps): update dependency ruff to ^0.8.0 ([`8cf1fce`](https://github.com/mraniki/cefi/commit/8cf1fce6c8f33341425d4c57b09cc6773b96159f))
+
+
 ## v5.3.2 (2024-11-05)
 
 ### Other
