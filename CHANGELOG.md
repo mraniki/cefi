@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v5.3.5 (2024-12-14)
+
+### Other
+
+- Merge pull request #553 from mraniki/dev
+  ([`50e6d6f`](https://github.com/mraniki/cefi/commit/50e6d6fe2b3095502efda2ef174a5acd9d3a6d0e))
+
+⬆️ 🤖 - You never have to change anything you got up in the middle of the night
+
+- Merge pull request #552 from mraniki/renovate/pytest-asyncio-0.x
+  ([`7def266`](https://github.com/mraniki/cefi/commit/7def266589c12fe28a6b46760e5afb9e7aa12a9f))
+
+⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.25.0
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.25.0
+  ([`738f9b6`](https://github.com/mraniki/cefi/commit/738f9b647802d303bdd39a772bc8ec39de06ac60))
+
+
 ## v5.3.4 (2024-11-30)
 
 ### Other
