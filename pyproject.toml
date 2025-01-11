@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "cefi"
-version = "5.3.5"
+version = "5.3.6"
 description = "A python library, to interact  with Crypto Exchanges (CCXT library) and brokers (IB & Capital.com)"
 authors = ["mraniki <8766259+mraniki@users.noreply.github.com>"]
 license = "MIT License"
@@ -39,7 +39,7 @@ mt5linux_updated = "0.0.1"
 
 [ tool.poetry.group.dev.dependencies]
 python-semantic-release = ">=8.0.8"
-ruff = "^0.8.0"
+ruff = "^0.9.0"
 pre-commit = "^4.0.0"
 
 [tool.ruff]
