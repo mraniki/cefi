@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v5.3.7 (2025-01-12)
+
+### Other
+
+- Merge branch 'dev' of git@github.com:mraniki/cefi.git
+  ([`27c581c`](https://github.com/mraniki/cefi/commit/27c581c1f1d4d1fcac704a6dc5b8353c351ead54))
+
+- Merge pull request #564 from mraniki/dev
+  ([`50f4d41`](https://github.com/mraniki/cefi/commit/50f4d414222208658dbb76db44882921d1551b01))
+
+⬆️ 🤖 - Your lover will never wish to leave you
+
+
 ## v5.3.6 (2025-01-11)
 
 ### Other
@@ -14,6 +27,11 @@
   ([`3161758`](https://github.com/mraniki/cefi/commit/3161758ac338ab829c9267b10b4f7cadf190304f))
 
 ⬆️ 🤖 - You have had a longterm stimulation relative to business
+
+### Update
+
+- Update dependabot configuration file format
+  ([`9958525`](https://github.com/mraniki/cefi/commit/99585252a57c5dc9af98bfb66b06ad6361b95451))
 
 ### ⬆️
 
