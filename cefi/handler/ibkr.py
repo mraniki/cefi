@@ -1,11 +1,10 @@
 """
-
-Interactive Brokers client
-
-
+Interactive Brokers client using ibind library
 """
 
-from ib_insync import IB, IBC, Contract, Order
+import asyncio
+
+from ibind import IbkrClient, QuestionType, StockQuery, make_order_request
 from loguru import logger
 
 from ._client import CexClient
@@ -13,221 +12,198 @@ from ._client import CexClient
 
 class IbHandler(CexClient):
     """
-    CEX client for IBKR
-
+    CEX client for IBKR using ibind library
 
     Args:
         None
 
     Returns:
         None
-
     """
 
-    def __init__(
-        self,
-        **kwargs,
-    ):
+    def __init__(self, **kwargs):
         """
-        Initializes the Broker_IBKR_Plugin class.
-
-        This function creates an instance of the IB class from the ib_insync
-        library and sets it as the 'ib' attribute of the class.
-        It also sets the 'client' attribute to None as a placeholder
-        for actual client details.
-
-        To connect to the Interactive Brokers (IBKR) platform,
-        the 'connect' method of the 'ib' instance is called.
-        This method requires the host, port, and clientId as parameters.
-        In this case, the function connects to the IBKR platform using
-        the IP address "127.0.0.1", port 7497, and clientId 1.
-
-        After successfully connecting to IBKR, the function logs
-        a debug message using the logger module.
-
-        For IBC gateway setup,
-        refer to https://github.com/IbcAlpha/IBC/blob/master/userguide.md
-
+        Initializes the IBKR client using ibind
         """
+        super().__init__(**kwargs)
+        self.client = None
+        self.account_number = None
+
+        if not self.enabled:
+            return
+
         try:
-            super().__init__(**kwargs)
-            if self.enabled:
-                if self.broker_gateway:
-                    ibc = IBC(
-                        976,
-                        gateway=True,
-                        tradingMode="paper" if self.testmode else "live",
-                        userid=self.user_id,
-                        password=self.password,
-                    )
-                    ibc.start()
-                    IB.run()
-                self.client = IB()
-                self.client.connect(
-                    host=self.host,
-                    port=self.port,
-                    clientId=self.broker_client_id or 1,
-                    readonly=False,
-                    account=self.broker_account_number or "",
-                )
-                self.name = self.client.id
-                self.account_number = self.client.managedAccounts()[0]
-                logger.debug("Connected to IBKR {}", self.client.isConnected())
-                logger.debug("Broker_IBKR initialized with account: {}", self.account)
+            # Initialize IbkrClient with IBeam gateway
+            self.url = self.url or "http://ibeam:5000/v1/api/"
+            self.client = IbkrClient(url=self.url)
+
+            # Verify connection
+            tickle_result = self.client.tickle()
+            if (
+                not tickle_result.data.get("iserver", {})
+                .get("authStatus", {})
+                .get("authenticated", False)
+            ):
+                raise ConnectionError("Failed to authenticate with IBKR")
+
+            # Get account number
+            accounts = self.client.portfolio_accounts().data
+            if not accounts:
+                raise ValueError("No trading accounts found")
+            self.account_number = accounts[0]["accountId"]
+
+            logger.debug("Connected to IBKR successfully")
+            logger.debug(f"Account number: {self.account_number}")
 
         except Exception as e:
-            logger.error("IBC Initialization Error {}", e)
-            return None
+            logger.error(f"IbkrClient initialization error: {e}")
+            raise
+
+    async def _async_request(self, fn, *args, **kwargs):
+        """Helper to run synchronous ibind calls in thread pool"""
+        return await asyncio.to_thread(fn, *args, **kwargs)
 
     async def get_info(self):
         """
-        Retrieves information from the accountValues method of the `ib` object.
-
-        Returns:
-            The result of calling the accountValues method of the `ib` object.
+        Retrieves account information
         """
-        return self.client.accountValues()
+        result = await self._async_request(
+            self.client.portfolio_account_summary, self.account_number
+        )
+        return result.data
 
     async def get_quote(self, instrument):
         """
-        Return a quote for a instrument
-        of a given ib object
-
-
-        Args:
-            cex
-            instrument
-
-        Returns:
-            quote
+        Get market data snapshot for instrument
         """
         try:
             instrument = await self.replace_instrument(instrument)
+            conid = await self.search_contract(instrument)
 
-            if contract := self.search_contract(instrument):
-                self.client.reqMktData(contract)
-                quote = self.client.ticker(contract)
-                logger.debug("Quote: {}", quote)
-                return quote
+            if not conid:
+                logger.warning(f"No contract found for {instrument}")
+                return None
+
+            # Get real-time market data (adjust fields as needed)
+            result = await self._async_request(
+                self.client.marketdata_snapshot,
+                conid,
+                fields=["31", "84", "86"],  # bid, ask, last price
+            )
+            return result.data
 
         except Exception as e:
-            logger.error("{} Error {}", self.name, e)
+            logger.error(f"Error getting quote: {e}")
+            return None
 
     async def get_account_balance(self):
         """
-        return account balance
-
-        Args:
-            None
-
-        Returns:
-            balance
-
+        Get account balance summary
         """
-
-        return self.client.accountSummary(self.account)
+        result = await self._async_request(
+            self.client.portfolio_account_summary, self.account_number
+        )
+        return result.data
 
     async def get_account_position(self):
         """
-        Return account position.
-
-        Args:
-            None
-
-        Returns:
-            position
-
+        Get current positions
         """
-
-        try:
-            return self.client.positions()
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-
-    async def pre_order_checks(self, order_params):
-        """ """
-        return True
-
-    async def get_trading_asset_balance(self):
-        """ """
-        return self.client.accountSummary(self.account_number)
-
-    async def execute_order(self, order_params):
-        """
-        Execute order
-
-        Args:
-            order_params (dict):
-                action(str)
-                instrument(str)
-                quantity(int)
-
-        Returns:
-            trade_confirmation(dict)
-
-        """
-        try:
-            action = order_params.get("action")
-            instrument = await self.replace_instrument(order_params.get("instrument"))
-            quantity = order_params.get("quantity", self.trading_risk_amount)
-            logger.debug("quantity {}", quantity)
-            amount = await self.get_order_amount(
-                quantity=quantity,
-                instrument=instrument,
-                is_percentage=self.trading_risk_percentage,
-            )
-
-            logger.debug("amount {}", amount)
-            pre_order_checks = await self.pre_order_checks(order_params)
-            logger.debug("pre_order_checks {}", pre_order_checks)
-
-            if amount and pre_order_checks:
-                if contract := self.search_contract(instrument):
-                    order = Order()
-                    order.action = order_params["action"]
-                    order.orderType = order_params["order_type"] or "MKT"
-                    order.totalQuantity = amount
-                    trade = self.client.placeOrder(contract, order)
-                    return await self.get_trade_confirmation(trade, instrument, action)
-
-            return f"Error executing {self.name}"
-
-        except Exception as e:
-            logger.error("{} Error {}", self.name, e)
-            return f"Error executing {self.name}"
+        result = await self._async_request(
+            self.client.portfolio_positions, self.account_number
+        )
+        return result.data
 
     async def search_contract(self, instrument):
         """
-        Asynchronously searches for a contract based on the given instrument.
-
-        Args:
-            self: The object instance.
-            instrument: The instrument to search for.
-
-        Returns:
-            Contract: The contract matching the instrument, or None if not found.
+        Find contract CONID using symbol and mapping configuration
         """
         try:
-            if asset := next(
+            # Find instrument in mapping
+            asset = next(
                 (
                     item
                     for item in self.mapping
                     if item["id"] == instrument or item["alt"] == instrument
                 ),
                 None,
-            ):
-                return Contract(
-                    secType=asset["type"],
-                    symbol=asset["id"],
-                    lastTradeDateOrContractMonth=asset["lastTradeDateOrContractMonth"],
-                    strike=asset["strike"],
-                    right=asset["right"],
-                    multiplier=asset["multiplier"],
-                    exchange=asset["exchange"],
-                    currency=asset["currency"],
-                )
-            logger.warning("Asset {} not found in mapping", instrument)
-            return None
+            )
+
+            if not asset:
+                logger.warning(f"Instrument {instrument} not found in mapping")
+                return None
+
+            # Build stock query from mapping
+            query = StockQuery(
+                symbol=asset["id"],
+                contract_conditions={
+                    "exchange": asset.get("exchange", "SMART"),
+                    "currency": asset.get("currency", "USD"),
+                    "secType": asset.get("type", "STK"),
+                },
+            )
+
+            # Get CONID
+            result = await self._async_request(
+                self.client.stock_conid_by_symbol, query, default_filtering=True
+            )
+
+            return result.data.get(instrument)
 
         except Exception as e:
-            logger.error("search_contract {} Error {}", instrument, e)
+            logger.error(f"Contract search error: {e}")
+            return None
+
+    async def execute_order(self, order_params):
+        """
+        Execute order using IBKR REST API
+        """
+        try:
+            instrument = await self.replace_instrument(order_params["instrument"])
+            conid = await self.search_contract(instrument)
+
+            if not conid:
+                return {"error": f"Contract not found for {instrument}"}
+
+            # Create order request
+            order_request = make_order_request(
+                conid=conid,
+                side=order_params["action"].upper(),
+                quantity=order_params.get("quantity", 1),
+                order_type=order_params.get("order_type", "MKT"),
+                acct_id=self.account_number,
+                price=order_params.get("price"),
+                coid=order_params.get("client_order_id"),
+            )
+
+            # Define standard answers for order questions
+            answers = {
+                QuestionType.PRICE_PERCENTAGE_CONSTRAINT: True,
+                QuestionType.ORDER_VALUE_LIMIT: True,
+                "_DEFAULT": True,  # Accept any unexpected questions
+            }
+
+            # Place order
+            result = await self._async_request(
+                self.client.place_order, order_request, answers=answers
+            )
+
+            if result.data.get("order_id"):
+                return {
+                    "status": "success",
+                    "order_id": result.data["order_id"],
+                    "details": result.data,
+                }
+            return {"status": "error", "message": result.data}
+
+        except Exception as e:
+            logger.error(f"Order execution error: {e}")
+            return {"error": str(e)}
+
+    async def get_trading_asset_balance(self):
+        """Alias for get_account_balance"""
+        return await self.get_account_balance()
+
+    async def pre_order_checks(self, order_params):
+        """Implement custom pre-trade checks if needed"""
+        return True
