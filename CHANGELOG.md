@@ -1,6 +1,31 @@
 # CHANGELOG
 
 
+## v6.0.0 (2025-02-11)
+
+### Other
+
+- Merge pull request #565 from mraniki/renovate/ibind-0.x
+  ([`a2d8803`](https://github.com/mraniki/cefi/commit/a2d880305da5b1f476647e6ae86d8d18ac32f7c7))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.9
+
+- Merge pull request #566 from mraniki/dev
+  ([`a2c146d`](https://github.com/mraniki/cefi/commit/a2c146de8905e6ce06c2c07329c70550d8871193))
+
+💥 breaking changing ibkr connectivity and lib
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.9
+  ([`b15eaea`](https://github.com/mraniki/cefi/commit/b15eaeab88848a5a1b0bd900a624c20b59af8986))
+
+### 💥
+
+- 💥 breaking changing ibkr connectivity and lib
+  ([`945e35a`](https://github.com/mraniki/cefi/commit/945e35afaa9541c59d636f5c6ae78e323ed104cd))
+
+
 ## v5.3.7 (2025-01-12)
 
 ### Other
@@ -4498,6 +4523,10 @@ The changes in this commit refactor the default_settings.toml and main.p y files
 - Refactor CexCcxt to return quote instead of ticker["last"]
   ([`76dec82`](https://github.com/mraniki/cefi/commit/76dec829e050dab9ab4a7bbb8936ff700fca5474))
 
+- Refactor CexTrader methods and add new methods for getting balances, positions, and PnLs. Update
+  CexCcxt and CexClient to include new methods for getting trading asset balance and order amount.
+  ([`4d044ba`](https://github.com/mraniki/cefi/commit/4d044ba18ff8ad67efca88942232578f7d2ea619))
+
 - Refactor get_account_balance to get_balances
   ([`a59b87d`](https://github.com/mraniki/cefi/commit/a59b87d6488fa3050cef7187588ef02e73130ca8))
 
@@ -4511,10 +4540,6 @@ The changes in this commit refactor the default_settings.toml and main.p y files
   ([`8e4cb45`](https://github.com/mraniki/cefi/commit/8e4cb453fc711a58e32d6028a34665df0d6377c5))
 
 ### Update
-
-- Refactor CexTrader methods and add new methods for getting balances, positions, and PnLs. Update
-  CexCcxt and CexClient to include new methods for getting trading asset balance and order amount.
-  ([`4d044ba`](https://github.com/mraniki/cefi/commit/4d044ba18ff8ad67efca88942232578f7d2ea619))
 
 - Update logging statements and test assertions
   ([`1576010`](https://github.com/mraniki/cefi/commit/1576010ddc9dd7d1544c58a2dec62114496477cd))
@@ -4853,14 +4878,6 @@ The changes in this commit refactor the default_settings.toml and main.p y files
 - :white_check_mark: Unit Test
   ([`de336db`](https://github.com/mraniki/cefi/commit/de336db6f36380e6b24ec26c0014f959797f6e67))
 
-### Fix
-
-- Refactor CexTrader class and fix exchange variable references
-  ([`2a0700a`](https://github.com/mraniki/cefi/commit/2a0700a40265873bb85476236c66d79a59e59d3a))
-
-- Refactor CexTrader class and fix exchange variable references
-  ([`b871e18`](https://github.com/mraniki/cefi/commit/b871e18ddb4c8828b7bd607c2cb8e8559773c8a7))
-
 ### Other
 
 - 'refactored by Sourcery'
@@ -4893,6 +4910,12 @@ The changes in this commit refactor the default_settings.toml and main.p y files
 
 - Refactor CexTrader and test_unit.py for symbol changes
   ([`47108af`](https://github.com/mraniki/cefi/commit/47108afa4180be138e7b3427fc534e3cb19cc920))
+
+- Refactor CexTrader class and fix exchange variable references
+  ([`2a0700a`](https://github.com/mraniki/cefi/commit/2a0700a40265873bb85476236c66d79a59e59d3a))
+
+- Refactor CexTrader class and fix exchange variable references
+  ([`b871e18`](https://github.com/mraniki/cefi/commit/b871e18ddb4c8828b7bd607c2cb8e8559773c8a7))
 
 - Refactor CexTrader class and test_execute_order function
   ([`6f5182e`](https://github.com/mraniki/cefi/commit/6f5182e0949233266d0704154d555aa7d08db59e))
@@ -5430,7 +5453,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### ⬆️
 
-- ⬆️(deps): update dependency ruff to >=0.0.285,<0.0.286
+- **deps**: ⬆️(deps): update dependency ruff to >=0.0.285,<0.0.286
   ([`977b6f9`](https://github.com/mraniki/cefi/commit/977b6f9763ce2386aca86321964a18526c130353))
 
 
@@ -5516,7 +5539,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### ⬆️
 
-- ⬆️(deps): update dependency ruff to >=0.0.284,<0.0.285
+- **deps**: ⬆️(deps): update dependency ruff to >=0.0.284,<0.0.285
   ([`77a8c33`](https://github.com/mraniki/cefi/commit/77a8c339b7fcbfac5fdbe0b2cc8a9a931a54e236))
 
 ### 👷
@@ -5738,7 +5761,7 @@ Update
 
 ### ⬆️
 
-- ⬆️(deps): update dependency ruff to >=0.0.283,<0.0.284
+- **deps**: ⬆️(deps): update dependency ruff to >=0.0.283,<0.0.284
   ([`f48429a`](https://github.com/mraniki/cefi/commit/f48429a622eb0e2d48e1fe3174f9268c4ad6df19))
 
 
