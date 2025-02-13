@@ -1,5 +1,6 @@
 """
 Interactive Brokers client using ibind library
+and ibeam docker gateway
 """
 
 import asyncio
@@ -28,14 +29,18 @@ class IbHandler(CexClient):
         super().__init__(**kwargs)
         self.client = None
         self.account_number = None
+        if not self.host:
+            self.host = "http://ibeam:5000/v1/api/"
 
         if not self.enabled:
             return
 
         try:
             # Initialize IbkrClient with IBeam gateway
-            self.url = self.url or "http://ibeam:5000/v1/api/"
-            self.client = IbkrClient(url=self.url)
+            # or your own gateway URL
+            # for ibeam you can use the preconfigured
+            # docker https://github.com/Voyz/ibeam
+            self.client = IbkrClient(url=self.host)
 
             # Verify connection
             tickle_result = self.client.tickle()
