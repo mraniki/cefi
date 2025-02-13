@@ -29,6 +29,8 @@ class IbHandler(CexClient):
         super().__init__(**kwargs)
         self.client = None
         self.account_number = None
+        if not self.host:
+            self.host = "http://ibeam:5000/v1/api/"
 
         if not self.enabled:
             return
@@ -38,8 +40,7 @@ class IbHandler(CexClient):
             # or your own gateway URL
             # for ibeam you can use the preconfigured
             # docker https://github.com/Voyz/ibeam
-            self.url = self.url or "http://ibeam:5000/v1/api/"
-            self.client = IbkrClient(url=self.url)
+            self.client = IbkrClient(url=self.host)
 
             # Verify connection
             tickle_result = self.client.tickle()
