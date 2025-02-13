@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v6.0.1 (2025-02-13)
+
+### Other
+
+- Merge pull request #568 from mraniki/dev
+  ([`90e1c7d`](https://github.com/mraniki/cefi/commit/90e1c7d09aced4f8fb82e767fcd195c14de5b0cd))
+
+🐛 update ibkr.py
+
+### 🐛
+
+- 🐛 update ibkr.py
+  ([`7d28b51`](https://github.com/mraniki/cefi/commit/7d28b51f22159b1c1fda8767e0a5186bd6a5c571))
+
+### 💬
+
+- 💬  ([`665f28c`](https://github.com/mraniki/cefi/commit/665f28c86b5a0e78b48c194b27847ea350ce243b))
+
+
 ## v6.0.0 (2025-02-11)
 
 ### Other
