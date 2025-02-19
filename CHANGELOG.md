@@ -1,6 +1,39 @@
 # CHANGELOG
 
 
+## v6.0.2 (2025-02-19)
+
+### Other
+
+- Merge pull request #569 from mraniki/renovate/ibind-0.x
+  ([`d03ebf3`](https://github.com/mraniki/cefi/commit/d03ebf3a6eba82ec2f287058c30667605759c2bd))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.10
+
+- Merge pull request #570 from mraniki/dev
+  ([`6b0c5d9`](https://github.com/mraniki/cefi/commit/6b0c5d9cb604e9fc519cc204263559f1bfe2ded3))
+
+⬆️ 🤖 - Q	Why did the tachyon cross the road
+
+- Merge pull request #571 from mraniki/renovate/ibind-0.x
+  ([`cc7b682`](https://github.com/mraniki/cefi/commit/cc7b682d139d52e72c98f1140307bfaaae39c0fb))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.11
+
+- Merge pull request #573 from mraniki/dev
+  ([`dc2f48a`](https://github.com/mraniki/cefi/commit/dc2f48a07020a3d4f28c57c974aa4c17fa3d6d03))
+
+⬆️ 🤖 - Your heart is pure and your mind clear and your soul devout
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.10
+  ([`37a518e`](https://github.com/mraniki/cefi/commit/37a518ea952a9ded9b9aeea2b0e5d00293b0fc9b))
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.11
+  ([`6ada75a`](https://github.com/mraniki/cefi/commit/6ada75ab173c9e330398fbf8fcd1dd4d1665aa45))
+
+
 ## v6.0.1 (2025-02-13)
 
 ### Other
