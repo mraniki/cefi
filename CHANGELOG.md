@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v6.0.3 (2025-03-06)
+
+### Other
+
+- Merge pull request #574 from mraniki/renovate/ibind-0.x
+  ([`dda70de`](https://github.com/mraniki/cefi/commit/dda70de5f0fe994ad678be853baf3aafb41c0858))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.12
+
+- Merge pull request #575 from mraniki/dev
+  ([`842b5f8`](https://github.com/mraniki/cefi/commit/842b5f863bce30afc42f2d9c23979147fa1e75a5))
+
+⬆️ 🤖 - Your mode of life will be changed for the better because of new developments
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.12
+  ([`7d8f7f5`](https://github.com/mraniki/cefi/commit/7d8f7f55e1e9d0467dd9a364094a56c3e53a1f7d))
+
+
 ## v6.0.2 (2025-02-19)
 
 ### Other
@@ -4151,9 +4171,7 @@ Updates the requirements on [ccxt](https://github.com/ccxt/ccxt) to permit the l
   [Changelog](https://github.com/ccxt/ccxt/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/ccxt/ccxt/compare/4.1.1...4.1.9)
 
---- updated-dependencies: - dependency-name: ccxt dependency-type: direct:production
-
-...
+--- updated-dependencies: - dependency-name: ccxt dependency-type: direct:production ...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -4362,9 +4380,7 @@ Updates the requirements on [ccxt](https://github.com/ccxt/ccxt) to permit the l
   [Changelog](https://github.com/ccxt/ccxt/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/ccxt/ccxt/compare/4.0.112...4.1.1)
 
---- updated-dependencies: - dependency-name: ccxt dependency-type: direct:production
-
-...
+--- updated-dependencies: - dependency-name: ccxt dependency-type: direct:production ...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -4691,7 +4707,7 @@ The changes in this commit refactor the default_settings.toml and main.p y files
 
 - 🚨  ([`7ec03d0`](https://github.com/mraniki/cefi/commit/7ec03d0d83dfc3e615c6fd30f9437b702b2edea9))
 
-### BREAKING CHANGES
+### Breaking Changes
 
 - The changes in this commit refactor the default_settings.toml and main.p y files.
 
@@ -5204,9 +5220,7 @@ Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to pe
   [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES) -
   [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.2.4...v7.2.5)
 
---- updated-dependencies: - dependency-name: sphinx dependency-type: direct:development
-
-...
+--- updated-dependencies: - dependency-name: sphinx dependency-type: direct:development ...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -5385,9 +5399,7 @@ Updates the requirements on [sphinx](https://github.com/sphinx-doc/sphinx) to pe
   [Changelog](https://github.com/sphinx-doc/sphinx/blob/master/CHANGES) -
   [Commits](https://github.com/sphinx-doc/sphinx/compare/v7.1.0...v7.2.2)
 
---- updated-dependencies: - dependency-name: sphinx dependency-type: direct:development
-
-...
+--- updated-dependencies: - dependency-name: sphinx dependency-type: direct:development ...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -5450,9 +5462,7 @@ Updates the requirements on [loguru](https://github.com/Delgan/loguru) to permit
   [Changelog](https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst) -
   [Commits](https://github.com/Delgan/loguru/compare/0.6.0...0.7.0)
 
---- updated-dependencies: - dependency-name: loguru dependency-type: direct:production
-
-...
+--- updated-dependencies: - dependency-name: loguru dependency-type: direct:production ...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
