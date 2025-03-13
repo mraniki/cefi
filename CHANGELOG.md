@@ -1,6 +1,32 @@
 # CHANGELOG
 
 
+## v6.0.4 (2025-03-13)
+
+### Other
+
+- Merge pull request #577 from mraniki/dev
+  ([`029d026`](https://github.com/mraniki/cefi/commit/029d026cf2af990aff92db472cb069c5abc2473d))
+
+⬆️ 🤖 - You will have long and healthy life
+
+- Merge pull request #578 from mraniki/renovate/ibind-0.x
+  ([`2be6395`](https://github.com/mraniki/cefi/commit/2be6395dec21c3e14d286ce5c6c7cb65c4e385ce))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.13
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency degiro-connector to v3.0.25
+  ([#576](https://github.com/mraniki/cefi/pull/576),
+  [`5aaa178`](https://github.com/mraniki/cefi/commit/5aaa178b01e06100d84d93aa897556770dfeac3d))
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.13
+  ([`9847da5`](https://github.com/mraniki/cefi/commit/9847da5219c0bb3411e12bbdef060f584a00ce3e))
+
+
 ## v6.0.3 (2025-03-06)
 
 ### Other
