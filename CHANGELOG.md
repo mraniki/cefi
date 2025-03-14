@@ -1,6 +1,34 @@
 # CHANGELOG
 
 
+## v6.0.5 (2025-03-14)
+
+### Other
+
+- Merge pull request #579 from mraniki/renovate/ruff-0.x
+  ([`5563cc0`](https://github.com/mraniki/cefi/commit/5563cc00664f762969c7c9c48696e1a835bd6b59))
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.10.0
+
+- Merge pull request #580 from mraniki/dev
+  ([`4e7e695`](https://github.com/mraniki/cefi/commit/4e7e6957c9c66f3f78008494125b78fca2d22c90))
+
+⬆️ 🤖 - Your fly might be open but dont check it just now
+
+- Merge pull request #581 from mraniki/renovate/ruff-0.x
+  ([`245c45c`](https://github.com/mraniki/cefi/commit/245c45c98a7aa929aab9576260d07e364366c5c8))
+
+⬆️ 🛠️(deps): update dependency ruff to ^0.11.0
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency ruff to ^0.10.0
+  ([`fd6e491`](https://github.com/mraniki/cefi/commit/fd6e491cf0af23b23dfb0ee95f0cdace2c0606c9))
+
+- ⬆️ 🛠️(deps): update dependency ruff to ^0.11.0
+  ([`8e50187`](https://github.com/mraniki/cefi/commit/8e5018721b514a27336b67341a9e38436437132b))
+
+
 ## v6.0.4 (2025-03-13)
 
 ### Other
