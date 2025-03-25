@@ -28,7 +28,7 @@ dynaconf = ">=3.1.12"
 loguru = ">=0.6"
 ccxt = "^4.2.80"
 capitalcom-python = "0.2.3"
-degiro-connector = "3.0.26"
+degiro-connector = "3.0.27"
 easyoanda = {version ="1.0.19", python = ">=3.11,<4.0"}
 ibind = "0.1.13"
 # ib_insync = "0.9.86"
@@ -183,7 +183,7 @@ overgeneral-exceptions = [
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^6.0.0"
-pytest-asyncio = "^0.25.0"
+pytest-asyncio = "^0.26.0"
 pytest-mock = "^3.11.1"
 pytest-loguru = "^0.4.0"
 
