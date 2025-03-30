@@ -1,6 +1,32 @@
 # CHANGELOG
 
 
+## v6.0.7 (2025-03-30)
+
+### Other
+
+- Merge pull request #585 from mraniki/dev
+  ([`dc0c972`](https://github.com/mraniki/cefi/commit/dc0c97261be906ca01e3b5ce51f0b8d050fc162e))
+
+⬆️ 🤖 - You have a deep interest in all that is artistic
+
+- Merge pull request #586 from mraniki/renovate/pytest-asyncio-0.x
+  ([`e8cea59`](https://github.com/mraniki/cefi/commit/e8cea59366b1ece6de523557708e1f64c99955f9))
+
+⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.26.0
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency degiro-connector to v3.0.27
+  ([#584](https://github.com/mraniki/cefi/pull/584),
+  [`3b1fb26`](https://github.com/mraniki/cefi/commit/3b1fb2633bfe77b546aef4b81dedf336d976ed15))
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+- ⬆️ 🛠️(deps): update dependency pytest-asyncio to ^0.26.0
+  ([`79b8fbd`](https://github.com/mraniki/cefi/commit/79b8fbdc7efc2154946bb5fe86fbcc9d1f536d36))
+
+
 ## v6.0.6 (2025-03-21)
 
 ### Other
