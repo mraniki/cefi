@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v6.0.8 (2025-04-12)
+
+### Other
+
+- Merge pull request #587 from mraniki/renovate/ibind-0.x
+  ([`63199d9`](https://github.com/mraniki/cefi/commit/63199d9279214749b5e21b4bdaaf1a4cec787b98))
+
+⬆️ 🛠️(deps): update dependency ibind to v0.1.14
+
+- Merge pull request #588 from mraniki/dev
+  ([`3871551`](https://github.com/mraniki/cefi/commit/38715515238900f31627b4d3151b3da734866345))
+
+⬆️ 🤖 - Your object is to save the world while still leading a pleasant life
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency ibind to v0.1.14
+  ([`8c7e9df`](https://github.com/mraniki/cefi/commit/8c7e9df8995830207f88aa9436711eb315084b9b))
+
+
 ## v6.0.7 (2025-03-30)
 
 ### Other
