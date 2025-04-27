@@ -1,6 +1,31 @@
 # CHANGELOG
 
 
+## v6.0.9 (2025-04-27)
+
+### Other
+
+- Merge pull request #589 from mraniki/dev
+  ([`730d958`](https://github.com/mraniki/cefi/commit/730d95857f6577143d6c71d61e4a454f0fddd6ec))
+
+⬆️ 🤖 - This is the first age thats paid much attention to the future which is a
+
+### ⚡
+
+- ⚡ update default_settings.toml and ibkr.py
+  ([`775b557`](https://github.com/mraniki/cefi/commit/775b5579d24394e850eda8a5b1b9efd12a3acdbe))
+
+### ✅
+
+- ✅ Unit Test test: update test_unit.py
+  ([`5ca0912`](https://github.com/mraniki/cefi/commit/5ca0912f6a4b11a2370e5c505dcf14d3c2880f1b))
+
+### 🚨
+
+- 🚨 update ibkr.py
+  ([`2ec0124`](https://github.com/mraniki/cefi/commit/2ec012438752d22e662ada657c8dc03588ad4b9c))
+
+
 ## v6.0.8 (2025-04-12)
 
 ### Other
