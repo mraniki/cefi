@@ -24,8 +24,20 @@ class IbHandler(CexClient):
     host = "http://127.0.0.1:5000" # IBeam URL
     account = "YOUR_IBKR_ACCOUNT_UXXXXXXX"
     mapping = [
-        { id = "EURUSD", alt = "EUR.USD", secType = "CASH", exchange = "IDEALPRO", currency = "USD" },
-        { id = "SPY", alt = "SPY", secType = "STK", exchange = "SMART", currency = "USD" },
+        {
+            id = "EURUSD",
+            alt = "EUR.USD",
+            secType = "CASH",
+            exchange = "IDEALPRO",
+            currency = "USD",
+        },
+        {
+            id = "SPY",
+            alt = "SPY",
+            secType = "STK",
+            exchange = "SMART",
+            currency = "USD",
+        },
         # Add other mappings here...
     ]
     """
@@ -48,7 +60,10 @@ class IbHandler(CexClient):
             return
 
         if not self.account_number:
-            logger.warning("IBKR account number not found in configuration. Some features might not work.")
+            logger.warning(
+                "IBKR account number not found in configuration. "
+                "Some features might not work."
+            )
             # Optionally raise error if account number is strictly required
             # raise ValueError("IBKR account number is required in configuration.")
 
@@ -68,7 +83,10 @@ class IbHandler(CexClient):
             is_authenticated = auth_status.get("authenticated", False)
 
             if not is_authenticated:
-                logger.error(f"Failed to authenticate with IBKR via {self.host}. Check IBeam status and connection.")
+                logger.error(
+                    f"Failed to authenticate with IBKR via {self.host}. "
+                    f"Check IBeam status and connection."
+                )
                 raise ConnectionError("Failed to authenticate with IBKR")
 
             logger.debug(f"IBKR Tickle Result: {tickle_result.data}")
@@ -76,7 +94,11 @@ class IbHandler(CexClient):
             # If account number wasn't provided, try to fetch it (optional)
             if not self.account_number:
                 accounts = self.client.portfolio_accounts().data
-                if accounts and isinstance(accounts, list) and 'accountId' in accounts[0]:
+                if (
+                    accounts
+                    and isinstance(accounts, list)
+                    and "accountId" in accounts[0]
+                ):
                     self.account_number = accounts[0]["accountId"]
                     logger.info(f"Fetched IBKR Account ID: {self.account_number}")
                 else:
@@ -84,7 +106,9 @@ class IbHandler(CexClient):
                     # Decide whether to raise error or proceed without account number
                     raise ValueError("Failed to fetch IBKR account number.")
 
-            logger.success(f"Connected to IBKR successfully. Account: {self.account_number}")
+            logger.success(
+                f"Connected to IBKR successfully. Account: {self.account_number}"
+            )
 
         except ConnectionError as ce:
              logger.error(f"IBKR ConnectionError: {ce}")
@@ -168,8 +192,10 @@ class IbHandler(CexClient):
         Find contract CONID using symbol and mapping configuration.
         Uses secType, exchange, currency from the mapping.
         """
-        if not self.client: return None # Client not initialized
-        if not self.mapping: return None # No mapping configured
+        if not self.client:
+            return None # Client not initialized
+        if not self.mapping:
+            return None # No mapping configured
 
         try:
             # Find instrument in mapping based on id or alt
@@ -177,7 +203,11 @@ class IbHandler(CexClient):
                 (
                     item
                     for item in self.mapping
-                    if isinstance(item, dict) and (item.get("id") == instrument or item.get("alt") == instrument)
+                    if isinstance(item, dict)
+                    and (
+                        item.get("id") == instrument
+                        or item.get("alt") == instrument
+                    )
                 ),
                 None,
             )
@@ -187,20 +217,30 @@ class IbHandler(CexClient):
                 return None
 
             # Get required details from mapping
-            symbol = asset.get("alt", asset.get("id")) # Prefer 'alt' if exists, else 'id'
+            # Prefer 'alt' if exists, else 'id'
+            symbol = asset.get("alt", asset.get("id"))
             secType = asset.get("secType")
-            exchange = asset.get("exchange", "SMART") # Default to SMART if not specified
-            currency = asset.get("currency", "USD")  # Default to USD if not specified
+            # Default to SMART if not specified
+            exchange = asset.get("exchange", "SMART")
+            # Default to USD if not specified
+            currency = asset.get("currency", "USD")
 
             if not symbol or not secType:
-                logger.error(f"Incomplete mapping for {instrument}: Missing 'id'/'alt' or 'secType'. Mapping: {asset}")
+                logger.error(
+                    f"Incomplete mapping for {instrument}: Missing 'id'/'alt' or "
+                    f"'secType'. Mapping: {asset}"
+                )
                 return None
 
-            logger.debug(f"Searching IBKR contract for: Symbol={symbol}, SecType={secType}, Exchange={exchange}, Currency={currency}")
+            logger.debug(
+                f"Searching IBKR contract for: Symbol={symbol}, SecType={secType}, "
+                f"Exchange={exchange}, Currency={currency}"
+            )
 
-            # TODO: ibind might require different query types/functions for non-STK secTypes.
-            # Using StockQuery for now, may need adjustment based on ibind capabilities.
-            # Example: Might need FutureQuery(symbol=..., exchange=..., currency=..., ...) etc.
+            # TODO: ibind might require different query types/functions for non-STK
+            # secTypes. Using StockQuery for now, may need adjustment based on
+            # ibind capabilities. Example: Might need FutureQuery(symbol=...,
+            # exchange=..., currency=..., ...) etc.
             query = StockQuery(
                 symbol=symbol,
                 contract_conditions={
@@ -219,7 +259,10 @@ class IbHandler(CexClient):
             )
 
             if not result or not result.data:
-                 logger.warning(f"IBKR contract search returned no data for query: {query}. Result: {result}")
+                 logger.warning(
+                     f"IBKR contract search returned no data for query: {query}. "
+                     f"Result: {result}"
+                 )
                  return None
 
             # ibind returns a dictionary {symbol: conid} or similar
@@ -227,7 +270,10 @@ class IbHandler(CexClient):
             conid = result.data.get(symbol)
 
             if not conid:
-                logger.warning(f"Could not extract CONID for symbol '{symbol}' from IBKR result: {result.data}")
+                logger.warning(
+                    f"Could not extract CONID for symbol '{symbol}' from IBKR result: "
+                    f"{result.data}"
+                )
                 return None
 
             logger.debug(f"Found CONID {conid} for instrument {instrument} ({symbol})")
