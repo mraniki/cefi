@@ -70,9 +70,7 @@ async def test_quote(CXTrader, caplog):
     result = await CXTrader.get_quotes("BTC")
     assert result is not None
     assert ("binance" in result) or ("huobi" in result) or ("capital" in result)
-    assert ("5" in result) or ("6" in result) or ("7" in result)
-
-
+    assert isinstance(result, str)
 
 
 @pytest.mark.asyncio

@@ -112,36 +112,60 @@ balance_limit_value = 10
 # balance_limit = false
 # balance_limit_value = 10
 
-# # Example using IBKR
+# Example using IBKR (via ibind and IBeam)
 # [default.cex.ibkr]
-# protocol = "ib"
-# enabled = true
-# user_id = ""
-# api_key= ""
-# host = ""
-# port = 7497
-# secret= ""
-# password = ""
-# testmode = true
-# default_account = ""
-# broker_client_id = ""
-# broker_account_number = ""
-# broker_gateway = true
-# defaulttype = ""
-# ordertype = ""
-# leverage_type = ""
-# leverage = 1
-# trading_risk_percentage = true
-# trading_risk_amount = 10
-# trading_slippage = 2
+# protocol = "ibkr" # Identifier for the IbHandler
+# enabled = false    # Disabled by default
+# name = "ibkr"
+# host = "http://127.0.0.1:5000" # Default URL for local IBeam
+# account = "" # User must provide their IBKR Account ID (e.g., U1234567)
+# testmode = true # IBKR doesn't have a simple testmode flag like CCXT; use Paper account via TWS/Gateway
+
+# Default order settings (optional, can be overridden)
+# ordertype = "MKT" # Default to Market orders
+# trading_risk_percentage = false
+# trading_risk_amount = 1 # Default quantity = 1
+# trading_slippage = 2 # Slippage tolerance for market orders (if used)
 # trading_amount_threshold = 0
-# trading_asset = "USD"
-# trading_asset_separator = ""
+# trading_asset = "USD" # Default currency
+# trading_asset_separator = "" # Not applicable
+
+# Instrument mapping is crucial for IBKR
+# Users MUST define mappings for instruments they want to trade.
+# 'id' is the internal identifier used in commands.
+# 'alt' is the symbol IBKR expects (can be same as id).
+# 'secType' is the IBKR security type (STK, CASH, FUT, IND, CMDTY, etc.).
+# 'exchange' is the target exchange (SMART, IDEALPRO, CME, NYMEX, etc.).
+# 'currency' is the contract currency.
+# Other fields like 'localSymbol', 'multiplier', 'lastTradeDateOrContractMonth' might be needed for FUT, OPT, etc.
 # mapping = [
-#     { id = "BTC", alt = "BTC/USDT", type="CRYPTO", exchange="SMART", currency="USD", multiplier="100000000", right="P", lastTradeDateOrContractMonth="202101" },
-#     { id = "ETH", alt = "ETH/USDT", type="CRYPTO", exchange="SMART", currency="USD" },
-#     { id = "EURUSD", alt = "EUR/USD", type="CASH", exchange="SMART", currency="USD" },
-#     { id = "TSLA", alt = "TESLA", type="STK", exchange="SMART", currency="USD" },
+    # --- Forex Examples (Verify details in TWS/IBKR) ---
+    # { id = "EURUSD", alt = "EUR.USD", secType = "CASH", exchange = "IDEALPRO", currency = "USD" },
+    # { id = "USDJPY", alt = "USD.JPY", secType = "CASH", exchange = "IDEALPRO", currency = "JPY" },
+    # { id = "USDCAD", alt = "USD.CAD", secType = "CASH", exchange = "IDEALPRO", currency = "CAD" },
+    # { id = "NZDUSD", alt = "NZD.USD", secType = "CASH", exchange = "IDEALPRO", currency = "USD" },
+    # { id = "AUDUSD", alt = "AUD.USD", secType = "CASH", exchange = "IDEALPRO", currency = "USD" },
+    # { id = "GBPUSD", alt = "GBP.USD", secType = "CASH", exchange = "IDEALPRO", currency = "USD" },
+
+    # --- Commodity Future Examples (Requires specific LocalSymbol/Expiry/Multiplier - Find via IBKR!) ---
+    # { id = "BRENT", alt = "BZ", secType = "FUT", exchange = "NYMEX", currency = "USD", localSymbol = "BZZ3", multiplier = "1000", lastTradeDateOrContractMonth = "202312" }, # Dec'23 Brent Example
+    # { id = "WTI", alt = "CL", secType = "FUT", exchange = "NYMEX", currency = "USD", localSymbol = "CLZ3", multiplier = "1000", lastTradeDateOrContractMonth = "202312" }, # Dec'23 WTI Example
+    # { id = "NATURALGAS", alt = "NG", secType = "FUT", exchange = "NYMEX", currency = "USD", localSymbol = "NGZ3", multiplier = "10000", lastTradeDateOrContractMonth = "202312" }, # Dec'23 NatGas Example
+    # { id = "COCOA", alt = "CC", secType = "FUT", exchange = "ICE", currency = "USD", localSymbol = "CCZ3", multiplier = "10", lastTradeDateOrContractMonth = "202312" }, # Dec'23 Cocoa Example
+
+    # --- Metal Examples (Verify details, esp. Spot CMDTY type) ---
+    # { id = "GOLD", alt = "XAUUSD", secType = "CMDTY", exchange = "SMART", currency = "USD" }, # Spot Gold Example (Verify secType CMDTY is correct for Spot Metals)
+    # { id = "SILVER", alt = "XAGUSD", secType = "CMDTY", exchange = "SMART", currency = "USD" }, # Spot Silver Example
+    # { id = "COPPER", alt = "HG", secType = "FUT", exchange = "COMEX", currency = "USD", localSymbol = "HGZ3", multiplier = "25000", lastTradeDateOrContractMonth = "202312" }, # Dec'23 Copper Future Example
+
+    # --- Index Future Examples (Requires specific details - Find via IBKR!) ---
+    # { id = "US500", alt = "ES", secType = "FUT", exchange = "CME", currency = "USD", localSymbol = "ESZ3", multiplier = "50", lastTradeDateOrContractMonth = "202312" }, # Example S&P 500 Dec'23 Future
+    # { id = "DE40", alt = "DAX", secType = "FUT", exchange = "EUREX", currency = "EUR", localSymbol = "FDAXZ3", multiplier = "25", lastTradeDateOrContractMonth = "202312" }, # Example DAX Dec'23 Future
+    # { id = "JP225", alt = "NK", secType = "FUT", exchange = "OSE.JPN", currency = "JPY", localSymbol = "NKZ3", multiplier = "100", lastTradeDateOrContractMonth = "202312" }, # Example Nikkei 225 Dec'23 Future
+    # { id = "US100", alt = "NQ", secType = "FUT", exchange = "CME", currency = "USD", localSymbol = "NQZ3", multiplier = "20", lastTradeDateOrContractMonth = "202312" }, # Example Nasdaq 100 Dec'23 Future
+
+    # --- Volatility Index Future Example (Requires specific details - Find via IBKR!) ---
+    # { id = "USVIX", alt = "VX", secType = "FUT", exchange = "CFE", currency = "USD", localSymbol = "VXZ3", multiplier = "1000", lastTradeDateOrContractMonth = "202312" }, # Example VIX Dec'23 Future
 # ]
 # balance_limit = false
 # balance_limit_value = 10
