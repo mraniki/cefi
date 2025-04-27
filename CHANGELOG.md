@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v7.0.0 (2025-04-27)
+
+### Other
+
+- Merge pull request #591 from mraniki/dev
+  ([`cf29f63`](https://github.com/mraniki/cefi/commit/cf29f63dee9ef153167bc24b9b17e2bf1d5adfc8))
+
+💥 breaking update config.py
+
+- Update config.py
+  ([`9eae0c5`](https://github.com/mraniki/cefi/commit/9eae0c56f91a06f9e2cf881f3ee9aab6e49791dc))
+
+- Update config.py
+  ([`848459f`](https://github.com/mraniki/cefi/commit/848459f411895b4e91b258d75e50dfd6f9b3cc90))
+
+### 💥
+
+- 💥 breaking update config.py
+  ([`edaa2bc`](https://github.com/mraniki/cefi/commit/edaa2bc4de89d3cd18912ec8b59454d8e439801a))
+
+
 ## v6.1.0 (2025-04-27)
 
 ### Other
