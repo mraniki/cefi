@@ -25,7 +25,7 @@ op_path = None
 if APP_CONFIG_DIR and os.path.isdir(APP_CONFIG_DIR):
     print(f"Cefi Config: Found TT_CONFIG_DIR: {APP_CONFIG_DIR}")
     # Use the specific name tt expects for its default settings
-    talky_settings_path = os.path.join(APP_CONFIG_DIR, "tt", "talky_settings.toml") 
+    talky_settings_path = os.path.join(APP_CONFIG_DIR, "tt", "talky_settings.toml")
     user_settings_path = os.path.join(APP_CONFIG_DIR, "settings.toml")
     secrets_path = os.path.join(APP_CONFIG_DIR, ".secrets.toml")
     op_path = os.path.join(APP_CONFIG_DIR, ".op.toml") # If this lib also reads this
