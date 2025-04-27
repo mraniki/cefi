@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v6.1.0 (2025-04-27)
+
+### Other
+
+- Merge pull request #590 from mraniki/dev
+  ([`7397e96`](https://github.com/mraniki/cefi/commit/7397e96bd07a08f4656cb52d24173564157e1779))
+
+🚀 new version: conversion to uv
+
+### 🚀
+
+- 🚀 new version: conversion to uv
+  ([`6382cc0`](https://github.com/mraniki/cefi/commit/6382cc04d06008ae187945f5a492ab4bf725c844))
+
+
 ## v6.0.9 (2025-04-27)
 
 ### Other
