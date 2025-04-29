@@ -73,8 +73,13 @@ class CexTrader:
             logger.info("Module is disabled. No Client will be created.")
             return
         self.clients = []
-        # Create a client for each client in settings.cex
-        for name, client_config in settings.cex.items():
+        # Use .get() for safer access to the nested table
+        cex_config_table = settings.get('cex', {})
+        if not cex_config_table:
+             logger.warning("No 'cex' configuration table found in settings.")
+
+        # Create a client for each client in the retrieved table
+        for name, client_config in cex_config_table.items():
             if (
                 # Skip empty client configs
                 client_config is None
