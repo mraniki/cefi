@@ -64,9 +64,10 @@ docs = [
   "sphinx_design~=0.6",
 ]
 
-[tool.setuptools]
-packages = ["cefi"]
-
+[tool.setuptools.packages.find]
+where = ["."] 
+include = ["cefi*"] 
+exclude = ["tests*", "docs*", "examples*"]
 
 [tool.ruff]
 exclude = [
