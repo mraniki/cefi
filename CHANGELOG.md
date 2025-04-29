@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v7.0.1 (2025-04-29)
+
+### Other
+
+- Merge pull request #593 from mraniki/dev
+  ([`83fae66`](https://github.com/mraniki/cefi/commit/83fae6617e98c9be5bffe2d63caa9e72ef29ac61))
+
+🚑 build(deps): update pyproject.toml
+
+### 🚑
+
+- 🚑 build(deps): update pyproject.toml
+  ([`743730e`](https://github.com/mraniki/cefi/commit/743730e1d793613af9035a02acfb97e76117614b))
+
+
 ## v7.0.0 (2025-04-27)
 
 ### Other

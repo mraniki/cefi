@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cefi"
-version = "7.0.0"
+version = "7.0.1"
 description = "A python library, to interact  with Crypto Exchanges (CCXT library) and brokers (IB & Capital.com)"
 authors = [
   { name = "mraniki", email = "8766259+mraniki@users.noreply.github.com" },
