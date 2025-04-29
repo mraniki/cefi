@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v7.0.2 (2025-04-29)
+
+### Other
+
+- Merge pull request #594 from mraniki/dev
+  ([`fc9fa54`](https://github.com/mraniki/cefi/commit/fc9fa5499f40cb3268c453a9b50fb334eb92c6f7))
+
+🐛 update main.py
+
+### 🐛
+
+- 🐛 update main.py
+  ([`8182422`](https://github.com/mraniki/cefi/commit/8182422d5843437bad1c7180e710aae222fc2873))
+
+
 ## v7.0.1 (2025-04-29)
 
 ### Other
