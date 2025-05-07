@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v7.0.3 (2025-05-07)
+
+### Other
+
+- Merge pull request #596 from mraniki/dev
+  ([`dd17cff`](https://github.com/mraniki/cefi/commit/dd17cff313356d6997ab357c5a622599684e2ddf))
+
+⬆️ 🤖 - Are you a turtle
+
+### ⬆️
+
+- ⬆️ 🛠️(deps): update dependency degiro-connector to v3.0.28
+  ([#595](https://github.com/mraniki/cefi/pull/595),
+  [`c58fa83`](https://github.com/mraniki/cefi/commit/c58fa837edca4870a90c47482f3fc04e39eb3292))
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+
 ## v7.0.2 (2025-04-29)
 
 ### Other
