@@ -27,7 +27,7 @@ dependencies = [
   "capitalcom-python==0.2.3",
   "degiro-connector==3.0.29",
   'easyoanda==1.0.19; python_version >= "3.11" and python_version < "4.0"',
-  "ibind==0.1.14",
+  "ibind==0.1.15",
   # "ib_insync = \"0.9.86\"",
   # "mt5linux = \"0.1.9\"",
   "mt5linux_updated==0.0.1",
@@ -51,7 +51,7 @@ dev = [
 test = [
   "pytest~=8.0",
   "pytest-cov~=6.0",
-  "pytest-asyncio~=0.26",
+  "pytest-asyncio~=1.0",
   "pytest-mock~=3.11",
   "pytest-loguru~=0.4",
 ]
