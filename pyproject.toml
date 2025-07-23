@@ -27,7 +27,7 @@ dependencies = [
   "capitalcom-python==0.2.3",
   "degiro-connector==3.0.29",
   'easyoanda==1.0.19; python_version >= "3.11" and python_version < "4.0"',
-  "ibind==0.1.16",
+  "ibind==0.1.17",
   # "ib_insync = \"0.9.86\"",
   # "mt5linux = \"0.1.9\"",
   "mt5linux_updated==0.0.1",
